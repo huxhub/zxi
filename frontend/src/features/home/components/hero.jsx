@@ -19,7 +19,7 @@ export function Hero({ hero, heroRef, heroPicRef, heroCopyRef }) {
           playsInline
           preload="auto"
           poster={hero?.src}
-          className="w-full h-full object-cover"
+          className="hero-video w-full h-full object-cover"
         >
           <source src="/zxi-hero-video.webm" type="video/webm" />
           Your browser does not support the video tag.
@@ -37,17 +37,17 @@ export function Hero({ hero, heroRef, heroPicRef, heroCopyRef }) {
             Dubai’s leading interior fitout company
           </p>
           <div className="hero-split-line overflow-hidden py-0.5">
-            <h1 className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-normal leading-[1.23] tracking-tight">
+            <h1 className="block text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-normal leading-[1.23] tracking-tight">
               Re-imagine your
             </h1>
           </div>
           <div className="hero-split-line overflow-hidden py-0.5">
-            <h1 className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-normal leading-[1.23] tracking-tight">
+            <h1 className="block text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-normal leading-[1.23] tracking-tight">
               space with
             </h1>
           </div>
           <div className="hero-split-line overflow-hidden py-0.5">
-            <h1 className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-normal leading-[1.23] tracking-tight">
+            <h1 className="block text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-normal leading-[1.23] tracking-tight">
               ZXI Interiors.
             </h1>
           </div>

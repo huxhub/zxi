@@ -17,6 +17,7 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate }) {
   const dialog = useRef(null);
   const [open, setOpen] = useState(false);
   const [portfolioOpen, setPortfolioOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
 
   const projectList = projects && projects.length > 0 ? projects : DEFAULT_PROJECT_TITLES;
 
@@ -180,13 +181,50 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate }) {
               </div>
             </div>
 
-            <Link
-              href="/services"
-              onClick={close}
-              className="text-left text-2xl sm:text-3xl md:text-[36px] font-normal tracking-tight text-neutral-900 hover:text-neutral-500 transition-colors cursor-pointer focus:outline-none"
-            >
-              Services
-            </Link>
+            <div>
+              <div className="flex items-center justify-between gap-4">
+                <Link
+                  href="/services"
+                  onClick={close}
+                  className="text-left text-2xl sm:text-3xl md:text-[36px] font-normal tracking-tight text-neutral-900 hover:text-neutral-500 transition-colors cursor-pointer focus:outline-none"
+                >
+                  Services
+                </Link>
+                <button
+                  onClick={() => setServicesOpen(!servicesOpen)}
+                  aria-label="Toggle services list"
+                  aria-expanded={servicesOpen}
+                  className="flex h-8 w-8 shrink-0 items-center justify-center text-neutral-700 transition-colors hover:text-neutral-400 focus:outline-none"
+                >
+                  <svg
+                    className={`h-4 w-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    strokeWidth="1.6"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="m6 9 6 6 6-6" />
+                  </svg>
+                </button>
+              </div>
+              <div className={`grid transition-all duration-300 ease-out ${servicesOpen ? 'grid-rows-[1fr] opacity-100 mt-3' : 'grid-rows-[0fr] opacity-0'}`}>
+                <div className="overflow-hidden border-l border-neutral-300 pl-4">
+                  <div className="flex flex-col gap-2 pb-1 text-sm text-neutral-500 sm:text-base">
+                    {[
+                      ['Commercial Fitouts', 'commercial-fitouts'],
+                      ['Residential Interiors', 'residential-interiors'],
+                      ['Turnkey Contracting', 'turnkey-contracting'],
+                      ['Custom Furniture', 'custom-furniture'],
+                      ['Hospitality & Wellness', 'hospitality-wellness'],
+                    ].map(([label, slug]) => (
+                      <Link key={slug} href={`/services/${slug}`} onClick={close} className="w-fit transition-colors hover:text-neutral-900 focus:outline-none">
+                        {label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
 
             <Link
               href="/blog"

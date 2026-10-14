@@ -1,0 +1,231 @@
+/* ==========================================================================
+   Responsive Contact System
+   Isolated responsiveness for /contact page route
+   ========================================================================== */
+
+@media (max-width: 640px) {
+  /* Contact page hero section */
+  .contact-hero {
+    min-height: 540px !important;
+    margin: 4px !important;
+    border-radius: 12px !important;
+  }
+
+  .contact-hero-copy {
+    padding: 110px 20px 48px !important;
+  }
+
+  .contact-hero h1 {
+    font-size: clamp(38px, 11vw, 56px) !important;
+    line-height: 1.05 !important;
+  }
+
+  .contact-hero-copy > p:last-child {
+    font-size: 14px !important;
+    margin-top: 18px !important;
+  }
+
+  .contact-scroll {
+    right: 20px !important;
+    bottom: 24px !important;
+  }
+
+  /* Contact inquiry grid */
+  .contact-inquiry {
+    grid-template-columns: 1fr !important;
+    gap: 48px !important;
+    padding: 64px 20px !important;
+  }
+
+  .contact-intro h2 {
+    font-size: clamp(32px, 8.5vw, 44px) !important;
+  }
+
+  .contact-intro > p:last-child {
+    font-size: 14px !important;
+    margin-top: 18px !important;
+  }
+
+  /* Contact form */
+  .contact-form {
+    grid-template-columns: 1fr !important;
+    column-gap: 0 !important;
+  }
+
+  .contact-form label {
+    padding: 0 0 16px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .contact-form input,
+  .contact-form select,
+  .contact-form textarea {
+    font-size: 16px !important; /* Prevents iOS auto-zoom on focus */
+    min-height: 38px;
+  }
+
+  .contact-submit {
+    padding: 16px 20px !important;
+    font-size: 14px !important;
+  }
+
+  /* Contact details grid */
+  .contact-details {
+    padding: 56px 20px !important;
+  }
+
+  .contact-detail-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .contact-detail {
+    min-height: 140px !important;
+    padding: 20px 0 !important;
+    border-right: 0 !important;
+  }
+
+  .contact-detail strong {
+    font-size: 18px !important;
+    margin-top: 24px !important;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 900px) {
+  .contact-inquiry {
+    grid-template-columns: 1fr !important;
+    gap: 56px !important;
+    padding: 80px 32px !important;
+  }
+
+  .contact-detail-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+/* ==========================================================================
+   4K & Ultra-Wide Contact System (2560px - 3840px+)
+   Proportional layout and typography scaling for high-res monitors
+   ========================================================================== */
+@media (min-width: 2560px) {
+  .contact-hero {
+    min-height: 850px !important;
+  }
+
+  .contact-hero-copy {
+    max-width: 1300px !important;
+    padding: 180px 80px 120px !important;
+  }
+
+  .contact-hero h1 {
+    font-size: 110px !important;
+  }
+
+  .contact-hero-copy > p:last-child {
+    font-size: 20px !important;
+    max-width: 520px !important;
+  }
+
+  .contact-inquiry {
+    max-width: 2200px !important;
+    padding: 160px 80px !important;
+    gap: 120px !important;
+  }
+
+  .contact-intro h2 {
+    font-size: 84px !important;
+  }
+
+  .contact-intro > p:last-child {
+    font-size: 20px !important;
+    max-width: 520px !important;
+  }
+
+  .contact-form label {
+    font-size: 15px !important;
+  }
+
+  .contact-form input,
+  .contact-form select,
+  .contact-form textarea {
+    font-size: 20px !important;
+  }
+
+  .contact-submit {
+    padding: 24px 30px !important;
+    font-size: 17px !important;
+  }
+
+  .contact-details {
+    padding: 120px 80px !important;
+  }
+
+  .contact-detail {
+    min-height: 280px !important;
+  }
+
+  .contact-detail strong {
+    font-size: 28px !important;
+  }
+}
+
+@media (min-width: 3840px) {
+  .contact-hero {
+    min-height: 1100px !important;
+  }
+
+  .contact-hero-copy {
+    max-width: 1800px !important;
+    padding: 240px 120px 160px !important;
+  }
+
+  .contact-hero h1 {
+    font-size: 145px !important;
+  }
+
+  .contact-hero-copy > p:last-child {
+    font-size: 26px !important;
+    max-width: 700px !important;
+  }
+
+  .contact-inquiry {
+    max-width: 3200px !important;
+    padding: 220px 120px !important;
+    gap: 160px !important;
+  }
+
+  .contact-intro h2 {
+    font-size: 110px !important;
+  }
+
+  .contact-intro > p:last-child {
+    font-size: 26px !important;
+    max-width: 700px !important;
+  }
+
+  .contact-form label {
+    font-size: 18px !important;
+  }
+
+  .contact-form input,
+  .contact-form select,
+  .contact-form textarea {
+    font-size: 26px !important;
+  }
+
+  .contact-submit {
+    padding: 30px 40px !important;
+    font-size: 22px !important;
+  }
+
+  .contact-details {
+    padding: 160px 120px !important;
+  }
+
+  .contact-detail {
+    min-height: 360px !important;
+  }
+
+  .contact-detail strong {
+    font-size: 38px !important;
+  }
+}

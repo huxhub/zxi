@@ -1,0 +1,153 @@
+/* ==========================================================================
+   Responsive Base & Viewport System
+   Global resets, overflow prevention, and fluid touch handling
+   ========================================================================== */
+
+/* Prevent accidental horizontal overflow on narrow mobile screens (320px - 480px) */
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  position: relative;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Ensure all media and boxes never blow out screen bounds */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img,
+video,
+canvas,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Smooth scrolling container adjustments */
+@media (max-width: 767px) {
+  /* Prevent scroll bounce clipping */
+  body {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Safe touch target size for interactive elements */
+  button,
+  a,
+  input,
+  select,
+  textarea {
+    touch-action: manipulation;
+  }
+}
+
+/* Fluid responsive typography helpers */
+@media (max-width: 640px) {
+  /* Prevent huge headings from blowing out screen on small viewports */
+  h1 {
+    word-break: break-word;
+    hyphens: auto;
+  }
+}
+
+/* High-DPI and ultra-wide screens */
+@media (min-width: 1920px) {
+  .site-container,
+  main {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* ==========================================================================
+   4K & Ultra-Wide Displays (2560px - 3840px+)
+   Proportional scaling and container expansion for high-res monitors
+   ========================================================================== */
+@media (min-width: 2560px) {
+  html {
+    font-size: 18px;
+  }
+
+  .site-container,
+  main {
+    max-width: 2560px;
+  }
+
+  /* Expand max-width containers proportionally */
+  .max-w-\[1720px\] {
+    max-width: 2280px !important;
+  }
+
+  .max-w-\[1920px\] {
+    max-width: 2460px !important;
+  }
+
+  /* Detail modal on 2560px */
+  dialog:not(#navigation-panel) {
+    max-width: 1280px !important;
+  }
+
+  /* WhatsApp CTA scaling */
+  .whatsapp-cta {
+    width: 68px !important;
+    height: 68px !important;
+    right: 28px !important;
+    bottom: 28px !important;
+  }
+
+  .whatsapp-cta svg {
+    width: 34px !important;
+    height: 34px !important;
+  }
+}
+
+@media (min-width: 3840px) {
+  html {
+    font-size: 24px;
+  }
+
+  .site-container,
+  main {
+    max-width: 3600px;
+  }
+
+  /* Expand max-width containers for 4K UHD */
+  .max-w-\[1720px\] {
+    max-width: 3200px !important;
+  }
+
+  .max-w-\[1920px\] {
+    max-width: 3400px !important;
+  }
+
+  /* Detail modal on 4K */
+  dialog:not(#navigation-panel) {
+    max-width: 1720px !important;
+    border-radius: 28px !important;
+  }
+
+  dialog:not(#navigation-panel) button[aria-label="Close details"] {
+    width: 60px !important;
+    height: 60px !important;
+    font-size: 32px !important;
+    right: 28px !important;
+    top: 28px !important;
+  }
+
+  /* WhatsApp CTA scaling */
+  .whatsapp-cta {
+    width: 88px !important;
+    height: 88px !important;
+    right: 44px !important;
+    bottom: 44px !important;
+  }
+
+  .whatsapp-cta svg {
+    width: 44px !important;
+    height: 44px !important;
+  }
+}

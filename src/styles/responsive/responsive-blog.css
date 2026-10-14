@@ -1,0 +1,218 @@
+/* ==========================================================================
+   Responsive Blog System
+   Isolated responsiveness for /blog listing and /blog/[slug] reading view
+   ========================================================================== */
+
+/* --- Blog Listing Archive (/blog) --- */
+@media (max-width: 640px) {
+  /* Blog main padding */
+  main:has(.group.block.mb-20) {
+    padding-top: 100px !important;
+    padding-bottom: 64px !important;
+  }
+
+  /* Editorial header */
+  header:has(> h1.text-4xl) {
+    margin-bottom: 36px !important;
+  }
+
+  header:has(> h1.text-4xl) h1 {
+    font-size: clamp(28px, 7.8vw, 40px) !important;
+    line-height: 1.15 !important;
+  }
+
+  header:has(> h1.text-4xl) p.text-base {
+    font-size: 15px !important;
+    margin-top: 16px !important;
+  }
+
+  /* Category pills horizontal swipe bar */
+  .overflow-x-auto:has(> button.rounded-full) {
+    margin-bottom: 36px !important;
+    padding-bottom: 8px !important;
+    gap: 8px !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .overflow-x-auto:has(> button.rounded-full) button {
+    padding: 8px 16px !important;
+    font-size: 12px !important;
+  }
+
+  /* Hero featured post: stack image above text */
+  .group.block.mb-20 {
+    margin-bottom: 48px !important;
+    gap: 20px !important;
+  }
+
+  .group.block.mb-20 .relative.aspect-\[16\/10\] {
+    aspect-ratio: 16 / 10 !important;
+    border-radius: 10px !important;
+  }
+
+  .group.block.mb-20 h2 {
+    font-size: 22px !important;
+    line-height: 1.25 !important;
+  }
+
+  /* 3-column grid to 1 column on mobile */
+  .grid.grid-cols-1.md\:grid-cols-2.lg\:grid-cols-3 {
+    grid-template-columns: 1fr !important;
+    gap: 36px !important;
+  }
+
+  .grid.grid-cols-1.md\:grid-cols-2.lg\:grid-cols-3 article h3,
+  .grid.grid-cols-1.md\:grid-cols-2.lg\:grid-cols-3 a h3 {
+    font-size: 20px !important;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .grid.grid-cols-1.md\:grid-cols-2.lg\:grid-cols-3 {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 32px 24px !important;
+  }
+
+  .group.block.mb-20 {
+    gap: 28px !important;
+    margin-bottom: 60px !important;
+  }
+
+  .group.block.mb-20 h2 {
+    font-size: 28px !important;
+  }
+}
+
+/* --- Blog Detail Article (/blog/[slug]) --- */
+@media (max-width: 640px) {
+  article header {
+    margin-bottom: 32px !important;
+  }
+
+  article header h1 {
+    font-size: clamp(26px, 7.5vw, 38px) !important;
+    line-height: 1.15 !important;
+  }
+
+  article header p.text-lg {
+    font-size: 16px !important;
+    margin-top: 18px !important;
+    line-height: 1.55 !important;
+  }
+
+  /* Author bar stack */
+  article header .flex.items-center.gap-4 {
+    margin-top: 24px !important;
+    padding-top: 20px !important;
+    gap: 12px !important;
+  }
+
+  /* Hero image */
+  .relative.aspect-\[16\/9\].md\:aspect-\[21\/9\] {
+    aspect-ratio: 16 / 10 !important;
+    border-radius: 12px !important;
+    margin-bottom: 32px !important;
+  }
+
+  /* Main body text */
+  .max-w-2xl.space-y-8 p {
+    font-size: 16px !important;
+    line-height: 1.65 !important;
+  }
+
+  .max-w-2xl blockquote {
+    margin-top: 28px !important;
+    margin-bottom: 28px !important;
+    padding-left: 18px !important;
+    font-size: 18px !important;
+    line-height: 1.4 !important;
+  }
+
+  /* Key principles bullet points */
+  .max-w-2xl h2 {
+    font-size: 22px !important;
+    margin-bottom: 16px !important;
+  }
+
+  /* Related perspectives section at bottom */
+  section:has(> .grid.grid-cols-1.md\:grid-cols-2.lg\:grid-cols-3) {
+    margin-top: 56px !important;
+    padding-top: 40px !important;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  article header h1 {
+    font-size: clamp(34px, 5.2vw, 48px) !important;
+  }
+
+  .relative.aspect-\[16\/9\].md\:aspect-\[21\/9\] {
+    aspect-ratio: 16 / 9 !important;
+  }
+}
+
+/* ==========================================================================
+   4K & Ultra-Wide Blog System (2560px - 3840px+)
+   Article reading comfort and typography scaling for high-res monitors
+   ========================================================================== */
+@media (min-width: 2560px) {
+  header:has(> h1) h1 {
+    font-size: 72px !important;
+  }
+
+  header:has(> h1) p.text-base {
+    font-size: 22px !important;
+  }
+
+  .group.block.mb-20 h2 {
+    font-size: 42px !important;
+  }
+
+  article header h1 {
+    font-size: 68px !important;
+  }
+
+  article header p.text-lg {
+    font-size: 24px !important;
+  }
+
+  article .max-w-2xl {
+    max-width: 1000px !important;
+  }
+
+  article p {
+    font-size: 20px !important;
+    line-height: 1.75 !important;
+  }
+}
+
+@media (min-width: 3840px) {
+  header:has(> h1) h1 {
+    font-size: 96px !important;
+  }
+
+  header:has(> h1) p.text-base {
+    font-size: 28px !important;
+  }
+
+  .group.block.mb-20 h2 {
+    font-size: 56px !important;
+  }
+
+  article header h1 {
+    font-size: 92px !important;
+  }
+
+  article header p.text-lg {
+    font-size: 32px !important;
+  }
+
+  article .max-w-2xl {
+    max-width: 1350px !important;
+  }
+
+  article p {
+    font-size: 26px !important;
+    line-height: 1.75 !important;
+  }
+}

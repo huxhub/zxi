@@ -1,0 +1,750 @@
+/* ==========================================================================
+   Responsive Home Page Sections
+   Isolated responsiveness for all sections on the home route
+   ========================================================================== */
+
+/* --- 1. Hero Section --- */
+@media (max-width: 640px) {
+  #home {
+    height: 100svh;
+    min-height: 580px;
+  }
+
+  #home .relative.z-10 {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    padding-bottom: 36px !important;
+  }
+
+  .hero-copy-sub {
+    font-size: 14px !important;
+    margin-bottom: 14px !important;
+  }
+
+  .hero-split-line h1 {
+    font-size: clamp(32px, 8.8vw, 42px) !important;
+    line-height: 1.18 !important;
+  }
+
+  .hero-actions {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    gap: 10px !important;
+    margin-top: 20px !important;
+  }
+
+  .hero-actions a {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .hero-split-line h1 {
+    font-size: clamp(44px, 5.8vw, 58px) !important;
+    line-height: 1.15 !important;
+  }
+}
+
+/* --- 2. Marquee Conversion Ribbon --- */
+@media (max-width: 640px) {
+  .home-cta-marquee {
+    padding: 16px 0 !important;
+  }
+
+  .home-cta-track {
+    font-size: 18px !important;
+    gap: 24px !important;
+    animation-duration: 18s !important;
+  }
+}
+
+/* --- 3. Featured Portfolio Grid on Home --- */
+@media (max-width: 640px) {
+  #portfolio {
+    padding-top: 64px !important;
+    padding-bottom: 56px !important;
+  }
+
+  #portfolio .grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+    padding: 0 12px !important;
+  }
+
+  #portfolio .project-card {
+    aspect-ratio: 16 / 12 !important;
+  }
+
+  #portfolio .project-card .absolute.bottom-6 {
+    bottom: 16px !important;
+    left: 16px !important;
+    right: 16px !important;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  #portfolio .grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+  }
+
+  #portfolio .project-card {
+    grid-column: span 1 !important;
+    aspect-ratio: 1 !important;
+  }
+}
+
+/* --- 4. Mid-Page CTA Ribbon --- */
+@media (max-width: 768px) {
+  .mid-page-cta {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+    padding: 50px 20px !important;
+    text-align: left !important;
+  }
+
+  .mid-page-cta h2 {
+    font-size: clamp(28px, 7vw, 42px) !important;
+    line-height: 1.1 !important;
+  }
+
+  .mid-page-cta a {
+    width: 100% !important;
+    min-width: 0 !important;
+    justify-content: space-between !important;
+  }
+}
+
+/* --- 5. Bloom 3D Services --- */
+@media (max-width: 767px) {
+  .bloom-services {
+    padding: 70px 0 90px !important;
+  }
+
+  .bloom-services-heading {
+    width: 90% !important;
+    margin-bottom: 48px !important;
+  }
+
+  .bloom-services-heading h2 {
+    font-size: clamp(28px, 6.5vw, 40px) !important;
+  }
+
+  .bloom-carousel {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 16px !important;
+    padding: 0 16px !important;
+  }
+
+  .bloom-card {
+    position: relative !important;
+    width: 100% !important;
+    aspect-ratio: 16 / 11 !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+  }
+
+  .bloom-card-copy {
+    inset: auto 20px 20px !important;
+    gap: 10px !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .bloom-services-heading h2 {
+    font-size: 44px !important;
+  }
+}
+
+/* --- 6. Why Work With Us Section --- */
+@media (max-width: 767px) {
+  .why-section {
+    display: flex !important;
+    flex-direction: column !important;
+    height: auto !important;
+    min-height: 0 !important;
+  }
+
+  .why-content {
+    padding: 48px 20px 32px !important;
+  }
+
+  .why-content > h2 {
+    font-size: clamp(28px, 6.5vw, 40px) !important;
+    margin-bottom: 24px !important;
+  }
+
+  .why-list {
+    margin-top: 24px !important;
+  }
+
+  .why-header {
+    font-size: 18px !important;
+    gap: 14px !important;
+  }
+
+  .why-number {
+    flex: 0 0 44px !important;
+    height: 48px !important;
+    font-size: 16px !important;
+  }
+
+  .why-body > p {
+    padding-left: 58px !important;
+    font-size: 14px !important;
+  }
+
+  .why-visual {
+    width: 100% !important;
+    height: 70vw !important;
+    min-height: 280px !important;
+  }
+}
+
+/* --- 7. About Stats Fullscreen Slider --- */
+@media (max-width: 640px) {
+  .sticky.top-0.w-full.h-screen {
+    min-height: 560px !important;
+  }
+
+  .sticky.top-0 .relative.z-10 {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  .sticky.top-0 h3 {
+    font-size: clamp(24px, 6.5vw, 34px) !important;
+    letter-spacing: 0.05em !important;
+  }
+
+  .sticky.top-0 p.mt-5 {
+    font-size: 14px !important;
+    margin-top: 14px !important;
+  }
+
+  /* Slide 4 stats grid */
+  .sticky.top-0 .grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px !important;
+    margin-top: 28px !important;
+    padding-top: 20px !important;
+  }
+
+  .sticky.top-0 .grid .tabular-nums {
+    font-size: 24px !important;
+  }
+
+  /* Floating slide indicators: tuck to the bottom right on mobile */
+  .fixed.right-6.top-1\/2 {
+    right: 14px !important;
+    gap: 8px !important;
+  }
+
+  .fixed.right-6.top-1\/2 button {
+    width: 6px !important;
+    height: 6px !important;
+  }
+}
+
+/* --- 8. FAQ Section --- */
+@media (max-width: 768px) {
+  #faq {
+    padding-top: 64px !important;
+    padding-bottom: 64px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  #faq .grid {
+    gap: 32px !important;
+  }
+
+  #faq h2 {
+    font-size: 30px !important;
+    position: static !important;
+  }
+
+  #faq button {
+    padding: 20px 0 !important;
+    font-size: 17px !important;
+  }
+}
+
+/* --- 9. Home Bottom Contact Banner --- */
+@media (max-width: 640px) {
+  #contact.relative.h-\[85svh\] {
+    height: 75svh !important;
+    min-height: 480px !important;
+    margin: 4px !important;
+  }
+
+  #contact .relative.z-10 {
+    padding: 36px 20px !important;
+    gap: 20px !important;
+  }
+
+  #contact h2 {
+    font-size: clamp(26px, 6.8vw, 36px) !important;
+  }
+
+  #contact .flex.gap-3 {
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+
+  #contact .flex.gap-3 a {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+}
+
+/* ==========================================================================
+   4K & Ultra-Wide Home Sections (2560px - 3840px+)
+   Proportional scaling and cinematic typography for high-res monitors
+   ========================================================================== */
+@media (min-width: 2560px) {
+  /* 1. Hero */
+  #home .relative.z-10 {
+    max-width: 2300px !important;
+    padding: 120px 80px 80px !important;
+  }
+
+  #home .max-w-2xl {
+    max-width: 1300px !important;
+  }
+
+  .hero-copy-sub {
+    font-size: 22px !important;
+    margin-bottom: 24px !important;
+  }
+
+  .hero-split-line h1 {
+    font-size: 96px !important;
+    line-height: 1.15 !important;
+  }
+
+  /* 2. Portfolio */
+  #portfolio .max-w-\[1720px\] {
+    max-width: 2300px !important;
+  }
+
+  #portfolio h2 {
+    font-size: 76px !important;
+  }
+
+  #portfolio .grid {
+    max-width: 2400px !important;
+    gap: 16px !important;
+    padding: 0 16px !important;
+  }
+
+  #portfolio .project-card h3 {
+    font-size: 26px !important;
+  }
+
+  #portfolio .project-card span.text-sm {
+    font-size: 18px !important;
+  }
+
+  #portfolio .project-card span.rounded-full {
+    font-size: 18px !important;
+    padding: 18px 36px !important;
+  }
+
+  /* 3. Mid-Page CTA Ribbon */
+  .mid-page-cta {
+    padding: 96px 120px !important;
+    gap: 80px !important;
+  }
+
+  .mid-page-cta h2 {
+    font-size: 92px !important;
+  }
+
+  .mid-page-cta > p {
+    font-size: 15px !important;
+  }
+
+  .mid-page-cta a {
+    min-width: 320px !important;
+    padding: 24px 32px !important;
+    font-size: 17px !important;
+  }
+
+  /* 4. Bloom 3D Services */
+  .bloom-services {
+    padding: 200px 0 240px !important;
+  }
+
+  .bloom-services-heading {
+    width: min(1400px, 90vw) !important;
+    margin-bottom: 160px !important;
+  }
+
+  .bloom-services-heading h2 {
+    font-size: 80px !important;
+  }
+
+  .bloom-scroll-track {
+    --item-width: 800px !important;
+  }
+
+  .bloom-stage {
+    perspective: 7000px !important;
+  }
+
+  .bloom-card-copy {
+    inset: auto 44px 44px !important;
+  }
+
+  .bloom-card-title {
+    font-size: 42px !important;
+  }
+
+  .bloom-card-link {
+    font-size: 18px !important;
+  }
+
+  /* 5. Why Work With Us */
+  .why-section {
+    min-height: 800px !important;
+  }
+
+  .why-content {
+    padding: 100px 90px !important;
+  }
+
+  .why-content > h2 {
+    font-size: 76px !important;
+    margin-bottom: 48px !important;
+  }
+
+  .why-number {
+    flex: 0 0 76px !important;
+    height: 84px !important;
+    font-size: 26px !important;
+  }
+
+  .why-header {
+    font-size: 36px !important;
+    gap: 36px !important;
+    padding-bottom: 28px !important;
+  }
+
+  .why-body > p {
+    font-size: 22px !important;
+    padding-left: 112px !important;
+  }
+
+  /* 6. About Stats Fullscreen Slider */
+  #about .sticky.top-0 {
+    min-height: 800px !important;
+  }
+
+  #about .slide-inner .relative.z-10 {
+    max-width: 1600px !important;
+  }
+
+  #about h3 {
+    font-size: 74px !important;
+  }
+
+  #about p.mt-5 {
+    font-size: 24px !important;
+    max-width: 900px !important;
+  }
+
+  #about .grid {
+    max-width: 1200px !important;
+    gap: 48px !important;
+    margin-top: 56px !important;
+    padding-top: 48px !important;
+  }
+
+  #about .grid .tabular-nums {
+    font-size: 54px !important;
+  }
+
+  #about .grid p {
+    font-size: 16px !important;
+  }
+
+  .fixed.right-6.top-1\/2 {
+    right: 36px !important;
+    gap: 20px !important;
+  }
+
+  .fixed.right-6.top-1\/2 button {
+    width: 14px !important;
+    height: 14px !important;
+  }
+
+  /* 7. FAQ Section */
+  #faq {
+    max-width: 2300px !important;
+    padding: 160px 80px !important;
+  }
+
+  #faq h2 {
+    font-size: 68px !important;
+  }
+
+  #faq button {
+    font-size: 26px !important;
+    padding: 32px 0 !important;
+  }
+
+  #faq p {
+    font-size: 19px !important;
+    max-width: 900px !important;
+  }
+
+  /* 8. Home Bottom Contact Banner */
+  #contact .relative.z-10 {
+    max-width: 2300px !important;
+    padding: 110px 80px !important;
+    gap: 40px !important;
+  }
+
+  #contact h2 {
+    font-size: 78px !important;
+    max-width: 1100px !important;
+  }
+
+  #contact p {
+    font-size: 16px !important;
+  }
+
+  #contact .flex.gap-3 a {
+    padding: 20px 40px !important;
+    font-size: 18px !important;
+  }
+}
+
+@media (min-width: 3840px) {
+  /* 1. Hero */
+  #home .relative.z-10 {
+    max-width: 3200px !important;
+    padding: 160px 120px 120px !important;
+  }
+
+  #home .max-w-2xl {
+    max-width: 1800px !important;
+  }
+
+  .hero-copy-sub {
+    font-size: 28px !important;
+    margin-bottom: 36px !important;
+  }
+
+  .hero-split-line h1 {
+    font-size: 130px !important;
+    line-height: 1.12 !important;
+  }
+
+  /* 2. Portfolio */
+  #portfolio .max-w-\[1720px\] {
+    max-width: 3200px !important;
+  }
+
+  #portfolio h2 {
+    font-size: 106px !important;
+  }
+
+  #portfolio .grid {
+    max-width: 3300px !important;
+    gap: 24px !important;
+    padding: 0 24px !important;
+  }
+
+  #portfolio .project-card h3 {
+    font-size: 36px !important;
+  }
+
+  #portfolio .project-card span.text-sm {
+    font-size: 24px !important;
+  }
+
+  #portfolio .project-card span.rounded-full {
+    font-size: 24px !important;
+    padding: 24px 48px !important;
+  }
+
+  /* 3. Mid-Page CTA Ribbon */
+  .mid-page-cta {
+    padding: 130px 180px !important;
+    gap: 110px !important;
+  }
+
+  .mid-page-cta h2 {
+    font-size: 130px !important;
+  }
+
+  .mid-page-cta > p {
+    font-size: 20px !important;
+  }
+
+  .mid-page-cta a {
+    min-width: 440px !important;
+    padding: 32px 44px !important;
+    font-size: 22px !important;
+  }
+
+  /* 4. Bloom 3D Services */
+  .bloom-services {
+    padding: 280px 0 340px !important;
+  }
+
+  .bloom-services-heading {
+    width: min(2000px, 90vw) !important;
+    margin-bottom: 220px !important;
+  }
+
+  .bloom-services-heading h2 {
+    font-size: 112px !important;
+  }
+
+  .bloom-scroll-track {
+    --item-width: 1120px !important;
+  }
+
+  .bloom-stage {
+    perspective: 9600px !important;
+  }
+
+  .bloom-card-copy {
+    inset: auto 60px 60px !important;
+  }
+
+  .bloom-card-title {
+    font-size: 58px !important;
+  }
+
+  .bloom-card-link {
+    font-size: 24px !important;
+  }
+
+  /* 5. Why Work With Us */
+  .why-section {
+    min-height: 1100px !important;
+  }
+
+  .why-content {
+    padding: 150px 130px !important;
+  }
+
+  .why-content > h2 {
+    font-size: 104px !important;
+    margin-bottom: 64px !important;
+  }
+
+  .why-number {
+    flex: 0 0 100px !important;
+    height: 112px !important;
+    font-size: 36px !important;
+  }
+
+  .why-header {
+    font-size: 48px !important;
+    gap: 48px !important;
+    padding-bottom: 38px !important;
+  }
+
+  .why-body > p {
+    font-size: 28px !important;
+    padding-left: 148px !important;
+  }
+
+  /* 6. About Stats Fullscreen Slider */
+  #about .sticky.top-0 {
+    min-height: 1080px !important;
+  }
+
+  #about .slide-inner .relative.z-10 {
+    max-width: 2200px !important;
+  }
+
+  #about p.text-xs {
+    font-size: 22px !important;
+    letter-spacing: 0.35em !important;
+  }
+
+  #about h3 {
+    font-size: 100px !important;
+  }
+
+  #about p.mt-5 {
+    font-size: 32px !important;
+    max-width: 1300px !important;
+  }
+
+  #about .grid {
+    max-width: 1600px !important;
+    gap: 64px !important;
+    margin-top: 80px !important;
+    padding-top: 64px !important;
+  }
+
+  #about .grid .tabular-nums {
+    font-size: 76px !important;
+  }
+
+  #about .grid p {
+    font-size: 22px !important;
+  }
+
+  .fixed.right-6.top-1\/2 {
+    right: 56px !important;
+    gap: 26px !important;
+  }
+
+  .fixed.right-6.top-1\/2 button {
+    width: 18px !important;
+    height: 18px !important;
+  }
+
+  /* 7. FAQ Section */
+  #faq {
+    max-width: 3200px !important;
+    padding: 220px 120px !important;
+  }
+
+  #faq h2 {
+    font-size: 92px !important;
+  }
+
+  #faq button {
+    font-size: 36px !important;
+    padding: 44px 0 !important;
+  }
+
+  #faq p {
+    font-size: 26px !important;
+    max-width: 1200px !important;
+  }
+
+  /* 8. Home Bottom Contact Banner */
+  #contact .relative.z-10 {
+    max-width: 3200px !important;
+    padding: 150px 120px !important;
+    gap: 56px !important;
+  }
+
+  #contact h2 {
+    font-size: 106px !important;
+    max-width: 1500px !important;
+  }
+
+  #contact p {
+    font-size: 22px !important;
+  }
+
+  #contact .flex.gap-3 a {
+    padding: 26px 56px !important;
+    font-size: 24px !important;
+  }
+}

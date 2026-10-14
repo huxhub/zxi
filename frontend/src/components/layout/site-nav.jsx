@@ -17,7 +17,6 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate }) {
   const dialog = useRef(null);
   const [open, setOpen] = useState(false);
   const [portfolioOpen, setPortfolioOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
 
   const projectList = projects && projects.length > 0 ? projects : DEFAULT_PROJECT_TITLES;
 
@@ -181,85 +180,13 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate }) {
               </div>
             </div>
 
-            <div>
-              <button
-                onClick={() => setServicesOpen(!servicesOpen)}
-                className="w-full flex items-center justify-between text-left text-3xl sm:text-4xl md:text-[42px] font-normal tracking-tight text-neutral-900 hover:text-neutral-500 transition-colors cursor-pointer focus:outline-none group"
-              >
-                <span className="flex items-center gap-3">
-                  Services
-                  <svg
-                    className={`w-4 h-4 md:w-5 md:h-5 text-neutral-700 transition-transform duration-300 ${
-                      servicesOpen ? 'rotate-180' : ''
-                    }`}
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    strokeWidth="1.8"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-                  </svg>
-                </span>
-              </button>
-
-              {/* Sub-services accordion dropdown */}
-              <div
-                className={`grid transition-all duration-300 ease-in-out ${
-                  servicesOpen ? 'grid-rows-[1fr] opacity-100 mt-3 pt-2' : 'grid-rows-[0fr] opacity-0'
-                }`}
-              >
-                <div className="overflow-hidden flex flex-col gap-2.5 pl-4 border-l-2 border-neutral-200 text-base sm:text-lg font-light text-neutral-600">
-                  <Link
-                    href="/services"
-                    onClick={close}
-                    className="text-left font-medium text-neutral-900 hover:text-neutral-500 transition-colors cursor-pointer focus:outline-none"
-                  >
-                    All Disciplines Page &rarr;
-                  </Link>
-                  <Link
-                    href="/services/commercial-fitouts"
-                    onClick={close}
-                    className="text-left hover:text-neutral-950 transition-colors cursor-pointer focus:outline-none"
-                  >
-                    Commercial Fitouts
-                  </Link>
-                  <Link
-                    href="/services/residential-interiors"
-                    onClick={close}
-                    className="text-left hover:text-neutral-950 transition-colors cursor-pointer focus:outline-none"
-                  >
-                    Residential Interiors
-                  </Link>
-                  <Link
-                    href="/services/turnkey-contracting"
-                    onClick={close}
-                    className="text-left hover:text-neutral-950 transition-colors cursor-pointer focus:outline-none"
-                  >
-                    Turnkey Contracting
-                  </Link>
-                  <Link
-                    href="/services/custom-furniture"
-                    onClick={close}
-                    className="text-left hover:text-neutral-950 transition-colors cursor-pointer focus:outline-none"
-                  >
-                    Custom Furniture & Joinery
-                  </Link>
-                  <Link
-                    href="/services/hospitality-wellness"
-                    onClick={close}
-                    className="text-left hover:text-neutral-950 transition-colors cursor-pointer focus:outline-none"
-                  >
-                    Hospitality & Wellness
-                  </Link>
-                  <button
-                    onClick={() => handleLinkClick('about')}
-                    className="text-left hover:text-neutral-950 transition-colors cursor-pointer focus:outline-none"
-                  >
-                    About us & Process
-                  </button>
-                </div>
-              </div>
-            </div>
+            <Link
+              href="/services"
+              onClick={close}
+              className="text-left text-3xl sm:text-4xl md:text-[42px] font-normal tracking-tight text-neutral-900 hover:text-neutral-500 transition-colors cursor-pointer focus:outline-none"
+            >
+              Services
+            </Link>
 
             <Link
               href="/blog"

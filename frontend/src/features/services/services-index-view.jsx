@@ -43,68 +43,63 @@ export function ServicesIndexView({ logo }) {
     <>
       <SiteNav logo={logo} onNavigate={handleNavigate} />
 
-      <main className="min-h-screen bg-[#fcfcfc] text-neutral-900 pt-28 sm:pt-36 md:pt-40 pb-24 md:pb-36">
-        <div className="max-w-[1600px] mx-auto px-6 sm:px-10 lg:px-16">
-          {/* Editorial Intro */}
-          <header className="max-w-3xl mb-16 md:mb-24">
-            <p className="text-xs uppercase tracking-[0.2em] text-neutral-500 font-medium mb-4">
-              Capabilities & Practice
+      <main className="min-h-screen bg-[#f6f5f1] text-neutral-900 pt-28 sm:pt-36 md:pt-40 pb-12 sm:pb-16">
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12">
+          <header className="max-w-3xl px-2 sm:px-4 mb-14 sm:mb-20">
+            <p className="text-[10px] uppercase tracking-[0.26em] text-neutral-500 mb-4">
+              ZXI interiors & contracting
             </p>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-normal tracking-tight text-neutral-900 leading-[1.1]">
-              Architectural design, craftsmanship & turnkey contracting.
+            <h1 className="text-[clamp(42px,6vw,88px)] font-normal tracking-[-0.055em] leading-[.96] text-neutral-900">
+              Spaces made to work beautifully.
             </h1>
-            <p className="text-base sm:text-lg text-neutral-500 font-light leading-relaxed mt-6">
-              From commercial headquarters in Business Bay to private villa sanctuaries in Emirates Hills, explore our dedicated disciplines across the United Arab Emirates.
+            <p className="max-w-lg mt-6 text-sm sm:text-base leading-relaxed text-neutral-500">
+              Design, fitout and craftsmanship for considered spaces across the UAE.
             </p>
           </header>
 
-          {/* Minimalist Image-Rich Services Strip */}
-          <div className="space-y-16 sm:space-y-24">
+          <section aria-label="ZXI services" className="grid grid-cols-1 md:grid-cols-2 gap-px overflow-hidden rounded-sm bg-neutral-300 border border-neutral-300">
             {SERVICES_DATA.map((service, idx) => (
               <Link
                 key={service.slug}
                 href={`/services/${service.slug}`}
-                className="group block border-t border-neutral-200 pt-10 sm:pt-14 cursor-pointer"
+                className="group relative min-h-[420px] sm:min-h-[500px] overflow-hidden bg-neutral-900"
               >
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
-                  <div className="lg:col-span-5 flex flex-col justify-between">
-                    <div>
-                      <div className="flex items-center gap-3 text-xs uppercase tracking-widest text-neutral-400 font-mono mb-4">
-                        <span>0{idx + 1}</span>
-                        <span className="w-1 h-1 rounded-full bg-neutral-300" aria-hidden="true" />
-                        <span>{service.tagline}</span>
-                      </div>
+                <Image
+                  src={service.heroImage.src}
+                  alt={service.title}
+                  fill
+                  sizes="(max-width: 767px) 100vw, 50vw"
+                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.045]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/15 to-black/5 transition-colors duration-500 group-hover:from-black/85 group-hover:via-black/25" />
 
-                      <h2 className="text-3xl sm:text-4xl font-normal tracking-tight text-neutral-900 group-hover:text-neutral-600 transition-colors leading-snug">
-                        {service.title}
-                      </h2>
+                <div className="absolute inset-x-0 top-0 flex items-center justify-between p-5 sm:p-7 text-[10px] uppercase tracking-[0.22em] text-white/75">
+                  <span>0{idx + 1}</span>
+                  <span className="h-px w-8 bg-white/50 transition-all duration-500 group-hover:w-14" />
+                </div>
 
-                      <p className="text-sm sm:text-base text-neutral-500 font-light leading-relaxed mt-4">
-                        {service.subtitle}
-                      </p>
-                    </div>
-
-                    <div className="flex items-center gap-2 mt-8 text-xs uppercase tracking-widest text-neutral-900 font-medium group-hover:translate-x-1.5 transition-transform">
-                      <span>Explore discipline</span>
-                      <span aria-hidden="true">&rarr;</span>
-                    </div>
-                  </div>
-
-                  <div className="lg:col-span-7">
-                    <div className="relative aspect-[16/10] sm:aspect-[16/9] w-full overflow-hidden rounded-2xl bg-neutral-100 shadow-sm">
-                      <Image
-                        src={service.heroImage.src}
-                        alt={service.title}
-                        fill
-                        sizes="(max-width: 1024px) 100vw, 60vw"
-                        className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.03]"
-                      />
-                    </div>
+                <div className="absolute inset-x-0 bottom-0 p-5 sm:p-7 text-white">
+                  <h2 className="max-w-md text-3xl sm:text-4xl lg:text-[42px] font-normal tracking-[-0.045em] leading-[.98]">
+                    {service.title}
+                  </h2>
+                  <div className="mt-5 flex items-center justify-between border-t border-white/30 pt-3 text-[10px] uppercase tracking-[0.2em] text-white/80">
+                    <span>Explore service</span>
+                    <span className="text-base leading-none transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">↗</span>
                   </div>
                 </div>
               </Link>
             ))}
-          </div>
+          </section>
+
+          <section className="flex flex-col gap-5 px-2 py-12 sm:flex-row sm:items-center sm:justify-between sm:px-4 sm:py-16">
+            <p className="text-sm text-neutral-500">Have a project in mind?</p>
+            <Link
+              href="/contact"
+              className="inline-flex w-fit items-center gap-8 border-b border-neutral-900 pb-2 text-xs uppercase tracking-[0.18em] text-neutral-900 transition-opacity hover:opacity-55"
+            >
+              Talk to ZXI <span aria-hidden="true">↗</span>
+            </Link>
+          </section>
         </div>
       </main>
 

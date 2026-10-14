@@ -93,7 +93,7 @@ export function BlogView({ logo }) {
               className="group block mb-20 md:mb-28 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center"
               aria-label={`Read full article: ${featuredPost.title}`}
             >
-              <div className="lg:col-span-7 relative aspect-[16/10] sm:aspect-[16/9] overflow-hidden rounded-xl bg-neutral-100">
+              <div className="lg:col-span-7 relative aspect-[16/10] sm:aspect-[16/9] overflow-hidden rounded-none bg-neutral-100">
                 <Image
                   src={featuredPost.image}
                   alt={featuredPost.title}
@@ -140,7 +140,7 @@ export function BlogView({ logo }) {
                   aria-label={`Read full article: ${post.title}`}
                 >
                   <div>
-                    <div className="relative aspect-[16/10] overflow-hidden rounded-xl bg-neutral-100 mb-6">
+                    <div className="relative aspect-[16/10] overflow-hidden rounded-none bg-neutral-100 mb-6">
                       <Image
                         src={post.image}
                         alt={post.title}

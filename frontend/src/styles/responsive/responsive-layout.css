@@ -63,14 +63,28 @@ dialog#navigation-panel {
 }
 
 /* --- Global Footer Responsiveness --- */
+footer {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  border-radius: 0 !important;
+}
+
 @media (max-width: 640px) {
   footer {
-    margin: 4px !important;
-    padding-left: 20px !important;
-    padding-right: 20px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
     padding-top: 56px !important;
     padding-bottom: 32px !important;
-    border-radius: 12px !important;
+  }
+
+  footer .footer-inner {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
   }
 
   footer h2 {
@@ -95,9 +109,18 @@ dialog#navigation-panel {
 
 @media (min-width: 641px) and (max-width: 1024px) {
   footer {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-top: 64px !important;
+  }
+
+  footer .footer-inner {
     padding-left: 36px !important;
     padding-right: 36px !important;
-    padding-top: 64px !important;
   }
 
   footer .grid {
@@ -167,11 +190,22 @@ dialog#navigation-panel {
   }
 
   footer {
-    max-width: 2460px;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-top: 100px !important;
+    padding-bottom: 48px !important;
+  }
+
+  footer .footer-inner {
+    max-width: 2460px !important;
     margin-left: auto !important;
     margin-right: auto !important;
-    padding: 100px 80px 48px !important;
-    border-radius: 20px !important;
+    padding-left: 80px !important;
+    padding-right: 80px !important;
   }
 
   footer h2 {
@@ -226,11 +260,22 @@ dialog#navigation-panel {
   }
 
   footer {
-    max-width: 3400px;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-top: 140px !important;
+    padding-bottom: 64px !important;
+  }
+
+  footer .footer-inner {
+    max-width: 3400px !important;
     margin-left: auto !important;
     margin-right: auto !important;
-    padding: 140px 120px 64px !important;
-    border-radius: 28px !important;
+    padding-left: 120px !important;
+    padding-right: 120px !important;
   }
 
   footer h2 {

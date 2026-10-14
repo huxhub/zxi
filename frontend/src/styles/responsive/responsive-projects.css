@@ -176,24 +176,40 @@
     margin: 0 auto;
   }
 
+  /* Eliminate overlap by allowing natural auto height with comfortable padding */
   .folio-intro {
-    height: 440px !important;
-    min-height: 440px !important;
-    padding-top: 180px !important;
+    height: auto !important;
+    min-height: auto !important;
+    padding-top: 140px !important;
+    padding-bottom: 28px !important;
   }
 
   .folio-heading {
-    font-size: 88px !important;
+    font-size: 84px !important;
   }
 
+  /* Add gap between hero heading and filter bar */
   .folio-filters {
-    height: 80px !important;
+    height: 72px !important;
     gap: 32px !important;
-    padding: 20px 36px !important;
+    padding: 16px 36px !important;
+    margin-top: 16px !important;
+    margin-bottom: 20px !important;
   }
 
   .folio-filters button {
     font-size: 14px !important;
+  }
+
+  /* Reduce excessive whitespace before bottom cards */
+  .folio-strip {
+    margin-top: 32px !important;
+    margin-bottom: 24px !important;
+    height: 140px !important;
+  }
+
+  .folio-grid {
+    gap: 36px 12px !important;
   }
 
   .folio-frame {
@@ -236,24 +252,41 @@
     margin: 0 auto;
   }
 
+  /* Eliminate overlap and give clean breathing room between text and filter */
   .folio-intro {
-    height: 560px !important;
-    min-height: 560px !important;
-    padding-top: 240px !important;
+    height: auto !important;
+    min-height: auto !important;
+    padding-top: 180px !important;
+    padding-bottom: 36px !important;
   }
 
   .folio-heading {
-    font-size: 124px !important;
+    font-size: 110px !important;
+    line-height: 1 !important;
   }
 
+  /* Add clean gap for filter section */
   .folio-filters {
-    height: 100px !important;
-    gap: 44px !important;
-    padding: 26px 48px !important;
+    height: 84px !important;
+    gap: 40px !important;
+    padding: 20px 48px !important;
+    margin-top: 24px !important;
+    margin-bottom: 28px !important;
   }
 
   .folio-filters button {
-    font-size: 18px !important;
+    font-size: 17px !important;
+  }
+
+  /* Eliminate giant 1500px whitespace gap before cards in 4K */
+  .folio-strip {
+    margin-top: 36px !important;
+    margin-bottom: 28px !important;
+    height: 160px !important;
+  }
+
+  .folio-grid {
+    gap: 44px 16px !important;
   }
 
   .folio-frame {

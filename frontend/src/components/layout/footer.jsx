@@ -6,8 +6,9 @@ import { Action } from '@/components/ui/action';
 
 export function Footer({ logo, onNavigate }) {
   return (
-    <footer className="m-1 sm:m-2 rounded-lg px-6 sm:px-12 md:px-16 pt-20 pb-8 bg-neutral-900 text-neutral-300">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 md:gap-12 pb-16">
+    <footer className="w-full m-0 rounded-none bg-neutral-900 text-neutral-300 pt-16 sm:pt-20 pb-8">
+      <div className="footer-inner w-full max-w-[1720px] mx-auto px-5 sm:px-10 lg:px-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 md:gap-12 pb-16">
         <div className="sm:col-span-2 lg:col-span-2">
           <h2 className="text-3xl md:text-4xl font-normal tracking-tight text-white max-w-sm mb-8 leading-snug">
             Let’s talk about your next project
@@ -162,8 +163,9 @@ export function Footer({ logo, onNavigate }) {
           Back to top ↑
         </a>
       </div>
-    </footer>
-  );
+    </div>
+  </footer>
+);
 }
 
 export default Footer;

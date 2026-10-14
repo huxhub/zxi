@@ -86,7 +86,7 @@ export function BlogDetailView({ post, nextPosts = [], logo }) {
 
           {/* Full Cinematic Hero Visual */}
           <div className="mb-16 sm:mb-20">
-            <div className="relative aspect-[16/9] md:aspect-[21/9] w-full overflow-hidden rounded-2xl bg-neutral-100 shadow-sm">
+            <div className="relative aspect-[16/9] md:aspect-[21/9] w-full overflow-hidden rounded-none bg-neutral-100 shadow-sm">
               <Image
                 src={post.image}
                 alt={post.title}
@@ -249,7 +249,7 @@ export function BlogDetailView({ post, nextPosts = [], logo }) {
                   aria-label={`Read ${relatedPost.title}`}
                 >
                   <div>
-                    <div className="relative aspect-[16/10] overflow-hidden rounded-xl bg-neutral-100 mb-6">
+                    <div className="relative aspect-[16/10] overflow-hidden rounded-none bg-neutral-100 mb-6">
                       <Image
                         src={relatedPost.image}
                         alt={relatedPost.title}

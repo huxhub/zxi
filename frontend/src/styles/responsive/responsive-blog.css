@@ -47,7 +47,7 @@
 
   .group.block.mb-20 .relative.aspect-\[16\/10\] {
     aspect-ratio: 16 / 10 !important;
-    border-radius: 10px !important;
+    border-radius: 0 !important;
   }
 
   .group.block.mb-20 h2 {
@@ -110,7 +110,7 @@
   /* Hero image */
   .relative.aspect-\[16\/9\].md\:aspect-\[21\/9\] {
     aspect-ratio: 16 / 10 !important;
-    border-radius: 12px !important;
+    border-radius: 0 !important;
     margin-bottom: 32px !important;
   }
 

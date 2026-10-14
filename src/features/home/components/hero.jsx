@@ -1,0 +1,61 @@
+'use client';
+
+
+export function Hero({ hero, heroRef, heroPicRef, heroCopyRef }) {
+  return (
+    <section
+      id="home"
+      className="relative h-[100svh] min-h-[660px] overflow-hidden text-white bg-neutral-950"
+      ref={heroRef}
+    >
+      <div
+        className="absolute -inset-y-[5%] inset-x-0 h-[110%] w-full will-change-transform"
+        ref={heroPicRef}
+      >
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+          poster={hero?.src}
+          className="w-full h-full object-cover"
+        >
+          <source src="/zxi-hero-video.webm" type="video/webm" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/10 to-black/80 pointer-events-none" />
+
+      <div
+        className="relative z-10 h-full max-w-[1720px] mx-auto px-5 sm:px-10 lg:px-16 pt-24 pb-16 flex flex-col md:flex-row md:items-end justify-end md:justify-between gap-8 md:gap-10 will-change-transform"
+        ref={heroCopyRef}
+      >
+        <div className="max-w-2xl">
+          <p className="hero-copy-sub text-base sm:text-lg font-medium text-white/90 mb-6 tracking-tight">
+            Dubai’s leading interior fitout company
+          </p>
+          <div className="hero-split-line overflow-hidden py-0.5">
+            <h1 className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-normal leading-[1.23] tracking-tight">
+              Re-imagine your
+            </h1>
+          </div>
+          <div className="hero-split-line overflow-hidden py-0.5">
+            <h1 className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-normal leading-[1.23] tracking-tight">
+              space with
+            </h1>
+          </div>
+          <div className="hero-split-line overflow-hidden py-0.5">
+            <h1 className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-normal leading-[1.23] tracking-tight">
+              ZXI Interiors.
+            </h1>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  );
+}
+
+export default Hero;

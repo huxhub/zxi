@@ -39,3 +39,29 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# editor and operating-system files
+.idea/
+.vscode/
+Thumbs.db
+Desktop.ini
+*.swp
+*.swo
+
+# local test and audit output
+/playwright-report/
+/test-results/
+/.lighthouseci/
+*.log
+
+# raw website export and scraping tools
+/export-zxi-source.ps1
+/zxi-source/*
+!/zxi-source/images.json
+
+# original 63 MB source video; the optimized production video is committed
+/public/zxi hero video.webm
+
+# obsolete and unused local source files
+/src/app/homepage.js
+/src/styles/**

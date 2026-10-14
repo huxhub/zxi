@@ -84,16 +84,16 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate }) {
       <dialog
         id="navigation-panel"
         ref={dialog}
-        className="fixed inset-y-0 right-0 left-auto ml-auto mr-0 m-0 w-full max-w-[460px] md:max-w-[500px] h-dvh bg-white text-neutral-900 border-0 z-50 p-0 shadow-2xl backdrop:bg-black/65 backdrop:backdrop-blur-sm"
+        className="fixed inset-y-0 right-0 left-auto ml-auto mr-0 m-0 w-full max-w-[430px] md:max-w-[470px] h-dvh bg-white text-neutral-900 border-0 z-50 p-0 shadow-2xl backdrop:bg-black/65 backdrop:backdrop-blur-sm"
         onClose={() => setOpen(false)}
         onClick={(e) => {
           if (e.target === e.currentTarget) close();
         }}
       >
-        <div className="h-full flex flex-col justify-between p-8 sm:p-12 md:p-14 relative bg-white overflow-y-auto">
+        <div className="h-full flex flex-col justify-between p-7 sm:p-9 md:p-11 relative bg-white overflow-y-auto">
           {/* Top-Right Close Button */}
           <button
-            className="absolute right-6 top-6 md:right-8 md:top-8 w-10 h-10 flex items-center justify-center text-neutral-900 hover:text-neutral-500 cursor-pointer transition-transform duration-200 hover:rotate-90 focus:outline-none"
+            className="absolute right-5 top-5 md:right-7 md:top-7 w-9 h-9 flex items-center justify-center text-neutral-900 hover:text-neutral-500 cursor-pointer transition-transform duration-200 hover:rotate-90 focus:outline-none"
             aria-label="Close navigation"
             onClick={close}
           >
@@ -113,10 +113,10 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate }) {
           </button>
 
           {/* Nav Menu Links */}
-          <nav className="flex flex-col gap-4 sm:gap-5 mt-8 md:mt-10" aria-label="Main navigation">
+          <nav className="flex flex-col gap-3 sm:gap-4 mt-7 md:mt-8" aria-label="Main navigation">
             <button
               onClick={() => handleLinkClick('home')}
-              className="text-left text-3xl sm:text-4xl md:text-[42px] font-normal tracking-tight text-neutral-900 hover:text-neutral-500 transition-colors cursor-pointer focus:outline-none"
+              className="text-left text-2xl sm:text-3xl md:text-[36px] font-normal tracking-tight text-neutral-900 hover:text-neutral-500 transition-colors cursor-pointer focus:outline-none"
             >
               Home
             </button>
@@ -127,7 +127,7 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate }) {
                 <Link
                   href="/projects"
                   onClick={close}
-                  className="text-left text-3xl sm:text-4xl md:text-[42px] font-normal tracking-tight text-neutral-900 hover:text-neutral-500 transition-colors cursor-pointer focus:outline-none"
+                  className="text-left text-2xl sm:text-3xl md:text-[36px] font-normal tracking-tight text-neutral-900 hover:text-neutral-500 transition-colors cursor-pointer focus:outline-none"
                 >
                   Portfolio
                 </Link>
@@ -183,7 +183,7 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate }) {
             <Link
               href="/services"
               onClick={close}
-              className="text-left text-3xl sm:text-4xl md:text-[42px] font-normal tracking-tight text-neutral-900 hover:text-neutral-500 transition-colors cursor-pointer focus:outline-none"
+              className="text-left text-2xl sm:text-3xl md:text-[36px] font-normal tracking-tight text-neutral-900 hover:text-neutral-500 transition-colors cursor-pointer focus:outline-none"
             >
               Services
             </Link>
@@ -191,14 +191,14 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate }) {
             <Link
               href="/blog"
               onClick={close}
-              className="text-left text-3xl sm:text-4xl md:text-[42px] font-normal tracking-tight text-neutral-900 hover:text-neutral-500 transition-colors cursor-pointer focus:outline-none"
+              className="text-left text-2xl sm:text-3xl md:text-[36px] font-normal tracking-tight text-neutral-900 hover:text-neutral-500 transition-colors cursor-pointer focus:outline-none"
             >
               Blog
             </Link>
 
             <button
               onClick={() => handleLinkClick('contact')}
-              className="text-left text-3xl sm:text-4xl md:text-[42px] font-normal tracking-tight text-neutral-900 hover:text-neutral-500 transition-colors cursor-pointer focus:outline-none"
+              className="text-left text-2xl sm:text-3xl md:text-[36px] font-normal tracking-tight text-neutral-900 hover:text-neutral-500 transition-colors cursor-pointer focus:outline-none"
             >
               Contacts
             </button>

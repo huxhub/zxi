@@ -208,31 +208,49 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate }) {
                   servicesOpen ? 'grid-rows-[1fr] opacity-100 mt-3 pt-2' : 'grid-rows-[0fr] opacity-0'
                 }`}
               >
-                <div className="overflow-hidden flex flex-col gap-2.5 pl-4 border-l-2 border-neutral-200 text-lg sm:text-xl font-light text-neutral-600">
-                  <button
-                    onClick={() => handleLinkClick('services')}
-                    className="text-left hover:text-neutral-950 transition-colors cursor-pointer focus:outline-none"
+                <div className="overflow-hidden flex flex-col gap-2.5 pl-4 border-l-2 border-neutral-200 text-base sm:text-lg font-light text-neutral-600">
+                  <Link
+                    href="/services"
+                    onClick={close}
+                    className="text-left font-medium text-neutral-900 hover:text-neutral-500 transition-colors cursor-pointer focus:outline-none"
                   >
-                    Interior Design
-                  </button>
-                  <button
-                    onClick={() => handleLinkClick('services')}
+                    All Disciplines Page &rarr;
+                  </Link>
+                  <Link
+                    href="/services/commercial-fitouts"
+                    onClick={close}
                     className="text-left hover:text-neutral-950 transition-colors cursor-pointer focus:outline-none"
                   >
                     Commercial Fitouts
-                  </button>
-                  <button
-                    onClick={() => handleLinkClick('services')}
+                  </Link>
+                  <Link
+                    href="/services/residential-interiors"
+                    onClick={close}
                     className="text-left hover:text-neutral-950 transition-colors cursor-pointer focus:outline-none"
                   >
-                    Residential Fitouts
-                  </button>
-                  <button
-                    onClick={() => handleLinkClick('services')}
+                    Residential Interiors
+                  </Link>
+                  <Link
+                    href="/services/turnkey-contracting"
+                    onClick={close}
                     className="text-left hover:text-neutral-950 transition-colors cursor-pointer focus:outline-none"
                   >
-                    Custom Furniture
-                  </button>
+                    Turnkey Contracting
+                  </Link>
+                  <Link
+                    href="/services/custom-furniture"
+                    onClick={close}
+                    className="text-left hover:text-neutral-950 transition-colors cursor-pointer focus:outline-none"
+                  >
+                    Custom Furniture & Joinery
+                  </Link>
+                  <Link
+                    href="/services/hospitality-wellness"
+                    onClick={close}
+                    className="text-left hover:text-neutral-950 transition-colors cursor-pointer focus:outline-none"
+                  >
+                    Hospitality & Wellness
+                  </Link>
                   <button
                     onClick={() => handleLinkClick('about')}
                     className="text-left hover:text-neutral-950 transition-colors cursor-pointer focus:outline-none"

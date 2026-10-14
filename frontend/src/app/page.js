@@ -10,11 +10,11 @@ export default function Page() {
   };
   const projects = portfolioProjects;
   const services = [
-    ['Interior design', 'Thoughtful spaces shaped around how you live and work.', 1389],
-    ['Commercial fitouts', 'Efficient workplaces delivered from plan to handover.', 1348],
-    ['Residential fitouts', 'Refined homes built with comfort and precision.', 246],
-    ['Custom furniture', 'Bespoke pieces made for your space.', 1618],
-  ].map(([title, description, id]) => ({ title, description, image: image(id) }));
+    ['Commercial Fitouts', 'Efficient workplaces delivered from plan to handover.', 1348, 'commercial-fitouts'],
+    ['Residential Interiors', 'Refined homes built with comfort and precision.', 246, 'residential-interiors'],
+    ['Turnkey Contracting', 'Engineering precision, authority approvals, and delivery.', 1389, 'turnkey-contracting'],
+    ['Custom Furniture', 'Bespoke pieces made for your space.', 1618, 'custom-furniture'],
+  ].map(([title, description, id, slug]) => ({ title, description, image: image(id), slug }));
   const advantages = [
     {
       title: 'Bold ideas, made real',

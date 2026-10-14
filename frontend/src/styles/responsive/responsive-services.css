@@ -1,0 +1,137 @@
+/* ==========================================================================
+   Responsive Services System
+   Isolated responsiveness for /services overview and /services/[slug] detail
+   ========================================================================== */
+
+/* --- Mobile Breakpoints (< 640px) --- */
+@media (max-width: 640px) {
+  /* Service detail header */
+  article header h1 {
+    font-size: clamp(32px, 8.5vw, 44px) !important;
+    line-height: 1.12 !important;
+  }
+
+  article header p.text-lg {
+    font-size: 16px !important;
+    line-height: 1.55 !important;
+    margin-top: 16px !important;
+  }
+
+  /* Metrics counter strip */
+  article header .grid.grid-cols-2 {
+    gap: 20px 16px !important;
+    margin-top: 28px !important;
+    padding-top: 24px !important;
+  }
+
+  article header .grid.grid-cols-2 .text-2xl {
+    font-size: 26px !important;
+  }
+
+  /* Hero image */
+  article .relative.aspect-\[16\/9\] {
+    aspect-ratio: 16 / 10 !important;
+    border-radius: 12px !important;
+    margin-bottom: 24px !important;
+  }
+
+  /* Capabilities grid: 1-col on phone */
+  section:has(> .grid.grid-cols-1.md\:grid-cols-2) .grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  /* Gallery: 1-col on phone */
+  figure .relative.aspect-\[16\/11\] {
+    aspect-ratio: 16 / 10 !important;
+    border-radius: 12px !important;
+  }
+
+  /* Specifications dl table */
+  dl .grid {
+    padding: 20px 16px !important;
+    gap: 6px !important;
+  }
+
+  /* Next service teaser block */
+  section:has(> a.group.block) a {
+    padding: 24px 20px !important;
+    border-radius: 14px !important;
+  }
+
+  section:has(> a.group.block) h3 {
+    font-size: 22px !important;
+  }
+}
+
+/* --- Tablet Breakpoints (641px - 1024px) --- */
+@media (min-width: 641px) and (max-width: 1024px) {
+  article header h1 {
+    font-size: clamp(42px, 5.5vw, 56px) !important;
+  }
+
+  article .relative.aspect-\[16\/9\] {
+    aspect-ratio: 16 / 9 !important;
+  }
+
+  /* 4-step workflow: 2-col on tablet */
+  .grid.grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-4 {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 24px !important;
+  }
+}
+
+/* --- 4K & Ultra-Wide Displays (2560px - 3840px+) --- */
+@media (min-width: 2560px) {
+  article header h1 {
+    font-size: 88px !important;
+  }
+
+  article header p.text-lg {
+    font-size: 26px !important;
+  }
+
+  article header .grid .text-2xl {
+    font-size: 52px !important;
+  }
+
+  article header .grid p {
+    font-size: 16px !important;
+  }
+
+  article .space-y-6 p {
+    font-size: 22px !important;
+    line-height: 1.75 !important;
+  }
+
+  article .rounded-2xl.border dl dt {
+    font-size: 16px !important;
+  }
+
+  article .rounded-2xl.border dl dd {
+    font-size: 20px !important;
+  }
+}
+
+@media (min-width: 3840px) {
+  article header h1 {
+    font-size: 118px !important;
+  }
+
+  article header p.text-lg {
+    font-size: 34px !important;
+  }
+
+  article header .grid .text-2xl {
+    font-size: 72px !important;
+  }
+
+  article header .grid p {
+    font-size: 22px !important;
+  }
+
+  article .space-y-6 p {
+    font-size: 28px !important;
+    line-height: 1.8 !important;
+  }
+}

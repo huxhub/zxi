@@ -109,42 +109,36 @@ export function Footer({ logo, onNavigate }) {
           <h3 className="text-xs uppercase tracking-widest text-neutral-500 font-semibold mb-2">
             Our expertise
           </h3>
-          <a
-            href="#services"
+          <Link
+            href="/services/commercial-fitouts"
             className="hover:text-white transition-colors"
-            onClick={(e) => {
-              e.preventDefault();
-              onNavigate('services');
-            }}
           >
             Commercial fitouts
-          </a>
-          <a
-            href="#services"
+          </Link>
+          <Link
+            href="/services/residential-interiors"
             className="hover:text-white transition-colors"
-            onClick={(e) => {
-              e.preventDefault();
-              onNavigate('services');
-            }}
           >
             Residential interiors
-          </a>
-          <a
-            href="#services"
+          </Link>
+          <Link
+            href="/services/custom-furniture"
             className="hover:text-white transition-colors"
-            onClick={(e) => {
-              e.preventDefault();
-              onNavigate('services');
-            }}
           >
-            Custom furniture
-          </a>
-          <a
-            href="mailto:info@zxi.ae?subject=Construction%20enquiry"
+            Custom furniture & joinery
+          </Link>
+          <Link
+            href="/services/turnkey-contracting"
             className="hover:text-white transition-colors"
           >
             Turnkey Contracting
-          </a>
+          </Link>
+          <Link
+            href="/services/hospitality-wellness"
+            className="hover:text-white transition-colors"
+          >
+            Hospitality & wellness
+          </Link>
         </div>
       </div>
 

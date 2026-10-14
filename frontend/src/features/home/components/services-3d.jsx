@@ -1,10 +1,11 @@
-﻿'use client';
+'use client';
 import './home-sections.css';
 import { useLayoutEffect, useRef } from 'react';
+import Link from 'next/link';
 import { Photo } from '@/components/ui/photo';
 import { gsap } from '@/lib/gsap';
 
-export function Services3D({ services, onSelect }) {
+export function Services3D({ services }) {
   const root = useRef(null);
   useLayoutEffect(() => {
     const mm = gsap.matchMedia();
@@ -22,9 +23,9 @@ export function Services3D({ services, onSelect }) {
   return <section id="services" className="bloom-services" ref={root} aria-label="Interior services">
     <div className="bloom-services-heading"><p>Our capabilities</p><h2>Design, craftsmanship, and delivery—under one roof.</h2></div>
     <div className="bloom-scroll-track"><div className="bloom-stage"><div className="bloom-carousel">
-      {services.map((service, index) => <button type="button" className="bloom-card" style={{ '--card-index': index + 1 }} key={service.title} onClick={() => onSelect(service)} aria-label={`View ${service.title}`}>
-        <span className="bloom-card-surface"><span className="carousel_card_img"><Photo image={service.image} alt={service.title} sizes="(max-width: 767px) 100vw, 40vw" /></span><span className="bloom-card-shade" /><span className="bloom-card-copy"><span className="bloom-card-title">{service.title}</span><span className="bloom-card-link">View service <span aria-hidden="true">&#8599;</span></span></span></span>
-      </button>)}
+      {services.map((service, index) => <Link href={service.slug ? `/services/${service.slug}` : '/services'} className="bloom-card" style={{ '--card-index': index + 1 }} key={service.title} aria-label={`View ${service.title}`}>
+        <span className="bloom-card-surface"><span className="carousel_card_img"><Photo image={service.image} alt={service.title} sizes="(max-width: 767px) 100vw, 40vw" /></span><span className="bloom-card-shade" /><span className="bloom-card-copy"><span className="bloom-card-title">{service.title}</span><span className="bloom-card-link">Explore service <span aria-hidden="true">&#8599;</span></span></span></span>
+      </Link>)}
     </div></div></div>
   </section>;
 }

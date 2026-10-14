@@ -73,7 +73,8 @@
     font-size: 16px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    overflow-x: hidden;
+    /* `hidden` creates a scrolling ancestor and breaks the sticky overlap panels. */
+    overflow-x: clip;
   }
   body:has(dialog[open]) {
     overflow: hidden;

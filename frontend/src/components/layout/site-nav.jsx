@@ -18,6 +18,32 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate }) {
   const [open, setOpen] = useState(false);
   const [portfolioOpen, setPortfolioOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [isPastHero, setIsPastHero] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const hero =
+        document.getElementById('home') ||
+        document.querySelector('.contact-hero') ||
+        document.querySelector('main > header.relative') ||
+        document.querySelector('[data-hero]');
+
+      if (hero) {
+        const heroBottom = hero.getBoundingClientRect().bottom;
+        setIsPastHero(heroBottom <= 70);
+      } else {
+        setIsPastHero(window.scrollY > 40);
+      }
+    };
+
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener('resize', handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleScroll);
+    };
+  }, []);
 
   const projectList = projects && projects.length > 0 ? projects : DEFAULT_PROJECT_TITLES;
 
@@ -42,9 +68,13 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate }) {
 
   return (
     <>
-      {/* Top Minimalist Header (Full-Time Transparent) */}
+      {/* Top Header: Transparent in hero section, compact white background after */}
       <header
-        className="fixed top-0 inset-x-0 z-40 w-full flex items-center justify-between px-6 sm:px-10 md:px-14 py-3 md:py-4 bg-transparent pointer-events-auto mix-blend-difference"
+        className={`fixed top-0 inset-x-0 z-40 w-full flex items-center justify-between px-6 sm:px-10 md:px-14 transition-all duration-300 pointer-events-auto ${
+          isPastHero
+            ? 'py-2 md:py-2.5 bg-white border-b border-neutral-100 shadow-xs'
+            : 'py-3 md:py-4 bg-transparent'
+        }`}
       >
         <a
           href="#home"
@@ -61,13 +91,17 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate }) {
             width={84}
             height={36}
             priority
-            className="block w-[72px] md:w-[82px] h-auto object-contain brightness-0 invert transition-opacity duration-200 group-hover:opacity-80"
+            className={`block w-[72px] md:w-[82px] h-auto object-contain transition-all duration-300 group-hover:opacity-80 ${
+              isPastHero ? '' : 'brightness-0 invert'
+            }`}
           />
         </a>
 
         {/* Minimal Two-Line Hamburger Button (=) */}
         <button
-          className="group flex flex-col items-end justify-center gap-[5px] w-9 h-9 p-1 cursor-pointer text-white focus:outline-none hover:opacity-80 transition-opacity"
+          className={`group flex flex-col items-end justify-center gap-[5px] w-9 h-9 p-1 cursor-pointer focus:outline-none transition-colors ${
+            isPastHero ? 'text-neutral-900 hover:opacity-70' : 'text-white hover:opacity-80'
+          }`}
           aria-label="Open navigation menu"
           aria-expanded={open}
           aria-controls="navigation-panel"
@@ -76,8 +110,16 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate }) {
             setOpen(true);
           }}
         >
-          <span className="block h-[1.5px] w-5 bg-white transition-all duration-300 group-hover:w-6" />
-          <span className="block h-[1.5px] w-5 bg-white transition-all duration-300 group-hover:w-4" />
+          <span
+            className={`block h-[1.5px] w-5 transition-all duration-300 group-hover:w-6 ${
+              isPastHero ? 'bg-neutral-900' : 'bg-white'
+            }`}
+          />
+          <span
+            className={`block h-[1.5px] w-5 transition-all duration-300 group-hover:w-4 ${
+              isPastHero ? 'bg-neutral-900' : 'bg-white'
+            }`}
+          />
         </button>
       </header>
 

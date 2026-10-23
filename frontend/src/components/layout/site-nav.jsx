@@ -241,7 +241,7 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate }) {
             </div>
 
             <div>
-              <div className="flex items-center justify-between gap-4">
+              <div className="flex items-stretch justify-between">
                 <Link
                   href="/services"
                   onClick={close}
@@ -250,10 +250,11 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate }) {
                   Services
                 </Link>
                 <button
-                  onClick={() => setServicesOpen(!servicesOpen)}
+                  onClick={() => setServicesOpen((expanded) => !expanded)}
                   aria-label="Toggle services list"
                   aria-expanded={servicesOpen}
-                  className="flex h-8 w-8 shrink-0 items-center justify-center text-neutral-700 transition-colors hover:text-neutral-400 focus:outline-none"
+                  aria-controls="navigation-services"
+                  className="flex min-h-11 min-w-11 flex-1 cursor-pointer items-center justify-end pl-4 pr-2 text-neutral-700 transition-colors hover:text-neutral-400 focus-visible:outline-2 focus-visible:outline-offset-2"
                 >
                   <svg
                     className={`h-4 w-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`}
@@ -266,7 +267,7 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate }) {
                   </svg>
                 </button>
               </div>
-              <div className={`grid transition-all duration-300 ease-out ${servicesOpen ? 'grid-rows-[1fr] opacity-100 mt-3' : 'grid-rows-[0fr] opacity-0'}`}>
+              <div id="navigation-services" inert={!servicesOpen} className={`grid transition-all duration-300 ease-out ${servicesOpen ? 'grid-rows-[1fr] opacity-100 mt-3' : 'grid-rows-[0fr] opacity-0'}`}>
                 <div className="overflow-hidden border-l border-neutral-300 pl-4">
                   <div className="flex flex-col gap-2 pb-1 text-sm text-neutral-500 sm:text-base">
                     {[

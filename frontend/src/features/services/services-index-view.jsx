@@ -62,13 +62,13 @@ export function ServicesIndexView({ logo }) {
               <Link
                 key={service.slug}
                 href={`/services/${service.slug}`}
-                className="group relative min-h-[420px] sm:min-h-[500px] overflow-hidden bg-neutral-900"
+                className={`group relative min-h-[420px] sm:min-h-[500px] overflow-hidden bg-neutral-900 ${idx === SERVICES_DATA.length - 1 && SERVICES_DATA.length % 2 === 1 ? 'md:col-span-2' : ''}`}
               >
                 <Image
                   src={service.heroImage.src}
                   alt={service.title}
                   fill
-                  sizes="(max-width: 767px) 100vw, 50vw"
+                  sizes={idx === SERVICES_DATA.length - 1 && SERVICES_DATA.length % 2 === 1 ? '100vw' : '(max-width: 767px) 100vw, 50vw'}
                   className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.045]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/15 to-black/5 transition-colors duration-500 group-hover:from-black/85 group-hover:via-black/25" />

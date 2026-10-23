@@ -17,7 +17,6 @@ export const metadata = {
   },
   twitter: { card: 'summary_large_image', title: 'Interior Design & Fitout Company in Dubai | ZXI', description: 'Design, fitout, and turnkey contracting across Dubai and the UAE.', images: ['/why-work-with-us.png'] },
   robots: { index: true, follow: true },
-  icons: { icon: '/zxi-ae-logo.png' },
 };
 
 export default function RootLayout({ children }) {

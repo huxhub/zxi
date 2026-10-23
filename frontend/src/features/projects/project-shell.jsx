@@ -17,5 +17,5 @@ export function ProjectShell({ logo, children }) {
     return () => { gsap.ticker.remove(tick); lenis.destroy(); };
   }, []);
   const navigate = (id) => router.push(id === 'portfolio' ? '/projects' : id === 'home' ? '/' : id === 'contact' ? '/contact' : `/#${id}`);
-  return <><SiteNav logo={logo} onNavigate={navigate} /><main id="main">{children}</main><Footer logo={logo} onNavigate={navigate} /></>;
+  return <><SiteNav logo={logo} onNavigate={navigate} /><main id="main" className="project-main">{children}</main><Footer logo={logo} onNavigate={navigate} /></>;
 }

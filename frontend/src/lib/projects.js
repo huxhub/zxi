@@ -1,4 +1,5 @@
-﻿import media from '../../zxi-source/images.json';
+import projectGalleries from './project-galleries.json';
+import media from '../../zxi-source/images.json';
 export function projectImage(id) {
   const item = media.find((image) => image.id === id);
   if (!item) throw new Error(`Missing project image ${id}`);
@@ -15,12 +16,29 @@ const entries = [
   ['bread-basket', 'Bread Basket', 'Jumeirah, Dubai', 'Hospitality', 'Café interiors', 1850, '#b28d70'],
   ['mr-jafar', 'Mr. Jafar', 'Dubai', 'Residential', 'Villa interiors', 1593, '#a2a793'],
 ];
-export const projects = entries.map(([slug, title, location, category, scope, id, color]) => {
+const legacyProjects = entries.map(([slug, title, location, category, scope, id, color]) => {
   const cover = media.find((item) => item.id === id);
   const parent = cover.source_page.split('/').slice(0, -2).join('/') + '/';
   const related = parent === 'https://zxi.ae/' ? [] : media.filter((item) => item.source_page?.startsWith(parent) && item.width >= 500 && item.height >= 400 && item.id !== id);
   const gallery = [projectImage(id), ...related.slice(0, 8).map((item) => projectImage(item.id))];
   return { slug, title, location, category, scope, color, image: projectImage(id), gallery };
 });
-export const portfolioProjects = [...projects.slice(0, 8), { ...projects[1], image: projectImage(2648) }, { ...projects[0], image: projectImage(2663) }, projects[8], { ...projects[4], image: projectImage(2625) }];
+// Encode each segment so spaces, punctuation, and emoji in supplied filenames are safe URLs.
+function suppliedProject(slug, details, existing) {
+  const { folder, files, ...metadata } = details;
+  const gallery = files.map((file) => ({
+    src: `/projects/${encodeURIComponent(folder)}/${encodeURIComponent(file)}`,
+  }));
+  return { ...existing, ...metadata, slug, color: existing?.color || '#b9b4a2', image: gallery[0], gallery };
+}
 
+export const projects = [
+  ...legacyProjects.map((project) => projectGalleries[project.slug]
+    ? suppliedProject(project.slug, projectGalleries[project.slug], project)
+    : project),
+  ...Object.entries(projectGalleries)
+    .filter(([slug]) => !legacyProjects.some((project) => project.slug === slug))
+    .map(([slug, details]) => suppliedProject(slug, details)),
+];
+
+export const portfolioProjects = projects;

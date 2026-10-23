@@ -15,6 +15,7 @@ const DEFAULT_PROJECT_TITLES = [
 
 export function SiteNav({ logo, projects = [], onSelectProject, onNavigate }) {
   const dialog = useRef(null);
+  const header = useRef(null);
   const [open, setOpen] = useState(false);
   const [portfolioOpen, setPortfolioOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
@@ -45,6 +46,21 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate }) {
     };
   }, []);
 
+  // Keep sticky controls below the actual header at every responsive size.
+  useEffect(() => {
+    const updateHeight = () => {
+      if (!header.current) return;
+      document.documentElement.style.setProperty('--site-header-height', `${Math.ceil(header.current.getBoundingClientRect().height)}px`);
+    };
+    updateHeight();
+    const observer = new ResizeObserver(updateHeight);
+    observer.observe(header.current);
+    return () => {
+      observer.disconnect();
+      document.documentElement.style.removeProperty('--site-header-height');
+    };
+  }, []);
+
   const projectList = projects && projects.length > 0 ? projects : DEFAULT_PROJECT_TITLES;
 
   const close = () => {
@@ -70,6 +86,7 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate }) {
     <>
       {/* Top Header: Transparent in hero section, compact white background after */}
       <header
+        ref={header}
         className={`fixed top-0 inset-x-0 z-40 w-full flex items-center justify-between px-6 sm:px-10 md:px-14 transition-all duration-300 pointer-events-auto ${
           isPastHero
             ? 'py-2 md:py-2.5 bg-white border-b border-neutral-100 shadow-xs'

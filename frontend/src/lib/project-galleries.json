@@ -1,0 +1,330 @@
+{
+  "plug-media": {
+    "title": "Plug Media",
+    "location": "Al Quoz, Dubai",
+    "category": "Commercial",
+    "scope": "Office interiors",
+    "area": "3,200 sq. ft",
+    "timeline": null,
+    "folder": "plug-media",
+    "files": [
+      "01.jpg",
+      "02.jpg",
+      "03.jpg",
+      "04.jpg",
+      "05.jpg",
+      "06.jpg",
+      "07.jpg",
+      "08.jpg",
+      "09.jpg",
+      "10.jpg",
+      "11.jpg",
+      "12.jpg"
+    ]
+  },
+  "mbr-kitchen": {
+    "title": "MBR Kitchen",
+    "location": "MBR City, Dubai",
+    "category": "Residential",
+    "scope": "Kitchen interiors",
+    "area": "2,583 sq. ft",
+    "timeline": "40 working days",
+    "folder": "mbr-kitchen",
+    "files": [
+      "01.jpg",
+      "02.jpg",
+      "03.jpg",
+      "04.jpg",
+      "05.jpg",
+      "06.jpg",
+      "07.jpg",
+      "08.jpg",
+      "09.jpg",
+      "10.jpg"
+    ]
+  },
+  "gemma": {
+    "title": "Gemma",
+    "location": "Dubai Design District",
+    "category": "Retail",
+    "scope": "Jewellery boutique",
+    "area": "900 sq. ft",
+    "timeline": "60 working days",
+    "folder": "gemma",
+    "files": [
+      "01.jpg",
+      "02.jpg",
+      "03.jpg",
+      "04.jpg",
+      "05.jpg",
+      "06.jpg",
+      "07.jpg",
+      "08.jpg",
+      "09.jpg",
+      "10.jpg",
+      "11.jpg",
+      "12.jpg"
+    ]
+  },
+  "nora": {
+    "title": "Nora",
+    "location": "Dubai Design District",
+    "category": "Retail",
+    "scope": "Fashion boutique",
+    "area": "1,100 sq. ft",
+    "timeline": "60 working days",
+    "folder": "nora",
+    "files": [
+      "01.jpg",
+      "02.jpg",
+      "03.jpg",
+      "04.jpg",
+      "05.jpg",
+      "06.jpg",
+      "07.jpg",
+      "08.jpg",
+      "09.jpg",
+      "10.jpg"
+    ]
+  },
+  "samsara-tribe-yoga": {
+    "title": "Samsara Tribe Yoga",
+    "location": "Dubai Marina",
+    "category": "Hospitality",
+    "scope": "Yoga studio",
+    "area": "3,500 sq. ft",
+    "timeline": "90 working days",
+    "folder": "samsara-tribe-yoga",
+    "files": [
+      "01.jpg",
+      "02.jpg",
+      "03.jpg",
+      "04.jpg",
+      "05.jpg",
+      "06.jpg",
+      "07.jpg",
+      "08.jpg",
+      "09.jpg",
+      "10.jpg",
+      "11.jpg",
+      "12.jpg"
+    ]
+  },
+  "binoy-mercy": {
+    "title": "Dr. Binoy Thomas & Dr. Mercy",
+    "location": "Marina One, Kochi",
+    "category": "Residential",
+    "scope": "Apartment interiors",
+    "area": "2,600 sq. ft",
+    "timeline": null,
+    "folder": "binoy-mercy",
+    "files": [
+      "01.jpg",
+      "02.jpg",
+      "03.jpg",
+      "04.jpg",
+      "05.jpg",
+      "06.jpg",
+      "07.jpg",
+      "08.jpg",
+      "09.jpg",
+      "10.jpg"
+    ]
+  },
+  "bread-basket": {
+    "title": "Bread Basket",
+    "location": "Al Wasl Road, Jumeirah, Dubai",
+    "category": "Hospitality",
+    "scope": "Café interiors",
+    "area": "3,500 sq. ft",
+    "timeline": "80 working days",
+    "folder": "bread-basket",
+    "files": [
+      "01.jpg",
+      "02.png",
+      "03.png",
+      "04.png",
+      "05.png",
+      "06.jpg",
+      "07.png",
+      "08.jpg",
+      "09.png",
+      "10.jpg",
+      "11.jpg",
+      "12.jpg"
+    ]
+  },
+  "mr-jafar": {
+    "title": "Mr. Jafar",
+    "location": "Al Tawar, East Dubai",
+    "category": "Residential",
+    "scope": "Villa interiors",
+    "area": null,
+    "timeline": "90 working days",
+    "folder": "mr-jafar",
+    "files": [
+      "01.jpg",
+      "02.jpg",
+      "03.jpg",
+      "04.jpg",
+      "05.jpg",
+      "06.jpg",
+      "07.jpg",
+      "08.jpg",
+      "09.jpg",
+      "10.jpg",
+      "11.jpg",
+      "12.png"
+    ]
+  },
+  "braschi": {
+    "title": "Braschi",
+    "location": "Souq Madinat Jumeirah, Dubai",
+    "category": "Retail",
+    "scope": "Boutique interiors",
+    "area": "2,000 sq. ft",
+    "timeline": "80 working days",
+    "folder": "braschi",
+    "files": [
+      "01.jpg",
+      "02.jpg",
+      "03.jpg",
+      "04.jpg",
+      "05.jpg",
+      "06.jpg",
+      "07.jpg",
+      "08.jpg",
+      "09.jpg",
+      "10.jpg"
+    ]
+  },
+  "city-walk": {
+    "title": "City Walk",
+    "location": "Al Safa Street, Al Wasl, Dubai",
+    "category": "Commercial",
+    "scope": "Interior fit-out",
+    "area": "180 sqm",
+    "timeline": "80 working days",
+    "folder": "city-walk",
+    "files": [
+      "01.jpg",
+      "02.jpg",
+      "03.jpg",
+      "04.jpg",
+      "05.jpg",
+      "06.jpg",
+      "07.jpg",
+      "08.jpg"
+    ]
+  },
+  "mrs-najia-bibi": {
+    "title": "Mrs. Najia Bibi",
+    "location": "Sustainable City, Sharjah",
+    "category": "Residential",
+    "scope": "Villa interiors",
+    "area": "3,500 sq. ft",
+    "timeline": "90 working days",
+    "folder": "mrs-najia-bibi",
+    "files": [
+      "01.jpg",
+      "02.jpg",
+      "03.jpg",
+      "04.jpg",
+      "05.jpg",
+      "06.jpg",
+      "07.jpg",
+      "08.jpg",
+      "09.jpg",
+      "10.jpg",
+      "11.jpg",
+      "12.jpg"
+    ]
+  },
+  "royal-gallery": {
+    "title": "Royal Gallery",
+    "location": "Al Quoz, Dubai",
+    "category": "Commercial",
+    "scope": "Gallery interiors",
+    "area": "1,000 sq. ft",
+    "timeline": "60 working days",
+    "folder": "royal-gallery",
+    "files": [
+      "01.webp",
+      "02.webp",
+      "03.jpg",
+      "04.jpg",
+      "05.jpg",
+      "06.jpg",
+      "07.jpg",
+      "08.webp",
+      "09.webp",
+      "10.webp"
+    ]
+  },
+  "orange-cafe": {
+    "title": "Orange Café",
+    "location": "Mirdif Hills Avenue, Dubai",
+    "category": "Hospitality",
+    "scope": "Café interiors",
+    "area": "3,000 sq. ft",
+    "timeline": "80 working days",
+    "folder": "orange-cafe",
+    "files": [
+      "01.jpg",
+      "02.jpg",
+      "03.jpg",
+      "04.jpg",
+      "05.jpg",
+      "06.jpg"
+    ]
+  },
+  "lajjarri-art-gallery": {
+    "title": "Lajjarri Art Gallery",
+    "location": "Dubai Silicon Oasis",
+    "category": "Commercial",
+    "scope": "Art gallery interiors",
+    "area": "1,000 sq. ft",
+    "timeline": "80 working days",
+    "folder": "lajjarri-art-gallery",
+    "files": [
+      "01.jpg",
+      "02.jpg",
+      "03.jpg",
+      "04.jpg",
+      "05.jpg"
+    ]
+  },
+  "ikigai-pilates-studio": {
+    "title": "Ikigai Pilates Studio",
+    "location": "Boulevard Plaza Tower 2, Dubai",
+    "category": "Hospitality",
+    "scope": "Pilates studio interiors",
+    "area": "220 sqm",
+    "timeline": "90 working days",
+    "folder": "ikigai-pilates-studio",
+    "files": [
+      "01.jpg",
+      "02.jpg",
+      "03.png",
+      "04.png",
+      "05.jpg",
+      "06.png",
+      "07.jpg",
+      "08.jpg",
+      "09.jpg",
+      "10.jpg",
+      "11.jpg",
+      "12.jpg"
+    ]
+  },
+  "mr-khalid": {
+    "title": "Mr. Khalid",
+    "location": "Dubai",
+    "category": "Residential",
+    "scope": "Villa interiors",
+    "files": [
+      "01.webp"
+    ],
+    "folder": "mr-khalid"
+  }
+}

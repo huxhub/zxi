@@ -64,3 +64,7 @@ Desktop.ini
 
 # obsolete and unused local source files
 /src/app/homepage.js
+
+# Original project uploads and intermediate copy; selected images live in public/projects/
+/public/PROJECTS DETAILS/
+/public/project-images/

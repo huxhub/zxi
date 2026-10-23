@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 import { useLayoutEffect, useRef } from 'react';
 import Link from 'next/link';
 import { Photo } from '@/components/ui/photo';
@@ -20,7 +20,11 @@ export function ProjectDetail({ project, next }) {
     }, root);
     return () => mm.revert();
   }, [project.slug]);
-  return <div className="project-story" ref={root} style={{ '--project-color': project.color }}>
+  return <>
+    <Link className="project-close" href="/projects" aria-label="Close project and return to all projects" title="All projects">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" /></svg>
+    </Link>
+    <div className="project-story" ref={root} style={{ '--project-color': project.color }}>
     <div className="project-track">
       <section className="project-cover">
         <div className="project-title-panel">
@@ -34,12 +38,12 @@ export function ProjectDetail({ project, next }) {
       <section className="project-information">
         <p className="folio-eyebrow">The project</p>
         <h2>{project.scope}<br />in {project.location}.</h2>
-        <dl><div><dt>Project</dt><dd>{project.title}</dd></div><div><dt>Location</dt><dd>{project.location}</dd></div><div><dt>Category</dt><dd>{project.category}</dd></div><div><dt>Studio</dt><dd>ZXI Interiors & Contracting</dd></div></dl>
+        <dl><div><dt>Project</dt><dd>{project.title}</dd></div><div><dt>Location</dt><dd>{project.location}</dd></div><div><dt>Category</dt><dd>{project.category}</dd></div>{project.area && <div><dt>Area</dt><dd>{project.area}</dd></div>}{project.timeline && <div><dt>Timeline</dt><dd>{project.timeline}</dd></div>}<div><dt>Studio</dt><dd>ZXI Interiors & Contracting</dd></div></dl>
         <Link href="/contact">Discuss your project &#8599;</Link>
       </section>
       {project.gallery.slice(1).map((image, index) => <figure className={`project-gallery-image ${index % 3 === 1 ? 'is-small' : ''}`} key={image.src}><div><Photo image={image} alt={`${project.title} — interior view ${index + 2}`} sizes="(max-width: 991px) 100vw, 65vw" /></div><figcaption>{project.title}<span>{String(index + 2).padStart(2, '0')} / {String(project.gallery.length).padStart(2, '0')}</span></figcaption></figure>)}
       <section className="project-next" style={{ background: next.color }}><p className="folio-eyebrow">Next project</p><Link href={`/projects/${next.slug}`}><div className="project-next-image"><Photo image={next.image} alt={next.title} sizes="50vw" /></div><h2>{next.title} <span>&#8599;</span></h2></Link><Link href="/projects">Back to all projects</Link></section>
     </div>
-  </div>;
+  </div></>;
 }
 

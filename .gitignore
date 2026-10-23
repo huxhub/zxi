@@ -1,0 +1,12 @@
+# OS and editor files
+.DS_Store
+Thumbs.db
+Desktop.ini
+.vscode/
+.idea/
+*.log
+
+# Ignore all root files/folders outside frontend
+/*
+!/frontend/
+!/.gitignore

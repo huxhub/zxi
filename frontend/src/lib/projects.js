@@ -23,16 +23,29 @@ const legacyProjects = entries.map(([slug, title, location, category, scope, id,
   const gallery = [projectImage(id), ...related.slice(0, 8).map((item) => projectImage(item.id))];
   return { slug, title, location, category, scope, color, image: projectImage(id), gallery };
 });
+const projectColorPalette = {
+  'samsara-tribe-yoga': '#9caa97',
+  'ikigai-pilates-studio': '#a1ab9c',
+  'city-walk': '#a69f94',
+  'gemma': '#b6ad91',
+  'nora': '#bfa697',
+  'braschi': '#ab9d8f',
+  'mrs-najia-bibi': '#b5aa9c',
+  'royal-gallery': '#9fa69b',
+  'orange-cafe': '#bfa188',
+  'lajjarri-art-gallery': '#a39f99',
+};
+
 // Encode each segment so spaces, punctuation, and emoji in supplied filenames are safe URLs.
 function suppliedProject(slug, details, existing) {
   const { folder, files, ...metadata } = details;
   const gallery = files.map((file) => ({
     src: `/projects/${encodeURIComponent(folder)}/${encodeURIComponent(file)}`,
   }));
-  return { ...existing, ...metadata, slug, color: existing?.color || '#b9b4a2', image: gallery[0], gallery };
+  return { ...existing, ...metadata, slug, color: existing?.color || projectColorPalette[slug] || '#b9b4a2', image: gallery[0], gallery };
 }
 
-export const projects = [
+const allProjects = [
   ...legacyProjects.map((project) => projectGalleries[project.slug]
     ? suppliedProject(project.slug, projectGalleries[project.slug], project)
     : project),
@@ -41,4 +54,18 @@ export const projects = [
     .map(([slug, details]) => suppliedProject(slug, details)),
 ];
 
+const prioritySlugs = [
+  'samsara-tribe-yoga',
+  'ikigai-pilates-studio',
+  'city-walk',
+  'gemma',
+  'nora',
+];
+
+export const projects = [
+  ...prioritySlugs.map((slug) => allProjects.find((project) => project.slug === slug)).filter(Boolean),
+  ...allProjects.filter((project) => !prioritySlugs.includes(project.slug)),
+];
+
 export const portfolioProjects = projects;
+

@@ -5,13 +5,16 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const DEFAULT_PROJECT_TITLES = [
-  { title: 'Plug Media', category: 'Commercial fitout' },
-  { title: 'MBR Kitchen', category: 'Residential fitout' },
+  { title: 'Samsara Tribe Yoga', category: 'Hospitality fitout' },
+  { title: 'Ikigai Pilates Studio', category: 'Studio fitout' },
+  { title: 'City Walk', category: 'Commercial fitout' },
   { title: 'Gemma', category: 'Retail fitout' },
   { title: 'Nora', category: 'Retail fitout' },
-  { title: 'Samsara Tribe Yoga', category: 'Studio fitout' },
+  { title: 'Plug Media', category: 'Commercial fitout' },
+  { title: 'MBR Kitchen', category: 'Residential fitout' },
   { title: 'Mr. Khalid Villa', category: 'Villa interiors' },
 ];
+
 
 export function SiteNav({ logo, projects = [], onSelectProject, onNavigate }) {
   const dialog = useRef(null);

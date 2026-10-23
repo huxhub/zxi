@@ -17,12 +17,14 @@ export function BlogDetailView({ post, nextPosts = [], logo }) {
   useEffect(() => {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     const lenis = new Lenis({ duration: 1.25, smoothWheel: true });
+    const resetScroll = () => lenis.scrollTo(0, { immediate: true, force: true });
+    window.addEventListener('app:reset-scroll', resetScroll);
     lenis.on('scroll', ScrollTrigger.update);
     const tick = (time) => lenis.raf(time * 1000);
     gsap.ticker.add(tick);
     return () => {
       gsap.ticker.remove(tick);
-      lenis.destroy();
+      window.removeEventListener('app:reset-scroll', resetScroll); lenis.destroy();
     };
   }, []);
 

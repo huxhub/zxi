@@ -11,10 +11,12 @@ export function ProjectShell({ logo, children }) {
   useEffect(() => {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     const lenis = new Lenis({ duration: 1.25, smoothWheel: true });
+    const resetScroll = () => lenis.scrollTo(0, { immediate: true, force: true });
+    window.addEventListener('app:reset-scroll', resetScroll);
     lenis.on('scroll', ScrollTrigger.update);
     const tick = (time) => lenis.raf(time * 1000);
     gsap.ticker.add(tick);
-    return () => { gsap.ticker.remove(tick); lenis.destroy(); };
+    return () => { gsap.ticker.remove(tick); window.removeEventListener('app:reset-scroll', resetScroll); lenis.destroy(); };
   }, []);
   const navigate = (id) => router.push(id === 'portfolio' ? '/projects' : id === 'home' ? '/' : id === 'contact' ? '/contact' : `/#${id}`);
   return <><SiteNav logo={logo} onNavigate={navigate} /><main id="main" className="project-main">{children}</main><Footer logo={logo} onNavigate={navigate} /></>;

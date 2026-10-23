@@ -38,6 +38,8 @@ export function HomeView({ data }) {
     });
     lenisRef.current = lenis;
 
+    const resetScroll = () => lenis.scrollTo(0, { immediate: true, force: true });
+    window.addEventListener('app:reset-scroll', resetScroll);
     lenis.on('scroll', ScrollTrigger.update);
 
     const ticker = (time) => {
@@ -48,7 +50,7 @@ export function HomeView({ data }) {
 
     return () => {
       gsap.ticker.remove(ticker);
-      lenis.destroy();
+      window.removeEventListener('app:reset-scroll', resetScroll); lenis.destroy();
     };
   }, []);
 

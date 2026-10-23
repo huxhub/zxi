@@ -1,3 +1,5 @@
+import { Suspense } from 'react';
+import { RouteScrollReset } from '@/components/layout/route-scroll-reset';
 import './globals.css';
 import '../features/contact/contact.css';
 
@@ -30,6 +32,7 @@ export default function RootLayout({ children }) {
     <html lang="en" suppressHydrationWarning>
       <body suppressHydrationWarning>
         {children}
+        <Suspense fallback={null}><RouteScrollReset /></Suspense>
         <a className="whatsapp-cta" href="https://wa.me/971565499766?text=Hello%20ZXI%2C%20I%27d%20like%20to%20discuss%20an%20interior%20project." target="_blank" rel="noopener noreferrer" aria-label="Chat with ZXI on WhatsApp" title="Chat with us on WhatsApp">
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M20.5 11.7a8.5 8.5 0 0 1-12.6 7.45L3.5 20.5l1.38-4.22A8.5 8.5 0 1 1 20.5 11.7Z" />

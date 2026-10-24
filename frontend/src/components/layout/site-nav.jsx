@@ -7,7 +7,7 @@ import Link from 'next/link';
 const DEFAULT_PROJECT_TITLES = [
   { title: 'Samsara Tribe Yoga', category: 'Hospitality fitout' },
   { title: 'Ikigai Pilates Studio', category: 'Studio fitout' },
-  { title: 'City Walk', category: 'Commercial fitout' },
+  { title: 'City Walk', category: 'Residential fitout' },
   { title: 'Gemma', category: 'Retail fitout' },
   { title: 'Nora', category: 'Retail fitout' },
   { title: 'Plug Media', category: 'Commercial fitout' },

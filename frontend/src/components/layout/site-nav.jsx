@@ -147,7 +147,7 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate }) {
       <dialog
         id="navigation-panel"
         ref={dialog}
-        className="fixed inset-y-0 right-0 left-auto ml-auto mr-0 m-0 w-full max-w-[430px] md:max-w-[470px] h-dvh bg-white text-neutral-900 border-0 z-50 p-0 shadow-2xl backdrop:bg-black/65 backdrop:backdrop-blur-sm"
+        className="fixed inset-y-0 right-0 left-auto ml-auto mr-0 m-0 w-[70vw] sm:w-full max-w-[70vw] sm:max-w-[430px] md:max-w-[470px] h-dvh bg-white text-neutral-900 border-0 z-50 p-0 shadow-2xl backdrop:bg-black/65 backdrop:backdrop-blur-sm"
         onClose={() => setOpen(false)}
         onClick={(e) => {
           if (e.target === e.currentTarget) close();

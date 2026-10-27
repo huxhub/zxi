@@ -4,6 +4,11 @@
    ========================================================================== */
 
 /* --- Site Navigation Header --- */
+header.fixed.bg-white {
+  padding-top: 6px !important;
+  padding-bottom: 6px !important;
+}
+
 @media (max-width: 640px) {
   header.fixed {
     padding-left: 16px !important;
@@ -12,14 +17,21 @@
     padding-bottom: 14px !important;
   }
 
+  header.fixed.bg-white {
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
+  }
+
   header.fixed a img {
     width: 66px !important;
     height: auto !important;
   }
 
-  header.fixed button[aria-label="Open navigation menu"] {
-    width: 40px !important;
-    height: 40px !important;
+  header.fixed button[aria-label="Open navigation menu"],
+  header.fixed .nav-menu-btn {
+    width: auto !important;
+    min-width: 36px !important;
+    height: auto !important;
   }
 }
 
@@ -209,14 +221,52 @@ footer {
     padding-bottom: 24px !important;
   }
 
+  /* Compact white navbar */
+  header.fixed.bg-white {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+  }
+
   header.fixed a img {
     width: 165px !important;
     height: auto !important;
   }
 
-  header.fixed button[aria-label="Open navigation menu"] {
-    width: 52px !important;
-    height: 52px !important;
+  header.fixed.bg-white a img {
+    width: 145px !important;
+  }
+
+  header.fixed button[aria-label="Open navigation menu"],
+  header.fixed .nav-menu-btn {
+    width: auto !important;
+    min-width: 72px !important;
+    height: auto !important;
+    gap: 12px !important;
+    padding: 6px 10px !important;
+  }
+
+  header.fixed .nav-menu-text {
+    font-size: 13px !important;
+    letter-spacing: 0.22em !important;
+  }
+
+  header.fixed .nav-menu-bars {
+    gap: 7px !important;
+  }
+
+  header.fixed .nav-menu-bar-top {
+    width: 38px !important;
+    height: 2.5px !important;
+  }
+
+  header.fixed .nav-menu-bar-bottom {
+    width: 25px !important;
+    height: 2.5px !important;
+  }
+
+  header.fixed button[aria-label="Open navigation menu"]:hover .nav-menu-bar-bottom,
+  header.fixed .nav-menu-btn:hover .nav-menu-bar-bottom {
+    width: 38px !important;
   }
 
   dialog#navigation-panel {
@@ -279,14 +329,52 @@ footer {
     padding-bottom: 36px !important;
   }
 
+  /* Compact white navbar */
+  header.fixed.bg-white {
+    padding-top: 14px !important;
+    padding-bottom: 14px !important;
+  }
+
   header.fixed a img {
     width: 215px !important;
     height: auto !important;
   }
 
-  header.fixed button[aria-label="Open navigation menu"] {
-    width: 68px !important;
-    height: 68px !important;
+  header.fixed.bg-white a img {
+    width: 185px !important;
+  }
+
+  header.fixed button[aria-label="Open navigation menu"],
+  header.fixed .nav-menu-btn {
+    width: auto !important;
+    min-width: 96px !important;
+    height: auto !important;
+    gap: 16px !important;
+    padding: 8px 14px !important;
+  }
+
+  header.fixed .nav-menu-text {
+    font-size: 16px !important;
+    letter-spacing: 0.25em !important;
+  }
+
+  header.fixed .nav-menu-bars {
+    gap: 9px !important;
+  }
+
+  header.fixed .nav-menu-bar-top {
+    width: 48px !important;
+    height: 3.5px !important;
+  }
+
+  header.fixed .nav-menu-bar-bottom {
+    width: 32px !important;
+    height: 3.5px !important;
+  }
+
+  header.fixed button[aria-label="Open navigation menu"]:hover .nav-menu-bar-bottom,
+  header.fixed .nav-menu-btn:hover .nav-menu-bar-bottom {
+    width: 48px !important;
   }
 
   dialog#navigation-panel {

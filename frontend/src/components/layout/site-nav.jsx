@@ -96,7 +96,7 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate, dark
         ref={header}
         className={`fixed top-0 inset-x-0 z-40 w-full flex items-center justify-between px-6 sm:px-10 md:px-14 transition-all duration-300 pointer-events-auto ${
           isPastHero
-            ? 'py-2 md:py-2.5 bg-white border-b border-neutral-100 shadow-xs'
+            ? 'py-1 md:py-1.5 bg-white border-b border-neutral-100 shadow-xs'
             : 'py-3 md:py-4 bg-transparent'
         }`}
       >
@@ -115,7 +115,7 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate, dark
             width={160}
             height={40}
             priority
-            className={`block w-[140px] h-auto object-contain transition-all duration-300 group-hover:opacity-80 ${
+            className={`block ${isPastHero ? 'w-[120px] md:w-[130px]' : 'w-[140px]'} h-auto object-contain transition-all duration-300 group-hover:opacity-80 ${
             isPastHero || darkAtTop ? '' : 'brightness-0 invert'
             }`}
           />
@@ -123,7 +123,7 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate, dark
 
         {/* Minimal Two-Line Hamburger Button */}
         <button
-          className={`group flex h-11 items-center justify-end gap-3 p-1.5 cursor-pointer focus:outline-none transition-colors ${
+          className={`group flex ${isPastHero ? 'h-8 md:h-8.5' : 'h-10 md:h-11'} items-center justify-end gap-3 p-1 cursor-pointer focus:outline-none transition-colors nav-menu-btn ${
             isPastHero || darkAtTop ? 'text-neutral-900 hover:opacity-70' : 'text-white hover:opacity-80'
           }`}
           aria-label="Open navigation menu"
@@ -134,15 +134,15 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate, dark
             setOpen(true);
           }}
         >
-          <span className="text-[10px] font-medium uppercase tracking-[0.2em]">Menu</span>
-          <span className="flex flex-col items-end gap-[6px]" aria-hidden="true">
+          <span className="text-[10px] font-medium uppercase tracking-[0.2em] nav-menu-text">Menu</span>
+          <span className="flex flex-col items-end gap-[6px] nav-menu-bars" aria-hidden="true">
             <span
-              className={`block h-[2px] w-8 transition-all duration-300 ${
+              className={`block h-[2px] w-8 nav-menu-bar-top transition-all duration-300 ${
                 isPastHero || darkAtTop ? 'bg-neutral-900' : 'bg-white'
               }`}
             />
             <span
-              className={`block h-[2px] w-5 transition-all duration-300 group-hover:w-8 ${
+              className={`block h-[2px] w-5 nav-menu-bar-bottom transition-all duration-300 group-hover:w-8 ${
                 isPastHero || darkAtTop ? 'bg-neutral-900' : 'bg-white'
               }`}
             />

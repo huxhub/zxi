@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 const DEFAULT_PROJECT_TITLES = [
   { title: 'Samsara Tribe Yoga', category: 'Hospitality fitout' },
@@ -17,6 +18,7 @@ const DEFAULT_PROJECT_TITLES = [
 
 
 export function SiteNav({ logo, projects = [], onSelectProject, onNavigate, darkAtTop = false }) {
+  const pathname = usePathname();
   const dialog = useRef(null);
   const header = useRef(null);
   const [open, setOpen] = useState(false);
@@ -94,7 +96,7 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate, dark
       {/* Top Header: Transparent in hero section, compact white background after */}
       <header
         ref={header}
-        className={`fixed top-0 inset-x-0 z-40 w-full flex items-center justify-between px-6 sm:px-10 md:px-14 transition-all duration-300 pointer-events-auto ${
+        className={`fixed top-0 inset-x-0 z-40 w-full flex items-center justify-between px-6 sm:px-10 md:px-14 transition-all duration-300 pointer-events-auto ${pathname === '/' && !isPastHero ? 'home-hero-nav' : ''} ${
           isPastHero
             ? 'py-1 md:py-1.5 bg-white border-b border-neutral-100 shadow-xs'
             : 'py-3 md:py-4 bg-transparent'
@@ -270,7 +272,7 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate, dark
                   aria-label="Toggle services list"
                   aria-expanded={servicesOpen}
                   aria-controls="navigation-services"
-                  className="absolute right-[200px] top-1/2 flex min-h-11 min-w-11 -translate-y-1/2 cursor-pointer items-center justify-center text-neutral-700 transition-colors hover:text-[#c5a059] focus-visible:outline-2 focus-visible:outline-offset-2"
+                  className="absolute right-0 top-1/2 flex min-h-11 min-w-11 -translate-y-1/2 cursor-pointer items-center justify-center text-neutral-700 transition-colors hover:text-[#c5a059] focus-visible:outline-2 focus-visible:outline-offset-2"
                 >
                   <svg
                     className={`h-4 w-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`}
@@ -322,7 +324,7 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate, dark
                   aria-label="Toggle packages list"
                   aria-expanded={packagesOpen}
                   aria-controls="navigation-packages"
-                  className="absolute right-[200px] top-1/2 flex min-h-11 min-w-11 -translate-y-1/2 cursor-pointer items-center justify-center text-neutral-700 transition-colors hover:text-[#c5a059] focus-visible:outline-2 focus-visible:outline-offset-2"
+                  className="absolute right-0 top-1/2 flex min-h-11 min-w-11 -translate-y-1/2 cursor-pointer items-center justify-center text-neutral-700 transition-colors hover:text-[#c5a059] focus-visible:outline-2 focus-visible:outline-offset-2"
                 >
                   <svg
                     className={`h-4 w-4 transition-transform duration-300 ${packagesOpen ? 'rotate-180' : ''}`}

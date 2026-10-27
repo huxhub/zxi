@@ -13,18 +13,46 @@ header.fixed.bg-white {
   header.fixed {
     padding-left: 16px !important;
     padding-right: 16px !important;
-    padding-top: 14px !important;
-    padding-bottom: 14px !important;
+    padding-top: 16px !important;
+    padding-bottom: 16px !important;
+    background-color: #fff !important;
   }
 
   header.fixed.bg-white {
-    padding-top: 6px !important;
-    padding-bottom: 6px !important;
+    padding-top: 16px !important;
+    padding-bottom: 16px !important;
   }
 
   header.fixed a img {
-    width: 66px !important;
+    width: 120px !important;
     height: auto !important;
+    filter: none !important;
+  }
+
+  header.fixed .nav-menu-text {
+    color: #171717 !important;
+  }
+
+  header.fixed .nav-menu-bar-top,
+  header.fixed .nav-menu-bar-bottom {
+    background-color: #171717 !important;
+  }
+
+  header.fixed.home-hero-nav {
+    background-color: transparent !important;
+  }
+
+  header.fixed.home-hero-nav a img {
+    filter: brightness(0) invert(1) !important;
+  }
+
+  header.fixed.home-hero-nav .nav-menu-text {
+    color: #fff !important;
+  }
+
+  header.fixed.home-hero-nav .nav-menu-bar-top,
+  header.fixed.home-hero-nav .nav-menu-bar-bottom {
+    background-color: #fff !important;
   }
 
   header.fixed button[aria-label="Open navigation menu"],

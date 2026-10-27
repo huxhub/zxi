@@ -27,7 +27,7 @@ export function PageBackButton() {
         if (window.history.length > 1) window.history.back();
         else window.location.assign('/');
       }}
-      className={`fixed left-6 top-[calc(var(--site-header-height,72px)+14px)] z-[45] grid h-12 w-12 place-items-center rounded-full bg-white text-neutral-900 transition-[opacity,transform,background-color] duration-300 hover:bg-neutral-100 focus-visible:bg-neutral-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-900 sm:left-10 md:left-14 ${
+      className={`page-back-button ${pathname === '/projects' ? 'project-archive-back-button' : ''} fixed left-6 top-[calc(var(--site-header-height,72px)+14px)] z-[45] grid h-12 w-12 place-items-center rounded-full bg-white text-neutral-900 transition-[opacity,transform,background-color] duration-300 hover:bg-neutral-100 focus-visible:bg-neutral-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-900 sm:left-10 md:left-14 ${
         hasScrolled ? 'translate-y-0 opacity-100' : 'pointer-events-none translate-y-2 opacity-0'
       }`}
       aria-label="Go back"

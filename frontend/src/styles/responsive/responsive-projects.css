@@ -5,6 +5,10 @@
 
 /* --- Projects Archive Page (/projects) --- */
 @media (max-width: 640px) {
+  .project-archive-back-button {
+    top: calc(var(--site-header-height, 80px) + 64px) !important;
+  }
+
   .folio {
     padding: 0 12px 64px !important;
   }

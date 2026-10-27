@@ -21,7 +21,7 @@ export function Hero({ hero, heroRef, heroPicRef, heroCopyRef }) {
           poster={hero?.src}
           className="hero-video w-full h-full object-cover"
         >
-          <source src="/zxi-hero-video.mp4" type="video/mp4" />
+          <source src="/zxi hero video 1.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>

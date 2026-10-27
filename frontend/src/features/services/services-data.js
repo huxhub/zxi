@@ -5,8 +5,8 @@ export const SERVICES_DATA = [
     subtitle: 'High-performance workspaces, corporate headquarters, and retail environments across Dubai.',
     tagline: 'Precision Workplace Engineering & Turnkey Handover',
     heroImage: {
-      src: '/zxi/assets/2619-dubai-commercial-interiors.webp',
-      alt: 'Executive corporate office interior in Dubai',
+      src: '/zxi/assets/11-minimalist-spiral-atrium.jpg',
+      alt: 'Contemporary European corporate headquarters with architectural spiral staircase and double-height glazing',
     },
     metrics: [
       { num: '180+', label: 'Offices Delivered' },
@@ -94,8 +94,8 @@ export const SERVICES_DATA = [
     subtitle: 'Private villa residences, penthouses, and bespoke living sanctuaries tailored to Dubai lifestyles.',
     tagline: 'Timeless Luxury Living & Architectural Millwork',
     heroImage: {
-      src: '/why-work-with-us.png',
-      alt: 'Luxury residential villa living room and garden view',
+      src: '/zxi/assets/01-paris-haussmann-salon.jpg',
+      alt: 'Luxury Haussmannian residential salon with ornate mouldings and herringbone oak parquet',
     },
     metrics: [
       { num: '220+', label: 'Villas & Penthouses' },
@@ -183,8 +183,8 @@ export const SERVICES_DATA = [
     subtitle: 'End-to-end architectural execution, MEP engineering, and single-source project accountability in the UAE.',
     tagline: 'Engineering Rigor & Transparent Delivery',
     heroImage: {
-      src: '/zxi/assets/2082-consultants.webp',
-      alt: 'ZXI engineering team reviewing site shop drawings',
+      src: '/zxi/assets/07-venetian-grand-foyer.jpg',
+      alt: 'Grand European architectural entrance foyer featuring curved twin staircases and checkerboard marble',
     },
     metrics: [
       { num: '500+', label: 'Delivered Projects' },
@@ -272,8 +272,8 @@ export const SERVICES_DATA = [
     subtitle: 'Handcrafted cabinetry, monolithic stone tables, and architectural woodwork tailored to precise proportions.',
     tagline: 'Artisanal Joinery & Material Mastery',
     heroImage: {
-      src: '/zxi/assets/1618-custom-furniture.webp',
-      alt: 'Bespoke custom joinery and monolithic marble furniture',
+      src: '/zxi/assets/04-calacatta-luxury-kitchen.jpg',
+      alt: 'Bespoke Calacatta Viola marble waterfall island and custom smoked oak architectural cabinetry',
     },
     metrics: [
       { num: 'In-House', label: 'Dedicated Workshop' },
@@ -361,8 +361,8 @@ export const SERVICES_DATA = [
     subtitle: 'Signature dining venues, artisan cafes, and sensory wellness sanctuaries built for operational excellence.',
     tagline: 'Sensory Environments & High-Traffic Durability',
     heroImage: {
-      src: '/zxi/assets/2625-samsara-dubai-interior-fitout.webp',
-      alt: 'Samsara Tribe luxury yoga studio interior fitout in Dubai Marina',
+      src: '/zxi/assets/02-milan-marble-dining.jpg',
+      alt: 'High-end hospitality dining venue with monolithic marble dining table and floor-to-ceiling garden views',
     },
     metrics: [
       { num: '45+', label: 'F&B & Wellness Venues' },

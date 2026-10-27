@@ -16,12 +16,13 @@ const DEFAULT_PROJECT_TITLES = [
 ];
 
 
-export function SiteNav({ logo, projects = [], onSelectProject, onNavigate }) {
+export function SiteNav({ logo, projects = [], onSelectProject, onNavigate, darkAtTop = false }) {
   const dialog = useRef(null);
   const header = useRef(null);
   const [open, setOpen] = useState(false);
   const [portfolioOpen, setPortfolioOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [packagesOpen, setPackagesOpen] = useState(false);
   const [isPastHero, setIsPastHero] = useState(false);
 
   useEffect(() => {
@@ -75,7 +76,10 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate }) {
     close();
     if (onNavigate) {
       onNavigate(id);
+      return;
     }
+    const routes = { home: '/', portfolio: '/projects', services: '/services', contact: '/contact' };
+    window.location.assign(routes[id] || `/#${id}`);
   };
 
   const handleProjectClick = (project) => {
@@ -108,19 +112,19 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate }) {
           <Image
             src={logo?.src || logo || '/zxi-ae-logo.png'}
             alt="ZXI Interiors & Contracting"
-            width={84}
-            height={36}
+            width={160}
+            height={40}
             priority
-            className={`block w-[72px] md:w-[82px] h-auto object-contain transition-all duration-300 group-hover:opacity-80 ${
-              isPastHero ? '' : 'brightness-0 invert'
+            className={`block w-[140px] h-auto object-contain transition-all duration-300 group-hover:opacity-80 ${
+            isPastHero || darkAtTop ? '' : 'brightness-0 invert'
             }`}
           />
         </a>
 
-        {/* Minimal Two-Line Hamburger Button (=) */}
+        {/* Minimal Two-Line Hamburger Button */}
         <button
-          className={`group flex flex-col items-end justify-center gap-[5px] w-9 h-9 p-1 cursor-pointer focus:outline-none transition-colors ${
-            isPastHero ? 'text-neutral-900 hover:opacity-70' : 'text-white hover:opacity-80'
+          className={`group flex flex-col items-end justify-center gap-[6px] w-11 h-11 p-1.5 cursor-pointer focus:outline-none transition-colors ${
+            isPastHero || darkAtTop ? 'text-neutral-900 hover:opacity-70' : 'text-white hover:opacity-80'
           }`}
           aria-label="Open navigation menu"
           aria-expanded={open}
@@ -131,13 +135,13 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate }) {
           }}
         >
           <span
-            className={`block h-[1.5px] w-5 transition-all duration-300 group-hover:w-6 ${
-              isPastHero ? 'bg-neutral-900' : 'bg-white'
+            className={`block h-[2px] w-8 transition-all duration-300 ${
+              isPastHero || darkAtTop ? 'bg-neutral-900' : 'bg-white'
             }`}
           />
           <span
-            className={`block h-[1.5px] w-5 transition-all duration-300 group-hover:w-4 ${
-              isPastHero ? 'bg-neutral-900' : 'bg-white'
+            className={`block h-[2px] w-5 transition-all duration-300 group-hover:w-8 ${
+              isPastHero || darkAtTop ? 'bg-neutral-900' : 'bg-white'
             }`}
           />
         </button>
@@ -176,7 +180,7 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate }) {
           </button>
 
           {/* Nav Menu Links */}
-          <nav className="flex flex-col gap-3 sm:gap-4 mt-7 md:mt-8" aria-label="Main navigation">
+          <nav className="main-drawer-nav flex flex-col gap-0 mt-7 md:mt-8" aria-label="Main navigation">
             <button
               onClick={() => handleLinkClick('home')}
               className="text-left text-2xl sm:text-3xl md:text-[36px] font-normal tracking-tight text-neutral-900 hover:text-neutral-500 transition-colors cursor-pointer focus:outline-none"
@@ -281,6 +285,55 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate }) {
                       ['Hospitality & Wellness', 'hospitality-wellness'],
                     ].map(([label, slug]) => (
                       <Link key={slug} href={`/services/${slug}`} onClick={close} className="w-fit transition-colors hover:text-neutral-900 focus:outline-none">
+                        {label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div className="flex items-stretch justify-between">
+                <Link
+                  href="/packages"
+                  onClick={close}
+                  className="text-left text-2xl sm:text-3xl md:text-[36px] font-normal tracking-tight text-neutral-900 hover:text-neutral-500 transition-colors cursor-pointer focus:outline-none"
+                >
+                  Packages
+                </Link>
+                <button
+                  onClick={() => setPackagesOpen((expanded) => !expanded)}
+                  aria-label="Toggle packages list"
+                  aria-expanded={packagesOpen}
+                  aria-controls="navigation-packages"
+                  className="flex min-h-11 min-w-11 flex-1 cursor-pointer items-center justify-end pl-4 pr-2 text-neutral-700 transition-colors hover:text-neutral-400 focus-visible:outline-2 focus-visible:outline-offset-2"
+                >
+                  <svg
+                    className={`h-4 w-4 transition-transform duration-300 ${packagesOpen ? 'rotate-180' : ''}`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    strokeWidth="1.6"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="m6 9 6 6 6-6" />
+                  </svg>
+                </button>
+              </div>
+              <div
+                id="navigation-packages"
+                inert={!packagesOpen}
+                className={`grid transition-all duration-300 ease-out ${packagesOpen ? 'grid-rows-[1fr] opacity-100 mt-3' : 'grid-rows-[0fr] opacity-0'}`}
+              >
+                <div className="overflow-hidden border-l border-neutral-300 pl-4">
+                  <div className="flex flex-col gap-2 pb-1 text-sm text-neutral-500 sm:text-base">
+                    {[
+                      ['Interior Design', 'interior-design'],
+                      ['F&B Shops', 'fb-shops'],
+                      ['Elite', 'elite'],
+                      ['Premium Residential', 'premium-residential'],
+                    ].map(([label, slug]) => (
+                      <Link key={slug} href={`/packages/${slug}`} onClick={close} className="w-fit transition-colors hover:text-neutral-900 focus:outline-none">
                         {label}
                       </Link>
                     ))}

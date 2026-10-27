@@ -5,6 +5,11 @@ import Link from 'next/link';
 import { Action } from '@/components/ui/action';
 
 export function Footer({ logo, onNavigate }) {
+  const navigate = (event, id) => {
+    if (!onNavigate) return;
+    event.preventDefault();
+    onNavigate(id);
+  };
   return (
     <footer className="w-full m-0 rounded-none bg-neutral-900 text-neutral-300 pt-16 sm:pt-20 pb-8">
       <div className="footer-inner w-full max-w-[1720px] mx-auto px-5 sm:px-10 lg:px-16">
@@ -16,8 +21,7 @@ export function Footer({ logo, onNavigate }) {
           <Action
             href="/contact"
             onClick={(event) => {
-              event.preventDefault();
-              onNavigate('contact');
+              navigate(event, 'contact');
             }}
           >
             Get in touch
@@ -28,59 +32,57 @@ export function Footer({ logo, onNavigate }) {
           <h3 className="text-xs uppercase tracking-widest text-neutral-500 font-semibold mb-2">
             Navigate
           </h3>
-          <a
-            href="#portfolio"
+          <Link
+            href="/projects"
             className="hover:text-white transition-colors"
             onClick={(e) => {
-              e.preventDefault();
-              onNavigate('portfolio');
+              navigate(e, 'portfolio');
             }}
           >
             Portfolio
-          </a>
-          <a
-            href="#services"
+          </Link>
+          <Link
+            href="/services"
             className="hover:text-white transition-colors"
             onClick={(e) => {
-              e.preventDefault();
-              onNavigate('services');
+              navigate(e, 'services');
             }}
           >
             Services
-          </a>
+          </Link>
           <Link href="/blog" className="hover:text-white transition-colors">
             Blog & Insights
           </Link>
-          <a
-            href="#about"
+          <Link href="/packages" className="hover:text-white transition-colors">
+            Packages
+          </Link>
+          <Link
+            href="/#about"
             className="hover:text-white transition-colors"
             onClick={(e) => {
-              e.preventDefault();
-              onNavigate('about');
+              navigate(e, 'about');
             }}
           >
             About us
-          </a>
-          <a
-            href="#advantages"
+          </Link>
+          <Link
+            href="/#advantages"
             className="hover:text-white transition-colors"
             onClick={(e) => {
-              e.preventDefault();
-              onNavigate('advantages');
+              navigate(e, 'advantages');
             }}
           >
             Why ZXI
-          </a>
-          <a
-            href="#contact"
+          </Link>
+          <Link
+            href="/contact"
             className="hover:text-white transition-colors"
             onClick={(e) => {
-              e.preventDefault();
-              onNavigate('contact');
+              navigate(e, 'contact');
             }}
           >
             Contacts
-          </a>
+          </Link>
         </div>
 
         <div className="flex flex-col items-start gap-3.5 text-sm">
@@ -152,16 +154,15 @@ export function Footer({ logo, onNavigate }) {
           className="brightness-0 invert"
         />
         <span>© ZXI Interiors & Contracting. All rights reserved.</span>
-        <a
-          href="#home"
+        <Link
+          href="/"
           className="hover:text-white transition-colors"
           onClick={(e) => {
-            e.preventDefault();
-            onNavigate('home');
+            navigate(e, 'home');
           }}
         >
           Back to top ↑
-        </a>
+        </Link>
       </div>
     </div>
   </footer>

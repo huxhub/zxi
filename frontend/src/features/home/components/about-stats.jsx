@@ -154,9 +154,9 @@ export function AboutStats({ intro, lenisRef }) {
 
                 {/* Embedded Stats Bar on Slide 4 */}
                 {item.stats && (
-                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8 mt-10 pt-8 border-t border-white/20 w-full max-w-3xl">
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8 mt-10 pt-8 border-t border-white/20 w-full max-w-4xl">
                     {item.stats.map((stat) => (
-                      <div key={stat.label} className="text-center">
+                      <div key={stat.label} className="text-center min-w-[168px] lg:min-w-[216px]">
                         <div className="text-2xl sm:text-3xl lg:text-4xl font-light tracking-tight text-white tabular-nums">
                           {stat.num}
                         </div>

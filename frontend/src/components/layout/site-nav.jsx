@@ -123,7 +123,7 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate, dark
 
         {/* Minimal Two-Line Hamburger Button */}
         <button
-          className={`group flex flex-col items-end justify-center gap-[6px] w-11 h-11 p-1.5 cursor-pointer focus:outline-none transition-colors ${
+          className={`group flex h-11 items-center justify-end gap-3 p-1.5 cursor-pointer focus:outline-none transition-colors ${
             isPastHero || darkAtTop ? 'text-neutral-900 hover:opacity-70' : 'text-white hover:opacity-80'
           }`}
           aria-label="Open navigation menu"
@@ -134,16 +134,19 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate, dark
             setOpen(true);
           }}
         >
-          <span
-            className={`block h-[2px] w-8 transition-all duration-300 ${
-              isPastHero || darkAtTop ? 'bg-neutral-900' : 'bg-white'
-            }`}
-          />
-          <span
-            className={`block h-[2px] w-5 transition-all duration-300 group-hover:w-8 ${
-              isPastHero || darkAtTop ? 'bg-neutral-900' : 'bg-white'
-            }`}
-          />
+          <span className="text-[10px] font-medium uppercase tracking-[0.2em]">Menu</span>
+          <span className="flex flex-col items-end gap-[6px]" aria-hidden="true">
+            <span
+              className={`block h-[2px] w-8 transition-all duration-300 ${
+                isPastHero || darkAtTop ? 'bg-neutral-900' : 'bg-white'
+              }`}
+            />
+            <span
+              className={`block h-[2px] w-5 transition-all duration-300 group-hover:w-8 ${
+                isPastHero || darkAtTop ? 'bg-neutral-900' : 'bg-white'
+              }`}
+            />
+          </span>
         </button>
       </header>
 
@@ -151,7 +154,7 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate, dark
       <dialog
         id="navigation-panel"
         ref={dialog}
-        className="fixed inset-y-0 right-0 left-auto ml-auto mr-0 m-0 w-[70vw] sm:w-full max-w-[70vw] sm:max-w-[430px] md:max-w-[470px] h-dvh bg-white text-neutral-900 border-0 z-50 p-0 shadow-2xl backdrop:bg-black/65 backdrop:backdrop-blur-sm"
+        className="fixed inset-y-0 right-0 left-auto ml-auto mr-0 m-0 h-dvh w-[450px] max-w-[calc(100vw-24px)] border-0 bg-white p-0 text-neutral-900 shadow-2xl backdrop:bg-black/65 backdrop:backdrop-blur-sm z-50"
         onClose={() => setOpen(false)}
         onClick={(e) => {
           if (e.target === e.currentTarget) close();
@@ -180,10 +183,10 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate, dark
           </button>
 
           {/* Nav Menu Links */}
-          <nav className="main-drawer-nav flex flex-col gap-0 mt-7 md:mt-8" aria-label="Main navigation">
+          <nav className="main-drawer-nav flex flex-col gap-2.5 sm:gap-3 mt-7 md:mt-8" aria-label="Main navigation">
             <button
               onClick={() => handleLinkClick('home')}
-              className="text-left text-2xl sm:text-3xl md:text-[36px] font-normal tracking-tight text-neutral-900 hover:text-neutral-500 transition-colors cursor-pointer focus:outline-none"
+              className="text-left text-lg sm:text-xl md:text-2xl font-normal tracking-tight text-neutral-900 hover:text-[#c5a059] transition-colors cursor-pointer focus:outline-none"
             >
               Home
             </button>
@@ -194,7 +197,7 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate, dark
                 <Link
                   href="/projects"
                   onClick={close}
-                  className="text-left text-2xl sm:text-3xl md:text-[36px] font-normal tracking-tight text-neutral-900 hover:text-neutral-500 transition-colors cursor-pointer focus:outline-none"
+                  className="text-left text-lg sm:text-xl md:text-2xl font-normal tracking-tight text-neutral-900 hover:text-[#c5a059] transition-colors cursor-pointer focus:outline-none"
                 >
                   Portfolio
                 </Link>
@@ -248,20 +251,26 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate, dark
             </div>
 
             <div>
-              <div className="flex items-stretch justify-between">
+              <div className="relative flex items-stretch justify-between">
                 <Link
                   href="/services"
                   onClick={close}
-                  className="text-left text-2xl sm:text-3xl md:text-[36px] font-normal tracking-tight text-neutral-900 hover:text-neutral-500 transition-colors cursor-pointer focus:outline-none"
+                  className="text-left text-lg sm:text-xl md:text-2xl font-normal tracking-tight text-neutral-900 hover:text-[#c5a059] transition-colors cursor-pointer focus:outline-none"
                 >
                   Services
                 </Link>
                 <button
-                  onClick={() => setServicesOpen((expanded) => !expanded)}
+                  onClick={() => {
+                    setServicesOpen((expanded) => {
+                      const next = !expanded;
+                      if (next) setPackagesOpen(false);
+                      return next;
+                    });
+                  }}
                   aria-label="Toggle services list"
                   aria-expanded={servicesOpen}
                   aria-controls="navigation-services"
-                  className="flex min-h-11 min-w-11 flex-1 cursor-pointer items-center justify-end pl-4 pr-2 text-neutral-700 transition-colors hover:text-neutral-400 focus-visible:outline-2 focus-visible:outline-offset-2"
+                  className="absolute right-[200px] top-1/2 flex min-h-11 min-w-11 -translate-y-1/2 cursor-pointer items-center justify-center text-neutral-700 transition-colors hover:text-[#c5a059] focus-visible:outline-2 focus-visible:outline-offset-2"
                 >
                   <svg
                     className={`h-4 w-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`}
@@ -284,7 +293,7 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate, dark
                       ['Custom Furniture', 'custom-furniture'],
                       ['Hospitality & Wellness', 'hospitality-wellness'],
                     ].map(([label, slug]) => (
-                      <Link key={slug} href={`/services/${slug}`} onClick={close} className="w-fit transition-colors hover:text-neutral-900 focus:outline-none">
+                      <Link key={slug} href={`/services/${slug}`} onClick={close} className="w-fit transition-colors hover:text-[#c5a059] focus:outline-none">
                         {label}
                       </Link>
                     ))}
@@ -294,20 +303,26 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate, dark
             </div>
 
             <div>
-              <div className="flex items-stretch justify-between">
+              <div className="relative flex items-stretch justify-between">
                 <Link
                   href="/packages"
                   onClick={close}
-                  className="text-left text-2xl sm:text-3xl md:text-[36px] font-normal tracking-tight text-neutral-900 hover:text-neutral-500 transition-colors cursor-pointer focus:outline-none"
+                  className="text-left text-lg sm:text-xl md:text-2xl font-normal tracking-tight text-neutral-900 hover:text-[#c5a059] transition-colors cursor-pointer focus:outline-none"
                 >
                   Packages
                 </Link>
                 <button
-                  onClick={() => setPackagesOpen((expanded) => !expanded)}
+                  onClick={() => {
+                    setPackagesOpen((expanded) => {
+                      const next = !expanded;
+                      if (next) setServicesOpen(false);
+                      return next;
+                    });
+                  }}
                   aria-label="Toggle packages list"
                   aria-expanded={packagesOpen}
                   aria-controls="navigation-packages"
-                  className="flex min-h-11 min-w-11 flex-1 cursor-pointer items-center justify-end pl-4 pr-2 text-neutral-700 transition-colors hover:text-neutral-400 focus-visible:outline-2 focus-visible:outline-offset-2"
+                  className="absolute right-[200px] top-1/2 flex min-h-11 min-w-11 -translate-y-1/2 cursor-pointer items-center justify-center text-neutral-700 transition-colors hover:text-[#c5a059] focus-visible:outline-2 focus-visible:outline-offset-2"
                 >
                   <svg
                     className={`h-4 w-4 transition-transform duration-300 ${packagesOpen ? 'rotate-180' : ''}`}
@@ -330,10 +345,10 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate, dark
                     {[
                       ['Interior Design', 'interior-design'],
                       ['F&B Shops', 'fb-shops'],
-                      ['Elite', 'elite'],
-                      ['Premium Residential', 'premium-residential'],
+                      ['Premium Residential', 'premium'],
+                      ['Office Fit-Out', 'office-fitout'],
                     ].map(([label, slug]) => (
-                      <Link key={slug} href={`/packages/${slug}`} onClick={close} className="w-fit transition-colors hover:text-neutral-900 focus:outline-none">
+                      <Link key={slug} href={`/packages/${slug}`} onClick={close} className="w-fit transition-colors hover:text-[#c5a059] focus:outline-none">
                         {label}
                       </Link>
                     ))}
@@ -345,14 +360,14 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate, dark
             <Link
               href="/blog"
               onClick={close}
-              className="text-left text-2xl sm:text-3xl md:text-[36px] font-normal tracking-tight text-neutral-900 hover:text-neutral-500 transition-colors cursor-pointer focus:outline-none"
+              className="text-left text-lg sm:text-xl md:text-2xl font-normal tracking-tight text-neutral-900 hover:text-[#c5a059] transition-colors cursor-pointer focus:outline-none"
             >
               Blog
             </Link>
 
             <button
               onClick={() => handleLinkClick('contact')}
-              className="text-left text-2xl sm:text-3xl md:text-[36px] font-normal tracking-tight text-neutral-900 hover:text-neutral-500 transition-colors cursor-pointer focus:outline-none"
+              className="text-left text-lg sm:text-xl md:text-2xl font-normal tracking-tight text-neutral-900 hover:text-[#c5a059] transition-colors cursor-pointer focus:outline-none"
             >
               Contacts
             </button>

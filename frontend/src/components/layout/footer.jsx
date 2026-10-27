@@ -11,7 +11,7 @@ export function Footer({ logo, onNavigate }) {
     onNavigate(id);
   };
   return (
-    <footer className="w-full m-0 rounded-none bg-neutral-900 text-neutral-300 pt-16 sm:pt-20 pb-8">
+    <footer className="w-full m-0 rounded-none bg-[#302b24] text-[#d7d0c4] pt-16 sm:pt-20 pb-8">
       <div className="footer-inner w-full max-w-[1720px] mx-auto px-5 sm:px-10 lg:px-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 md:gap-12 pb-16">
         <div className="sm:col-span-2 lg:col-span-2">
@@ -149,9 +149,9 @@ export function Footer({ logo, onNavigate }) {
         <Image
           src={logo?.src || logo || '/zxi-ae-logo.png'}
           alt="ZXI Interiors & Contracting"
-          width={90}
-          height={46}
-          className="brightness-0 invert"
+          width={156}
+          height={78}
+          className="h-auto w-[132px] sm:w-[156px] brightness-0 invert"
         />
         <span>© ZXI Interiors & Contracting. All rights reserved.</span>
         <Link

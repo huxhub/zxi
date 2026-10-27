@@ -1,30 +1,13 @@
 'use client';
 
-import { useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import Lenis from 'lenis';
-import { gsap, ScrollTrigger } from '@/lib/gsap';
 import { SiteNav } from '@/components/layout/site-nav';
 import { Footer } from '@/components/layout/footer';
 
 export function ServiceDetailView({ service, nextService, logo }) {
   const router = useRouter();
-
-  useEffect(() => {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    const lenis = new Lenis({ duration: 1.25, smoothWheel: true });
-    const resetScroll = () => lenis.scrollTo(0, { immediate: true, force: true });
-    window.addEventListener('app:reset-scroll', resetScroll);
-    lenis.on('scroll', ScrollTrigger.update);
-    const tick = (time) => lenis.raf(time * 1000);
-    gsap.ticker.add(tick);
-    return () => {
-      gsap.ticker.remove(tick);
-      window.removeEventListener('app:reset-scroll', resetScroll); lenis.destroy();
-    };
-  }, []);
 
   const handleNavigate = (id) => {
     router.push(

@@ -1,5 +1,7 @@
 import { Suspense } from 'react';
+import { PageBackButton } from '@/components/layout/page-back-button';
 import { RouteScrollReset } from '@/components/layout/route-scroll-reset';
+import { SmoothScroll } from '@/components/layout/smooth-scroll';
 import './globals.css';
 import '../features/contact/contact.css';
 
@@ -31,6 +33,8 @@ export default function RootLayout({ children }) {
     <html lang="en" suppressHydrationWarning>
       <body suppressHydrationWarning>
         {children}
+        <SmoothScroll />
+        <PageBackButton />
         <Suspense fallback={null}><RouteScrollReset /></Suspense>
         <a className="whatsapp-cta" href="https://wa.me/971565499766?text=Hello%20ZXI%2C%20I%27d%20like%20to%20discuss%20an%20interior%20project." target="_blank" rel="noopener noreferrer" aria-label="Chat with ZXI on WhatsApp" title="Chat with us on WhatsApp">
           <svg viewBox="0 0 24 24" aria-hidden="true">

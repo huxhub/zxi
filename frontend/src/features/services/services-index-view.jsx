@@ -1,31 +1,14 @@
 'use client';
 
-import { useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import Lenis from 'lenis';
-import { gsap, ScrollTrigger } from '@/lib/gsap';
 import { SiteNav } from '@/components/layout/site-nav';
 import { Footer } from '@/components/layout/footer';
 import { SERVICES_DATA } from './services-data';
 
 export function ServicesIndexView({ logo }) {
   const router = useRouter();
-
-  useEffect(() => {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    const lenis = new Lenis({ duration: 1.25, smoothWheel: true });
-    const resetScroll = () => lenis.scrollTo(0, { immediate: true, force: true });
-    window.addEventListener('app:reset-scroll', resetScroll);
-    lenis.on('scroll', ScrollTrigger.update);
-    const tick = (time) => lenis.raf(time * 1000);
-    gsap.ticker.add(tick);
-    return () => {
-      gsap.ticker.remove(tick);
-      window.removeEventListener('app:reset-scroll', resetScroll); lenis.destroy();
-    };
-  }, []);
 
   const handleNavigate = (id) => {
     router.push(
@@ -43,7 +26,7 @@ export function ServicesIndexView({ logo }) {
 
   return (
     <>
-      <SiteNav logo={logo} onNavigate={handleNavigate} />
+      <SiteNav logo={logo} onNavigate={handleNavigate} darkAtTop />
 
       <main className="min-h-screen bg-[#f6f5f1] text-neutral-900 pt-28 sm:pt-36 md:pt-40 pb-12 sm:pb-16">
         <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12">

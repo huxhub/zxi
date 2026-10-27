@@ -14,6 +14,7 @@ export default function Page() {
     ['Residential Interiors', 'Refined homes built with comfort and precision.', 246, 'residential-interiors'],
     ['Turnkey Contracting', 'Engineering precision, authority approvals, and delivery.', 1389, 'turnkey-contracting'],
     ['Custom Furniture', 'Bespoke pieces made for your space.', 1618, 'custom-furniture'],
+    ['Hospitality & Wellness', 'Immersive dining, hospitality, and wellness environments.', 2625, 'hospitality-wellness'],
   ].map(([title, description, id, slug]) => ({ title, description, image: image(id), slug }));
   const advantages = [
     {

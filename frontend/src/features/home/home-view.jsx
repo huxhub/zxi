@@ -2,8 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import Lenis from 'lenis';
-import { gsap, ScrollTrigger } from '@/lib/gsap';
+import { gsap } from '@/lib/gsap';
 
 import { SiteNav } from '@/components/layout/site-nav';
 import { Footer } from '@/components/layout/footer';
@@ -28,30 +27,15 @@ export function HomeView({ data }) {
   const heroCopyRef = useRef(null);
   const ctaPicRef = useRef(null);
 
-  // Initialize Lenis smooth scroll
   useEffect(() => {
-    const lenis = new Lenis({
-      duration: 1.25,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      smoothWheel: true,
-      touchMultiplier: 1.8,
-    });
-    lenisRef.current = lenis;
-
-    const resetScroll = () => lenis.scrollTo(0, { immediate: true, force: true });
-    window.addEventListener('app:reset-scroll', resetScroll);
-    lenis.on('scroll', ScrollTrigger.update);
-
-    const ticker = (time) => {
-      lenis.raf(time * 1000);
+    const syncLenis = () => {
+      lenisRef.current = window.__lenis || null;
     };
-    gsap.ticker.add(ticker);
-    gsap.ticker.lagSmoothing(0);
 
-    return () => {
-      gsap.ticker.remove(ticker);
-      window.removeEventListener('app:reset-scroll', resetScroll); lenis.destroy();
-    };
+    syncLenis();
+    window.addEventListener('zxi:lenis-ready', syncLenis);
+
+    return () => window.removeEventListener('zxi:lenis-ready', syncLenis);
   }, []);
 
   // Hero entrance animation on mount
@@ -250,7 +234,7 @@ export function HomeView({ data }) {
 
         <Advantages items={data.advantages} lenisRef={lenisRef} />
 
-        <ContactBanner cta={data.cta} ctaPicRef={ctaPicRef} />
+        {/* <ContactBanner cta={data.cta} ctaPicRef={ctaPicRef} /> */}
 
         <FAQ items={data.faq} />
       </main>

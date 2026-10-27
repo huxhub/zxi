@@ -48,7 +48,7 @@ export const PACKAGES = [
     note: 'Subject to the agreed project scope and applicable terms.',
   },
   {
-    slug: 'premium-residential', title: 'Premium Residential', audience: 'Apartments & Villas',
+    slug: 'elite-plus', title: 'Elite Plus', audience: 'Apartments & Villas',
     price: 'AED 210 / sqft', regular: 'AED 275 / sqft', image: '/projects/royal-gallery/01.webp',
     intro: 'From concept development to visualisation and design planning — the upgraded signature residential package spanning seven areas.',
     sections: [
@@ -62,6 +62,40 @@ export const PACKAGES = [
     ],
     note: 'Subject to the agreed project scope and applicable terms.',
   },
+  {
+    slug: 'office-fitout', title: 'Office Fit-Out', audience: 'Commercial workplaces',
+    price: 'AED 80 / sqft onwards', regular: 'AED 100 / sqft', image: '/zxi/assets/2619-dubai-commercial-interiors.webp',
+    intro: 'A complete office interior and fit-out package covering design, approvals, finishes, services, and final decoration.',
+    sections: [{ title: 'Included', items: [
+      'Basic Interior Design & Mood Board Presentation',
+      'Authority Approvals & Permits — government fees payable by the client',
+      'Floor Screeding Works — 50 mm thickness',
+      'Floor Finishing Works — ceramic tiles or LVT',
+      'Electrical Works, Including Light Fixture Supply',
+      'Ceiling Works — 60 × 60 mm gypsum ceiling tiles',
+      'HVAC Works, Including Supply — subject to authority approval',
+      'Painting & Wallcovering Works',
+    ] }],
+    note: 'Offer is subject to the agreed project scope, authority approvals, and applicable terms.',
+  },
 ];
 
 export const getPackage = (slug) => PACKAGES.find((item) => item.slug === slug);
+
+export const PACKAGE_COLLECTIONS = [
+  {
+    slug: 'premium',
+    title: 'Premium Residential',
+    audience: 'Residential packages',
+    image: '/projects/royal-gallery/01.webp',
+    intro: 'Two elevated residential packages, carefully scaled to the way you want to live.',
+    tiers: [
+      { slug: 'elite', label: '01', title: 'Elite', description: 'A refined foundation for a complete, considered home.' },
+      { slug: 'elite-plus', label: '02', title: 'Elite Plus', description: 'An expanded material palette with tailored details throughout.' },
+    ],
+  },
+];
+
+export const PACKAGE_INDEX = [PACKAGES[0], PACKAGES[1], PACKAGE_COLLECTIONS[0], PACKAGES[4]];
+
+export const getPackageCollection = (slug) => PACKAGE_COLLECTIONS.find((item) => item.slug === slug);

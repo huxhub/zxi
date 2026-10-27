@@ -156,6 +156,14 @@
    Article reading comfort and typography scaling for high-res monitors
    ========================================================================== */
 @media (min-width: 2560px) {
+  main .max-w-\[1600px\] {
+    max-width: 2400px !important;
+  }
+
+  header:has(> h1) {
+    max-width: 1400px !important;
+  }
+
   header:has(> h1) h1 {
     font-size: 72px !important;
   }
@@ -187,6 +195,14 @@
 }
 
 @media (min-width: 3840px) {
+  main .max-w-\[1600px\] {
+    max-width: 3200px !important;
+  }
+
+  header:has(> h1) {
+    max-width: 1800px !important;
+  }
+
   header:has(> h1) h1 {
     font-size: 96px !important;
   }

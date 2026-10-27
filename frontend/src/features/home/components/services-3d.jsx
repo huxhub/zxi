@@ -5,22 +5,25 @@ import Link from 'next/link';
 import { Photo } from '@/components/ui/photo';
 import { gsap } from '@/lib/gsap';
 
+const CARD_ANGLE = 360 / 14;
+
 export function Services3D({ services }) {
   const root = useRef(null);
   useLayoutEffect(() => {
     const mm = gsap.matchMedia();
     mm.add('(min-width: 768px) and (prefers-reduced-motion: no-preference)', () => {
+      const startRotation = -(CARD_ANGLE * services.length);
       const carousel = root.current.querySelector('.bloom-carousel');
       const wrapper = root.current.querySelector('.bloom-scroll-track');
       const images = root.current.querySelectorAll('.carousel_card_img');
       const scrollTrigger = { trigger: wrapper, start: 'top 75%', end: 'bottom 25%', scrub: true, invalidateOnRefresh: true };
-      gsap.fromTo(carousel, { rotationY: -102, yPercent: 0 }, { rotationY: -25, yPercent: 100, ease: 'power1.inOut', scrollTrigger });
+      gsap.fromTo(carousel, { rotationY: startRotation, yPercent: 0 }, { rotationY: -CARD_ANGLE, yPercent: 100, ease: 'power1.inOut', scrollTrigger });
       gsap.fromTo(images, { x: 100 }, { x: -100, ease: 'power1.inOut', scrollTrigger: { ...scrollTrigger } });
       gsap.fromTo(images, { y: -100 }, { y: 100, ease: 'none', scrollTrigger: { ...scrollTrigger, start: 'top bottom', end: 'bottom top' } });
     }, root);
     return () => mm.revert();
-  }, []);
-  return <section id="services" className="bloom-services" ref={root} aria-label="Interior services">
+  }, [services.length]);
+  return <section id="services" className="bloom-services" ref={root} aria-label="Interior services" style={{ '--card-angle': `${CARD_ANGLE}deg`, '--carousel-start': `${-(CARD_ANGLE * services.length)}deg` }}>
     <div className="bloom-services-heading"><p>Our capabilities</p><h2>Design, craftsmanship, and delivery—under one roof.</h2></div>
     <div className="bloom-scroll-track"><div className="bloom-stage"><div className="bloom-carousel">
       {services.map((service, index) => <Link href={service.slug ? `/services/${service.slug}` : '/services'} className="bloom-card" style={{ '--card-index': index + 1 }} key={service.title} aria-label={`View ${service.title}`}>

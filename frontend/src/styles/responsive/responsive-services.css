@@ -83,6 +83,22 @@
 
 /* --- 4K & Ultra-Wide Displays (2560px - 3840px+) --- */
 @media (min-width: 2560px) {
+  main .max-w-\[1600px\] {
+    max-width: 2400px !important;
+  }
+
+  main header.max-w-3xl {
+    max-width: 1400px !important;
+  }
+
+  main h1 {
+    font-size: 88px !important;
+  }
+
+  main section.grid a.group {
+    min-height: 580px !important;
+  }
+
   article header h1 {
     font-size: 88px !important;
   }
@@ -114,6 +130,22 @@
 }
 
 @media (min-width: 3840px) {
+  main .max-w-\[1600px\] {
+    max-width: 3200px !important;
+  }
+
+  main header.max-w-3xl {
+    max-width: 1800px !important;
+  }
+
+  main h1 {
+    font-size: 118px !important;
+  }
+
+  main section.grid a.group {
+    min-height: 720px !important;
+  }
+
   article header h1 {
     font-size: 118px !important;
   }

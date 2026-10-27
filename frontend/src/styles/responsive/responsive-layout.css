@@ -28,6 +28,18 @@ dialog#navigation-panel {
   max-width: 500px;
 }
 
+dialog#navigation-panel nav button,
+dialog#navigation-panel nav a {
+  transition: color 0.25s ease !important;
+}
+
+dialog#navigation-panel nav button:hover,
+dialog#navigation-panel nav a:hover,
+dialog#navigation-panel #navigation-services a:hover,
+dialog#navigation-panel #navigation-packages a:hover {
+  color: #c5a059 !important;
+}
+
 @media (max-width: 640px) {
   dialog#navigation-panel {
     width: 70vw !important;
@@ -48,12 +60,12 @@ dialog#navigation-panel {
 
   dialog#navigation-panel nav {
     margin-top: 24px !important;
-    gap: 12px !important;
+    gap: 10px !important;
   }
 
   dialog#navigation-panel nav button,
   dialog#navigation-panel nav a {
-    font-size: 20px !important;
+    font-size: 17px !important;
     line-height: 1.25 !important;
   }
 
@@ -94,7 +106,7 @@ dialog#navigation-panel {
 
   dialog#navigation-panel nav button,
   dialog#navigation-panel nav a {
-    font-size: 34px !important;
+    font-size: 22px !important;
   }
 }
 
@@ -217,7 +229,7 @@ footer {
 
   dialog#navigation-panel nav button,
   dialog#navigation-panel nav a {
-    font-size: 46px !important;
+    font-size: 30px !important;
   }
 
   dialog#navigation-panel .project-list-items a {
@@ -287,7 +299,7 @@ footer {
 
   dialog#navigation-panel nav button,
   dialog#navigation-panel nav a {
-    font-size: 60px !important;
+    font-size: 38px !important;
   }
 
   dialog#navigation-panel .project-list-items a {

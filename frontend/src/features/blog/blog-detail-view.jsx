@@ -1,32 +1,14 @@
 'use client';
 
-import { useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import Lenis from 'lenis';
-import { gsap, ScrollTrigger } from '@/lib/gsap';
 import { SiteNav } from '@/components/layout/site-nav';
 import { Footer } from '@/components/layout/footer';
 import { Action } from '@/components/ui/action';
 
 export function BlogDetailView({ post, nextPosts = [], logo }) {
   const router = useRouter();
-
-  // Initialize smooth Lenis scrolling
-  useEffect(() => {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    const lenis = new Lenis({ duration: 1.25, smoothWheel: true });
-    const resetScroll = () => lenis.scrollTo(0, { immediate: true, force: true });
-    window.addEventListener('app:reset-scroll', resetScroll);
-    lenis.on('scroll', ScrollTrigger.update);
-    const tick = (time) => lenis.raf(time * 1000);
-    gsap.ticker.add(tick);
-    return () => {
-      gsap.ticker.remove(tick);
-      window.removeEventListener('app:reset-scroll', resetScroll); lenis.destroy();
-    };
-  }, []);
 
   const handleNavigate = (id) => {
     router.push(
@@ -44,7 +26,7 @@ export function BlogDetailView({ post, nextPosts = [], logo }) {
 
   return (
     <>
-      <SiteNav logo={logo} onNavigate={handleNavigate} />
+      <SiteNav logo={logo} onNavigate={handleNavigate} darkAtTop />
 
       <main className="min-h-screen bg-[#fcfcfc] text-neutral-900 pt-28 sm:pt-32 md:pt-36 pb-24 md:pb-36">
         <article className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-16">

@@ -62,7 +62,7 @@
 
 .bloom-carousel {
     transform-style: preserve-3d;
-    transform: translate3d(0, 0, var(--radius)) rotateY(-102deg);
+    transform: translate3d(0, 0, var(--radius)) rotateY(var(--carousel-start));
     width: var(--item-width);
     height: var(--item-width);
     position: relative;
@@ -75,7 +75,7 @@
     width: var(--item-width);
     height: var(--item-width);
     backface-visibility: hidden;
-    transform: rotateY(calc(25.7142857143deg * var(--card-index))) translate3d(0, 0, calc(var(--radius) * -1));
+    transform: rotateY(calc(var(--card-angle) * var(--card-index))) translate3d(0, 0, calc(var(--radius) * -1));
     cursor: pointer;
     text-align: left;
     border: 0;

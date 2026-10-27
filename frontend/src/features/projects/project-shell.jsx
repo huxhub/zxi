@@ -1,23 +1,10 @@
 'use client';
-import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import Lenis from 'lenis';
-import { gsap, ScrollTrigger } from '@/lib/gsap';
 import { SiteNav } from '@/components/layout/site-nav';
 import { Footer } from '@/components/layout/footer';
 
-export function ProjectShell({ logo, children }) {
+export function ProjectShell({ logo, children, darkAtTop = false }) {
   const router = useRouter();
-  useEffect(() => {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    const lenis = new Lenis({ duration: 1.25, smoothWheel: true });
-    const resetScroll = () => lenis.scrollTo(0, { immediate: true, force: true });
-    window.addEventListener('app:reset-scroll', resetScroll);
-    lenis.on('scroll', ScrollTrigger.update);
-    const tick = (time) => lenis.raf(time * 1000);
-    gsap.ticker.add(tick);
-    return () => { gsap.ticker.remove(tick); window.removeEventListener('app:reset-scroll', resetScroll); lenis.destroy(); };
-  }, []);
   const navigate = (id) => router.push(id === 'portfolio' ? '/projects' : id === 'home' ? '/' : id === 'contact' ? '/contact' : `/#${id}`);
-  return <><SiteNav logo={logo} onNavigate={navigate} /><main id="main" className="project-main">{children}</main><Footer logo={logo} onNavigate={navigate} /></>;
+  return <><SiteNav logo={logo} onNavigate={navigate} darkAtTop={darkAtTop} /><main id="main" className="project-main">{children}</main><Footer logo={logo} onNavigate={navigate} /></>;
 }

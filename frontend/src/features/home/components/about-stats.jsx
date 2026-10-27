@@ -6,6 +6,19 @@ import { gsap, ScrollTrigger } from '@/lib/gsap';
 
 const STANDARDS = [
   {
+    tag: 'PROVEN LEGACY',
+    title: '500+ PROJECTS DELIVERED',
+    description:
+      'More than 500 spaces delivered across the UAE and India.',
+    image: '/zxi/assets/2513-banner2-1.webp',
+    stats: [
+      { num: '500+', label: 'Completed projects' },
+      { num: '12+', label: 'Years of excellence' },
+      { num: 'UAE', label: 'Interiors & contracting' },
+      { num: 'Dubai & Kochi', label: 'Design studios' },
+    ],
+  },
+  {
     tag: 'THE ZXI STANDARD',
     title: 'SAFETY & ENGINEERING',
     description:
@@ -25,19 +38,6 @@ const STANDARDS = [
     description:
       'Lasting materials selected for quality, texture, and character.',
     image: '/zxi/assets/2514-banner4.webp',
-  },
-  {
-    tag: 'PROVEN LEGACY',
-    title: '500+ PROJECTS DELIVERED',
-    description:
-      'More than 500 spaces delivered across the UAE and India.',
-    image: '/zxi/assets/2513-banner2-1.webp',
-    stats: [
-      { num: '500+', label: 'Completed projects' },
-      { num: '12+', label: 'Years of excellence' },
-      { num: 'UAE', label: 'Interiors & contracting' },
-      { num: 'Dubai & Kochi', label: 'Design studios' },
-    ],
   },
 ];
 

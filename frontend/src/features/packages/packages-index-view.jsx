@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { SiteNav } from '@/components/layout/site-nav';
 import { Footer } from '@/components/layout/footer';
-import { PACKAGES } from './packages-data';
+import { PACKAGE_INDEX } from './packages-data';
 
 export function PackagesIndexView() {
   return (
@@ -16,10 +16,10 @@ export function PackagesIndexView() {
             <p className="packages-eyebrow">ZXI interiors & contracting · Dubai</p>
             <h1>Our <em>packages.</em></h1>
           </div>
-          <p>Four clear starting points—each with a defined scope, transparent offer price and complete list of inclusions.</p>
+          <p>Five clear starting points—each with a defined scope, transparent offer price and complete list of inclusions.</p>
         </header>
         <section className="packages-grid" aria-label="Interior and fit-out packages">
-          {PACKAGES.map((item, i) => (
+          {PACKAGE_INDEX.map((item, i) => (
             <Link className={`package-card package-card--${i + 1}`} href={`/packages/${item.slug}`} key={item.slug}>
               <div className="package-image">
                 <Image src={item.image} alt={`${item.title} interior package`} fill sizes="(max-width: 800px) 100vw, 50vw" />

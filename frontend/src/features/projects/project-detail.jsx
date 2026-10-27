@@ -21,9 +21,6 @@ export function ProjectDetail({ project, next }) {
     return () => mm.revert();
   }, [project.slug]);
   return <>
-    <Link className="project-close" href="/projects" aria-label="Close project and return to all projects" title="All projects">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" /></svg>
-    </Link>
     <div className="project-story" ref={root} style={{ '--project-color': project.color }}>
     <div className="project-track">
       <section className="project-cover">

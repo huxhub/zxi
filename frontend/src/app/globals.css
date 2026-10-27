@@ -421,21 +421,3 @@ dialog#navigation-panel::backdrop {
 
 /* Keep the viewport-wide project story aligned on ultra-wide displays. */
 main.project-main { width:100%; max-width:none; }
-.project-close {
-  position:fixed;
-  top:calc(var(--site-header-height, 80px) + 12px);
-  right:max(16px, env(safe-area-inset-right));
-  z-index:45;
-  display:grid;
-  place-items:center;
-  width:44px;
-  height:44px;
-  border:1px solid #2223;
-  border-radius:50%;
-  background:#ede9e1;
-  color:#22231f;
-  box-shadow:0 2px 12px #0001;
-  transition:background .2s;
-}
-.project-close:hover { background:#fff; }
-.project-close:focus-visible { outline:2px solid #222; outline-offset:4px; }

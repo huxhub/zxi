@@ -78,6 +78,38 @@ export const PACKAGES = [
     ] }],
     note: 'Offer is subject to the agreed project scope, authority approvals, and applicable terms.',
   },
+  {
+    slug: 'residential-villa', title: 'Residential / Villa', audience: 'Interior design + fit-out',
+    price: 'AED 49 / sqft onwards', regular: 'AED 75 / sqft', image: '/projects/mr-khalid/01.webp',
+    intro: 'A complete residential fit-out starting point, bringing the essential design, finishes and decorative layers into one considered scope.',
+    sections: [{ title: 'Included', items: [
+      'Basic Interior Design & Mood Board Presentation',
+      'Flooring Works — LVT Flooring / Tile Installation',
+      'Basic MEP Works — Mechanical, Electrical, and Plumbing',
+      'Decorative Ceiling Works',
+      'Interior Painting Work',
+      'Decorative Wallpaper Installation',
+      'Basic Interior Decorative Accessories — Supply and Placement of 5 Decorative Items',
+    ] }],
+    note: 'Offer is subject to the agreed project scope and applicable terms.',
+  },
+  {
+    slug: 'retail-shops', title: 'Retail Shops', audience: 'Design + fit-out',
+    price: 'AED 109 / sqft onwards', regular: 'AED 140 / sqft', image: '/projects/gemma/01.jpg',
+    intro: 'A practical retail fit-out scope that takes a shop from concept and approvals through its essential finishes and services.',
+    sections: [{ title: 'Included', items: [
+      'Basic Interior Design & Mood Board Presentation',
+      'Authority Approvals & Permits — government fees payable by the client',
+      'Floor Screeding Works — 50 mm thickness',
+      'Floor Finishing Works — Porcelain Tiles / LVT',
+      'Electrical Works, Including Light Fixture Supply',
+      'Ceiling Works — Plain Gypsum Ceiling Tiles',
+      'Gypsum Partition Works',
+      'HVAC Works, Including Supply of FCU, Subject to Authority Approval',
+      'Painting & Wallcovering Works',
+    ] }],
+    note: 'Offer is subject to the agreed project scope, authority approvals, and applicable terms.',
+  },
 ];
 
 export const getPackage = (slug) => PACKAGES.find((item) => item.slug === slug);
@@ -96,6 +128,6 @@ export const PACKAGE_COLLECTIONS = [
   },
 ];
 
-export const PACKAGE_INDEX = [PACKAGES[0], PACKAGES[1], PACKAGE_COLLECTIONS[0], PACKAGES[4]];
+export const PACKAGE_INDEX = [PACKAGES[0], PACKAGES[6], PACKAGES[4], PACKAGES[1], PACKAGES[5], PACKAGE_COLLECTIONS[0]];
 
 export const getPackageCollection = (slug) => PACKAGE_COLLECTIONS.find((item) => item.slug === slug);

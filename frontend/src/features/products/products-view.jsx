@@ -43,7 +43,7 @@ export function ProductsView() {
       <main className="products-page">
         <header className="products-intro">
           <div className="products-intro__body">
-            <h1>Objects for<br /><em>living.</em></h1>
+            <h1>Objects for<br /> <em>living.</em></h1>
             <p>A collection of furniture shaped by material, proportion and the way we live. Explore each family of pieces.</p>
           </div>
         </header>

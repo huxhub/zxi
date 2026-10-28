@@ -47,6 +47,10 @@
   color: inherit;
 }
 
+@media (min-width: 701px) {
+  .products-intro h1 br { display: none; }
+}
+
 .products-intro__body p {
   max-width: 480px;
   margin-top: 30px;

@@ -261,7 +261,7 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate, dark
             </Link>
 
             <div>
-              <div className="relative flex items-stretch justify-between">
+              <div className="flex items-center gap-1">
                 <Link
                   href="/services"
                   onClick={close}
@@ -280,7 +280,7 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate, dark
                   aria-label="Toggle services list"
                   aria-expanded={servicesOpen}
                   aria-controls="navigation-services"
-                  className="absolute right-0 top-1/2 flex min-h-11 min-w-11 -translate-y-1/2 cursor-pointer items-center justify-center text-neutral-700 transition-colors hover:text-[#c5a059] focus-visible:outline-2 focus-visible:outline-offset-2"
+                  className="flex min-h-11 min-w-11 cursor-pointer items-center justify-center text-neutral-700 transition-colors hover:text-[#c5a059] focus-visible:outline-2 focus-visible:outline-offset-2"
                 >
                   <svg
                     className={`h-4 w-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`}
@@ -313,7 +313,7 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate, dark
             </div>
 
             <div>
-              <div className="relative flex items-stretch justify-between">
+              <div className="flex items-center gap-1">
                 <Link
                   href="/packages"
                   onClick={close}
@@ -332,7 +332,7 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate, dark
                   aria-label="Toggle packages list"
                   aria-expanded={packagesOpen}
                   aria-controls="navigation-packages"
-                  className="absolute right-0 top-1/2 flex min-h-11 min-w-11 -translate-y-1/2 cursor-pointer items-center justify-center text-neutral-700 transition-colors hover:text-[#c5a059] focus-visible:outline-2 focus-visible:outline-offset-2"
+                  className="flex min-h-11 min-w-11 cursor-pointer items-center justify-center text-neutral-700 transition-colors hover:text-[#c5a059] focus-visible:outline-2 focus-visible:outline-offset-2"
                 >
                   <svg
                     className={`h-4 w-4 transition-transform duration-300 ${packagesOpen ? 'rotate-180' : ''}`}

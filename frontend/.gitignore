@@ -52,6 +52,8 @@ Desktop.ini
 /playwright-report/
 /test-results/
 /.lighthouseci/
+/*-audit*.png
+/heading-*.png
 *.log
 
 # raw website export and scraping tools

@@ -16,7 +16,7 @@ export function PackagesIndexView() {
             <p className="packages-eyebrow">ZXI interiors & contracting · Dubai</p>
             <h1>Our <em>packages.</em></h1>
           </div>
-          <p>Five clear starting points—each with a defined scope, transparent offer price and complete list of inclusions.</p>
+          <p>Clear starting points, each with a defined scope, transparent offer price and complete list of inclusions.</p>
         </header>
         <section className="packages-grid" aria-label="Interior and fit-out packages">
           {PACKAGE_INDEX.map((item, i) => (

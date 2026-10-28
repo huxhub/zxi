@@ -334,7 +334,7 @@ dialog#navigation-panel::backdrop {
 .folio-intro .folio-eyebrow { margin-bottom:4px; }
 .folio-scroll-note { display:none; font-size:10px; margin-top:28px; opacity:.55; }
 .folio-scroll-note span { margin-left:12px; }
-.folio-filters { position:sticky; top:var(--site-header-height, 80px); z-index:20; width:max-content; max-width:calc(100% - 24px); margin:clamp(14px, 2vh, 22px) auto clamp(18px, 2.4vh, 28px); height:auto; min-height:52px; display:flex; align-items:center; justify-content:center; gap:clamp(12px, 1.8vw, 24px); padding:12px clamp(18px, 2.2vw, 32px); background:#e3dfd5; border-radius:9999px; }
+.folio-filters { position:sticky; top:calc(var(--site-header-height, 80px) + clamp(10px, 1.4vh, 16px)); z-index:20; width:max-content; max-width:calc(100% - 24px); margin:clamp(14px, 2vh, 22px) auto clamp(18px, 2.4vh, 28px); height:auto; min-height:52px; display:flex; align-items:center; justify-content:center; gap:clamp(12px, 1.8vw, 24px); padding:12px clamp(18px, 2.2vw, 32px); background:#e3dfd5; border-radius:9999px; }
 .folio-filters button { font-size:11px; cursor:pointer; opacity:.5; transition:opacity .2s; }
 .folio-filters button[aria-pressed=true],.folio-filters button:hover { opacity:1; }
 .folio-strip { display:grid; grid-template-columns:repeat(10,minmax(0,1fr)); gap:10px; height:clamp(130px, 12vw, 175px); margin-top:clamp(16px, 2.2vh, 24px); margin-bottom:clamp(18px, 2.5vh, 28px); pointer-events:none; }

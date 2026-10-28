@@ -252,6 +252,14 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate, dark
               </div>
             </div>
 
+            <Link
+              href="/products"
+              onClick={close}
+              className="text-left text-lg sm:text-xl md:text-2xl font-normal tracking-tight text-neutral-900 hover:text-[#c5a059] transition-colors cursor-pointer focus:outline-none"
+            >
+              Products
+            </Link>
+
             <div>
               <div className="relative flex items-stretch justify-between">
                 <Link

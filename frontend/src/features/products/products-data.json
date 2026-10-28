@@ -1,0 +1,269 @@
+[
+  {
+    "title": "Bar stools",
+    "slug": "bar-stools",
+    "items": [
+      {
+        "title": "The Elegance Bar Stool",
+        "description": "Featuring a softly curved upholstered backrest, textured beige fabric, and a sleek black metal frame, this bar stool combines modern elegance with everyday comfort. Its clean lines and refined silhouette create a sophisticated seating solution for contemporary kitchen islands and stylish bar spaces.",
+        "image": "/products/bar-stools-01-photo.webp"
+      },
+      {
+        "title": "The Elegance Bar Stool",
+        "description": "Featuring a softly curved upholstered backrest, textured beige fabric, and a sleek black metal frame, this bar stool combines modern elegance with everyday comfort. Its clean lines and refined silhouette create a sophisticated seating solution for contemporary kitchen islands and stylish bar spaces.",
+        "image": "/products/bar-stools-02-photo.webp"
+      },
+      {
+        "title": "The Refined Accent Bar Stool",
+        "description": "Featuring a distinctive cylindrical backrest, textured beige upholstery, and a sleek black metal frame, this bar stool blends sculptural design with understated elegance. The contrasting materials and clean lines create a refined seating piece that brings warmth, character, and contemporary sophistication to any interior.",
+        "image": "/products/bar-stools-03-photo.webp"
+      }
+    ]
+  },
+  {
+    "title": "Dining chairs",
+    "slug": "dining-chairs",
+    "items": [
+      {
+        "title": "The Sculptural Accent Dining Chair",
+        "description": "Featuring a curved, enveloping backrest and rich textured upholstery, this sculptural dining chair combines inviting comfort with a bold pedestal base, adding warmth and contemporary character to the space.",
+        "image": "/products/dining-chairs-01-photo.webp"
+      },
+      {
+        "title": "The Sculptural Comfort Dining Chair",
+        "description": "Featuring a gracefully curved backrest, softly textured beige upholstery, and elegant tapered legs, this dining chair blends contemporary style with inviting comfort. Its organic silhouette and warm finishes bring understated sophistication and timeless appeal to any dining space.",
+        "image": "/products/dining-chairs-02-photo.webp"
+      },
+      {
+        "title": "The Sculptural Comfort Dining Chair",
+        "description": "Featuring a gracefully curved backrest, softly textured beige upholstery, and elegant tapered legs, this dining chair blends contemporary style with inviting comfort. Its organic silhouette and warm finishes bring understated sophistication and timeless appeal to any dining space.",
+        "image": "/products/dining-chairs-03-photo.webp"
+      }
+    ]
+  },
+  {
+    "title": "Dining tables",
+    "slug": "dining-tables",
+    "items": [
+      {
+        "title": "The Statement Dining Table",
+        "description": "Featuring a richly veined marble surface and a distinctive fluted cylindrical base, this dining table makes a bold yet timeless statement. Its organic edges and natural stone detailing bring together refined craftsmanship and understated luxury.",
+        "image": "/products/dining-tables-01-photo.webp"
+      },
+      {
+        "title": "The Contemporary Dining Table",
+        "description": "Featuring a sleek round glass top and a sculptural brushed-bronze pedestal base, this dining table brings a refined contemporary touch to the space. Its elegant proportions and warm metallic finish create a sophisticated focal point, perfectly complemented by the rich burgundy dining chairs.",
+        "image": "/products/dining-tables-02-photo.webp"
+      },
+      {
+        "title": "The Sculptural Wooden Dining Table",
+        "description": "Defined by its softly rounded silhouette and natural oak finish, this dining table brings warmth and understated sophistication to the space. Its sculptural fluted pedestal adds depth and texture, creating a striking balance between organic form and contemporary elegance. Paired with plush upholstered chairs, it offers a refined and inviting setting for everyday dining and intimate gatherings.",
+        "image": "/products/dining-tables-03-photo.webp"
+      }
+    ]
+  },
+  {
+    "title": "Sofas & lounge",
+    "slug": "sofas-lounge",
+    "items": [
+      {
+        "title": "The Bouclé Lounge Chair",
+        "description": "Sculpted in generous, rounded forms, this lounge chair wraps you in softness. Its cream bouclé upholstery adds quiet texture, while the sweeping arms invite you to sink in and stay awhile. A calm, tactile statement for any living space or quiet corner.",
+        "image": "/products/sofas-lounge-01-photo.webp"
+      },
+      {
+        "title": "The Bouclé Lounge Sofa",
+        "description": "Sculpted in generous, rounded forms, this lounge Sofa wraps you in softness. Its cream bouclé upholstery adds quiet texture, while the sweeping arms invite you to sink in and stay awhile. A calm, tactile statement for any living space or quiet corner.",
+        "image": "/products/sofas-lounge-02-photo.webp"
+      },
+      {
+        "title": "The Sculptural Lounge Sofa",
+        "description": "Defined by its generous proportions, rounded silhouette and plush olive-green upholstery, this sculptural sofa brings a sense of relaxed sophistication to the living space. Its deep seating and softly curved cushions invite you to unwind, while the rich, tactile fabric adds warmth, depth and understated character to the interior.",
+        "image": "/products/sofas-lounge-03-photo.webp"
+      },
+      {
+        "title": "The Bouclé Lounge Sofa",
+        "description": "Sculpted in generous, rounded forms, this lounge Sofa wraps you in softness. Its cream bouclé upholstery adds quiet texture, while the sweeping arms invite you to sink in and stay awhile. A calm, tactile statement for any living space or quiet corner.",
+        "image": "/products/sofas-lounge-04-photo.webp"
+      }
+    ]
+  },
+  {
+    "title": "Coffee tables",
+    "slug": "coffee-tables",
+    "items": [
+      {
+        "title": "The Organic Coffee Table",
+        "description": "Inspired by fluid, sculptural forms, this coffee table brings effortless elegance to the living space. Its freeform silhouette, matte dark-wood finish and bold cylindrical legs create a striking balance of softness and structure, making it a timeless centrepiece with quiet contemporary character.",
+        "image": "/products/coffee-tables-01-photo.webp"
+      },
+      {
+        "title": "The Refined Coffee Table",
+        "description": "Defined by its clean lines and distinctive combination of natural wood and marble, this coffee table brings understated sophistication to the living space. Its low-profile design, solid geometric form and contrasting stone detailing create a refined balance of warmth, texture and contemporary elegance.",
+        "image": "/products/coffee-tables-02-photo.webp"
+      },
+      {
+        "title": "The Sculpted Coffee Table",
+        "description": "Defined by its softly rounded edges, rich dark-wood finish and distinctive sculptural base, this coffee table brings a sense of understated luxury to the living space. Its organic silhouette and solid proportions create a striking focal point, blending natural warmth with contemporary sophistication.",
+        "image": "/products/coffee-tables-03-photo.webp"
+      },
+      {
+        "title": "The Sculpted Coffee Table",
+        "description": "Defined by its softly rounded edges, rich dark-wood finish and distinctive sculptural base, this coffee table brings a sense of understated luxury to the living space. Its organic silhouette and solid proportions create a striking focal point, blending natural warmth with contemporary sophistication.",
+        "image": "/products/coffee-tables-04-photo.webp"
+      }
+    ]
+  },
+  {
+    "title": "Bedside tables",
+    "slug": "bedside-tables",
+    "items": [
+      {
+        "title": "The Marble Bedside Table",
+        "description": "Featuring rich burgundy marble with striking natural veining, this bedside table brings a bold yet refined touch to the bedroom. Its solid geometric form and layered design combine functional storage with distinctive material elegance.",
+        "image": "/products/bedside-tables-01-photo.webp"
+      },
+      {
+        "title": "The Minimalist Bedside Table",
+        "description": "Featuring clean lines, a natural oak finish and seamless drawer fronts, this bedside table brings warmth and simplicity to the bedroom. Its understated design offers practical storage while maintaining a calm, contemporary aesthetic.",
+        "image": "/products/bedside-tables-02-photo.webp"
+      },
+      {
+        "title": "The Travertine Bedside Table",
+        "description": "Featuring a sculptural stone form, softly rounded edges and distinctive natural veining, this bedside table brings organic character and understated luxury to the bedroom. Its open shelving adds functional simplicity while highlighting the beauty of the natural material.",
+        "image": "/products/bedside-tables-03-photo.webp"
+      }
+    ]
+  },
+  {
+    "title": "Consoles",
+    "slug": "consoles",
+    "items": [
+      {
+        "title": "The Timeless Console",
+        "description": "Defined by its rich natural wood finish and softly rounded silhouette, this elegant console brings warmth and understated sophistication to contemporary interiors. Its refined panel detailing, generous proportions, and contrasting stone surface create a balanced composition, offering both functional storage and a distinctive architectural presence.",
+        "image": "/products/consoles-01-photo.webp"
+      },
+      {
+        "title": "The Sculptural Console",
+        "description": "Defined by its bold geometric silhouette and softly rounded edges, this contemporary console pairs rich dark wood with reflective surfaces for a sophisticated sense of depth. Its rhythmic panel detailing and seamless proportions create a striking architectural presence, bringing modern character and understated luxury to the interior.",
+        "image": "/products/consoles-02-photo.webp"
+      },
+      {
+        "title": "The Fluted Console",
+        "description": "Defined by its striking fluted façade and sculptural linear form, this contemporary console brings depth, rhythm, and character to the modern interior. Its refined metallic finish and dark contrasting surface create a sophisticated balance of texture and tone, transforming functional design into a bold architectural statement.",
+        "image": "/products/consoles-03-photo.webp"
+      }
+    ]
+  },
+  {
+    "title": "Display shelves",
+    "slug": "display-shelves",
+    "items": [
+      {
+        "title": "The Refined Display Shelves",
+        "description": "Featuring a rich walnut finish and clean architectural lines, these display shelves blend functional storage with sculptural elegance, creating a warm and sophisticated focal point for any modern interior.",
+        "image": "/products/display-shelves-01-photo.webp"
+      },
+      {
+        "title": "The Refined Display Shelves",
+        "description": "Featuring a rich walnut finish and clean architectural lines, these display shelves blend functional storage with sculptural elegance, creating a warm and sophisticated focal point for any modern interior.",
+        "image": "/products/display-shelves-02-photo.webp"
+      },
+      {
+        "title": "The Refined Display Shelves",
+        "description": "Featuring a rich Dark walnut finish and clean architectural lines, these display shelves blend functional storage with sculptural elegance, creating a warm and sophisticated focal point for any modern interior.",
+        "image": "/products/display-shelves-03-photo.webp"
+      }
+    ]
+  },
+  {
+    "title": "Pouffes",
+    "slug": "pouffes",
+    "items": [
+      {
+        "title": "The Refined Pouffe",
+        "description": "Featuring soft textured upholstery and a sculptural silhouette, this elegant pouffe combines everyday comfort with understated sophistication, adding warmth and versatility to any modern interior.",
+        "image": "/products/pouffes-01-photo.webp"
+      },
+      {
+        "title": "The Modern Pouffe",
+        "description": "Featuring a softly rounded upholstered seat and a distinctive sculptural silhouette, this elegant pouffe brings effortless comfort to contemporary interiors. Supported by a sleek black frame, its balanced proportions and refined form create a versatile accent that complements modern living spaces with understated sophistication",
+        "image": "/products/pouffes-02-photo.webp"
+      },
+      {
+        "title": "The Sculptural Pouffe",
+        "description": "Defined by its plush textured upholstery and bold segmented silhouette, this statement pouffe brings depth, warmth, and character to contemporary interiors. Its softly rounded form and generous proportions create a comfortable, inviting presence, while the rich tactile finish adds a refined sense of understated luxury to any modern space.",
+        "image": "/products/pouffes-03-photo.webp"
+      }
+    ]
+  },
+  {
+    "title": "TV units",
+    "slug": "tv-units",
+    "items": [
+      {
+        "title": "The Minimalist Media Console",
+        "description": "Defined by its monolithic form and distinctive natural stone finish, this media console brings understated elegance to the contemporary interior. Its clean, floating-line aesthetic, subtle textural variations and warm integrated lighting create a refined architectural feature, balancing natural beauty with modern simplicity.",
+        "image": "/products/tv-units-01-photo.webp"
+      },
+      {
+        "title": "The contemporary Tv Unit",
+        "description": "Defined by its clean horizontal lines, rich walnut finish and understated geometric form, this TV console brings a sense of quiet sophistication to the living space. Its seamless cabinetry and solid base create a balanced architectural statement, while the natural wood grain adds warmth, texture and timeless appeal.",
+        "image": "/products/tv-units-02-photo.webp"
+      },
+      {
+        "title": "The Minimalist Tv Console",
+        "description": "Defined by its understated panel detailing, warm wood cabinetry and clean, elongated proportions, this media wall creates a calm and cohesive focal point. Subtle integrated lighting enhances the refined finishes, while the handleless storage and minimalist composition bring effortless sophistication to the contemporary living space.",
+        "image": "/products/tv-units-03-photo.webp"
+      },
+      {
+        "title": "The Contemporary Tv Unit",
+        "description": "Defined by its textured wall panels, warm walnut shelving and striking natural stone console, this media unit brings depth and sophistication to the living space. Integrated linear lighting highlights the material contrasts, while the seamless composition balances architectural detail with functional elegance.",
+        "image": "/products/tv-units-04-photo.webp"
+      }
+    ]
+  },
+  {
+    "title": "Wardrobes",
+    "slug": "wardrobes",
+    "items": [
+      {
+        "title": "The Modern Wardrobe",
+        "description": "Featuring warm wood tones, precise panel detailing, and understated hardware, this elegant wardrobe combines generous storage with refined simplicity. Its balanced proportions and timeless materiality create a sophisticated presence, bringing warmth and quiet character to contemporary interiors.",
+        "image": "/products/wardrobes-01-photo.webp"
+      },
+      {
+        "title": "The Modern Wardrobe",
+        "description": "Featuring warm wood tones, precise panel detailing, and understated hardware, this elegant wardrobe combines generous storage with refined simplicity. Its balanced proportions and timeless materiality create a sophisticated presence, bringing warmth and quiet character to contemporary interiors.",
+        "image": "/products/wardrobes-02-photo.webp"
+      },
+      {
+        "title": "The Modern Wardrobe",
+        "description": "Featuring warm wood tones, precise panel detailing, and understated hardware, this elegant wardrobe combines generous storage with refined simplicity. Its balanced proportions and timeless materiality create a sophisticated presence, bringing warmth and quiet character to contemporary interiors.",
+        "image": "/products/wardrobes-03-photo.webp"
+      }
+    ]
+  },
+  {
+    "title": "Upholstered beds",
+    "slug": "upholstered-beds",
+    "items": [
+      {
+        "title": "The Contemporary Upholstered Bed",
+        "description": "Featuring a softly upholstered frame in muted olive green, this bed brings warmth and understated elegance to the bedroom. Its clean-lined silhouette, padded headboard and coordinated bedside detailing create a harmonious balance of comfort, texture and contemporary sophistication.",
+        "image": "/products/upholstered-beds-01-photo.webp"
+      },
+      {
+        "title": "The Sculptural Upholstered Bed",
+        "description": "Featuring a softly curved, wraparound headboard and plush ivory upholstery, this bed brings a sense of calm sophistication to the bedroom. Its fluid silhouette and warm neutral tones create an inviting focal point, blending contemporary design with understated comfort.",
+        "image": "/products/upholstered-beds-02-photo.webp"
+      },
+      {
+        "title": "The Upholstered Bed",
+        "description": "Featuring a softly upholstered frame in muted olive green, this bed brings warmth and understated elegance to the bedroom. Its clean-lined silhouette, padded headboard and coordinated bedside detailing create a harmonious balance of comfort, texture and contemporary sophistication.",
+        "image": "/products/upholstered-beds-03-photo.webp"
+      }
+    ]
+  }
+]

@@ -4,7 +4,7 @@ import { PACKAGES } from '@/features/packages/packages-data';
 
 export default function sitemap() {
   const lastModified = new Date();
-  const pages = ['', '/projects', '/services', '/packages', '/contact', '/blog'].map((path) => ({
+  const pages = ['', '/projects', '/services', '/packages', '/products', '/contact', '/blog'].map((path) => ({
     url: `https://zxi.ae${path}`, lastModified, changeFrequency: path === '' ? 'weekly' : 'monthly', priority: path === '' ? 1 : 0.8,
   }));
   const projectPages = projects.map(({ slug }) => ({ url: `https://zxi.ae/projects/${slug}`, lastModified, changeFrequency: 'monthly', priority: 0.7 }));

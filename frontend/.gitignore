@@ -70,3 +70,6 @@ Desktop.ini
 /public/project-images/
 /public/european-interiors/
 /public/europe-interiors/
+
+# Original furniture PDFs; optimized catalog photos live in public/products/
+/public/wetransfer_furnatures_2026-10-27_1234/

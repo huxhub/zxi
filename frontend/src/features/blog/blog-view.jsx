@@ -29,9 +29,6 @@ export function BlogView({ logo }) {
       ? BLOG_POSTS
       : BLOG_POSTS.filter((post) => post.category === activeCategory);
 
-  const featuredPost = filteredPosts[0] || BLOG_POSTS[0];
-  const gridPosts = filteredPosts.slice(1);
-
   return (
     <>
       <SiteNav logo={logo} onNavigate={handleNavigate} darkAtTop />
@@ -71,53 +68,10 @@ export function BlogView({ logo }) {
             })}
           </div>
 
-          {/* Featured Hero Article */}
-          {featuredPost && (
-            <Link
-              href={`/blog/${featuredPost.slug}`}
-              className="group block mb-20 md:mb-28 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center"
-              aria-label={`Read full article: ${featuredPost.title}`}
-            >
-              <div className="lg:col-span-7 relative aspect-[16/10] sm:aspect-[16/9] overflow-hidden rounded-none bg-neutral-100">
-                <Image
-                  src={featuredPost.image}
-                  alt={featuredPost.title}
-                  fill
-                  priority
-                  sizes="(max-width: 1024px) 100vw, 60vw"
-                  className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.03]"
-                />
-              </div>
-
-              <div className="lg:col-span-5 flex flex-col items-start justify-center">
-                <div className="flex items-center gap-3 text-xs uppercase tracking-widest text-neutral-500 font-medium mb-4">
-                  <span>{featuredPost.category}</span>
-                  <span className="w-1 h-1 rounded-full bg-neutral-300" aria-hidden="true" />
-                  <span>{featuredPost.readTime}</span>
-                </div>
-
-                <h2 className="text-2xl sm:text-3xl md:text-4xl font-normal tracking-tight text-neutral-900 leading-snug group-hover:text-neutral-600 transition-colors">
-                  {featuredPost.title}
-                </h2>
-
-                <p className="text-sm sm:text-base text-neutral-500 font-light leading-relaxed mt-4 line-clamp-3">
-                  {featuredPost.excerpt}
-                </p>
-
-                <div className="flex items-center gap-4 mt-6 text-xs text-neutral-400">
-                  <span>{featuredPost.date}</span>
-                  <span className="text-neutral-900 font-normal inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-                    Read full article &rarr;
-                  </span>
-                </div>
-              </div>
-            </Link>
-          )}
-
-          {/* Standard Blog Posts Grid (3 Columns) */}
-          {gridPosts.length > 0 && (
+          {/* Standard Blog Posts Grid */}
+          {filteredPosts.length > 0 && (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-12 lg:gap-14">
-              {gridPosts.map((post) => (
+              {filteredPosts.map((post) => (
                 <Link
                   key={post.id}
                   href={`/blog/${post.slug}`}

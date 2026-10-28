@@ -45,10 +45,12 @@
 @media(max-width:800px){.packages-intro{padding:140px 20px 65px}.packages-grid{grid-template-columns:1fr;padding:0 20px 90px;gap:60px}.package-detail-hero{display:flex;flex-direction:column-reverse}.package-detail-image{min-height:65vh}.package-detail-copy{padding:45px 20px 70px}.package-back{margin-bottom:65px}.package-scope{display:block;padding:90px 20px}.scope-heading{margin-bottom:60px}.scope-section{grid-template-columns:35px 1fr;gap:8px}.scope-section h3{grid-column:2}.scope-section ul{grid-column:2;padding-left:17px}}
 
 /* Packages: image-led archive and specification-first detail pages. */
-.packages-intro--compact { display:grid; grid-template-columns:1.25fr .75fr; align-items:end; gap:8vw; padding-bottom:70px; }
+.packages-intro--compact,
+.packages-grid { width:min(calc(100% - 8vw),1720px); margin-inline:auto; }
+.packages-intro--compact { display:grid; grid-template-columns:1.25fr .75fr; align-items:end; gap:8vw; padding:170px 0 70px; }
 .packages-intro--compact h1 { margin-bottom:0; }
 .packages-intro--compact>p { max-width:420px; padding-bottom:8px; }
-.packages-grid { max-width:none; padding:0; gap:2px; grid-template-columns:repeat(2,minmax(0,1fr)); grid-auto-rows:clamp(480px,46vw,680px); background:#f3f1eb; }
+.packages-grid { max-width:none; padding:0 0 130px; gap:2px; grid-template-columns:repeat(2,minmax(0,1fr)); grid-auto-rows:clamp(480px,46vw,680px); background:#f3f1eb; }
 .package-card { position:relative; min-width:0; min-height:0; overflow:hidden; color:#fff; container-type:inline-size; }
 .package-card { grid-column:span 1; }
 .package-image { position:absolute; inset:0; aspect-ratio:auto; width:100%; height:100%; }
@@ -94,9 +96,9 @@
   .package-card .package-card-meta span:last-child { text-align:right; }
 }
 @media(max-width:800px){
-  .packages-intro--compact { display:block; padding:140px 20px 55px; }
+  .packages-intro--compact { display:block; width:calc(100% - 32px); padding:140px 0 55px; }
   .packages-intro--compact>p { margin-top:30px; }
-  .packages-grid { display:block; padding:0; }
+  .packages-grid { display:block; width:calc(100% - 32px); padding:0 0 90px; }
   .package-card { min-height:72svh; }
   .package-card+.package-card { border-top:2px solid #f3f1eb; }
   .package-card-content { padding:20px 20px 27px; }

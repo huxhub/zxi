@@ -9,7 +9,7 @@
 
 .products-intro,
 .products-collection {
-  width: min(100% - 8vw, 1720px);
+  width: min(calc(100% - 8vw), 1720px);
   margin-inline: auto;
 }
 

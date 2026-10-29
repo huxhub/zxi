@@ -39,14 +39,14 @@ export const SERVICES_DATA = [
     ],
     gallery: [
       {
-        src: '/zxi/assets/2080-office-dubai.jpg',
-        alt: 'Minimalist corporate workstation floor with linear illumination',
-        caption: 'Open workstation floor with high-CRI linear fixtures and acoustic ceiling baffles',
+        src: '/services/commercial-executive-reception.webp',
+        alt: 'Premium Dubai corporate office reception with travertine desk, walnut paneling, executive lounge seating, and skyline views',
+        caption: 'Executive arrival suite combining honed travertine, book-matched walnut, integrated lighting, and a tailored client lounge',
       },
       {
-        src: '/zxi/assets/2079-fitout-dubai.jpg',
-        alt: 'Executive meeting suite with timber joinery',
-        caption: 'Executive boardroom featuring custom walnut wall cladding and flush concealed doors',
+        src: '/services/commercial-executive-boardroom.webp',
+        alt: 'Luxury executive boardroom with monolithic stone conference table, leather seating, walnut joinery, and fluted glass partitions',
+        caption: 'Private boardroom engineered with concealed AV, acoustic ceiling treatment, bronze-framed glass, and bespoke executive seating',
       },
       {
         src: '/zxi/assets/1838-store-front.webp',
@@ -217,14 +217,14 @@ export const SERVICES_DATA = [
     ],
     gallery: [
       {
-        src: '/projects/city-walk/01.jpg',
-        alt: 'Turnkey engineering and precision architectural fitout at City Walk, Dubai',
-        caption: 'Monolithic joinery integration, recessed architectural ceiling lighting, and concealed MEP distribution at City Walk',
+        src: '/services/turnkey-premium-villa-daylight.webp',
+        alt: 'Completed premium Dubai villa exterior in daylight with limestone volumes, timber screens, bronze glazing, and landscaped water court',
+        caption: 'Turnkey villa execution defined by precision stone facades, shaded glazing, architectural timber screens, and coordinated landscape works',
       },
       {
-        src: '/projects/nora/01.jpg',
-        alt: 'Full-scope turnkey commercial contracting and architectural execution at Dubai Design District',
-        caption: 'Parametric tiered ceiling execution, fluted architectural wall cladding, and custom travertine reception at Nóra',
+        src: '/services/turnkey-premium-villa-exterior.webp',
+        alt: 'Completed premium contemporary villa exterior in Dubai with limestone architecture, warm timber detailing, and integrated landscape lighting',
+        caption: 'Turnkey villa delivery uniting architectural construction, premium facade materials, landscape coordination, and integrated exterior lighting',
       },
       {
         src: '/zxi/assets/2363-14-scaled.webp',
@@ -395,14 +395,14 @@ export const SERVICES_DATA = [
     ],
     gallery: [
       {
-        src: '/projects/samsara-tribe-yoga/01.jpg',
-        alt: 'Samsara Tribe Yoga sensory wellness studio in Dubai Marina',
-        caption: 'Signature wellness sanctuary featuring curved lime-wash plaster walls, custom ceiling fabric canopies, and micro-cement flooring',
+        src: '/services/hospitality-five-star-lobby.webp',
+        alt: 'Five-star Dubai hotel lobby with double-height limestone columns, sculptural reception desk, bespoke seating, and indoor trees',
+        caption: 'Five-star arrival experience shaped by monumental stone, layered lighting, bespoke furnishings, and integrated landscape elements',
       },
       {
-        src: '/projects/bread-basket/01.jpg',
-        alt: 'Bread Basket artisan bakery and cafe fitout in Jumeirah',
-        caption: 'Artisan hospitality environment featuring a monolithic travertine espresso bar, oak shelving vitrines, and warm ambient illumination',
+        src: '/services/hospitality-five-star-lounge.webp',
+        alt: 'Intimate five-star hotel lounge and cocktail bar with curved stone counter, bronze detailing, and tailored seating',
+        caption: 'Atmospheric hotel lounge balancing a sculptural bar, artisan glass displays, tactile finishes, and intimate pools of light',
       },
       {
         src: '/zxi/assets/1850-cover-image-1.webp',

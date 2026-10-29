@@ -115,8 +115,14 @@
     text-align: center !important;
   }
 
+  .mid-page-cta__copy {
+    width: 100%;
+    align-items: center !important;
+  }
+
   .mid-page-cta h2 {
     max-width: 520px;
+    text-align: center !important;
     font-size: clamp(24px, 7vw, 30px) !important;
     line-height: 1.1 !important;
   }
@@ -383,7 +389,7 @@
     font-size: 64px !important;
   }
 
-  .mid-page-cta > p {
+  .mid-page-cta__copy > p {
     font-size: 12px !important;
   }
 
@@ -611,7 +617,7 @@
     font-size: 72px !important;
   }
 
-  .mid-page-cta > p {
+  .mid-page-cta__copy > p {
     font-size: 13px !important;
   }
 

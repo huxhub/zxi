@@ -1,18 +1,18 @@
 /* Static, full-width conversion band placed mid-page. */
 .mid-page-cta {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
-    align-items: center;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: end;
     gap: clamp(24px, 2.25vw, 40px);
     width: 100%;
     padding: clamp(44px, 6vw, 92px) clamp(24px, 6vw, 110px);
     background: #E8DDCC;
     color: #282722;
-    border-block: 1px solid #D4C8B9;
 }
 
-.mid-page-cta>p { margin: 0; font-size: 11px; text-transform: uppercase; letter-spacing: .15em; color: #5C574E; }
-.mid-page-cta h2 { margin: 0; justify-self: center; text-align: center; font-size: clamp(32px, 2.8vw, 48px); font-weight: 400; line-height: 1; letter-spacing: -.05em; color: #282722; white-space: nowrap; }
+.mid-page-cta__copy { display: flex; min-width: 0; flex-direction: column; align-items: flex-start; gap: 14px; }
+.mid-page-cta__copy>p { margin: 0; font-size: 11px; text-transform: uppercase; letter-spacing: .15em; color: #5C574E; }
+.mid-page-cta h2 { margin: 0; text-align: left; font-size: clamp(32px, 2.8vw, 48px); font-weight: 400; line-height: 1; letter-spacing: -.05em; color: #282722; white-space: nowrap; }
 .mid-page-cta a { display: flex; align-items: center; justify-self: end; gap: 30px; width: 250px; min-width: 0; padding: 18px 20px; background: #F5F0E7; color: #282722; border: none; font-weight: 600; text-decoration: none; font-size: 13px; transition: background .25s, transform .25s, color .25s; }
 .mid-page-cta a:hover { background: #F7F3ED; color: #282722; transform: translateX(-5px); }
 .mid-page-cta a span:last-child { margin-left: auto; }

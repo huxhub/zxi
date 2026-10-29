@@ -34,7 +34,7 @@ export function ServicesIndexView({ logo }) {
             <p className="text-[10px] uppercase tracking-[0.26em] text-neutral-500 mb-4">
               ZXI interiors & contracting
             </p>
-            <h1 className="text-[clamp(42px,6vw,88px)] font-normal tracking-[-0.055em] leading-[.96] text-neutral-900">
+            <h1 className="text-[32px] sm:text-[42px] lg:text-[55px] font-normal tracking-[-0.025em] leading-[1.14] text-neutral-900">
               Spaces made to work beautifully.
             </h1>
             <p className="max-w-lg mt-6 text-sm sm:text-base leading-relaxed text-neutral-500">

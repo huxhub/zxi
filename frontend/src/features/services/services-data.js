@@ -217,14 +217,14 @@ export const SERVICES_DATA = [
     ],
     gallery: [
       {
-        src: '/zxi/assets/2161-construction.webp',
-        alt: 'On-site technical fitout and structural execution in progress',
-        caption: 'Rigorous on-site civil works and MEP infrastructure routing managed under strict safety standards',
+        src: '/projects/city-walk/01.jpg',
+        alt: 'Turnkey engineering and precision architectural fitout at City Walk, Dubai',
+        caption: 'Monolithic joinery integration, recessed architectural ceiling lighting, and concealed MEP distribution at City Walk',
       },
       {
-        src: '/zxi/assets/1628-villa-construction.webp',
-        alt: 'Turnkey architectural residential expansion and renovation',
-        caption: 'Full-scope villa expansion and structural shell remodeling in Dubai',
+        src: '/projects/nora/01.jpg',
+        alt: 'Full-scope turnkey commercial contracting and architectural execution at Dubai Design District',
+        caption: 'Parametric tiered ceiling execution, fluted architectural wall cladding, and custom travertine reception at Nóra',
       },
       {
         src: '/zxi/assets/2363-14-scaled.webp',
@@ -395,14 +395,14 @@ export const SERVICES_DATA = [
     ],
     gallery: [
       {
-        src: '/zxi/assets/2627-samsara-exterior-view.webp',
-        alt: 'Samsara Tribe wellness studio arrival experience',
-        caption: 'Serene entry corridor with indirect floor-washing illumination and curved plaster surfaces',
+        src: '/projects/samsara-tribe-yoga/01.jpg',
+        alt: 'Samsara Tribe Yoga sensory wellness studio in Dubai Marina',
+        caption: 'Signature wellness sanctuary featuring curved lime-wash plaster walls, custom ceiling fabric canopies, and micro-cement flooring',
       },
       {
-        src: '/zxi/assets/1348-bread-basket.webp',
-        alt: 'Bread Basket artisan cafe interior fitout in Jumeirah',
-        caption: 'Warm cafe interior featuring solid oak counters, bespoke banquettes, and woven lighting fixtures',
+        src: '/projects/bread-basket/01.jpg',
+        alt: 'Bread Basket artisan bakery and cafe fitout in Jumeirah',
+        caption: 'Artisan hospitality environment featuring a monolithic travertine espresso bar, oak shelving vitrines, and warm ambient illumination',
       },
       {
         src: '/zxi/assets/1850-cover-image-1.webp',

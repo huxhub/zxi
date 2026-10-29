@@ -37,17 +37,17 @@ export function Hero({ hero, heroRef, heroPicRef, heroCopyRef }) {
             Dubai’s leading interior fitout company
           </p>
           <div className="hero-split-line overflow-hidden py-0.5">
-            <h1 className="block text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-normal leading-[1.23] tracking-tight">
+            <h1 className="block text-3xl sm:text-4xl md:text-5xl lg:text-[55px] font-normal leading-[1.18] tracking-[-0.025em]">
               Re-imagine your
             </h1>
           </div>
           <div className="hero-split-line overflow-hidden py-0.5">
-            <h1 className="block text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-normal leading-[1.23] tracking-tight">
+            <h1 className="block text-3xl sm:text-4xl md:text-5xl lg:text-[55px] font-normal leading-[1.18] tracking-[-0.025em]">
               space with
             </h1>
           </div>
           <div className="hero-split-line overflow-hidden py-0.5">
-            <h1 className="block text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-normal leading-[1.23] tracking-tight">
+            <h1 className="block text-3xl sm:text-4xl md:text-5xl lg:text-[55px] font-normal leading-[1.18] tracking-[-0.025em]">
               ZXI Interiors.
             </h1>
           </div>

@@ -75,10 +75,10 @@ export function ServiceDetailView({ service, nextService, logo }) {
             />
             <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,.72)_0%,rgba(0,0,0,.22)_62%,rgba(0,0,0,.08)_100%)]" />
             <div className="relative z-10 flex h-full max-w-[1600px] mx-auto items-end px-6 pb-12 sm:px-10 sm:pb-16 lg:px-16 lg:pb-20">
-              <div className="max-w-3xl">
-                <p className="mb-5 text-[10px] uppercase tracking-[.28em] text-white/70">{service.tagline}</p>
-                <h1 className="text-[clamp(45px,7vw,104px)] font-normal tracking-[-.06em] leading-[.9]">{service.title}</h1>
-                <p className="mt-6 max-w-xl text-sm leading-relaxed text-white/80 sm:text-base">{service.subtitle}</p>
+              <div className="max-w-4xl">
+                <p className="mb-4 sm:mb-5 text-[11px] sm:text-xs uppercase tracking-[.26em] text-white/75 font-medium">{service.tagline}</p>
+                <h1 className="text-[32px] sm:text-[42px] lg:text-[55px] font-normal tracking-[-0.025em] leading-[1.14] text-white">{service.title}</h1>
+                <p className="mt-5 sm:mt-6 max-w-2xl text-sm leading-relaxed text-white/80 sm:text-base font-light">{service.subtitle}</p>
               </div>
             </div>
           </header>

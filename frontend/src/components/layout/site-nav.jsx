@@ -217,11 +217,11 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate, dark
 
               {/* Sub-projects accordion dropdown */}
               <div
-                className={`hidden grid transition-all duration-300 ease-in-out ${
+                className={`grid transition-all duration-300 ease-in-out ${
                   portfolioOpen ? 'grid-rows-[1fr] opacity-100 mt-3 pt-2' : 'grid-rows-[0fr] opacity-0'
                 }`}
               >
-                <div className="overflow-hidden flex flex-col gap-2.5 pl-4 border-l-2 border-[#282722]/25 text-base sm:text-lg font-light text-[#282722]/75 max-h-56 overflow-y-auto">
+                <div className="project-list-items overflow-hidden flex flex-col gap-2.5 pl-4 border-l-2 border-[#282722]/25 text-base sm:text-lg font-light text-[#282722]/75 max-h-56 overflow-y-auto">
                   <Link
                     href="/projects"
                     onClick={close}

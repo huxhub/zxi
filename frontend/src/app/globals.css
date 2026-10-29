@@ -365,7 +365,7 @@ dialog#navigation-panel::backdrop {
 .project-thumbnail-meta { width:100%; display:flex; justify-content:center; align-items:center; flex-wrap:wrap; gap:12px 0; align-self:center; margin:20px auto 0; color:#22231f; font-size:clamp(13px,1vw,16px); line-height:1.25; text-align:center; }
 .project-thumbnail-meta span { display:inline-flex; align-items:center; white-space:nowrap; }
 .project-thumbnail-meta span + span::before { content:'·'; margin:0 20px; opacity:.55; }
-.project-title-panel h1 { font-size:clamp(36px,3.2vw,60px); line-height:1.18; text-align:center; letter-spacing:-.045em; font-weight:400; max-width:100%; overflow-wrap:anywhere; margin:14px 0 0; }
+.project-title-panel h1 { font-size:clamp(34px,3.2vw,55px); line-height:1.15; text-align:center; letter-spacing:-.025em; font-weight:400; max-width:100%; overflow-wrap:anywhere; margin:14px 0 0; }
 .project-scroll-cue { font-size:10px; margin-top:15px; }
 .project-information { flex:0 0 44vw; width:44vw; display:flex; flex-direction:column; justify-content:center; padding:70px 6vw; }
 .project-information h2 { font-size:clamp(24px,2.8vw,44px); line-height:1.1; letter-spacing:-.04em; margin-bottom:65px; }
@@ -396,7 +396,7 @@ dialog#navigation-panel::backdrop {
  .project-thumbnail>div { height:44svh; }
  .project-title-content { width:100%; max-width:500px; }
  .project-thumbnail-meta { max-width:500px; font-size:13px; }
- .project-title-panel h1 { font-size:clamp(30px,5vw,48px); }
+ .project-title-panel h1 { width:100%; font-size:clamp(28px,4.5vw,44px); letter-spacing:-.01em; }
  .project-information { width:100%; padding:90px 30px; }
  .project-gallery-image,.project-gallery-image.is-small { width:100%; padding:15px; }
  .project-gallery-image>div { height:100vw; }
@@ -438,4 +438,122 @@ main.project-main { width:100%; max-width:none; }
 }
 @media(max-width:767px) {
   .folio-heading { font-size:clamp(30px,5vw,48px) !important; }
+}
+
+/* Shared heading rhythm across routes. Component-specific heading classes can refine this. */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: 0.005em;
+  line-height: 1.15;
+}
+
+@media (min-width: 1025px) {
+  h1, h2, h3, h4, h5, h6 { line-height: 1.08; }
+}
+
+@media (min-width: 2560px) {
+  h1, h2, h3, h4, h5, h6 { line-height: 1.1; }
+}
+
+@media (max-width: 1024px) {
+  h1, h2, h3, h4, h5, h6 { line-height: 1.12; }
+}
+
+/*
+ * Shared page rail
+ * Keep every card collection on the same left/right edge at each viewport.
+ * Full-bleed heroes and project-detail storytelling intentionally opt out.
+ */
+:root {
+  --page-gutter: clamp(16px, 4vw, 64px);
+  --page-content-max: 1720px;
+  --page-rail-width: min(
+    calc(100% - (var(--page-gutter) * 2)),
+    var(--page-content-max)
+  );
+}
+
+/* Home project cards */
+#portfolio > .grid {
+  width: var(--page-rail-width) !important;
+  max-width: var(--page-content-max) !important;
+  margin-inline: auto !important;
+  padding-inline: 0 !important;
+}
+
+/* Project, package and product archives */
+.folio {
+  width: 100%;
+  max-width: none;
+  padding-inline: 0 !important;
+}
+
+.folio-grid {
+  width: var(--page-rail-width);
+  max-width: var(--page-content-max);
+  margin-inline: auto;
+}
+
+.packages-intro--compact,
+.packages-grid,
+.products-intro,
+.products-collection {
+  width: var(--page-rail-width) !important;
+  max-width: var(--page-content-max);
+  margin-inline: auto;
+}
+
+/* Services and journal card grids share the same centered rail. */
+main:has(section[aria-label="ZXI services"]) > div,
+main:has(.grid.grid-cols-1.md\:grid-cols-2.lg\:grid-cols-3) > div {
+  width: var(--page-rail-width);
+  max-width: var(--page-content-max) !important;
+  margin-inline: auto;
+  padding-inline: 0 !important;
+}
+
+/* Contact detail cards align with the same route-wide card edge. */
+.contact-details {
+  padding-inline: var(--page-gutter) !important;
+}
+
+.contact-details > * {
+  width: 100%;
+  max-width: var(--page-content-max);
+  margin-inline: auto;
+}
+
+/* Navbar logo and menu terminate on the same vertical rails as page cards. */
+header.fixed:has(.nav-menu-btn) {
+  padding-left: max(
+    var(--page-gutter),
+    calc((100vw - var(--page-content-max)) / 2)
+  ) !important;
+  padding-right: max(
+    var(--page-gutter),
+    calc((100vw - var(--page-content-max)) / 2)
+  ) !important;
+}
+
+header.fixed .nav-menu-btn,
+header.fixed button[aria-label="Open navigation menu"] {
+  padding-inline: 0 !important;
+}
+
+@media (min-width: 2560px) {
+  :root {
+    --page-gutter: 80px;
+    --page-content-max: 2280px;
+  }
+}
+
+@media (min-width: 3840px) {
+  :root {
+    --page-gutter: 120px;
+    --page-content-max: 3200px;
+  }
 }

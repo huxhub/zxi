@@ -397,18 +397,18 @@ footer {
   }
 
   header.fixed .nav-menu-bar-top {
-    width: 48px !important;
+    width: 56px !important;
     height: 3.5px !important;
   }
 
   header.fixed .nav-menu-bar-bottom {
-    width: 32px !important;
+    width: 38px !important;
     height: 3.5px !important;
   }
 
   header.fixed button[aria-label="Open navigation menu"]:hover .nav-menu-bar-bottom,
   header.fixed .nav-menu-btn:hover .nav-menu-bar-bottom {
-    width: 48px !important;
+    width: 56px !important;
   }
 
   dialog#navigation-panel {

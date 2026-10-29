@@ -14,8 +14,9 @@
 
   /* Service detail header */
   article header h1 {
-    font-size: clamp(32px, 8.5vw, 44px) !important;
-    line-height: 1.12 !important;
+    font-size: clamp(28px, 7.5vw, 38px) !important;
+    line-height: 1.16 !important;
+    letter-spacing: -0.02em !important;
   }
 
   article header p.text-lg {
@@ -74,7 +75,9 @@
 /* --- Tablet Breakpoints (641px - 1024px) --- */
 @media (min-width: 641px) and (max-width: 1024px) {
   article header h1 {
-    font-size: clamp(42px, 5.5vw, 56px) !important;
+    font-size: clamp(38px, 4.8vw, 46px) !important;
+    line-height: 1.15 !important;
+    letter-spacing: -0.025em !important;
   }
 
   article .relative.aspect-\[16\/9\] {
@@ -99,7 +102,9 @@
   }
 
   main h1 {
-    font-size: 88px !important;
+    font-size: 72px !important;
+    line-height: 1.15 !important;
+    letter-spacing: -0.025em !important;
   }
 
   main section.grid a.group {
@@ -107,7 +112,9 @@
   }
 
   article header h1 {
-    font-size: 88px !important;
+    font-size: 72px !important;
+    line-height: 1.15 !important;
+    letter-spacing: -0.025em !important;
   }
 
   article header p.text-lg {
@@ -146,7 +153,9 @@
   }
 
   main h1 {
-    font-size: 118px !important;
+    font-size: 88px !important;
+    line-height: 1.14 !important;
+    letter-spacing: -0.025em !important;
   }
 
   main section.grid a.group {
@@ -154,7 +163,9 @@
   }
 
   article header h1 {
-    font-size: 118px !important;
+    font-size: 88px !important;
+    line-height: 1.14 !important;
+    letter-spacing: -0.025em !important;
   }
 
   article header p.text-lg {

@@ -13,7 +13,7 @@ export function ProjectArchive({ projects, standalone = false }) {
     <section id="portfolio" className="folio">
       <div className="folio-intro">
         <p className="folio-eyebrow">ZXI — Selected projects</p>
-        {standalone ? <h1 className="folio-heading">Considered spaces.<br />Distinctive interiors.<br />Made for living.</h1> : <h2 className="folio-heading">Considered spaces.<br />Distinctive interiors.<br />Made for living.</h2>}
+        {standalone ? <h1 className="folio-heading">Considered spaces. Distinctive interiors.<br />Made for living.</h1> : <h2 className="folio-heading">Considered spaces.<br />Distinctive interiors.<br />Made for living.</h2>}
       </div>
       <nav className="folio-filters" aria-label="Filter projects">
         {['All', 'Residential', 'Retail', 'Hospitality', 'Commercial'].map((category) => <button key={category} type="button" aria-pressed={filter === category} onClick={() => selectCategory(category)}>{category}</button>)}

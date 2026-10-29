@@ -395,14 +395,14 @@ export const SERVICES_DATA = [
     ],
     gallery: [
       {
-        src: '/services/hospitality-five-star-lobby.webp',
-        alt: 'Five-star Dubai hotel lobby with double-height limestone columns, sculptural reception desk, bespoke seating, and indoor trees',
-        caption: 'Five-star arrival experience shaped by monumental stone, layered lighting, bespoke furnishings, and integrated landscape elements',
+        src: '/services/hospitality-five-star-lobby-clean-v2.webp',
+        alt: 'Clean five-star Dubai hotel lobby in natural daylight with double-height limestone columns, restrained reception desk, and indoor trees',
+        caption: 'A calm five-star arrival shaped by natural daylight, pale stone architecture, discreet lighting, and integrated landscape elements',
       },
       {
-        src: '/services/hospitality-five-star-lounge.webp',
-        alt: 'Intimate five-star hotel lounge and cocktail bar with curved stone counter, bronze detailing, and tailored seating',
-        caption: 'Atmospheric hotel lounge balancing a sculptural bar, artisan glass displays, tactile finishes, and intimate pools of light',
+        src: '/services/hospitality-five-star-lounge-clean-v2.webp',
+        alt: 'Clean five-star hotel lounge with pale limestone, light timber columns, tailored seating, and soft natural daylight',
+        caption: 'An uncluttered hotel lounge composed with quiet stone surfaces, warm timber, tailored seating, and restrained illumination',
       },
       {
         src: '/zxi/assets/1850-cover-image-1.webp',

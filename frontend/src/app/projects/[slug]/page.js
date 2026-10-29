@@ -1,5 +1,6 @@
+import { Suspense } from 'react';
 import { notFound } from 'next/navigation';
-import { projects, projectImage } from '@/lib/projects';
+import { projects } from '@/lib/projects';
 import { ProjectShell } from '@/features/projects/project-shell';
 import { ProjectDetail } from '@/features/projects/project-detail';
 export function generateStaticParams() { return projects.map(({ slug }) => ({ slug })); }
@@ -14,7 +15,15 @@ export async function generateMetadata({ params }) {
     openGraph: { url: `/projects/${project.slug}`, title: `${project.title} | ZXI Interiors`, images: [project.image.src] },
   };
 }
-export default async function ProjectPage({ params }) {
+export default function ProjectPage({ params }) {
+  return (
+    <Suspense fallback={<main aria-busy="true" className="min-h-screen bg-[#ede9e1]" />}>
+      <ProjectContent params={params} />
+    </Suspense>
+  );
+}
+
+async function ProjectContent({ params }) {
   const { slug } = await params;
   const index = projects.findIndex((item) => item.slug === slug);
   if (index < 0) notFound();

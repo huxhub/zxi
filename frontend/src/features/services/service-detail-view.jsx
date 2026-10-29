@@ -1,13 +1,46 @@
 'use client';
 
+import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { SiteNav } from '@/components/layout/site-nav';
 import { Footer } from '@/components/layout/footer';
+import categories from '@/features/products/products-data.json';
+import '@/features/products/products.css';
 
 export function ServiceDetailView({ service, nextService, logo }) {
   const router = useRouter();
+
+  const dialog = useRef(null);
+  const [selected, setSelected] = useState(null);
+  const [index, setIndex] = useState(0);
+  const category = selected === null ? null : categories[selected];
+  const item = category?.items[index];
+
+  useEffect(() => {
+    const viewer = dialog.current;
+    if (selected === null) {
+      if (viewer?.open) viewer.close();
+      return;
+    }
+    if (!viewer?.open) viewer?.showModal();
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [selected]);
+
+  const openCategory = (categoryIndex) => {
+    setIndex(0);
+    setSelected(categoryIndex);
+  };
+
+  const move = (direction) => {
+    if (!category) return;
+    setIndex((current) => (current + direction + category.items.length) % category.items.length);
+  };
 
   const handleNavigate = (id) => {
     router.push(
@@ -71,20 +104,66 @@ export function ServiceDetailView({ service, nextService, logo }) {
               </div>
             </section>
 
-            <section className="grid grid-cols-1 gap-3 pb-14 sm:grid-cols-5 sm:pb-20" aria-label="Selected service work">
-              {service.gallery.slice(0, 2).map((item, index) => (
-                <figure key={item.src} className={`relative overflow-hidden bg-neutral-200 ${index === 0 ? 'aspect-[4/3] sm:col-span-3' : 'aspect-[4/3] sm:col-span-2 sm:mt-20'}`}>
-                  <Image src={item.src} alt={item.alt} fill sizes="(max-width: 640px) 100vw, 60vw" className="object-cover" />
+            <section className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 pb-14 sm:pb-20" aria-label="Selected service work">
+              {service.gallery.slice(0, 2).map((item) => (
+                <figure key={item.src} className="relative overflow-hidden bg-neutral-200 aspect-[4/3]">
+                  <Image src={item.src} alt={item.alt} fill sizes="(max-width: 640px) 100vw, 50vw" className="object-cover" />
                 </figure>
               ))}
             </section>
 
-            <section className="mb-10 flex flex-col gap-8 bg-neutral-900 px-6 py-10 text-white sm:mb-16 sm:flex-row sm:items-end sm:justify-between sm:px-10 sm:py-14">
+            {service.slug === 'custom-furniture' && (
+              <section className="pb-16 sm:pb-24 border-t border-neutral-300 pt-12 sm:pt-16" aria-labelledby="furniture-collection-heading">
+                <div className="mb-10 sm:mb-14 flex flex-col gap-3">
+                  <p className="text-[10px] uppercase tracking-[.24em] text-neutral-500">Custom furniture</p>
+                  <h2 id="furniture-collection-heading" className="text-3xl sm:text-4xl lg:text-5xl font-normal tracking-[-.045em] text-neutral-900">
+                    Furniture made for you.
+                  </h2>
+                  <p className="max-w-xl text-sm sm:text-base text-neutral-600 leading-relaxed">
+                    Explore pieces designed for your space and the way you live.
+                  </p>
+                </div>
+
+                <div className="products-collection !w-full !max-w-full !p-0">
+                  {categories.map((entry, categoryIndex) => (
+                    <button
+                      className={`products-card ${categoryIndex === 0 ? 'products-card--lead' : ''}`}
+                      key={entry.slug}
+                      type="button"
+                      onClick={() => openCategory(categoryIndex)}
+                      aria-label={`Explore ${entry.title}, ${entry.items.length} pieces`}
+                    >
+                      <span className="products-card__media">
+                        <Image
+                          src={entry.items[0].image}
+                          alt={entry.items[0].title}
+                          fill
+                          sizes={categoryIndex === 0 ? '(max-width: 700px) 100vw, 50vw' : '(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 25vw'}
+                          priority={categoryIndex === 0}
+                        />
+                        <span className="products-card__reveal" aria-hidden="true">
+                          <span>Featured piece</span>
+                          <strong>{entry.items[0].title}</strong>
+                          <span className="products-card__description">{entry.items[0].description}</span>
+                          <small>Explore collection <span>↗</span></small>
+                        </span>
+                        <span className="products-card__open" aria-hidden="true">↗</span>
+                      </span>
+                      <span className="products-card__meta">
+                        <span className="products-card__name"><strong>{entry.title}</strong><small>{entry.items[0].title}</small></span>
+                      </span>
+                    </button>
+                  ))}
+                </div>
+              </section>
+            )}
+
+            <section className="mb-10 flex flex-col gap-8 bg-[#E8DDCC] px-6 py-10 text-[#282722] border border-[#D4C8B9] rounded-none sm:mb-16 sm:flex-row sm:items-end sm:justify-between sm:px-10 sm:py-14">
               <div>
-                <p className="text-[10px] uppercase tracking-[.24em] text-white/55">Start a conversation</p>
-                <h2 className="mt-4 max-w-lg text-3xl tracking-[-.045em] sm:text-4xl">Tell us what you are planning.</h2>
+                <p className="text-[10px] uppercase tracking-[.24em] text-[#5C574E] font-semibold">Start a conversation</p>
+                <h2 className="mt-4 max-w-lg text-3xl tracking-[-.045em] text-[#282722] sm:text-4xl">Tell us what you are planning.</h2>
               </div>
-              <Link href="/contact" className="inline-flex w-fit items-center gap-8 border-b border-white pb-2 text-xs uppercase tracking-[.18em] transition-opacity hover:opacity-60">Contact ZXI <span aria-hidden="true">↗</span></Link>
+              <Link href="/contact" className="inline-flex w-fit items-center gap-8 border-0 bg-[#F5F0E7] px-5 py-4 text-xs uppercase tracking-[.18em] text-[#282722] font-semibold transition-colors hover:bg-[#F7F3ED]">Contact ZXI <span aria-hidden="true">↗</span></Link>
             </section>
 
             {nextService && (
@@ -98,6 +177,50 @@ export function ServiceDetailView({ service, nextService, logo }) {
       </main>
 
       <Footer logo={logo} onNavigate={handleNavigate} />
+
+      {service.slug === 'custom-furniture' && (
+        <dialog
+          ref={dialog}
+          className="products-viewer"
+          aria-label={category ? `${category.title} product gallery` : 'Product gallery'}
+          onClose={() => setSelected(null)}
+          onClick={(event) => { if (event.target === dialog.current) setSelected(null); }}
+          onKeyDown={(event) => {
+            if (!category) return;
+            if (event.key === 'ArrowLeft') { event.preventDefault(); move(-1); }
+            if (event.key === 'ArrowRight') { event.preventDefault(); move(1); }
+          }}
+        >
+          {category && item && (
+            <div className="products-viewer__inner">
+              <div className="products-viewer__top">
+                <button className="products-viewer__back" type="button" onClick={() => setSelected(null)} aria-label="Back to products" title="Back to products">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true">
+                    <path d="M19 12H5" />
+                    <path d="m11 18-6-6 6-6" />
+                  </svg>
+                </button>
+              </div>
+              <div className="products-viewer__content">
+                <div className="products-viewer__stage">
+                  <Image src={item.image} alt={item.title} fill sizes="(max-width: 800px) 100vw, 60vw" priority />
+                </div>
+                <div className="products-viewer__details" aria-live="polite">
+                  <h2>{item.title}</h2>
+                  <p>{item.description}</p>
+                  <div className="products-viewer__controls">
+                    <span>{String(index + 1).padStart(2, '0')} <span aria-hidden="true">/</span> {String(category.items.length).padStart(2, '0')}</span>
+                    <div>
+                      <button type="button" onClick={() => move(-1)} aria-label="Previous product">←</button>
+                      <button type="button" onClick={() => move(1)} aria-label="Next product">→</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+        </dialog>
+      )}
     </>
   );
 }

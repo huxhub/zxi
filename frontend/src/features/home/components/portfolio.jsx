@@ -7,7 +7,7 @@ import { Action } from '@/components/ui/action';
 export function Portfolio({ projects }) {
   const displayedProjects = (projects || []).slice(0, 5);
   return (
-    <section id="portfolio" className="relative bg-[#f7f7f7] pt-24 md:pt-36 pb-16 md:pb-24">
+    <section id="portfolio" className="relative bg-[#f7f7f7] pt-24 md:pt-36 pb-8 md:pb-12">
       <div className="max-w-[1720px] mx-auto px-5 sm:px-10 lg:px-16 text-center mb-16 md:mb-20">
         <p className="text-xs uppercase tracking-widest text-neutral-500 font-medium mb-3">Selected Portfolio</p>
         <h2 className="text-4xl sm:text-5xl md:text-6xl font-normal tracking-tight text-neutral-900">Featured Projects</h2>
@@ -31,12 +31,12 @@ export function Portfolio({ projects }) {
                 </div>
                 <span className="text-sm text-white/80 whitespace-nowrap">{project.location}</span>
               </div>
-              <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 scale-90 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-300 px-6 py-3.5 rounded-full bg-white/95 text-neutral-900 text-sm font-medium shadow-xl pointer-events-none whitespace-nowrap" aria-hidden="true">View project &#8599;</span>
+              <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 scale-90 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-300 px-6 py-3.5 rounded-none bg-[#F5F0E7] text-[#282722] text-sm font-semibold pointer-events-none whitespace-nowrap" aria-hidden="true">View project &#8599;</span>
             </Link>
           );
         })}
       </div>
-      <div className="flex justify-center items-center mt-12 md:mt-16"><Action dark href="/projects">View all projects</Action></div>
+      <div className="flex justify-center items-center mt-10 md:mt-12"><Action dark href="/projects">View all projects</Action></div>
     </section>
   );
 }

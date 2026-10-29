@@ -98,7 +98,7 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate, dark
         ref={header}
         className={`fixed top-0 inset-x-0 z-40 w-full flex items-center justify-between px-6 sm:px-10 md:px-14 transition-all duration-300 pointer-events-auto ${pathname === '/' && !isPastHero ? 'home-hero-nav' : ''} ${
           isPastHero
-            ? 'py-1 md:py-1.5 bg-white border-b border-neutral-100 shadow-xs'
+            ? 'py-1 md:py-1.5 bg-[#F5F0E7] border-b border-[#E8DDCC] shadow-xs'
             : 'py-3 md:py-4 bg-transparent'
         }`}
       >
@@ -114,10 +114,11 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate, dark
           <Image
             src={logo?.src || logo || '/zxi-ae-logo.png'}
             alt="ZXI Interiors & Contracting"
-            width={160}
-            height={40}
+            width={500}
+            height={97}
             priority
-            className={`block ${isPastHero ? 'w-[120px] md:w-[130px]' : 'w-[140px]'} h-auto object-contain transition-all duration-300 group-hover:opacity-80 ${
+            style={{ height: 'auto' }}
+            className={`block ${isPastHero ? 'w-[135px] sm:w-[145px] md:w-[155px]' : 'w-[145px] sm:w-[160px] md:w-[175px]'} h-auto object-contain transition-all duration-300 group-hover:opacity-80 ${
             isPastHero || darkAtTop ? '' : 'brightness-0 invert'
             }`}
           />
@@ -156,16 +157,16 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate, dark
       <dialog
         id="navigation-panel"
         ref={dialog}
-        className="fixed inset-y-0 right-0 left-auto ml-auto mr-0 m-0 h-dvh w-[450px] max-w-[calc(100vw-24px)] border-0 bg-white p-0 text-neutral-900 shadow-2xl backdrop:bg-black/65 backdrop:backdrop-blur-sm z-50"
+        className="fixed inset-y-0 right-0 left-auto ml-auto mr-0 m-0 h-dvh w-[450px] max-w-[calc(100vw-24px)] border-0 bg-[#E8DDCC] p-0 text-[#282722] shadow-2xl backdrop:bg-black/65 backdrop:backdrop-blur-sm z-50"
         onClose={() => setOpen(false)}
         onClick={(e) => {
           if (e.target === e.currentTarget) close();
         }}
       >
-        <div className="h-full flex flex-col justify-between p-7 sm:p-9 md:p-11 relative bg-white overflow-y-auto">
+        <div className="h-full flex flex-col justify-between p-7 sm:p-9 md:p-11 relative bg-[#E8DDCC] text-[#282722] overflow-y-auto">
           {/* Top-Right Close Button */}
           <button
-            className="absolute right-5 top-5 md:right-7 md:top-7 w-9 h-9 flex items-center justify-center text-neutral-900 hover:text-neutral-500 cursor-pointer transition-transform duration-200 hover:rotate-90 focus:outline-none"
+            className="absolute right-5 top-5 md:right-7 md:top-7 w-9 h-9 flex items-center justify-center text-[#282722] hover:text-[#5C574E] cursor-pointer transition-transform duration-200 hover:rotate-90 focus:outline-none"
             aria-label="Close navigation"
             onClick={close}
           >
@@ -188,7 +189,7 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate, dark
           <nav className="main-drawer-nav flex flex-col gap-2.5 sm:gap-3 mt-7 md:mt-8" aria-label="Main navigation">
             <button
               onClick={() => handleLinkClick('home')}
-              className="text-left text-lg sm:text-xl md:text-2xl font-normal tracking-tight text-neutral-900 hover:text-[#c5a059] transition-colors cursor-pointer focus:outline-none"
+              className="text-left text-lg sm:text-xl md:text-2xl font-normal tracking-tight text-[#282722] hover:text-[#5C574E] transition-colors cursor-pointer focus:outline-none"
             >
               Home
             </button>
@@ -199,7 +200,7 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate, dark
                 <Link
                   href="/projects"
                   onClick={close}
-                  className="text-left text-lg sm:text-xl md:text-2xl font-normal tracking-tight text-neutral-900 hover:text-[#c5a059] transition-colors cursor-pointer focus:outline-none"
+                  className="text-left text-lg sm:text-xl md:text-2xl font-normal tracking-tight text-[#282722] hover:text-[#5C574E] transition-colors cursor-pointer focus:outline-none"
                 >
                   Portfolio
                 </Link>
@@ -209,7 +210,7 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate, dark
                   className="hidden"
                 >
                   <svg
-                    className={`w-5 h-5 text-neutral-700 transition-transform duration-300 ${
+                    className={`w-5 h-5 text-[#282722]/70 transition-transform duration-300 ${
                       portfolioOpen ? 'rotate-180' : ''
                     }`}
                     fill="none"
@@ -228,11 +229,11 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate, dark
                   portfolioOpen ? 'grid-rows-[1fr] opacity-100 mt-3 pt-2' : 'grid-rows-[0fr] opacity-0'
                 }`}
               >
-                <div className="overflow-hidden flex flex-col gap-2.5 pl-4 border-l-2 border-neutral-200 text-base sm:text-lg font-light text-neutral-600 max-h-56 overflow-y-auto">
+                <div className="overflow-hidden flex flex-col gap-2.5 pl-4 border-l-2 border-[#282722]/25 text-base sm:text-lg font-light text-[#282722]/75 max-h-56 overflow-y-auto">
                   <Link
                     href="/projects"
                     onClick={close}
-                    className="text-left font-medium text-neutral-900 hover:text-neutral-500 transition-colors cursor-pointer focus:outline-none"
+                    className="text-left font-medium text-[#282722] hover:text-[#5C574E] transition-colors cursor-pointer focus:outline-none"
                   >
                     All Projects Page →
                   </Link>
@@ -240,10 +241,10 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate, dark
                     <button
                       key={`${project.title}-${idx}`}
                       onClick={() => handleProjectClick(project)}
-                      className="text-left hover:text-neutral-950 transition-colors cursor-pointer focus:outline-none flex items-center justify-between gap-3 group/item py-0.5"
+                      className="text-left hover:text-[#282722] transition-colors cursor-pointer focus:outline-none flex items-center justify-between gap-3 group/item py-0.5"
                     >
                       <span className="truncate">{project.title}</span>
-                      <span className="text-xs text-neutral-400 group-hover/item:text-neutral-600 whitespace-nowrap">
+                      <span className="text-xs text-[#282722]/60 group-hover/item:text-[#282722] whitespace-nowrap">
                         {project.category || project.location}
                       </span>
                     </button>
@@ -252,20 +253,12 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate, dark
               </div>
             </div>
 
-            <Link
-              href="/products"
-              onClick={close}
-              className="text-left text-lg sm:text-xl md:text-2xl font-normal tracking-tight text-neutral-900 hover:text-[#c5a059] transition-colors cursor-pointer focus:outline-none"
-            >
-              Products
-            </Link>
-
             <div>
               <div className="flex items-center gap-1">
                 <Link
                   href="/services"
                   onClick={close}
-                  className="text-left text-lg sm:text-xl md:text-2xl font-normal tracking-tight text-neutral-900 hover:text-[#c5a059] transition-colors cursor-pointer focus:outline-none"
+                  className="text-left text-lg sm:text-xl md:text-2xl font-normal tracking-tight text-[#282722] hover:text-[#5C574E] transition-colors cursor-pointer focus:outline-none"
                 >
                   Services
                 </Link>
@@ -280,7 +273,7 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate, dark
                   aria-label="Toggle services list"
                   aria-expanded={servicesOpen}
                   aria-controls="navigation-services"
-                  className="flex min-h-11 min-w-11 cursor-pointer items-center justify-center text-neutral-700 transition-colors hover:text-[#c5a059] focus-visible:outline-2 focus-visible:outline-offset-2"
+                  className="flex min-h-11 min-w-11 cursor-pointer items-center justify-center text-[#282722]/70 transition-colors hover:text-[#282722] focus-visible:outline-2 focus-visible:outline-offset-2"
                 >
                   <svg
                     className={`h-4 w-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`}
@@ -294,8 +287,8 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate, dark
                 </button>
               </div>
               <div id="navigation-services" inert={!servicesOpen} className={`grid transition-all duration-300 ease-out ${servicesOpen ? 'grid-rows-[1fr] opacity-100 mt-3' : 'grid-rows-[0fr] opacity-0'}`}>
-                <div className="overflow-hidden border-l border-neutral-300 pl-4">
-                  <div className="flex flex-col gap-2 pb-1 text-sm text-neutral-500 sm:text-base">
+                <div className="overflow-hidden border-l border-[#282722]/25 pl-4">
+                  <div className="flex flex-col gap-2 pb-1 text-sm text-[#282722]/75 sm:text-base">
                     {[
                       ['Commercial Fitouts', 'commercial-fitouts'],
                       ['Residential Interiors', 'residential-interiors'],
@@ -303,7 +296,7 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate, dark
                       ['Custom Furniture', 'custom-furniture'],
                       ['Hospitality & Wellness', 'hospitality-wellness'],
                     ].map(([label, slug]) => (
-                      <Link key={slug} href={`/services/${slug}`} onClick={close} className="w-fit transition-colors hover:text-[#c5a059] focus:outline-none">
+                      <Link key={slug} href={`/services/${slug}`} onClick={close} className="w-fit transition-colors hover:text-[#282722] focus:outline-none">
                         {label}
                       </Link>
                     ))}
@@ -317,7 +310,7 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate, dark
                 <Link
                   href="/packages"
                   onClick={close}
-                  className="text-left text-lg sm:text-xl md:text-2xl font-normal tracking-tight text-neutral-900 hover:text-[#c5a059] transition-colors cursor-pointer focus:outline-none"
+                  className="text-left text-lg sm:text-xl md:text-2xl font-normal tracking-tight text-[#282722] hover:text-[#5C574E] transition-colors cursor-pointer focus:outline-none"
                 >
                   Packages
                 </Link>
@@ -332,7 +325,7 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate, dark
                   aria-label="Toggle packages list"
                   aria-expanded={packagesOpen}
                   aria-controls="navigation-packages"
-                  className="flex min-h-11 min-w-11 cursor-pointer items-center justify-center text-neutral-700 transition-colors hover:text-[#c5a059] focus-visible:outline-2 focus-visible:outline-offset-2"
+                  className="flex min-h-11 min-w-11 cursor-pointer items-center justify-center text-[#282722]/70 transition-colors hover:text-[#282722] focus-visible:outline-2 focus-visible:outline-offset-2"
                 >
                   <svg
                     className={`h-4 w-4 transition-transform duration-300 ${packagesOpen ? 'rotate-180' : ''}`}
@@ -350,15 +343,15 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate, dark
                 inert={!packagesOpen}
                 className={`grid transition-all duration-300 ease-out ${packagesOpen ? 'grid-rows-[1fr] opacity-100 mt-3' : 'grid-rows-[0fr] opacity-0'}`}
               >
-                <div className="overflow-hidden border-l border-neutral-300 pl-4">
-                  <div className="flex flex-col gap-2 pb-1 text-sm text-neutral-500 sm:text-base">
+                <div className="overflow-hidden border-l border-[#282722]/25 pl-4">
+                  <div className="flex flex-col gap-2 pb-1 text-sm text-[#282722]/75 sm:text-base">
                     {[
                       ['Interior Design', 'interior-design'],
                       ['F&B Shops', 'fb-shops'],
                       ['Premium Residential', 'premium'],
                       ['Office Fit-Out', 'office-fitout'],
                     ].map(([label, slug]) => (
-                      <Link key={slug} href={`/packages/${slug}`} onClick={close} className="w-fit transition-colors hover:text-[#c5a059] focus:outline-none">
+                      <Link key={slug} href={`/packages/${slug}`} onClick={close} className="w-fit transition-colors hover:text-[#282722] focus:outline-none">
                         {label}
                       </Link>
                     ))}
@@ -370,28 +363,28 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate, dark
             <Link
               href="/blog"
               onClick={close}
-              className="text-left text-lg sm:text-xl md:text-2xl font-normal tracking-tight text-neutral-900 hover:text-[#c5a059] transition-colors cursor-pointer focus:outline-none"
+              className="text-left text-lg sm:text-xl md:text-2xl font-normal tracking-tight text-[#282722] hover:text-[#5C574E] transition-colors cursor-pointer focus:outline-none"
             >
               Blog
             </Link>
 
             <button
               onClick={() => handleLinkClick('contact')}
-              className="text-left text-lg sm:text-xl md:text-2xl font-normal tracking-tight text-neutral-900 hover:text-[#c5a059] transition-colors cursor-pointer focus:outline-none"
+              className="text-left text-lg sm:text-xl md:text-2xl font-normal tracking-tight text-[#282722] hover:text-[#5C574E] transition-colors cursor-pointer focus:outline-none"
             >
               Contacts
             </button>
           </nav>
 
           {/* Bottom CTA Section */}
-          <div className="mt-auto pt-8 border-t border-neutral-100 flex flex-col gap-4">
-            <p className="text-xl sm:text-2xl font-normal text-neutral-900 tracking-tight leading-snug">
+          <div className="mt-auto pt-8 border-t border-[#282722]/20 flex flex-col gap-4">
+            <p className="text-xl sm:text-2xl font-normal text-[#282722] tracking-tight leading-snug">
               Let’s talk about your next project
             </p>
             <div className="flex flex-wrap items-center gap-3">
               <a
                 href="tel:+971565499766"
-                className="inline-flex items-center gap-2 bg-[#1c1c1c] text-white hover:bg-neutral-800 text-[14px] font-medium px-5 py-3.5 rounded-[4px] transition-colors"
+                className="inline-flex items-center gap-2 bg-[#F5F0E7] text-[#282722] hover:bg-[#F7F3ED] text-[14px] font-semibold px-5 py-3.5 rounded-none border-0 transition-colors"
               >
                 <span>Schedule a call</span>
                 <span className="text-sm font-light" aria-hidden="true">
@@ -400,7 +393,7 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate, dark
               </a>
               <button
                 onClick={() => handleLinkClick('contact')}
-                className="inline-flex items-center justify-center bg-[#1c1c1c] text-white hover:bg-neutral-800 text-[14px] font-medium px-5 py-3.5 rounded-[4px] transition-colors cursor-pointer focus:outline-none"
+                className="inline-flex items-center justify-center bg-[#F5F0E7] text-[#282722] hover:bg-[#F7F3ED] text-[14px] font-semibold px-5 py-3.5 rounded-none border-0 transition-colors cursor-pointer focus:outline-none"
               >
                 Discuss the project
               </button>

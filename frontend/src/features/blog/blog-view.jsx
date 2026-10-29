@@ -56,10 +56,10 @@ export function BlogView({ logo }) {
                 <button
                   key={category}
                   onClick={() => setActiveCategory(category)}
-                  className={`px-5 py-2.5 rounded-full text-xs sm:text-sm font-normal tracking-tight whitespace-nowrap cursor-pointer transition-colors ${
+                  className={`px-5 py-2.5 rounded-none text-xs sm:text-sm font-semibold tracking-tight whitespace-nowrap cursor-pointer transition-colors ${
                     isActive
-                      ? 'bg-neutral-900 text-white'
-                      : 'bg-neutral-100 text-neutral-600 hover:bg-neutral-200'
+                      ? 'bg-[#E8DDCC] text-[#282722]'
+                      : 'bg-[#F5F0E7] text-[#282722] hover:bg-[#E8DDCC]'
                   }`}
                 >
                   {category}

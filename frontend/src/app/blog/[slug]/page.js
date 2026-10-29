@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import { notFound } from 'next/navigation';
 import { BLOG_POSTS } from '@/features/blog/blog-data';
 import { BlogDetailView } from '@/features/blog/blog-detail-view';
@@ -20,7 +21,15 @@ export async function generateMetadata({ params }) {
   };
 }
 
-export default async function BlogDetailPage({ params }) {
+export default function BlogDetailPage({ params }) {
+  return (
+    <Suspense fallback={<main aria-busy="true" className="min-h-screen bg-[#F5F0E7]" />}>
+      <BlogDetailContent params={params} />
+    </Suspense>
+  );
+}
+
+async function BlogDetailContent({ params }) {
   const { slug } = await params;
   const index = BLOG_POSTS.findIndex((item) => item.slug === slug);
   if (index < 0) {

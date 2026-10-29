@@ -9,7 +9,7 @@
 .contact-hero h1 { font-size:clamp(52px,8.2vw,135px); }
 .contact-hero-copy>p:last-child { max-width:390px; margin:30px 0 0; font-size:15px; line-height:1.55; color:rgba(255,255,255,.8); }
 .contact-scroll { position:absolute; z-index:2; right:clamp(25px,5vw,72px); bottom:clamp(34px,7vh,75px); color:#fff; font-size:11px; letter-spacing:.025em; text-decoration:none; display:flex; gap:18px; align-items:center; }
-.contact-scroll span { width:34px; height:34px; display:grid; place-items:center; border:1px solid rgba(255,255,255,.55); border-radius:50%; transition:transform .3s ease,background .3s ease; }
+.contact-scroll span { width:34px; height:34px; display:grid; place-items:center; border:0; background:#F5F0E7; color:#282722; border-radius:50%; transition:transform .3s ease,background .3s ease; }
 .contact-scroll:hover span { transform:translateY(4px); background:rgba(255,255,255,.15); }
 .contact-inquiry { display:grid; grid-template-columns:minmax(250px,.8fr) minmax(400px,1.2fr); gap:clamp(55px,12vw,200px); max-width:1480px; margin:auto; padding:clamp(90px,14vw,210px) clamp(24px,8vw,130px); }
 .contact-intro h2 { font-size:clamp(45px,5.5vw,88px); }
@@ -25,10 +25,10 @@
 .contact-form input::placeholder,.contact-form textarea::placeholder { color:#96958e; opacity:1; }
 .contact-form label:focus-within { border-color:#222; }
 .contact-message { grid-column:1/-1; }
-.contact-submit { grid-column:1/-1; margin-top:12px; width:100%; display:flex; justify-content:space-between; align-items:center; padding:18px 20px; border:0; background:#20201e; color:white; cursor:pointer; font-size:13px; transition:background .25s ease,transform .25s ease; }
-.contact-submit:hover { background:#474640; transform:translateY(-2px); }
+.contact-submit { grid-column:1/-1; margin-top:12px; width:100%; display:flex; justify-content:space-between; align-items:center; padding:18px 20px; border:none; background:#E8DDCC; color:#282722; font-weight:600; cursor:pointer; font-size:13px; transition:background .25s ease,transform .25s ease; }
+.contact-submit:hover { background:#DCD0BE; transform:translateY(-2px); }
 .contact-success { border-top:1px solid #20201e; padding-top:25px; max-width:480px; animation:contact-copy-in .5s ease-out; }
-.contact-success>span { font-size:11px; opacity:.55; }.contact-success h3 { margin:33px 0 10px; font-size:42px; font-weight:400; letter-spacing:-.05em; }.contact-success p { color:#60605a; line-height:1.6; }.contact-success button { margin-top:24px; background:none; border:0; border-bottom:1px solid #20201e; padding:0 0 5px; color:#20201e; cursor:pointer; font-size:13px; }
+.contact-success>span { font-size:11px; opacity:.55; }.contact-success h3 { margin:33px 0 10px; font-size:42px; font-weight:400; letter-spacing:-.05em; }.contact-success p { color:#60605a; line-height:1.6; }.contact-success button { margin-top:24px; background:#E8DDCC; border:0; padding:12px 18px; color:#282722; cursor:pointer; font-size:13px; }
 .contact-details { background:#e6e1d6; padding:clamp(70px,10vw,145px) clamp(24px,8vw,130px) clamp(78px,10vw,125px); }
 .contact-detail-grid { display:grid; grid-template-columns:repeat(3,1fr); border-top:1px solid #aaa69e; }
 .contact-detail { position:relative; min-height:215px; padding:20px 26px 20px 0; color:#22231f; text-decoration:none; display:flex; flex-direction:column; border-bottom:1px solid #aaa69e; border-right:1px solid #aaa69e; transition:background .3s ease,padding .3s ease; }

@@ -14,7 +14,7 @@ export function DetailModal({ dialogRef, item, onClose }) {
     >
       <div className="relative max-h-[90dvh] overflow-y-auto">
         <button
-          className="absolute right-5 top-5 z-20 w-10 h-10 rounded-full bg-white/20 hover:bg-white/40 text-white grid place-items-center text-xl transition-all cursor-pointer"
+          className="absolute right-5 top-5 z-20 w-10 h-10 rounded-full border-0 bg-[#F5F0E7] hover:bg-[#E8DDCC] text-[#282722] grid place-items-center text-xl transition-all cursor-pointer"
           aria-label="Close details"
           onClick={onClose}
         >

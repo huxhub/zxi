@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 import { useLayoutEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { Photo } from '@/components/ui/photo';
@@ -20,7 +20,7 @@ export function ProjectArchive({ projects, standalone = false }) {
         });
       }
     }, element);
-    mm.add('(min-width: 769px) and (prefers-reduced-motion: no-preference)', () => {
+    mm.add('(min-width: 1025px) and (prefers-reduced-motion: no-preference)', () => {
       const links = [...element.querySelectorAll('.folio-image')];
       const slots = [...element.querySelectorAll('.folio-strip-slot')];
       const captions = element.querySelectorAll('.folio-caption');

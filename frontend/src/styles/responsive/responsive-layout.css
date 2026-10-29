@@ -4,9 +4,10 @@
    ========================================================================== */
 
 /* --- Site Navigation Header --- */
-header.fixed.bg-white {
-  padding-top: 6px !important;
-  padding-bottom: 6px !important;
+header.fixed.bg-\[\#F5F0E7\],
+header.fixed.site-nav--scrolled {
+  padding-top: 14px !important;
+  padding-bottom: 14px !important;
 }
 
 @media (max-width: 640px) {
@@ -15,16 +16,17 @@ header.fixed.bg-white {
     padding-right: 16px !important;
     padding-top: 16px !important;
     padding-bottom: 16px !important;
-    background-color: #fff !important;
+    background-color: #F5F0E7 !important;
   }
 
-  header.fixed.bg-white {
+  header.fixed.bg-\[\#F5F0E7\],
+  header.fixed.site-nav--scrolled {
     padding-top: 16px !important;
     padding-bottom: 16px !important;
   }
 
   header.fixed a img {
-    width: 120px !important;
+    width: 140px !important;
     height: auto !important;
     filter: none !important;
   }
@@ -58,8 +60,11 @@ header.fixed.bg-white {
   header.fixed button[aria-label="Open navigation menu"],
   header.fixed .nav-menu-btn {
     width: auto !important;
-    min-width: 36px !important;
-    height: auto !important;
+    min-width: 44px !important;
+    min-height: 44px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
   }
 }
 
@@ -77,7 +82,7 @@ dialog#navigation-panel nav button:hover,
 dialog#navigation-panel nav a:hover,
 dialog#navigation-panel #navigation-services a:hover,
 dialog#navigation-panel #navigation-packages a:hover {
-  color: #c5a059 !important;
+  color: #5C574E !important;
 }
 
 @media (max-width: 640px) {
@@ -249,19 +254,21 @@ footer {
     padding-bottom: 24px !important;
   }
 
-  /* Compact white navbar */
-  header.fixed.bg-white {
-    padding-top: 10px !important;
-    padding-bottom: 10px !important;
+  /* Compact beige navbar */
+  header.fixed.bg-\[\#F5F0E7\],
+  header.fixed.site-nav--scrolled {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
   }
 
   header.fixed a img {
-    width: 165px !important;
+    width: 210px !important;
     height: auto !important;
   }
 
-  header.fixed.bg-white a img {
-    width: 145px !important;
+  header.fixed.bg-\[\#F5F0E7\] a img,
+  header.fixed.site-nav--scrolled a img {
+    width: 185px !important;
   }
 
   header.fixed button[aria-label="Open navigation menu"],
@@ -357,19 +364,21 @@ footer {
     padding-bottom: 36px !important;
   }
 
-  /* Compact white navbar */
-  header.fixed.bg-white {
-    padding-top: 14px !important;
-    padding-bottom: 14px !important;
+  /* Compact beige navbar */
+  header.fixed.bg-\[\#F5F0E7\],
+  header.fixed.site-nav--scrolled {
+    padding-top: 26px !important;
+    padding-bottom: 26px !important;
   }
 
   header.fixed a img {
-    width: 215px !important;
+    width: 260px !important;
     height: auto !important;
   }
 
-  header.fixed.bg-white a img {
-    width: 185px !important;
+  header.fixed.bg-\[\#F5F0E7\] a img,
+  header.fixed.site-nav--scrolled a img {
+    width: 230px !important;
   }
 
   header.fixed button[aria-label="Open navigation menu"],

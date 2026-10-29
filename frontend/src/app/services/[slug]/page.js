@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import { notFound } from 'next/navigation';
 import { SERVICES_DATA, SERVICE_SLUGS, getServiceBySlug } from '@/features/services/services-data';
 import { ServiceDetailView } from '@/features/services/service-detail-view';
@@ -25,7 +26,15 @@ export async function generateMetadata({ params }) {
   };
 }
 
-export default async function ServicePage({ params }) {
+export default function ServicePage({ params }) {
+  return (
+    <Suspense fallback={<main aria-busy="true" className="min-h-screen bg-[#F5F0E7]" />}>
+      <ServiceContent params={params} />
+    </Suspense>
+  );
+}
+
+async function ServiceContent({ params }) {
   const { slug } = await params;
   const index = SERVICES_DATA.findIndex((item) => item.slug === slug);
   if (index < 0) {

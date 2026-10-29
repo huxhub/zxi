@@ -64,7 +64,7 @@
 @media (max-width: 640px) {
   #portfolio {
     padding-top: 64px !important;
-    padding-bottom: 56px !important;
+    padding-bottom: 36px !important;
   }
 
   #portfolio .grid {
@@ -121,7 +121,7 @@
 /* --- 5. Bloom 3D Services --- */
 @media (max-width: 767px) {
   .bloom-services {
-    padding: 70px 0 90px !important;
+    padding: 40px 0 90px !important;
   }
 
   .bloom-services-heading {
@@ -377,7 +377,7 @@
 
   /* 4. Bloom 3D Services */
   .bloom-services {
-    padding: 200px 0 240px !important;
+    padding: 96px 0 240px !important;
   }
 
   .bloom-services-heading {
@@ -596,7 +596,7 @@
 
   /* 4. Bloom 3D Services */
   .bloom-services {
-    padding: 280px 0 340px !important;
+    padding: 130px 0 340px !important;
   }
 
   .bloom-services-heading {

@@ -80,7 +80,7 @@ export function ServicesIndexView({ logo }) {
             <p className="text-sm text-neutral-500">Have a project in mind?</p>
             <Link
               href="/contact"
-              className="inline-flex w-fit items-center gap-8 border-b border-neutral-900 pb-2 text-xs uppercase tracking-[0.18em] text-neutral-900 transition-opacity hover:opacity-55"
+              className="inline-flex w-fit items-center gap-8 border-0 bg-[#E8DDCC] px-5 py-4 text-xs uppercase tracking-[0.18em] text-[#282722] transition-colors hover:bg-[#DCD0BE]"
             >
               Talk to ZXI <span aria-hidden="true">↗</span>
             </Link>

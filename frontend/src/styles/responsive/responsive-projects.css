@@ -116,10 +116,7 @@
   }
 
   .folio-strip {
-    height: clamp(120px, 14vw, 150px) !important;
-    margin-top: 16px !important;
-    margin-bottom: 22px !important;
-    gap: 8px !important;
+    display: none !important;
   }
 
   .folio-grid {
@@ -305,6 +302,7 @@
   .project-cover {
     width: 100% !important;
     height: auto !important;
+    flex: none !important;
     display: flex !important;
     flex-direction: column !important;
   }
@@ -322,18 +320,17 @@
 
   .project-thumbnail {
     width: 100% !important;
-    max-width: 320px !important;
+    max-width: 560px !important;
   }
 
   .project-thumbnail > div {
-    height: 30vh !important;
-    min-height: 200px !important;
+    height: 44svh !important;
+    min-height: 260px !important;
   }
 
-  .project-cover-image {
+  .project-thumbnail-meta {
     width: 100% !important;
-    height: 65vh !important;
-    min-height: 360px !important;
+    max-width: 560px !important;
   }
 
   .project-information {

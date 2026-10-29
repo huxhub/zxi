@@ -6,23 +6,26 @@ export function Action({
   children,
   muted = false,
   dark = false,
+  light = false,
   onClick,
   className = '',
 }) {
-  const variantClass = dark
-    ? 'bg-neutral-900 text-white hover:bg-black hover:shadow-lg'
+  const variantClass = light
+    ? 'bg-[#F5F0E7] text-[#282722] hover:bg-[#F7F3ED]'
+    : dark
+    ? 'bg-[#E8DDCC] text-[#282722] hover:bg-[#F5F0E7]'
     : muted
-    ? 'bg-white/15 text-white backdrop-blur-md border border-white/20 hover:bg-white/25 hover:border-white/40'
-    : 'bg-white text-neutral-900 shadow-sm hover:shadow-md hover:bg-neutral-50';
+    ? 'bg-[#F5F0E7] text-[#282722] hover:bg-[#E8DDCC]'
+    : 'bg-[#E8DDCC] text-[#282722] hover:bg-[#F5F0E7]';
 
   return (
     <a
-      className={`group relative inline-flex items-center justify-center rounded-full overflow-hidden h-[52px] px-7 text-[14.5px] font-medium tracking-tight whitespace-nowrap cursor-pointer transition-all duration-300 ${variantClass} ${className}`}
+      className={`group relative inline-flex items-center justify-center rounded-none overflow-hidden h-[52px] px-7 text-[14.5px] font-semibold tracking-tight whitespace-nowrap cursor-pointer transition-all duration-300 border-0 focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#282722] ${variantClass} ${className}`}
       href={href}
       onClick={onClick}
     >
       <div className="relative flex flex-col overflow-hidden h-5">
-        <span className="inline-flex items-center gap-2 h-5 leading-5 transition-transform duration-500 ease-out group-hover:-translate-y-[120%]">
+        <span className="inline-flex items-center gap-2 h-5 leading-5 transition-transform duration-500 ease-out group-hover:-translate-y-[120%] font-semibold">
           <span>{children}</span>
           <span
             className="inline-block text-[15px] transition-transform duration-300 ease-out group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
@@ -31,7 +34,7 @@ export function Action({
             ↗
           </span>
         </span>
-        <span className="absolute top-0 left-0 inline-flex items-center gap-2 h-5 leading-5 translate-y-[120%] transition-transform duration-500 ease-out group-hover:translate-y-0">
+        <span className="absolute top-0 left-0 inline-flex items-center gap-2 h-5 leading-5 translate-y-[120%] transition-transform duration-500 ease-out group-hover:translate-y-0 font-semibold">
           <span>{children}</span>
           <span
             className="inline-block text-[15px] transition-transform duration-300 ease-out group-hover:translate-x-0.5 group-hover:-translate-y-0.5"

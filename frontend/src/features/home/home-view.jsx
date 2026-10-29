@@ -13,9 +13,11 @@ import { Portfolio } from './components/portfolio';
 import { Services3D } from './components/services-3d';
 import { MidPageCta } from './components/mid-page-cta';
 import { AboutStats } from './components/about-stats';
+import { ReviewsCarousel } from './components/reviews-carousel';
 import { Advantages } from './components/advantages';
 import { ContactBanner } from './components/contact-banner';
 import { FAQ } from './components/faq';
+import { TrustedPartners } from './components/trusted-partners';
 
 export function HomeView({ data }) {
   const router = useRouter();
@@ -42,7 +44,7 @@ export function HomeView({ data }) {
   useEffect(() => {
     const ctx = gsap.context(() => {
       const lines = gsap.utils.toArray('.hero-split-line h1');
-      gsap.fromTo(
+      if (lines.length) gsap.fromTo(
         lines,
         {
           yPercent: 110,
@@ -55,8 +57,9 @@ export function HomeView({ data }) {
         }
       );
 
-      gsap.fromTo(
-        '.hero-copy-sub',
+      const subtitle = document.querySelector('.hero-copy-sub');
+      if (subtitle) gsap.fromTo(
+        subtitle,
         {
           opacity: 0,
           y: 20,
@@ -70,20 +73,6 @@ export function HomeView({ data }) {
         }
       );
 
-      gsap.fromTo(
-        '.hero-actions',
-        {
-          opacity: 0,
-          y: 20,
-        },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.9,
-          delay: 0.35,
-          ease: 'power3.out',
-        }
-      );
     });
 
     return () => ctx.revert();
@@ -105,7 +94,7 @@ export function HomeView({ data }) {
           },
         });
 
-        gsap.to(heroCopyRef.current, {
+        if (heroCopyRef.current) gsap.to(heroCopyRef.current, {
           yPercent: -25,
           opacity: 0,
           ease: 'none',
@@ -203,7 +192,7 @@ export function HomeView({ data }) {
     <>
       <a
         href="#main"
-        className="fixed z-50 top-4 left-4 px-5 py-3 bg-white text-neutral-900 rounded-full shadow-lg -translate-y-24 focus:translate-y-0 transition-transform font-medium text-sm"
+        className="fixed z-50 top-4 left-4 px-5 py-3 bg-white text-neutral-900 rounded-full -translate-y-24 focus:translate-y-0 transition-transform font-medium text-sm"
       >
         Skip to content
       </a>
@@ -232,9 +221,13 @@ export function HomeView({ data }) {
 
         <AboutStats intro={data.intro} lenisRef={lenisRef} />
 
+        <ReviewsCarousel />
+
         <Advantages items={data.advantages} lenisRef={lenisRef} />
 
         {/* <ContactBanner cta={data.cta} ctaPicRef={ctaPicRef} /> */}
+
+        <TrustedPartners />
 
         <FAQ items={data.faq} />
       </main>

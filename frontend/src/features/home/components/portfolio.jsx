@@ -15,13 +15,15 @@ export function Portfolio({ projects }) {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 gap-2 px-2 max-w-[1920px] mx-auto">
         {displayedProjects.map((project, index) => {
           const isTwoCols = [2, 3, 4].includes(index);
+          const isHeroCard = index < 2;
           return (
             <Link key={`${project.slug}-${index}`} href={`/projects/${project.slug}`}
-              className={`project-card group relative overflow-hidden bg-neutral-900 rounded-sm cursor-pointer will-change-transform col-span-1 ${isTwoCols ? 'md:col-span-2 aspect-[0.85]' : 'md:col-span-3 aspect-[0.84]'}`}
+              className={`project-card ${isHeroCard ? 'project-card-hero' : ''} group relative overflow-hidden bg-neutral-900 cursor-pointer will-change-transform col-span-1 ${isTwoCols ? 'md:col-span-2 aspect-[0.85]' : 'md:col-span-3 aspect-[16/12]'}`}
               aria-label={`View ${project.title}, ${project.location}`}>
               <div className="project-card-img-wrap absolute -inset-y-[10%] inset-x-0 h-[120%] w-full will-change-transform">
                 <Photo image={project.image} alt={`${project.title} — ${project.category} by ZXI`}
-                  sizes={isTwoCols ? '(max-width: 767px) 100vw, 33vw' : '(max-width: 767px) 100vw, 50vw'}
+                  sizes={isTwoCols ? '(max-width: 767px) 100vw, (max-width: 1200px) 33vw, 540px' : '(max-width: 767px) 100vw, (max-width: 1200px) 50vw, 840px'}
+                  priority={isHeroCard}
                   className="transition-all duration-700 ease-out group-hover:scale-105 group-hover:brightness-90" />
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none" />

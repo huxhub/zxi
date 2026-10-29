@@ -42,7 +42,7 @@ export function ServicesIndexView({ logo }) {
             </p>
           </header>
 
-          <section aria-label="ZXI services" className="grid grid-cols-1 md:grid-cols-2 gap-px overflow-hidden rounded-sm bg-neutral-300 border border-neutral-300">
+          <section aria-label="ZXI services" className="grid grid-cols-1 md:grid-cols-2 gap-px overflow-hidden bg-neutral-300 border border-neutral-300">
             {SERVICES_DATA.map((service, idx) => (
               <Link
                 key={service.slug}

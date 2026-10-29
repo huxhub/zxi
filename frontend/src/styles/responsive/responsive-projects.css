@@ -536,3 +536,44 @@
     font-size: 92px !important;
   }
 }
+
+/* Archive cards are intentionally immediate: no strip, no scroll expansion, no staggered sizing. */
+.folio-strip { display: none !important; }
+.folio-grid { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; gap: clamp(28px, 3vw, 48px) clamp(14px, 1.5vw, 24px) !important; }
+.folio-card,
+.folio-card:nth-child(n),
+.folio-card:nth-child(3n + 1),
+.folio-card:nth-child(7n + 4),
+.folio-card:nth-child(7n + 5),
+.folio-card:nth-child(7n + 6),
+.folio-card:nth-child(7n + 7) { grid-column: auto !important; }
+.folio-frame,
+.folio-card:nth-child(n) .folio-frame,
+.folio-card:nth-child(3n + 1) .folio-frame,
+.folio-card:nth-child(7n + 4) .folio-frame,
+.folio-card:nth-child(7n + 5) .folio-frame,
+.folio-card:nth-child(7n + 6) .folio-frame,
+.folio-card:nth-child(7n + 7) .folio-frame { height: auto !important; max-height: none !important; aspect-ratio: 4 / 5; }
+
+@media (max-width: 1024px) {
+  .folio-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+}
+
+@media (max-width: 640px) {
+  .folio-grid { grid-template-columns: 1fr !important; gap: 24px !important; }
+.folio-frame,
+.folio-card:nth-child(n) .folio-frame { aspect-ratio: 4 / 5; }
+}
+
+/* Keep every archive card the same, shorter height at every viewport. */
+.folio-frame,
+.folio-card:nth-child(n) .folio-frame,
+.folio-card:nth-child(3n + 1) .folio-frame,
+.folio-card:nth-child(7n + 4) .folio-frame,
+.folio-card:nth-child(7n + 5) .folio-frame,
+.folio-card:nth-child(7n + 6) .folio-frame,
+.folio-card:nth-child(7n + 7) .folio-frame {
+  height: auto !important;
+  max-height: none !important;
+  aspect-ratio: 16 / 10 !important;
+}

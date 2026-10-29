@@ -16,7 +16,12 @@ header.fixed.site-nav--scrolled {
     padding-right: 16px !important;
     padding-top: 16px !important;
     padding-bottom: 16px !important;
-    background-color: #F5F0E7 !important;
+    background-color: #fff !important;
+  }
+
+  header.fixed:not(.home-hero-nav) {
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
   }
 
   header.fixed.bg-\[\#F5F0E7\],
@@ -40,22 +45,14 @@ header.fixed.site-nav--scrolled {
     background-color: #171717 !important;
   }
 
-  header.fixed.home-hero-nav {
-    background-color: transparent !important;
-  }
+  header.fixed.home-hero-nav { background-color: transparent !important; border-bottom-color: transparent !important; }
 
-  header.fixed.home-hero-nav a img {
-    filter: brightness(0) invert(1) !important;
-  }
+  header.fixed.home-hero-nav a img { filter: brightness(0) invert(1) !important; }
 
-  header.fixed.home-hero-nav .nav-menu-text {
-    color: #fff !important;
-  }
+  header.fixed.home-hero-nav .nav-menu-text { color: #fff !important; }
 
   header.fixed.home-hero-nav .nav-menu-bar-top,
-  header.fixed.home-hero-nav .nav-menu-bar-bottom {
-    background-color: #fff !important;
-  }
+  header.fixed.home-hero-nav .nav-menu-bar-bottom { background-color: #fff !important; }
 
   header.fixed button[aria-label="Open navigation menu"],
   header.fixed .nav-menu-btn {

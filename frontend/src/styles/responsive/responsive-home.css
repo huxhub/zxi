@@ -77,6 +77,12 @@
     aspect-ratio: 16 / 12 !important;
   }
 
+  #portfolio .project-card,
+  #portfolio .project-card-img-wrap {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+  }
+
   #portfolio .project-card .absolute.bottom-6 {
     bottom: 16px !important;
     left: 16px !important;
@@ -92,7 +98,7 @@
 
   #portfolio .project-card {
     grid-column: span 1 !important;
-    aspect-ratio: 1 !important;
+    aspect-ratio: 16 / 12 !important;
   }
 }
 
@@ -144,7 +150,7 @@
     position: relative !important;
     width: 100% !important;
     aspect-ratio: 16 / 11 !important;
-    border-radius: 12px !important;
+    border-radius: 0 !important;
     overflow: hidden !important;
   }
 
@@ -340,6 +346,12 @@
     max-width: 2400px !important;
     gap: 16px !important;
     padding: 0 16px !important;
+  }
+
+  #portfolio .project-card.project-card-hero,
+  #portfolio .project-card:nth-child(-n+2) {
+    aspect-ratio: 16 / 12 !important;
+    max-height: 720px !important;
   }
 
   #portfolio .project-card h3 {
@@ -559,6 +571,12 @@
     max-width: 3300px !important;
     gap: 24px !important;
     padding: 0 24px !important;
+  }
+
+  #portfolio .project-card.project-card-hero,
+  #portfolio .project-card:nth-child(-n+2) {
+    aspect-ratio: 16 / 12 !important;
+    max-height: 850px !important;
   }
 
   #portfolio .project-card h3 {

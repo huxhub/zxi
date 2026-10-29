@@ -5,6 +5,13 @@
 
 /* --- Mobile Breakpoints (< 640px) --- */
 @media (max-width: 640px) {
+  /* Keep the capabilities section square on phones. */
+  section:has(> .grid.grid-cols-1.md\:grid-cols-2),
+  section:has(> .grid.grid-cols-1.md\:grid-cols-2) > .grid,
+  section:has(> .grid.grid-cols-1.md\:grid-cols-2) > .grid > * {
+    border-radius: 0 !important;
+  }
+
   /* Service detail header */
   article header h1 {
     font-size: clamp(32px, 8.5vw, 44px) !important;

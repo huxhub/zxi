@@ -27,8 +27,14 @@ export function ProjectDetail({ project, next }) {
         <div className="project-title-panel">
           <Link className="project-back" href="/projects">&#8598; All projects</Link>
           <div className="project-thumbnail"><div><Photo image={project.gallery[1] || project.image} alt={`${project.title} detail`} priority sizes="(max-width: 991px) 100vw, 60vw" /></div></div>
-          <h1>{project.title}</h1>
-          <div className="project-thumbnail-meta"><p>{project.location}<span>{project.category}</span></p><p>{project.scope}</p></div>
+          <div className="project-title-content">
+            <h1>{project.title}</h1>
+            <div className="project-thumbnail-meta" aria-label="Project details">
+              <span>{project.location}</span>
+              <span>{project.category}</span>
+              <span>{project.scope}</span>
+            </div>
+          </div>
           <span className="project-scroll-cue">Scroll to discover &#8600;</span>
         </div>
       </section>

@@ -91,6 +91,22 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate, dark
     }
   };
 
+  const toggleServices = () => {
+    setServicesOpen((expanded) => {
+      const next = !expanded;
+      if (next) setPackagesOpen(false);
+      return next;
+    });
+  };
+
+  const togglePackages = () => {
+    setPackagesOpen((expanded) => {
+      const next = !expanded;
+      if (next) setServicesOpen(false);
+      return next;
+    });
+  };
+
   return (
     <>
       {/* Top Header: transparent over the home hero, then a lightly compact white bar. */}
@@ -181,17 +197,19 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate, dark
           <nav className="main-drawer-nav flex flex-col gap-2.5 sm:gap-3 mt-7 md:mt-8" aria-label="Main navigation">
             <button
               onClick={() => handleLinkClick('home')}
-              className="text-left text-lg sm:text-xl md:text-2xl font-normal tracking-tight text-[#282722] hover:text-[#5C574E] transition-colors cursor-pointer focus:outline-none"
+              aria-current={pathname === '/' ? 'page' : undefined}
+              className={`drawer-primary-link ${pathname === '/' ? 'is-active' : ''} text-left text-lg sm:text-xl md:text-2xl font-normal tracking-tight text-[#282722] hover:text-[#5C574E] transition-colors cursor-pointer focus:outline-none`}
             >
               Home
             </button>
 
             {/* Portfolio with Link to /projects and Expandable Project Titles */}
             <div>
-              <div className="w-full flex items-center justify-between group">
+              <div className={`drawer-primary-row ${pathname.startsWith('/projects') ? 'is-active' : ''} w-full flex items-center justify-between group`}>
                 <Link
                   href="/projects"
                   onClick={close}
+                  aria-current={pathname.startsWith('/projects') ? 'page' : undefined}
                   className="text-left text-lg sm:text-xl md:text-2xl font-normal tracking-tight text-[#282722] hover:text-[#5C574E] transition-colors cursor-pointer focus:outline-none"
                 >
                   Portfolio
@@ -246,22 +264,18 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate, dark
             </div>
 
             <div>
-              <div className="flex items-center gap-1">
-                <Link
-                  href="/services"
-                  onClick={close}
-                  className="text-left text-lg sm:text-xl md:text-2xl font-normal tracking-tight text-[#282722] hover:text-[#5C574E] transition-colors cursor-pointer focus:outline-none"
+              <div className={`drawer-primary-row ${pathname.startsWith('/services') ? 'is-active' : ''} flex w-full items-center justify-between gap-1`}>
+                <button
+                  type="button"
+                  onClick={toggleServices}
+                  aria-expanded={servicesOpen}
+                  aria-controls="navigation-services"
+                  className="flex-1 text-left text-lg sm:text-xl md:text-2xl font-normal tracking-tight text-[#282722] hover:text-[#5C574E] transition-colors cursor-pointer focus:outline-none"
                 >
                   Services
-                </Link>
+                </button>
                 <button
-                  onClick={() => {
-                    setServicesOpen((expanded) => {
-                      const next = !expanded;
-                      if (next) setPackagesOpen(false);
-                      return next;
-                    });
-                  }}
+                  onClick={toggleServices}
                   aria-label="Toggle services list"
                   aria-expanded={servicesOpen}
                   aria-controls="navigation-services"
@@ -280,7 +294,10 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate, dark
               </div>
               <div id="navigation-services" inert={!servicesOpen} className={`grid transition-all duration-300 ease-out ${servicesOpen ? 'grid-rows-[1fr] opacity-100 mt-3' : 'grid-rows-[0fr] opacity-0'}`}>
                 <div className="overflow-hidden border-l border-[#282722]/25 pl-4">
-                  <div className="flex flex-col gap-2 pb-1 text-sm text-[#282722]/75 sm:text-base">
+                  <div className="flex flex-col gap-2.5 pb-1 text-[15px] leading-snug text-[#282722]/75 sm:text-[17px]">
+                    <Link href="/services" onClick={close} aria-current={pathname === '/services' ? 'page' : undefined} className="drawer-submenu-link w-fit font-medium text-[#282722] focus:outline-none">
+                      All Services →
+                    </Link>
                     {[
                       ['Commercial Fitouts', 'commercial-fitouts'],
                       ['Residential Interiors', 'residential-interiors'],
@@ -288,7 +305,7 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate, dark
                       ['Custom Furniture', 'custom-furniture'],
                       ['Hospitality & Wellness', 'hospitality-wellness'],
                     ].map(([label, slug]) => (
-                      <Link key={slug} href={`/services/${slug}`} onClick={close} className="w-fit transition-colors hover:text-[#282722] focus:outline-none">
+                      <Link key={slug} href={`/services/${slug}`} onClick={close} aria-current={pathname === `/services/${slug}` ? 'page' : undefined} className="drawer-submenu-link w-fit focus:outline-none">
                         {label}
                       </Link>
                     ))}
@@ -298,22 +315,18 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate, dark
             </div>
 
             <div>
-              <div className="flex items-center gap-1">
-                <Link
-                  href="/packages"
-                  onClick={close}
-                  className="text-left text-lg sm:text-xl md:text-2xl font-normal tracking-tight text-[#282722] hover:text-[#5C574E] transition-colors cursor-pointer focus:outline-none"
+              <div className={`drawer-primary-row ${pathname.startsWith('/packages') ? 'is-active' : ''} flex w-full items-center justify-between gap-1`}>
+                <button
+                  type="button"
+                  onClick={togglePackages}
+                  aria-expanded={packagesOpen}
+                  aria-controls="navigation-packages"
+                  className="flex-1 text-left text-lg sm:text-xl md:text-2xl font-normal tracking-tight text-[#282722] hover:text-[#5C574E] transition-colors cursor-pointer focus:outline-none"
                 >
                   Packages
-                </Link>
+                </button>
                 <button
-                  onClick={() => {
-                    setPackagesOpen((expanded) => {
-                      const next = !expanded;
-                      if (next) setServicesOpen(false);
-                      return next;
-                    });
-                  }}
+                  onClick={togglePackages}
                   aria-label="Toggle packages list"
                   aria-expanded={packagesOpen}
                   aria-controls="navigation-packages"
@@ -336,14 +349,19 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate, dark
                 className={`grid transition-all duration-300 ease-out ${packagesOpen ? 'grid-rows-[1fr] opacity-100 mt-3' : 'grid-rows-[0fr] opacity-0'}`}
               >
                 <div className="overflow-hidden border-l border-[#282722]/25 pl-4">
-                  <div className="flex flex-col gap-2 pb-1 text-sm text-[#282722]/75 sm:text-base">
+                  <div className="flex flex-col gap-2.5 pb-1 text-[15px] leading-snug text-[#282722]/75 sm:text-[17px]">
+                    <Link href="/packages" onClick={close} aria-current={pathname === '/packages' ? 'page' : undefined} className="drawer-submenu-link w-fit font-medium text-[#282722] focus:outline-none">
+                      All Packages →
+                    </Link>
                     {[
                       ['Interior Design', 'interior-design'],
-                      ['F&B Shops', 'fb-shops'],
-                      ['Premium Residential', 'premium'],
+                      ['Retail Shops', 'retail-shops'],
                       ['Office Fit-Out', 'office-fitout'],
+                      ['F&B Shops', 'fb-shops'],
+                      ['Residential / Villa', 'residential-villa'],
+                      ['Premium Residential', 'premium'],
                     ].map(([label, slug]) => (
-                      <Link key={slug} href={`/packages/${slug}`} onClick={close} className="w-fit transition-colors hover:text-[#282722] focus:outline-none">
+                      <Link key={slug} href={`/packages/${slug}`} onClick={close} aria-current={pathname === `/packages/${slug}` ? 'page' : undefined} className="drawer-submenu-link w-fit focus:outline-none">
                         {label}
                       </Link>
                     ))}
@@ -355,14 +373,16 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate, dark
             <Link
               href="/blog"
               onClick={close}
-              className="text-left text-lg sm:text-xl md:text-2xl font-normal tracking-tight text-[#282722] hover:text-[#5C574E] transition-colors cursor-pointer focus:outline-none"
+              aria-current={pathname.startsWith('/blog') ? 'page' : undefined}
+              className={`drawer-primary-link ${pathname.startsWith('/blog') ? 'is-active' : ''} text-left text-lg sm:text-xl md:text-2xl font-normal tracking-tight text-[#282722] hover:text-[#5C574E] transition-colors cursor-pointer focus:outline-none`}
             >
               Blog
             </Link>
 
             <button
               onClick={() => handleLinkClick('contact')}
-              className="text-left text-lg sm:text-xl md:text-2xl font-normal tracking-tight text-[#282722] hover:text-[#5C574E] transition-colors cursor-pointer focus:outline-none"
+              aria-current={pathname.startsWith('/contact') ? 'page' : undefined}
+              className={`drawer-primary-link ${pathname.startsWith('/contact') ? 'is-active' : ''} text-left text-lg sm:text-xl md:text-2xl font-normal tracking-tight text-[#282722] hover:text-[#5C574E] transition-colors cursor-pointer focus:outline-none`}
             >
               Contacts
             </button>

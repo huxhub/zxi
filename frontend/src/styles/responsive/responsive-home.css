@@ -109,18 +109,20 @@
   .mid-page-cta {
     display: flex !important;
     flex-direction: column !important;
+    align-items: center !important;
     gap: 20px !important;
     padding: 50px 20px !important;
-    text-align: left !important;
+    text-align: center !important;
   }
 
   .mid-page-cta h2 {
-    font-size: clamp(28px, 7vw, 42px) !important;
+    max-width: 520px;
+    font-size: clamp(24px, 7vw, 30px) !important;
     line-height: 1.1 !important;
   }
 
   .mid-page-cta a {
-    width: 100% !important;
+    width: min(100%, 280px) !important;
     min-width: 0 !important;
     justify-content: space-between !important;
   }
@@ -373,22 +375,23 @@
 
   /* 3. Mid-Page CTA Ribbon */
   .mid-page-cta {
-    padding: 96px 120px !important;
-    gap: 80px !important;
+    padding: 88px 120px !important;
+    gap: 48px !important;
   }
 
   .mid-page-cta h2 {
-    font-size: 92px !important;
+    font-size: 64px !important;
   }
 
   .mid-page-cta > p {
-    font-size: 15px !important;
+    font-size: 12px !important;
   }
 
   .mid-page-cta a {
-    min-width: 320px !important;
-    padding: 24px 32px !important;
-    font-size: 17px !important;
+    width: 260px !important;
+    min-width: 0 !important;
+    padding: 20px 24px !important;
+    font-size: 14px !important;
   }
 
   /* 4. Bloom 3D Services */
@@ -600,22 +603,23 @@
 
   /* 3. Mid-Page CTA Ribbon */
   .mid-page-cta {
-    padding: 130px 180px !important;
-    gap: 110px !important;
+    padding: 104px 180px !important;
+    gap: 64px !important;
   }
 
   .mid-page-cta h2 {
-    font-size: 130px !important;
+    font-size: 72px !important;
   }
 
   .mid-page-cta > p {
-    font-size: 20px !important;
+    font-size: 13px !important;
   }
 
   .mid-page-cta a {
-    min-width: 440px !important;
-    padding: 32px 44px !important;
-    font-size: 22px !important;
+    width: 280px !important;
+    min-width: 0 !important;
+    padding: 22px 26px !important;
+    font-size: 15px !important;
   }
 
   /* 4. Bloom 3D Services */

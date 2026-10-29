@@ -310,6 +310,50 @@ dialog#navigation-panel::backdrop {
   align-items: center;
 }
 
+.drawer-primary-link,
+.drawer-primary-row {
+  width: 100%;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: right calc(100% - 4px);
+  background-repeat: no-repeat;
+  background-size: 0 1px;
+  transition: color 250ms ease, background-size 280ms cubic-bezier(.22, 1, .36, 1);
+}
+
+.drawer-primary-link:hover,
+.drawer-primary-link:focus-visible,
+.drawer-primary-row:hover,
+.drawer-primary-row:focus-within,
+.drawer-primary-link.is-active,
+.drawer-primary-row.is-active {
+  background-position: left calc(100% - 4px);
+  background-size: 100% 1px;
+}
+
+.drawer-primary-link:hover,
+.drawer-primary-link:focus-visible,
+.drawer-primary-row:hover > a,
+.drawer-primary-row:hover > button,
+.drawer-primary-row:focus-within > a,
+.drawer-primary-row:focus-within > button,
+.drawer-primary-link.is-active,
+.drawer-primary-row.is-active > a,
+.drawer-primary-row.is-active > button {
+  color: #8A4F2C !important;
+}
+
+.drawer-submenu-link {
+  color: rgba(40, 39, 34, .72);
+  transition: color 220ms ease, transform 220ms cubic-bezier(.22, 1, .36, 1);
+}
+
+.drawer-submenu-link:hover,
+.drawer-submenu-link:focus-visible,
+.drawer-submenu-link[aria-current='page'] {
+  color: #8A4F2C !important;
+  transform: translateX(4px);
+}
+
 @keyframes menu-drawer {
   from {
     transform: translateX(100%);

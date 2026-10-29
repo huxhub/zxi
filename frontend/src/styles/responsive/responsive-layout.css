@@ -79,7 +79,7 @@ dialog#navigation-panel nav button:hover,
 dialog#navigation-panel nav a:hover,
 dialog#navigation-panel #navigation-services a:hover,
 dialog#navigation-panel #navigation-packages a:hover {
-  color: #5C574E !important;
+  color: #8A4F2C !important;
 }
 
 @media (max-width: 640px) {

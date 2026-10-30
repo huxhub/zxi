@@ -55,8 +55,6 @@ export function ContactView({ logo, image, selectedPackage }) {
           {selectedPackage ? <div className="contact-package-summary">
             <div className="contact-package-summary-head"><p className="contact-eyebrow">{selectedPackage.title} inclusions</p><span>{String(inclusionCount).padStart(2, '0')} items</span></div>
             <div className="contact-package-sections">{selectedPackage.sections.map((section, sectionIndex) => <article className="contact-package-section" key={section.title}><header><span>{String(sectionIndex + 1).padStart(2, '0')}</span><h3>{section.title}</h3></header><ol>{section.items.map((item, itemIndex) => <li key={item}><span>{String(itemIndex + 1).padStart(2, '0')}</span><p>{item}</p></li>)}</ol></article>)}</div>
-            <div className="contact-package-price"><span>Special offer</span><strong>{selectedPackage.price}</strong><del>{selectedPackage.regular}</del></div>
-            <p className="contact-package-note">{selectedPackage.note || 'Offer is subject to the agreed project scope and applicable terms.'}</p>
           </div> : <div className="contact-package-empty"><h3>Select the right starting point.</h3><p>Choose a package to review its complete scope here, or send a general project enquiry.</p><Link href="/packages">Explore all packages <span aria-hidden="true">↗</span></Link></div>}
           <div className="contact-direct-list">
             <p className="contact-eyebrow">Reach us directly</p>

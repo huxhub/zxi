@@ -14,10 +14,6 @@
 .contact-inquiry { display:grid; grid-template-columns:minmax(0,1fr) minmax(380px,.92fr); gap:clamp(40px,5vw,78px); max-width:1600px; margin:auto; padding:clamp(64px,7vw,96px) clamp(24px,6vw,100px); scroll-margin-top:var(--site-header-height,80px); align-items:start; }
 .contact-intro h2 { font-size:clamp(45px,5.5vw,88px); }
 .contact-intro>p:last-child { max-width:370px; margin:34px 0 0; color:#61615d; font-size:15px; line-height:1.65; }
-.contact-package-price { display:flex; flex-wrap:wrap; align-items:baseline; gap:8px 16px; margin-top:28px; }
-.contact-package-price span { width:100%; color:#77766f; font-size:10px; letter-spacing:.15em; text-transform:uppercase; }
-.contact-package-price strong { font-size:clamp(24px,2.2vw,34px); font-weight:500; letter-spacing:-.03em; }
-.contact-package-price del { color:#9d9a91; font-size:13px; }
 .contact-package-wrap { min-width:0; }
 .contact-package-summary { border-top:1px solid #aaa69e; }
 .contact-package-summary-head { display:flex; justify-content:space-between; gap:20px; padding:16px 0 18px; }
@@ -30,7 +26,6 @@
 .contact-package-section ol { display:grid; gap:0; margin:0; padding:0; list-style:none; }
 .contact-package-section li { display:grid; grid-template-columns:34px minmax(0,1fr); gap:12px; padding:9px 0; border-top:1px solid #dedcd6; color:#54534e; font-size:14px; line-height:1.45; }
 .contact-package-section li p { margin:0; }
-.contact-package-note { margin:20px 0 0; color:#77746c; font-size:11px; line-height:1.6; }
 .contact-package-actions { display:grid; grid-template-columns:1fr 1fr; gap:2px; margin-top:34px; }
 .contact-package-actions a,.contact-package-empty a { display:flex; align-items:center; justify-content:space-between; gap:24px; padding:18px 20px; background:#E8DDCC; color:#282722; font-size:12px; font-weight:600; text-decoration:none; transition:background .25s ease,transform .25s ease; }
 .contact-package-actions a:hover,.contact-package-empty a:hover { background:#DCD0BE; transform:translateY(-2px); }

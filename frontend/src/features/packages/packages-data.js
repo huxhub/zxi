@@ -2,6 +2,7 @@ export const PACKAGES = [
   {
     slug: 'interior-design', title: 'Interior Design', audience: 'Concept to visuals',
     price: 'AED 5 / sqft onwards', regular: 'AED 20 / sqft', image: '/packages/interior-design.jpeg',
+    contactHero: { src: '/contact/packages/interior-design-contact-hero.webp', alt: 'Luxury interior design studio with material samples and a refined residential living space' },
     intro: 'A focused design package for shaping your space before construction begins.',
     sections: [{ title: 'Included', items: [
       'Design Concept & Mood Board Presentation',
@@ -14,6 +15,7 @@ export const PACKAGES = [
   {
     slug: 'fb-shops', title: 'F&B Shops', audience: 'Design + fit-out',
     price: 'AED 140 / sqft onwards', regular: 'AED 180 / sqft', image: '/packages/fb-shops.jpeg',
+    contactHero: { src: '/contact/packages/fb-shops-contact-hero.webp', alt: 'Premium Dubai restaurant interior with tailored dining seating and a marble bar' },
     intro: 'A practical fit-out foundation for food and beverage spaces, from authority coordination to ventilation.',
     sections: [{ title: 'Included', items: [
       'Basic Interior Design & Space Planning',
@@ -35,6 +37,7 @@ export const PACKAGES = [
   {
     slug: 'elite', title: 'Elite', audience: 'Apartments & Villas',
     price: 'AED 130 / sqft', regular: 'AED 170 / sqft', image: '/packages/elite.jpeg',
+    contactHero: { src: '/contact/packages/elite-contact-hero.webp', alt: 'Elegant luxury apartment living room with bespoke joinery and warm sunset views' },
     intro: 'From concept development to visualisation and design planning — a signature residential package spanning seven areas.',
     sections: [
       { title: 'Foyer', items: ['Laminate-finished shoe rack with ledges — 1 No.', 'Pendant lights — 1 Set (2 Nos.)', 'Plain ceiling at the entrance area', 'Flooring in tile or wood finish (LVT or parquet), including skirting'] },
@@ -50,6 +53,7 @@ export const PACKAGES = [
   {
     slug: 'elite-plus', title: 'Elite Plus', audience: 'Apartments & Villas',
     price: 'AED 210 / sqft', regular: 'AED 275 / sqft', image: '/packages/elite-plus.jpeg',
+    contactHero: { src: '/contact/packages/elite-plus-contact-hero.webp', alt: 'Premium villa master suite with upholstered bed, walnut panelling, and soft indirect lighting' },
     intro: 'From concept development to visualisation and design planning — the upgraded signature residential package spanning seven areas.',
     sections: [
       { title: 'Foyer', items: ['Wooden veneer-finished shoe rack with ledges — 1 No.', 'Brass-finish mirror wall art — 1 No.', 'Decorative cement-texture wall finish', 'Pendant lights — 1 Set (2 Nos.)', 'Custom-designed entrance ceiling with concealed cove LED lighting', 'Premium flooring in tile or wood finish (LVT or parquet), including skirting'] },
@@ -65,6 +69,7 @@ export const PACKAGES = [
   {
     slug: 'office-fitout', title: 'Office Fit-Out', audience: 'Commercial workplaces',
     price: 'AED 80 / sqft onwards', regular: 'AED 100 / sqft', image: '/packages/office-fitout.jpeg',
+    contactHero: { src: '/contact/packages/office-fitout-contact-hero.webp', alt: 'Executive Dubai office interior with a stone meeting table and city skyline views' },
     intro: 'A complete office interior and fit-out package covering design, approvals, finishes, services, and final decoration.',
     sections: [{ title: 'Included', items: [
       'Basic Interior Design & Mood Board Presentation',
@@ -81,6 +86,7 @@ export const PACKAGES = [
   {
     slug: 'residential-villa', title: 'Residential / Villa', audience: 'Interior design + fit-out',
     price: 'AED 49 / sqft onwards', regular: 'AED 75 / sqft', image: '/packages/residential-villa.jpeg',
+    contactHero: { src: '/contact/packages/residential-villa-contact-hero.webp', alt: 'Contemporary Dubai villa living room opening to a landscaped terrace' },
     intro: 'A complete residential fit-out starting point, bringing the essential design, finishes and decorative layers into one considered scope.',
     sections: [{ title: 'Included', items: [
       'Basic Interior Design & Mood Board Presentation',
@@ -96,6 +102,7 @@ export const PACKAGES = [
   {
     slug: 'retail-shops', title: 'Retail Shops', audience: 'Design + fit-out',
     price: 'AED 109 / sqft onwards', regular: 'AED 140 / sqft', image: '/packages/retail-shops.jpeg',
+    contactHero: { src: '/contact/packages/retail-shops-contact-hero.webp', alt: 'Luxury boutique retail interior with stone display plinths and warm architectural lighting' },
     intro: 'A practical retail fit-out scope that takes a shop from concept and approvals through its essential finishes and services.',
     sections: [{ title: 'Included', items: [
       'Basic Interior Design & Mood Board Presentation',

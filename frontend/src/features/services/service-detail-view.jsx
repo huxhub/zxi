@@ -141,8 +141,8 @@ export function ServiceDetailView({ service, nextService, logo }) {
                     >
                       <span className="products-card__media">
                         <Image
-                          src={entry.items[0].image}
-                          alt={entry.items[0].title}
+                          src={entry.coverImage || entry.items[0].image}
+                          alt={`${entry.title} furniture collection`}
                           fill
                           sizes={categoryIndex === 0 ? '(max-width: 700px) 100vw, 50vw' : '(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 25vw'}
                           priority={categoryIndex === 0}

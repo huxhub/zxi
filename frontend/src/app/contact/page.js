@@ -10,18 +10,19 @@ export const metadata = {
 };
 
 const logo = { src: '/zxi-ae-logo.png', width: 500, height: 128 };
-const image = { src: '/contact/contact-hero.webp', width: 1920, height: 1080 };
+const defaultImage = { src: '/contact/contact-hero.webp', width: 1920, height: 1080 };
 
 async function ContactContent({ searchParams }) {
   const query = await searchParams;
   const packageParam = Array.isArray(query?.package) ? query.package[0] : query?.package;
   const selectedPackage = packageParam ? getPackage(packageParam) : null;
+  const image = selectedPackage?.contactHero || defaultImage;
   return <ContactView logo={logo} image={image} selectedPackage={selectedPackage} />;
 }
 
 export default function ContactPage({ searchParams }) {
   return (
-    <Suspense fallback={<ContactView logo={logo} image={image} selectedPackage={null} />}>
+    <Suspense fallback={<ContactView logo={logo} image={defaultImage} selectedPackage={null} />}>
       <ContactContent searchParams={searchParams} />
     </Suspense>
   );

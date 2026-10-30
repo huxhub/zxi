@@ -2,6 +2,7 @@
   {
     "title": "Bar stools",
     "slug": "bar-stools",
+    "coverImage": "/products/covers/bar-stools-cover.webp",
     "items": [
       {
         "title": "The Elegance Bar Stool",
@@ -23,6 +24,7 @@
   {
     "title": "Dining chairs",
     "slug": "dining-chairs",
+    "coverImage": "/products/covers/dining-chairs-cover.webp",
     "items": [
       {
         "title": "The Sculptural Accent Dining Chair",
@@ -44,6 +46,7 @@
   {
     "title": "Dining tables",
     "slug": "dining-tables",
+    "coverImage": "/products/covers/dining-tables-cover.webp",
     "items": [
       {
         "title": "The Statement Dining Table",
@@ -65,6 +68,7 @@
   {
     "title": "Sofas & lounge",
     "slug": "sofas-lounge",
+    "coverImage": "/products/covers/sofas-lounge-cover.webp",
     "items": [
       {
         "title": "The Bouclé Lounge Chair",
@@ -91,6 +95,7 @@
   {
     "title": "Coffee tables",
     "slug": "coffee-tables",
+    "coverImage": "/products/covers/coffee-tables-cover.webp",
     "items": [
       {
         "title": "The Organic Coffee Table",
@@ -117,6 +122,7 @@
   {
     "title": "Bedside tables",
     "slug": "bedside-tables",
+    "coverImage": "/products/covers/bedside-tables-cover.webp",
     "items": [
       {
         "title": "The Marble Bedside Table",
@@ -138,6 +144,7 @@
   {
     "title": "Consoles",
     "slug": "consoles",
+    "coverImage": "/products/covers/consoles-cover.webp",
     "items": [
       {
         "title": "The Timeless Console",
@@ -159,6 +166,7 @@
   {
     "title": "Display shelves",
     "slug": "display-shelves",
+    "coverImage": "/products/covers/display-shelves-cover.webp",
     "items": [
       {
         "title": "The Refined Display Shelves",
@@ -180,6 +188,7 @@
   {
     "title": "Pouffes",
     "slug": "pouffes",
+    "coverImage": "/products/covers/pouffes-cover.webp",
     "items": [
       {
         "title": "The Refined Pouffe",
@@ -201,6 +210,7 @@
   {
     "title": "TV units",
     "slug": "tv-units",
+    "coverImage": "/products/covers/tv-units-cover.webp",
     "items": [
       {
         "title": "The Minimalist Media Console",
@@ -227,6 +237,7 @@
   {
     "title": "Wardrobes",
     "slug": "wardrobes",
+    "coverImage": "/products/covers/wardrobes-cover.webp",
     "items": [
       {
         "title": "The Modern Wardrobe",
@@ -248,6 +259,7 @@
   {
     "title": "Upholstered beds",
     "slug": "upholstered-beds",
+    "coverImage": "/products/covers/upholstered-beds-cover.webp",
     "items": [
       {
         "title": "The Contemporary Upholstered Bed",

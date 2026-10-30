@@ -94,8 +94,8 @@ export const SERVICES_DATA = [
     subtitle: 'Private villa residences, penthouses, and bespoke living sanctuaries tailored to Dubai lifestyles.',
     tagline: 'Timeless Luxury Living & Architectural Millwork',
     heroImage: {
-      src: '/zxi/assets/01-paris-haussmann-salon.jpg',
-      alt: 'Luxury Haussmannian residential salon with ornate mouldings and herringbone oak parquet',
+      src: '/services/residential-luxury-villa-hero.webp',
+      alt: 'Double-height luxury Dubai villa interior with a sculptural staircase, warm stone, oak joinery, and garden views',
     },
     metrics: [
       { num: '220+', label: 'Villas & Penthouses' },

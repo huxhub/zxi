@@ -2,7 +2,6 @@ import './home-sections.css';
 import Image from 'next/image';
 
 const PARTNERS = [
-  { name: 'DAMAC', image: '/partners/damac.webp', scale: 1.22 },
   { name: 'Sobha Realty', image: '/partners/sobha.webp', scale: 1.18 },
   { name: 'Plug Media', image: '/partners/plug-media.webp', scale: 1.18 },
   { name: 'Braschi', image: '/partners/braschi.webp' },

@@ -87,9 +87,9 @@ export function ServiceDetailView({ service, nextService, logo }) {
             {service.slug !== 'custom-furniture' && (
               <>
                 <section className="pt-12 pb-8 sm:pt-16 sm:pb-10 lg:grid lg:grid-cols-12">
-                  <div className="flex flex-col gap-4 lg:col-start-4 lg:col-span-7 sm:gap-5">
+                  <div className="flex flex-col gap-4 lg:col-start-1 lg:col-span-9 sm:gap-5">
                     <p className="text-[10px] uppercase tracking-[.24em] text-neutral-500">The approach</p>
-                    <p className="text-2xl font-[200] leading-[1.25] tracking-[-.035em] text-neutral-900 sm:text-3xl lg:text-4xl">{service.overview[0]}</p>
+                    <p className="text-2xl font-[200] leading-[1.25] tracking-[-.035em] text-neutral-900 sm:text-3xl lg:text-[34px]">{service.overview[0]}</p>
                   </div>
                 </section>
 

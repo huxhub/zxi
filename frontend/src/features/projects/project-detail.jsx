@@ -20,13 +20,25 @@ export function ProjectDetail({ project, next }) {
     }, root);
     return () => mm.revert();
   }, [project.slug]);
+
+  const detailImages = project.gallery.slice(1);
+  const thumbImage = project.introImage
+    || project.gallery.find((image) => (image.aspectRatio || image.width / image.height) >= 1.25)
+    || detailImages[0]
+    || project.image;
+  const storyImages = detailImages.filter((image) => image.src !== thumbImage.src);
+
   return <>
     <div className="project-story" ref={root} style={{ '--project-color': project.color }}>
     <div className="project-track">
       <section className="project-cover">
         <div className="project-title-panel">
           <Link className="project-back" href="/projects">&#8598; All projects</Link>
-          <div className="project-thumbnail"><div><Photo image={project.gallery[1] || project.image} alt={`${project.title} detail`} priority sizes="(max-width: 991px) 100vw, 60vw" /></div></div>
+          <div className="project-thumbnail">
+            <div>
+              <Photo image={thumbImage} alt={`${project.title} detail`} priority sizes="(max-width: 991px) 100vw, 60vw" />
+            </div>
+          </div>
           <div className="project-title-content">
             <h1>{project.title}</h1>
             <div className="project-thumbnail-meta" aria-label="Project details">
@@ -43,9 +55,27 @@ export function ProjectDetail({ project, next }) {
         <dl><div><dt>Project</dt><dd>{project.title}</dd></div><div><dt>Location</dt><dd>{project.location}</dd></div><div><dt>Category</dt><dd>{project.category}</dd></div>{project.area && <div><dt>Area</dt><dd>{project.area}</dd></div>}{project.timeline && <div><dt>Timeline</dt><dd>{project.timeline}</dd></div>}<div><dt>Studio</dt><dd>ZXI Interiors & Contracting</dd></div></dl>
         <Link href="/contact">Discuss your project &#8599;</Link>
       </section>
-      {project.gallery.slice(2).map((image, index) => <figure className="project-gallery-image" key={image.src}><div><Photo image={image} alt={`${project.title} — interior view ${index + 3}`} sizes="(max-width: 991px) 100vw, 65vw" /></div><figcaption>{project.title}<span>{String(index + 3).padStart(2, '0')} / {String(project.gallery.length).padStart(2, '0')}</span></figcaption></figure>)}
-      <section className="project-next" style={{ background: next.color }}><p className="folio-eyebrow">Next project</p><Link href={`/projects/${next.slug}`}><div className="project-next-image"><Photo image={next.image} alt={next.title} sizes="50vw" /></div><h2>{next.title} <span>&#8599;</span></h2></Link><Link href="/projects">Back to all projects</Link></section>
+      {storyImages.map((image, index) => (
+        <figure className="project-gallery-image" key={image.src}>
+          <div>
+            <Photo image={image} alt={`${project.title} — interior view ${index + 2}`} sizes="(max-width: 991px) 100vw, 45vw" />
+          </div>
+          <figcaption>
+            {project.title}
+            <span>{String(index + 2).padStart(2, '0')} / {String(storyImages.length + 1).padStart(2, '0')}</span>
+          </figcaption>
+        </figure>
+      ))}
+      <section className="project-next" style={{ background: next.color }}>
+        <p className="folio-eyebrow">Next project</p>
+        <Link href={`/projects/${next.slug}`}>
+          <div className="project-next-image">
+            <Photo image={next.image} alt={next.title} sizes="50vw" />
+          </div>
+          <h2>{next.title} <span>&#8599;</span></h2>
+        </Link>
+        <Link href="/projects">Back to all projects</Link>
+      </section>
     </div>
   </div></>;
 }
-

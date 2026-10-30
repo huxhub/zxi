@@ -11,7 +11,7 @@ export default function Page() {
   const projects = portfolioProjects;
   const services = [
     ['Commercial Fitouts', 'Efficient workplaces delivered from plan to handover.', 1348, 'commercial-fitouts'],
-    ['Residential Interiors', 'Refined homes built with comfort and precision.', 246, 'residential-interiors'],
+    ['Residential Interiors', 'Refined homes built with comfort and precision.', 2189, 'residential-interiors'],
     ['Turnkey Contracting', 'Engineering precision, authority approvals, and delivery.', 1389, 'turnkey-contracting'],
     ['Custom Furniture', 'Bespoke pieces made for your space.', 1618, 'custom-furniture'],
     ['Hospitality & Wellness', 'Immersive dining, hospitality, and wellness environments.', 2625, 'hospitality-wellness'],
@@ -20,22 +20,22 @@ export default function Page() {
     {
       title: 'Bold ideas, made real',
       description: 'Tailored design and craftsmanship for distinctive spaces.',
-      image: { src: '/zxi/assets/1744-living-5.webp' },
+      image: { src: '/why-us/why-us-bold-ideas.webp' },
     },
     {
       title: 'Clear process. Reliable delivery',
       description: 'Defined milestones, clear updates, and no surprises.',
-      image: { src: '/why-work-with-us.png' },
+      image: { src: '/why-us/why-us-clear-process.webp' },
     },
     {
       title: 'Global vision. Local insight',
       description: 'International standards informed by local UAE expertise.',
-      image: { src: '/zxi/assets/2625-samsara-dubai-interior-fitout.webp' },
+      image: { src: '/why-us/why-us-global-vision.webp' },
     },
     {
       title: 'Built on architectural expertise',
       description: 'Engineering precision from concept to completion.',
-      image: { src: '/zxi/assets/2646-zxi-residential-kitchen-design-dubai.webp' },
+      image: { src: '/why-us/why-us-architectural-expertise.webp' },
     },
   ];
   return <HomeView data={{

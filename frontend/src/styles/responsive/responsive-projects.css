@@ -324,8 +324,12 @@
   }
 
   .project-thumbnail > div {
-    height: 44svh !important;
-    min-height: 260px !important;
+    width: 100% !important;
+    max-width: 560px !important;
+    height: auto !important;
+    max-height: none !important;
+    min-height: auto !important;
+    aspect-ratio: 16 / 9 !important;
   }
 
   .project-thumbnail-meta {
@@ -353,12 +357,17 @@
 
   .project-gallery-image > div,
   .project-gallery-image.is-small > div {
-    height: 65vh !important;
-    min-height: 320px !important;
+    width: 100% !important;
+    max-width: min(100%, 720px) !important;
+    height: auto !important;
+    min-height: auto !important;
+    aspect-ratio: 4 / 5 !important;
   }
 
   .project-next {
     width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
     flex: none !important;
     padding: 64px 24px !important;
     margin-top: 32px !important;
@@ -451,6 +460,15 @@
   .project-next h2 {
     font-size: 70px !important;
   }
+
+  .project-next > p,
+  .project-next > a {
+    max-width: min(68vw, 1800px) !important;
+  }
+
+  .project-next-image {
+    height: min(50svh, 820px) !important;
+  }
 }
 
 @media (min-width: 3840px) {
@@ -534,6 +552,15 @@
 
   .project-next h2 {
     font-size: 92px !important;
+  }
+
+  .project-next > p,
+  .project-next > a {
+    max-width: min(66vw, 2300px) !important;
+  }
+
+  .project-next-image {
+    height: min(48svh, 980px) !important;
   }
 }
 

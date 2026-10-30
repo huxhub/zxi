@@ -1,9 +1,18 @@
 import projectGalleries from './project-galleries.json';
 import media from '../../zxi-source/images.json';
+import projectImageDimensions from './project-image-dimensions.json';
+
 export function projectImage(id) {
   const item = media.find((image) => image.id === id);
   if (!item) throw new Error(`Missing project image ${id}`);
-  return { src: `/zxi/${item.local_file.replaceAll('\\', '/')}`, width: item.width, height: item.height };
+  const width = item.width || 1600;
+  const height = item.height || 1067;
+  return {
+    src: `/zxi/${item.local_file.replaceAll('\\', '/')}`,
+    width,
+    height,
+    aspectRatio: +(width / height).toFixed(4),
+  };
 }
 const entries = [
   ['plug-media', 'Plug Media', 'Al Quoz, Dubai', 'Commercial', 'Office interiors', 2664, '#b2a290'],
@@ -38,11 +47,38 @@ const projectColorPalette = {
 
 // Encode each segment so spaces, punctuation, and emoji in supplied filenames are safe URLs.
 function suppliedProject(slug, details, existing) {
-  const { folder, files, ...metadata } = details;
-  const gallery = files.map((file) => ({
-    src: `/projects/${encodeURIComponent(folder)}/${encodeURIComponent(file)}`,
-  }));
-  return { ...existing, ...metadata, slug, color: existing?.color || projectColorPalette[slug] || '#b9b4a2', image: gallery[0], gallery };
+  const { folder, files, introImage, ...metadata } = details;
+  const folderDims = projectImageDimensions[folder] || {};
+  const gallery = files.map((file) => {
+    const dim = folderDims[file] || {};
+    const width = dim.width || 1600;
+    const height = dim.height || 1067;
+    const aspectRatio = dim.aspectRatio || +(width / height).toFixed(4);
+    return {
+      src: `/projects/${encodeURIComponent(folder)}/${encodeURIComponent(file)}`,
+      width,
+      height,
+      aspectRatio,
+    };
+  });
+  const introDimensions = introImage ? (folderDims[introImage] || {}) : {};
+  const introWidth = introDimensions.width || 1536;
+  const introHeight = introDimensions.height || 864;
+  const introAsset = introImage ? {
+    src: `/projects/${encodeURIComponent(folder)}/${encodeURIComponent(introImage)}`,
+    width: introWidth,
+    height: introHeight,
+    aspectRatio: introDimensions.aspectRatio || +(introWidth / introHeight).toFixed(4),
+  } : null;
+  return {
+    ...existing,
+    ...metadata,
+    slug,
+    color: existing?.color || projectColorPalette[slug] || '#b9b4a2',
+    image: gallery[0],
+    introImage: introAsset,
+    gallery,
+  };
 }
 
 const allProjects = [

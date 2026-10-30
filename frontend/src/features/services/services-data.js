@@ -183,8 +183,8 @@ export const SERVICES_DATA = [
     subtitle: 'End-to-end architectural execution, MEP engineering, and single-source project accountability in the UAE.',
     tagline: 'Engineering Rigor & Transparent Delivery',
     heroImage: {
-      src: '/zxi/assets/07-venetian-grand-foyer.jpg',
-      alt: 'Grand European architectural entrance foyer featuring curved twin staircases and checkerboard marble',
+      src: '/services/turnkey-contracting-hero.webp',
+      alt: 'Cantilevered limestone villa in Dubai at dusk showcasing precision turnkey engineering and architectural construction',
     },
     metrics: [
       { num: '500+', label: 'Delivered Projects' },
@@ -361,8 +361,8 @@ export const SERVICES_DATA = [
     subtitle: 'Signature dining venues, artisan cafes, and sensory wellness sanctuaries built for operational excellence.',
     tagline: 'Sensory Environments & High-Traffic Durability',
     heroImage: {
-      src: '/zxi/assets/02-milan-marble-dining.jpg',
-      alt: 'High-end hospitality dining venue with monolithic marble dining table and floor-to-ceiling garden views',
+      src: '/services/hospitality-hero.webp',
+      alt: 'Ultra-luxury Dubai fine dining restaurant and lounge interior featuring curved travertine cocktail bar, fluted walnut joinery, and warm ambient illumination',
     },
     metrics: [
       { num: '45+', label: 'F&B & Wellness Venues' },

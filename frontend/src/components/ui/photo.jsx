@@ -14,7 +14,7 @@ export function Photo({
       fill
       sizes={sizes}
       priority={priority}
-      className={className}
+      className={`object-cover w-full h-full ${className}`.trim()}
     />
   );
 }

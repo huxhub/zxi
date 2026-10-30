@@ -1,4 +1,6 @@
+import { Suspense } from 'react';
 import { ContactView } from '@/features/contact/contact-view';
+import { getPackage } from '@/features/packages/packages-data';
 
 export const metadata = {
   title: 'Contact Interior Fitout Company in Dubai',
@@ -8,8 +10,19 @@ export const metadata = {
 };
 
 const logo = { src: '/zxi-ae-logo.png', width: 500, height: 128 };
-const image = { src: '/zxi/assets/0245-banner1-1.webp', width: 1920, height: 1080 };
+const image = { src: '/contact/contact-hero.webp', width: 1920, height: 1080 };
 
-export default function ContactPage() {
-  return <ContactView logo={logo} image={image} />;
+async function ContactContent({ searchParams }) {
+  const query = await searchParams;
+  const packageParam = Array.isArray(query?.package) ? query.package[0] : query?.package;
+  const selectedPackage = packageParam ? getPackage(packageParam) : null;
+  return <ContactView logo={logo} image={image} selectedPackage={selectedPackage} />;
+}
+
+export default function ContactPage({ searchParams }) {
+  return (
+    <Suspense fallback={<ContactView logo={logo} image={image} selectedPackage={null} />}>
+      <ContactContent searchParams={searchParams} />
+    </Suspense>
+  );
 }

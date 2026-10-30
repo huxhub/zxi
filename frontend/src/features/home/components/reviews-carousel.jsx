@@ -176,13 +176,18 @@ export function ReviewsCarousel() {
               className="reviews-clean-rating"
               aria-label={`${GOOGLE_RATING_SUMMARY.average} out of 5 from ${GOOGLE_RATING_SUMMARY.totalReviews} client reviews`}
             >
-              <span className="reviews-clean-score">{GOOGLE_RATING_SUMMARY.average}</span>
-              <div className="reviews-clean-stars">
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <StarIcon key={i} />
-                ))}
+              <span className="reviews-clean-score">
+                {Number(GOOGLE_RATING_SUMMARY.average).toFixed(1)}
+                <small>/ 5</small>
+              </span>
+              <div className="reviews-rating-proof">
+                <div className="reviews-clean-stars" aria-hidden="true">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <StarIcon key={i} />
+                  ))}
+                </div>
+                <span className="reviews-rating-count">Based on {GOOGLE_RATING_SUMMARY.totalReviews} Google reviews <b aria-hidden="true">↗</b></span>
               </div>
-              <span className="reviews-rating-count">{GOOGLE_RATING_SUMMARY.totalReviews} reviews ↗</span>
             </a>
             <div className="reviews-top-nav" aria-label="Review carousel direction">
               <button

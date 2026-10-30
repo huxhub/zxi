@@ -84,33 +84,37 @@ export function ServiceDetailView({ service, nextService, logo }) {
           </header>
 
           <div className="max-w-[1600px] mx-auto px-6 sm:px-10 lg:px-16">
-            <section className="grid grid-cols-1 gap-10 py-16 sm:py-24 lg:grid-cols-12 lg:gap-16">
-              <p className="lg:col-span-3 text-[10px] uppercase tracking-[.24em] text-neutral-500">The approach</p>
-              <p className="lg:col-span-7 text-2xl leading-[1.25] tracking-[-.035em] text-neutral-900 sm:text-3xl lg:text-4xl">{service.overview[0]}</p>
-            </section>
+            {service.slug !== 'custom-furniture' && (
+              <>
+                <section className="grid grid-cols-1 gap-10 py-16 sm:py-24 lg:grid-cols-12 lg:gap-16">
+                  <p className="lg:col-span-3 text-[10px] uppercase tracking-[.24em] text-neutral-500">The approach</p>
+                  <p className="lg:col-span-7 text-2xl font-light leading-[1.25] tracking-[-.035em] text-neutral-900 sm:text-3xl lg:text-4xl">{service.overview[0]}</p>
+                </section>
 
-            <section className="border-t border-neutral-300 py-12 sm:py-16" aria-labelledby="scope-heading">
-              <div className="mb-10 flex items-end justify-between gap-4 sm:mb-14">
-                <h2 id="scope-heading" className="text-[10px] uppercase tracking-[.24em] text-neutral-500">Service scope</h2>
-                <span className="text-xs text-neutral-400">0{service.capabilities.length} areas</span>
-              </div>
-              <div className="grid grid-cols-1 divide-y divide-neutral-300 border-y border-neutral-300 md:grid-cols-2 md:divide-x md:divide-y-0">
-                {service.capabilities.map((cap, index) => (
-                  <div key={cap.title} className="flex min-h-32 items-start gap-5 p-5 first:pt-5 md:p-7">
-                    <span className="pt-1 text-[10px] tracking-widest text-neutral-400">0{index + 1}</span>
-                    <h3 className="max-w-sm text-xl leading-tight tracking-[-.035em] text-neutral-900 sm:text-2xl">{cap.title}</h3>
+                <section className="border-t border-neutral-300 py-12 sm:py-16" aria-labelledby="scope-heading">
+                  <div className="mb-10 flex items-end justify-between gap-4 sm:mb-14">
+                    <h2 id="scope-heading" className="text-[10px] uppercase tracking-[.24em] text-neutral-500">Service scope</h2>
+                    <span className="text-xs text-neutral-400">0{service.capabilities.length} areas</span>
                   </div>
-                ))}
-              </div>
-            </section>
+                  <div className="grid grid-cols-1 divide-y divide-neutral-300 border-y border-neutral-300 md:grid-cols-2 md:divide-x md:divide-y-0">
+                    {service.capabilities.map((cap, index) => (
+                      <div key={cap.title} className="flex min-h-32 items-start gap-5 p-5 first:pt-5 md:p-7">
+                        <span className="pt-1 text-[10px] tracking-widest text-neutral-400">0{index + 1}</span>
+                        <h3 className="max-w-sm text-xl leading-tight tracking-[-.035em] text-neutral-900 sm:text-2xl">{cap.title}</h3>
+                      </div>
+                    ))}
+                  </div>
+                </section>
 
-            <section className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 pb-14 sm:pb-20" aria-label="Selected service work">
-              {service.gallery.slice(0, 2).map((item) => (
-                <figure key={item.src} className="relative overflow-hidden bg-neutral-200 aspect-[4/3]">
-                  <Image src={item.src} alt={item.alt} fill sizes="(max-width: 640px) 100vw, 50vw" className="object-cover" />
-                </figure>
-              ))}
-            </section>
+                <section className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 pb-14 sm:pb-20" aria-label="Selected service work">
+                  {service.gallery.slice(0, 2).map((item) => (
+                    <figure key={item.src} className="relative overflow-hidden bg-neutral-200 aspect-[4/3]">
+                      <Image src={item.src} alt={item.alt} fill sizes="(max-width: 640px) 100vw, 50vw" className="object-cover" />
+                    </figure>
+                  ))}
+                </section>
+              </>
+            )}
 
             {service.slug === 'custom-furniture' && (
               <section className="pb-16 sm:pb-24 border-t border-neutral-300 pt-12 sm:pt-16" aria-labelledby="furniture-collection-heading">

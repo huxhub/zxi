@@ -7,6 +7,7 @@
     "area": "3,200 sq. ft",
     "timeline": null,
     "folder": "plug-media",
+    "introImage": "intro-wide.png",
     "files": [
       "01.jpg",
       "02.jpg",
@@ -286,6 +287,7 @@
     "area": "1,000 sq. ft",
     "timeline": "80 working days",
     "folder": "lajjarri-art-gallery",
+    "introImage": "intro-wide.png",
     "files": [
       "01.jpg",
       "02.jpg",
@@ -302,6 +304,7 @@
     "area": "220 sqm",
     "timeline": "90 working days",
     "folder": "ikigai-pilates-studio",
+    "introImage": "09.jpg",
     "files": [
       "01.jpg",
       "02.jpg",

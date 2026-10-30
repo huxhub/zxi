@@ -80,3 +80,28 @@ Desktop.ini
 graphify-out/
 **/graphify-out/
 .graphify*
+
+
+# Agent workflows and task tracking
+/.gsd/
+**/.gsd/
+
+# Backups and temporary test artifacts
+*.bak
+/public/test_*
+/public/test-*
+
+# Raw scraped client assets (optimized production assets are in /public/partners/)
+/public/clients/
+
+# Raw camera video footage and uncompressed footage
+/public/hero banner video/
+
+# Intermediate hero video test encodes (production videos are hero-desktop-native-hq-v5, hero-tablet, hero-mobile)
+/public/media/hero/*
+!/public/media/hero/hero-desktop-native-hq-v5.mp4
+!/public/media/hero/hero-mobile.mp4
+!/public/media/hero/hero-tablet.mp4
+
+# Raw intermediate package image downloads (production assets are in /public/packages/)
+/public/packages image/

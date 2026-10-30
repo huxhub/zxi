@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { SiteNav } from '@/components/layout/site-nav';
 import { Footer } from '@/components/layout/footer';
@@ -12,20 +13,23 @@ const details = [
   { label: 'Office', value: 'Office #808, The Metropolis Tower\nBusiness Bay, Dubai, UAE', href: 'https://maps.google.com/?q=The+Metropolis+Tower+Business+Bay+Dubai' },
 ];
 
-export function ContactView({ logo, image }) {
+export function ContactView({ logo, image, selectedPackage }) {
   const router = useRouter();
   const [sent, setSent] = useState(false);
+  const inclusionCount = selectedPackage?.sections.reduce((total, section) => total + section.items.length, 0) || 0;
+
   const navigate = (id) => {
     if (id === 'home') router.push('/');
     else if (id === 'portfolio') router.push('/projects');
     else if (id === 'contact') router.push('/contact');
     else router.push(`/#${id}`);
   };
+
   const submitEnquiry = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     const message = [
-      'Hello ZXI, I would like to discuss a project.',
+      selectedPackage ? `Hello ZXI, I would like to discuss the ${selectedPackage.title} package (${selectedPackage.price}).` : 'Hello ZXI, I would like to discuss a project.',
       `Name: ${data.get('name')}`,
       `Email: ${data.get('email')}`,
       `Phone: ${data.get('phone') || 'Not provided'}`,
@@ -36,67 +40,43 @@ export function ContactView({ logo, image }) {
     setSent(true);
   };
 
-  return (
-    <>
-      <SiteNav logo={logo} onNavigate={navigate} />
-      <main id="main" className="contact-page">
-        <section className="contact-hero">
-          <div className="contact-hero-image">
-            <Image src={image.src} alt="Contemporary ZXI interior" fill priority sizes="100vw" />
-          </div>
-          <div className="contact-hero-overlay" />
-          <div className="contact-hero-copy">
-            <p className="contact-eyebrow">Dubai · UAE</p>
-            <h1>Let&rsquo;s create a space<br />that feels like yours.</h1>
-            <p>Tell us what you&rsquo;re planning. We&rsquo;ll help you take it forward.</p>
-          </div>
-          <a href="#inquiry" className="contact-scroll">Start an enquiry <span>↓</span></a>
-        </section>
+  return <>
+    <SiteNav logo={logo} onNavigate={navigate} />
+    <main id="main" className="contact-page">
+      <section className="contact-hero">
+        <div className="contact-hero-image"><Image src={image.src} alt="Contemporary ZXI interior" fill priority sizes="100vw" /></div>
+        <div className="contact-hero-overlay" />
+        <div className="contact-hero-copy"><p className="contact-eyebrow">Dubai · UAE</p><h1>Let&rsquo;s create a space<br />that feels like yours.</h1><p>Tell us what you&rsquo;re planning. We&rsquo;ll help you take it forward.</p></div>
+        <a href="#inquiry" className="contact-scroll">Start an enquiry <span>↓</span></a>
+      </section>
 
-        <section id="inquiry" className="contact-inquiry">
-          <div className="contact-intro">
-            <p className="contact-eyebrow">Project enquiry</p>
-            <h2>Begin with a<br />conversation.</h2>
-            <p>Share your space, scope, and timeline. We&rsquo;ll take it from there.</p>
-          </div>
+      <section id="inquiry" className="contact-inquiry">
+        <div className="contact-package-wrap">
+          {selectedPackage ? <div className="contact-package-summary">
+            <div className="contact-package-summary-head"><p className="contact-eyebrow">{selectedPackage.title} inclusions</p><span>{String(inclusionCount).padStart(2, '0')} items</span></div>
+            <div className="contact-package-sections">{selectedPackage.sections.map((section, sectionIndex) => <article className="contact-package-section" key={section.title}><header><span>{String(sectionIndex + 1).padStart(2, '0')}</span><h3>{section.title}</h3></header><ol>{section.items.map((item, itemIndex) => <li key={item}><span>{String(itemIndex + 1).padStart(2, '0')}</span><p>{item}</p></li>)}</ol></article>)}</div>
+            <div className="contact-package-price"><span>Special offer</span><strong>{selectedPackage.price}</strong><del>{selectedPackage.regular}</del></div>
+            <p className="contact-package-note">{selectedPackage.note || 'Offer is subject to the agreed project scope and applicable terms.'}</p>
+          </div> : <div className="contact-package-empty"><span>01</span><h3>Select the right starting point.</h3><p>Choose a package to review its complete scope here, or send a general project enquiry.</p><Link href="/packages">Explore all packages <span aria-hidden="true">↗</span></Link></div>}
+        </div>
 
-          <div className="contact-form-wrap">
-            {sent ? (
-              <div className="contact-success" role="status">
-                <span>01</span>
-                <h3>Thank you.</h3>
-                <p>We&rsquo;ll be in touch shortly.</p>
-                <button type="button" onClick={() => setSent(false)}>Send another enquiry ↗</button>
-              </div>
-            ) : (
-              <form className="contact-form" onSubmit={submitEnquiry}>
-                <label><span>Your name</span><input name="name" type="text" autoComplete="name" required placeholder="Full name" /></label>
-                <label><span>Email address</span><input name="email" type="email" autoComplete="email" required placeholder="you@company.com" /></label>
-                <label><span>Phone number <em>(optional)</em></span><input name="phone" type="tel" autoComplete="tel" placeholder="+971" /></label>
-                <label><span>Project type</span><select name="projectType" defaultValue=""><option value="" disabled>Select an option</option><option>Residential interiors</option><option>Commercial fitout</option><option>Hospitality / retail</option><option>Custom furniture</option><option>Turnkey contracting</option></select></label>
-                <label className="contact-message"><span>Project details</span><textarea name="message" required rows="4" placeholder="Scope, location, and timeline." /></label>
-                <button className="contact-submit" type="submit"><span>Send enquiry</span><span aria-hidden="true">↗</span></button>
-              </form>
-            )}
-          </div>
-        </section>
+        <div className="contact-form-wrap">
+          <div className="contact-form-heading"><p className="contact-eyebrow">Project enquiry</p><h2>{selectedPackage ? 'Discuss this package.' : 'Begin with a conversation.'}</h2><p>{selectedPackage ? `Tell us about your space and we’ll tailor the ${selectedPackage.title} package to your requirements.` : 'Share your space, scope, and timeline. We’ll take it from there.'}</p></div>
+          {sent ? <div className="contact-success" role="status"><span>01</span><h3>Thank you.</h3><p>We&rsquo;ll be in touch shortly.</p><button type="button" onClick={() => setSent(false)}>Send another enquiry ↗</button></div> : <form className="contact-form" onSubmit={submitEnquiry}>
+            <label><span>Your name</span><input name="name" type="text" autoComplete="name" required placeholder="Full name" /></label>
+            <label><span>Email address</span><input name="email" type="email" autoComplete="email" required placeholder="you@company.com" /></label>
+            <label><span>Phone number <em>(optional)</em></span><input name="phone" type="tel" autoComplete="tel" placeholder="+971" /></label>
+            <label><span>Project type</span><select name="projectType" defaultValue={selectedPackage?.title || ''} required><option value="" disabled>Select an option</option>{selectedPackage && <option value={selectedPackage.title}>{selectedPackage.title}</option>}<option>Residential interiors</option><option>Commercial fitout</option><option>Hospitality / retail</option><option>Custom furniture</option><option>Turnkey contracting</option></select></label>
+            <label className="contact-message"><span>Project details</span><textarea name="message" required rows="4" placeholder="Scope, location, and timeline." /></label>
+            <button className="contact-submit" type="submit"><span>Send enquiry</span><span aria-hidden="true">↗</span></button>
+          </form>}
+        </div>
+      </section>
 
-        <section className="contact-details" aria-label="Contact details">
-          <p className="contact-eyebrow">Reach us directly</p>
-          <div className="contact-detail-grid">
-            {details.map((detail, index) => (
-              <a key={detail.label} href={detail.href} target={detail.label === 'Office' ? '_blank' : undefined} rel={detail.label === 'Office' ? 'noreferrer' : undefined} className="contact-detail">
-                <span>0{index + 1} — {detail.label}</span>
-                <strong>{detail.value}</strong>
-                <i>↗</i>
-              </a>
-            ))}
-          </div>
-        </section>
-      </main>
-      <Footer logo={logo} onNavigate={navigate} />
-    </>
-  );
+      <section className="contact-details" aria-label="Contact details"><p className="contact-eyebrow">Reach us directly</p><div className="contact-detail-grid">{details.map((detail, index) => <a key={detail.label} href={detail.href} target={detail.label === 'Office' ? '_blank' : undefined} rel={detail.label === 'Office' ? 'noreferrer' : undefined} className="contact-detail"><span>0{index + 1} — {detail.label}</span><strong>{detail.value}</strong><i>↗</i></a>)}</div></section>
+    </main>
+    <Footer logo={logo} onNavigate={navigate} />
+  </>;
 }
 
 export default ContactView;

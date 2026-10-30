@@ -31,6 +31,21 @@ CATEGORIES = [
     (".", "Upholstered beds", "upholstered-beds"),
 ]
 
+OFFSETS = {
+    "bar-stools": 0.28,
+    "dining-chairs": 0.20,
+    "dining-tables": 0.15,
+    "sofas-lounge": 0.20,
+    "coffee-tables": 0.25,
+    "bedside-tables": 0.20,
+    "consoles": 0.20,
+    "display-shelves": 0.12,
+    "pouffes": 0.25,
+    "tv-units": 0.20,
+    "wardrobes": 0.10,
+    "upholstered-beds": 0.15,
+}
+
 
 def order(path):
     match = re.search(r"\b([23])\b", path.stem)
@@ -57,16 +72,16 @@ def main():
             title = title.replace("Boucl Lounge", "Bouclé Lounge")
             description = clean(" ".join(lines[description_start:description_end])).replace("boucl upholstery", "bouclé upholstery")
             image = Image.open(io.BytesIO(page.images[0].data)).convert("RGB")
-            # The source photography has a printed PDF text panel in its upper 40%.
-            # The lower 60% is a clean 4:3 landscape product photograph.
-            crop_top = 0.43 if slug == "consoles" else 0.4
-            image = image.crop((0, round(image.height * crop_top), image.width, image.height))
-            target_width = round(image.height * 4 / 3)
-            left = (image.width - target_width) // 2
-            image = image.crop((left, 0, left + target_width, image.height))
+            # Frame the furniture piece in the website's 4:3 div ratio without the empty top PDF content space.
+            w, h = image.size
+            crop_h = round(w * 3 / 4)
+            y0 = round(h * OFFSETS.get(slug, 0.20))
+            if y0 + crop_h > h:
+                y0 = h - crop_h
+            image = image.crop((0, y0, w, y0 + crop_h))
             image.thumbnail((1600, 1200), Image.Resampling.LANCZOS)
             image_name = f"{slug}-{number:02d}-photo.webp"
-            image.save(IMAGES / image_name, "WEBP", quality=82, method=6)
+            image.save(IMAGES / image_name, "WEBP", quality=88, method=6)
             items.append({"title": title, "description": description, "image": f"/products/{image_name}"})
         categories.append({"title": label, "slug": slug, "items": items})
     DATA.write_text(json.dumps(categories, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

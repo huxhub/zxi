@@ -18,26 +18,39 @@ export function PackageDetailView({ item }) {
             <h1>{item.title}</h1>
             <p className="package-detail-intro">{item.intro}</p>
             <div className="package-price"><span>Special offer</span><strong>{item.price}</strong><del>{item.regular}</del></div>
-            <Link href="/contact" className="package-cta">Discuss this package <span aria-hidden="true">↗</span></Link>
+            <Link href={`/contact?package=${item.slug}#inquiry`} className="package-cta">Discuss this package <span aria-hidden="true">↗</span></Link>
           </div>
           <div className="package-detail-image"><Image src={item.image} alt={`${item.title} package`} fill priority sizes="(max-width: 900px) 100vw, 50vw" /></div>
         </section>
-        <section className="package-scope">
-          <div className="scope-heading">
-            <p className="packages-eyebrow">What is included</p>
-            <h2>Every line, <em>clear.</em></h2>
-            <p>Every inclusion is presented below exactly by area, with quantities, brands and technical specifications retained from the package.</p>
+        <section className="package-journey" aria-labelledby="package-journey-title">
+          <div className="package-journey-intro">
+            <p className="packages-eyebrow">A considered beginning</p>
+            <h2 id="package-journey-title">From package<br />to <em>your space.</em></h2>
+            <p>Every project starts with clarity. We use this package as a foundation, then refine it around your property, priorities, and way of living.</p>
           </div>
-          <div className="scope-list">
-            {item.sections.map((section, i) => (
-              <article className="scope-section" key={section.title}>
-                <div className="scope-number">{String(i + 1).padStart(2, '0')}</div>
-                <div className="scope-title"><h3>{section.title}</h3><span>{section.items.length} {section.items.length === 1 ? 'item' : 'items'}</span></div>
-                <ol>{section.items.map((entry, itemIndex) => <li key={entry}><span>{String(itemIndex + 1).padStart(2, '0')}</span><p>{entry}</p></li>)}</ol>
-              </article>
-            ))}
+          <ol className="package-journey-steps">
+            <li>
+              <span>01</span>
+              <div><h3>Select your package</h3><p>Choose the scope that most closely matches your project and ambition.</p></div>
+            </li>
+            <li>
+              <span>02</span>
+              <div><h3>Share your space</h3><p>Tell us the location, scale, timeline, and details that matter to you.</p></div>
+            </li>
+            <li>
+              <span>03</span>
+              <div><h3>Receive a tailored proposal</h3><p>Our team reviews the brief and shapes the package into a precise project plan.</p></div>
+            </li>
+          </ol>
+        </section>
+        <section className="package-closing" aria-label="Start your package consultation">
+          <p className="packages-eyebrow">Your project, considered</p>
+          <div className="package-closing-row">
+            <h2>Ready to make<br />the first move?</h2>
+            <Link href={`/contact?package=${item.slug}#inquiry`} className="package-closing-link">
+              <span>Discuss {item.title}</span><b aria-hidden="true">↗</b>
+            </Link>
           </div>
-          <p className="package-note">{item.note || '*Offer is subject to the agreed project scope and applicable terms.'}</p>
         </section>
       </main>
       <Footer logo={{ src: '/zxi-ae-logo.png' }} />

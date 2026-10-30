@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 import './home-sections.css';
 import { useLayoutEffect, useRef, useState } from 'react';
 import Image from 'next/image';
@@ -56,7 +56,7 @@ export function Advantages({ items = [], lenisRef }) {
         <div className="why-body" id={`why-body-${index}`}><p>{item.description}</p></div><span className="why-progress" />
       </article>)}
     </div></div>
-    <div className="why-visual">{items.map((item, index) => <div className={`why-image ${active === index ? 'is-active' : ''}`} key={item.title} aria-hidden={active !== index}><Image src={item.image?.src || item.image} alt={item.title} fill sizes="(max-width: 767px) 100vw, 50vw" /></div>)}</div>
+    <div className="why-visual">{items.map((item, index) => <div className={`why-image ${active === index ? 'is-active' : ''}`} key={item.title} aria-hidden={active !== index}><Image src={item.image?.src || item.image} alt={item.title} fill sizes="(max-width: 767px) 100vw, 50vw" className="object-cover" /></div>)}</div>
   </section>;
 }
 export default Advantages;

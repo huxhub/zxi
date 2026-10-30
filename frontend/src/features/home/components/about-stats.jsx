@@ -10,7 +10,7 @@ const STANDARDS = [
     title: '500+ PROJECTS DELIVERED',
     description:
       'More than 500 spaces delivered across the UAE and India.',
-    image: '/zxi/assets/2513-banner2-1.webp',
+    image: '/about/projects-500-milestone.webp',
     stats: [
       { num: '500+', label: 'Completed projects' },
       { num: '12+', label: 'Years of excellence' },
@@ -23,21 +23,21 @@ const STANDARDS = [
     title: 'SAFETY & ENGINEERING',
     description:
       'Structural integrity, disciplined engineering, and safety in every detail.',
-    image: '/zxi/assets/2363-14-scaled.webp',
+    image: '/about/safety-engineering.webp',
   },
   {
     tag: 'BESPOKE LIVING',
     title: 'DESIGN PHILOSOPHY',
     description:
       'Timeless, welcoming interiors tailored to each client.',
-    image: '/zxi/assets/2515-banner5.webp',
+    image: '/about/design-philosophy.webp',
   },
   {
     tag: 'UNCOMPROMISING SELECTION',
     title: 'TOP GRADE MATERIALS',
     description:
       'Lasting materials selected for quality, texture, and character.',
-    image: '/zxi/assets/2514-banner4.webp',
+    image: '/about/top-grade-materials.webp',
   },
 ];
 

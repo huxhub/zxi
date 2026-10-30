@@ -1,0 +1,958 @@
+{
+  "binoy-mercy": {
+    "01.jpg": {
+      "width": 1280,
+      "height": 853,
+      "format": "JPEG",
+      "aspectRatio": 1.5006
+    },
+    "02.jpg": {
+      "width": 1280,
+      "height": 853,
+      "format": "JPEG",
+      "aspectRatio": 1.5006
+    },
+    "03.jpg": {
+      "width": 1600,
+      "height": 900,
+      "format": "JPEG",
+      "aspectRatio": 1.7778
+    },
+    "04.jpg": {
+      "width": 1280,
+      "height": 853,
+      "format": "JPEG",
+      "aspectRatio": 1.5006
+    },
+    "05.jpg": {
+      "width": 1280,
+      "height": 853,
+      "format": "JPEG",
+      "aspectRatio": 1.5006
+    },
+    "06.jpg": {
+      "width": 1280,
+      "height": 853,
+      "format": "JPEG",
+      "aspectRatio": 1.5006
+    },
+    "07.jpg": {
+      "width": 1280,
+      "height": 852,
+      "format": "JPEG",
+      "aspectRatio": 1.5023
+    },
+    "08.jpg": {
+      "width": 1280,
+      "height": 853,
+      "format": "JPEG",
+      "aspectRatio": 1.5006
+    },
+    "09.jpg": {
+      "width": 1280,
+      "height": 853,
+      "format": "JPEG",
+      "aspectRatio": 1.5006
+    },
+    "10.jpg": {
+      "width": 900,
+      "height": 1600,
+      "format": "JPEG",
+      "aspectRatio": 0.5625
+    }
+  },
+  "braschi": {
+    "01.jpg": {
+      "width": 3894,
+      "height": 2920,
+      "format": "JPEG",
+      "aspectRatio": 1.3336
+    },
+    "02.jpg": {
+      "width": 4032,
+      "height": 3024,
+      "format": "JPEG",
+      "aspectRatio": 1.3333
+    },
+    "03.jpg": {
+      "width": 3992,
+      "height": 2994,
+      "format": "JPEG",
+      "aspectRatio": 1.3333
+    },
+    "04.jpg": {
+      "width": 4032,
+      "height": 3024,
+      "format": "JPEG",
+      "aspectRatio": 1.3333
+    },
+    "05.jpg": {
+      "width": 4032,
+      "height": 3024,
+      "format": "JPEG",
+      "aspectRatio": 1.3333
+    },
+    "06.jpg": {
+      "width": 4032,
+      "height": 3024,
+      "format": "JPEG",
+      "aspectRatio": 1.3333
+    },
+    "07.jpg": {
+      "width": 4032,
+      "height": 3024,
+      "format": "JPEG",
+      "aspectRatio": 1.3333
+    },
+    "08.jpg": {
+      "width": 2956,
+      "height": 3823,
+      "format": "JPEG",
+      "aspectRatio": 0.7732
+    },
+    "09.jpg": {
+      "width": 4032,
+      "height": 3024,
+      "format": "JPEG",
+      "aspectRatio": 1.3333
+    },
+    "10.jpg": {
+      "width": 3024,
+      "height": 4032,
+      "format": "JPEG",
+      "aspectRatio": 0.75
+    }
+  },
+  "bread-basket": {
+    "01.jpg": {
+      "width": 9000,
+      "height": 6000,
+      "format": "JPEG",
+      "aspectRatio": 1.5
+    },
+    "02.png": {
+      "width": 1080,
+      "height": 1350,
+      "format": "PNG",
+      "aspectRatio": 0.8
+    },
+    "03.png": {
+      "width": 1080,
+      "height": 1350,
+      "format": "PNG",
+      "aspectRatio": 0.8
+    },
+    "04.png": {
+      "width": 1080,
+      "height": 1350,
+      "format": "PNG",
+      "aspectRatio": 0.8
+    },
+    "05.png": {
+      "width": 1080,
+      "height": 1350,
+      "format": "PNG",
+      "aspectRatio": 0.8
+    },
+    "06.jpg": {
+      "width": 7692,
+      "height": 9000,
+      "format": "JPEG",
+      "aspectRatio": 0.8547
+    },
+    "07.png": {
+      "width": 1080,
+      "height": 1350,
+      "format": "PNG",
+      "aspectRatio": 0.8
+    },
+    "08.jpg": {
+      "width": 6425,
+      "height": 9000,
+      "format": "JPEG",
+      "aspectRatio": 0.7139
+    },
+    "09.png": {
+      "width": 1080,
+      "height": 1349,
+      "format": "PNG",
+      "aspectRatio": 0.8006
+    },
+    "10.jpg": {
+      "width": 9000,
+      "height": 5992,
+      "format": "JPEG",
+      "aspectRatio": 1.502
+    },
+    "11.jpg": {
+      "width": 12142,
+      "height": 17008,
+      "format": "JPEG",
+      "aspectRatio": 0.7139
+    },
+    "12.jpg": {
+      "width": 6450,
+      "height": 9000,
+      "format": "JPEG",
+      "aspectRatio": 0.7167
+    }
+  },
+  "city-walk": {
+    "01.jpg": {
+      "width": 6480,
+      "height": 4320,
+      "format": "JPEG",
+      "aspectRatio": 1.5
+    },
+    "02.jpg": {
+      "width": 2160,
+      "height": 2880,
+      "format": "JPEG",
+      "aspectRatio": 0.75
+    },
+    "03.jpg": {
+      "width": 1728,
+      "height": 2304,
+      "format": "JPEG",
+      "aspectRatio": 0.75
+    },
+    "04.jpg": {
+      "width": 6480,
+      "height": 8094,
+      "format": "JPEG",
+      "aspectRatio": 0.8006
+    },
+    "05.jpg": {
+      "width": 6480,
+      "height": 4320,
+      "format": "JPEG",
+      "aspectRatio": 1.5
+    },
+    "06.jpg": {
+      "width": 914,
+      "height": 1218,
+      "format": "JPEG",
+      "aspectRatio": 0.7504
+    },
+    "07.jpg": {
+      "width": 1080,
+      "height": 1440,
+      "format": "JPEG",
+      "aspectRatio": 0.75
+    },
+    "08.jpg": {
+      "width": 5526,
+      "height": 6912,
+      "format": "JPEG",
+      "aspectRatio": 0.7995
+    }
+  },
+  "gemma": {
+    "01.jpg": {
+      "width": 2976,
+      "height": 1984,
+      "format": "JPEG",
+      "aspectRatio": 1.5
+    },
+    "02.jpg": {
+      "width": 1984,
+      "height": 2976,
+      "format": "JPEG",
+      "aspectRatio": 0.6667
+    },
+    "03.jpg": {
+      "width": 1984,
+      "height": 2976,
+      "format": "JPEG",
+      "aspectRatio": 0.6667
+    },
+    "04.jpg": {
+      "width": 1984,
+      "height": 2976,
+      "format": "JPEG",
+      "aspectRatio": 0.6667
+    },
+    "05.jpg": {
+      "width": 1984,
+      "height": 2976,
+      "format": "JPEG",
+      "aspectRatio": 0.6667
+    },
+    "06.jpg": {
+      "width": 1984,
+      "height": 2976,
+      "format": "JPEG",
+      "aspectRatio": 0.6667
+    },
+    "07.jpg": {
+      "width": 1984,
+      "height": 2976,
+      "format": "JPEG",
+      "aspectRatio": 0.6667
+    },
+    "08.jpg": {
+      "width": 2976,
+      "height": 1984,
+      "format": "JPEG",
+      "aspectRatio": 1.5
+    },
+    "09.jpg": {
+      "width": 3024,
+      "height": 4032,
+      "format": "JPEG",
+      "aspectRatio": 0.75
+    },
+    "10.jpg": {
+      "width": 3024,
+      "height": 4032,
+      "format": "JPEG",
+      "aspectRatio": 0.75
+    },
+    "11.jpg": {
+      "width": 3024,
+      "height": 4032,
+      "format": "JPEG",
+      "aspectRatio": 0.75
+    },
+    "12.jpg": {
+      "width": 3024,
+      "height": 4032,
+      "format": "JPEG",
+      "aspectRatio": 0.75
+    }
+  },
+  "ikigai-pilates-studio": {
+    "01.jpg": {
+      "width": 1778,
+      "height": 2667,
+      "format": "JPEG",
+      "aspectRatio": 0.6667
+    },
+    "02.jpg": {
+      "width": 1984,
+      "height": 2976,
+      "format": "JPEG",
+      "aspectRatio": 0.6667
+    },
+    "03.png": {
+      "width": 2720,
+      "height": 1814,
+      "format": "PNG",
+      "aspectRatio": 1.4994
+    },
+    "04.png": {
+      "width": 1080,
+      "height": 1440,
+      "format": "PNG",
+      "aspectRatio": 0.75
+    },
+    "05.jpg": {
+      "width": 2160,
+      "height": 3840,
+      "format": "JPEG",
+      "aspectRatio": 0.5625
+    },
+    "06.png": {
+      "width": 1080,
+      "height": 1440,
+      "format": "PNG",
+      "aspectRatio": 0.75
+    },
+    "07.jpg": {
+      "width": 1984,
+      "height": 2976,
+      "format": "JPEG",
+      "aspectRatio": 0.6667
+    },
+    "08.jpg": {
+      "width": 2103,
+      "height": 3739,
+      "format": "JPEG",
+      "aspectRatio": 0.5624
+    },
+    "09.jpg": {
+      "width": 3792,
+      "height": 2844,
+      "format": "JPEG",
+      "aspectRatio": 1.3333
+    },
+    "10.jpg": {
+      "width": 2072,
+      "height": 3683,
+      "format": "JPEG",
+      "aspectRatio": 0.5626
+    },
+    "11.jpg": {
+      "width": 1984,
+      "height": 2976,
+      "format": "JPEG",
+      "aspectRatio": 0.6667
+    },
+    "12.jpg": {
+      "width": 1984,
+      "height": 2976,
+      "format": "JPEG",
+      "aspectRatio": 0.6667
+    }
+  },
+  "lajjarri-art-gallery": {
+    "01.jpg": {
+      "width": 3024,
+      "height": 4032,
+      "format": "JPEG",
+      "aspectRatio": 0.75
+    },
+    "02.jpg": {
+      "width": 3024,
+      "height": 4032,
+      "format": "JPEG",
+      "aspectRatio": 0.75
+    },
+    "03.jpg": {
+      "width": 3024,
+      "height": 4032,
+      "format": "JPEG",
+      "aspectRatio": 0.75
+    },
+    "04.jpg": {
+      "width": 3012,
+      "height": 3636,
+      "format": "JPEG",
+      "aspectRatio": 0.8284
+    },
+    "05.jpg": {
+      "width": 3024,
+      "height": 4032,
+      "format": "JPEG",
+      "aspectRatio": 0.75
+    }
+  },
+  "mbr-kitchen": {
+    "01.jpg": {
+      "width": 1080,
+      "height": 829,
+      "format": "JPEG",
+      "aspectRatio": 1.3028
+    },
+    "02.jpg": {
+      "width": 1080,
+      "height": 1350,
+      "format": "JPEG",
+      "aspectRatio": 0.8
+    },
+    "03.jpg": {
+      "width": 1080,
+      "height": 1350,
+      "format": "JPEG",
+      "aspectRatio": 0.8
+    },
+    "04.jpg": {
+      "width": 1080,
+      "height": 720,
+      "format": "JPEG",
+      "aspectRatio": 1.5
+    },
+    "05.jpg": {
+      "width": 1080,
+      "height": 1350,
+      "format": "JPEG",
+      "aspectRatio": 0.8
+    },
+    "06.jpg": {
+      "width": 1080,
+      "height": 719,
+      "format": "JPEG",
+      "aspectRatio": 1.5021
+    },
+    "07.jpg": {
+      "width": 1080,
+      "height": 1350,
+      "format": "JPEG",
+      "aspectRatio": 0.8
+    },
+    "08.jpg": {
+      "width": 1080,
+      "height": 1350,
+      "format": "JPEG",
+      "aspectRatio": 0.8
+    },
+    "09.jpg": {
+      "width": 1080,
+      "height": 720,
+      "format": "JPEG",
+      "aspectRatio": 1.5
+    },
+    "10.jpg": {
+      "width": 1080,
+      "height": 1350,
+      "format": "JPEG",
+      "aspectRatio": 0.8
+    }
+  },
+  "mr-jafar": {
+    "01.jpg": {
+      "width": 2000,
+      "height": 1125,
+      "format": "JPEG",
+      "aspectRatio": 1.7778
+    },
+    "02.jpg": {
+      "width": 2000,
+      "height": 1125,
+      "format": "JPEG",
+      "aspectRatio": 1.7778
+    },
+    "03.jpg": {
+      "width": 2000,
+      "height": 1125,
+      "format": "JPEG",
+      "aspectRatio": 1.7778
+    },
+    "04.jpg": {
+      "width": 3000,
+      "height": 1688,
+      "format": "JPEG",
+      "aspectRatio": 1.7773
+    },
+    "05.jpg": {
+      "width": 1708,
+      "height": 1343,
+      "format": "JPEG",
+      "aspectRatio": 1.2718
+    },
+    "06.jpg": {
+      "width": 2500,
+      "height": 1420,
+      "format": "JPEG",
+      "aspectRatio": 1.7606
+    },
+    "07.jpg": {
+      "width": 2084,
+      "height": 1416,
+      "format": "JPEG",
+      "aspectRatio": 1.4718
+    },
+    "08.jpg": {
+      "width": 3000,
+      "height": 1688,
+      "format": "JPEG",
+      "aspectRatio": 1.7773
+    },
+    "09.jpg": {
+      "width": 1505,
+      "height": 2000,
+      "format": "JPEG",
+      "aspectRatio": 0.7525
+    },
+    "10.jpg": {
+      "width": 3000,
+      "height": 1688,
+      "format": "JPEG",
+      "aspectRatio": 1.7773
+    },
+    "11.jpg": {
+      "width": 2560,
+      "height": 1463,
+      "format": "JPEG",
+      "aspectRatio": 1.7498
+    },
+    "12.png": {
+      "width": 2436,
+      "height": 1520,
+      "format": "PNG",
+      "aspectRatio": 1.6026
+    }
+  },
+  "mr-khalid": {
+    "01.webp": {
+      "width": 1920,
+      "height": 1200,
+      "format": "WEBP",
+      "aspectRatio": 1.6
+    }
+  },
+  "mrs-najia-bibi": {
+    "01.jpg": {
+      "width": 1920,
+      "height": 1604,
+      "format": "JPEG",
+      "aspectRatio": 1.197
+    },
+    "02.jpg": {
+      "width": 1762,
+      "height": 1259,
+      "format": "JPEG",
+      "aspectRatio": 1.3995
+    },
+    "03.jpg": {
+      "width": 1920,
+      "height": 1461,
+      "format": "JPEG",
+      "aspectRatio": 1.3142
+    },
+    "04.jpg": {
+      "width": 1885,
+      "height": 1364,
+      "format": "JPEG",
+      "aspectRatio": 1.382
+    },
+    "05.jpg": {
+      "width": 1648,
+      "height": 1173,
+      "format": "JPEG",
+      "aspectRatio": 1.4049
+    },
+    "06.jpg": {
+      "width": 1920,
+      "height": 1193,
+      "format": "JPEG",
+      "aspectRatio": 1.6094
+    },
+    "07.jpg": {
+      "width": 1920,
+      "height": 1724,
+      "format": "JPEG",
+      "aspectRatio": 1.1137
+    },
+    "08.jpg": {
+      "width": 1920,
+      "height": 1724,
+      "format": "JPEG",
+      "aspectRatio": 1.1137
+    },
+    "09.jpg": {
+      "width": 1920,
+      "height": 1724,
+      "format": "JPEG",
+      "aspectRatio": 1.1137
+    },
+    "10.jpg": {
+      "width": 1920,
+      "height": 1532,
+      "format": "JPEG",
+      "aspectRatio": 1.2533
+    },
+    "11.jpg": {
+      "width": 1920,
+      "height": 1628,
+      "format": "JPEG",
+      "aspectRatio": 1.1794
+    },
+    "12.jpg": {
+      "width": 1848,
+      "height": 1724,
+      "format": "JPEG",
+      "aspectRatio": 1.0719
+    }
+  },
+  "nora": {
+    "01.jpg": {
+      "width": 3444,
+      "height": 2223,
+      "format": "JPEG",
+      "aspectRatio": 1.5493
+    },
+    "02.jpg": {
+      "width": 1940,
+      "height": 2911,
+      "format": "JPEG",
+      "aspectRatio": 0.6664
+    },
+    "03.jpg": {
+      "width": 3796,
+      "height": 2964,
+      "format": "JPEG",
+      "aspectRatio": 1.2807
+    },
+    "04.jpg": {
+      "width": 1984,
+      "height": 2976,
+      "format": "JPEG",
+      "aspectRatio": 0.6667
+    },
+    "05.jpg": {
+      "width": 2203,
+      "height": 3916,
+      "format": "JPEG",
+      "aspectRatio": 0.5626
+    },
+    "06.jpg": {
+      "width": 2076,
+      "height": 3691,
+      "format": "JPEG",
+      "aspectRatio": 0.5624
+    },
+    "07.jpg": {
+      "width": 2769,
+      "height": 3959,
+      "format": "JPEG",
+      "aspectRatio": 0.6994
+    },
+    "08.jpg": {
+      "width": 1928,
+      "height": 2893,
+      "format": "JPEG",
+      "aspectRatio": 0.6664
+    },
+    "09.jpg": {
+      "width": 1868,
+      "height": 2828,
+      "format": "JPEG",
+      "aspectRatio": 0.6605
+    },
+    "10.jpg": {
+      "width": 2268,
+      "height": 4032,
+      "format": "JPEG",
+      "aspectRatio": 0.5625
+    }
+  },
+  "orange-cafe": {
+    "01.jpg": {
+      "width": 1023,
+      "height": 766,
+      "format": "JPEG",
+      "aspectRatio": 1.3355
+    },
+    "02.jpg": {
+      "width": 1024,
+      "height": 768,
+      "format": "JPEG",
+      "aspectRatio": 1.3333
+    },
+    "03.jpg": {
+      "width": 768,
+      "height": 1024,
+      "format": "JPEG",
+      "aspectRatio": 0.75
+    },
+    "04.jpg": {
+      "width": 1024,
+      "height": 768,
+      "format": "JPEG",
+      "aspectRatio": 1.3333
+    },
+    "05.jpg": {
+      "width": 1024,
+      "height": 768,
+      "format": "JPEG",
+      "aspectRatio": 1.3333
+    },
+    "06.jpg": {
+      "width": 1024,
+      "height": 768,
+      "format": "JPEG",
+      "aspectRatio": 1.3333
+    }
+  },
+  "plug-media": {
+    "01.jpg": {
+      "width": 1984,
+      "height": 2976,
+      "format": "JPEG",
+      "aspectRatio": 0.6667
+    },
+    "02.jpg": {
+      "width": 1984,
+      "height": 2976,
+      "format": "JPEG",
+      "aspectRatio": 0.6667
+    },
+    "03.jpg": {
+      "width": 1984,
+      "height": 2976,
+      "format": "JPEG",
+      "aspectRatio": 0.6667
+    },
+    "04.jpg": {
+      "width": 1938,
+      "height": 2907,
+      "format": "JPEG",
+      "aspectRatio": 0.6667
+    },
+    "05.jpg": {
+      "width": 1930,
+      "height": 2976,
+      "format": "JPEG",
+      "aspectRatio": 0.6485
+    },
+    "06.jpg": {
+      "width": 1984,
+      "height": 2976,
+      "format": "JPEG",
+      "aspectRatio": 0.6667
+    },
+    "07.jpg": {
+      "width": 1912,
+      "height": 2868,
+      "format": "JPEG",
+      "aspectRatio": 0.6667
+    },
+    "08.jpg": {
+      "width": 1984,
+      "height": 2976,
+      "format": "JPEG",
+      "aspectRatio": 0.6667
+    },
+    "09.jpg": {
+      "width": 1947,
+      "height": 2920,
+      "format": "JPEG",
+      "aspectRatio": 0.6668
+    },
+    "10.jpg": {
+      "width": 1984,
+      "height": 2976,
+      "format": "JPEG",
+      "aspectRatio": 0.6667
+    },
+    "11.jpg": {
+      "width": 1984,
+      "height": 2976,
+      "format": "JPEG",
+      "aspectRatio": 0.6667
+    },
+    "12.jpg": {
+      "width": 2268,
+      "height": 4032,
+      "format": "JPEG",
+      "aspectRatio": 0.5625
+    }
+  },
+  "royal-gallery": {
+    "01.webp": {
+      "width": 1243,
+      "height": 1020,
+      "format": "WEBP",
+      "aspectRatio": 1.2186
+    },
+    "02.webp": {
+      "width": 780,
+      "height": 1020,
+      "format": "WEBP",
+      "aspectRatio": 0.7647
+    },
+    "03.jpg": {
+      "width": 1024,
+      "height": 768,
+      "format": "JPEG",
+      "aspectRatio": 1.3333
+    },
+    "04.jpg": {
+      "width": 768,
+      "height": 1024,
+      "format": "JPEG",
+      "aspectRatio": 0.75
+    },
+    "05.jpg": {
+      "width": 768,
+      "height": 1024,
+      "format": "JPEG",
+      "aspectRatio": 0.75
+    },
+    "06.jpg": {
+      "width": 768,
+      "height": 1024,
+      "format": "JPEG",
+      "aspectRatio": 0.75
+    },
+    "07.jpg": {
+      "width": 1024,
+      "height": 768,
+      "format": "JPEG",
+      "aspectRatio": 1.3333
+    },
+    "08.webp": {
+      "width": 757,
+      "height": 1020,
+      "format": "WEBP",
+      "aspectRatio": 0.7422
+    },
+    "09.webp": {
+      "width": 766,
+      "height": 1020,
+      "format": "WEBP",
+      "aspectRatio": 0.751
+    },
+    "10.webp": {
+      "width": 848,
+      "height": 1020,
+      "format": "WEBP",
+      "aspectRatio": 0.8314
+    }
+  },
+  "samsara-tribe-yoga": {
+    "01.jpg": {
+      "width": 1080,
+      "height": 863,
+      "format": "JPEG",
+      "aspectRatio": 1.2514
+    },
+    "02.jpg": {
+      "width": 1080,
+      "height": 694,
+      "format": "JPEG",
+      "aspectRatio": 1.5562
+    },
+    "03.jpg": {
+      "width": 1080,
+      "height": 1350,
+      "format": "JPEG",
+      "aspectRatio": 0.8
+    },
+    "04.jpg": {
+      "width": 896,
+      "height": 1152,
+      "format": "JPEG",
+      "aspectRatio": 0.7778
+    },
+    "05.jpg": {
+      "width": 1080,
+      "height": 1080,
+      "format": "JPEG",
+      "aspectRatio": 1.0
+    },
+    "06.jpg": {
+      "width": 1278,
+      "height": 1020,
+      "format": "JPEG",
+      "aspectRatio": 1.2529
+    },
+    "07.jpg": {
+      "width": 1080,
+      "height": 1350,
+      "format": "JPEG",
+      "aspectRatio": 0.8
+    },
+    "08.jpg": {
+      "width": 3024,
+      "height": 4032,
+      "format": "JPEG",
+      "aspectRatio": 0.75
+    },
+    "09.jpg": {
+      "width": 720,
+      "height": 1280,
+      "format": "JPEG",
+      "aspectRatio": 0.5625
+    },
+    "10.jpg": {
+      "width": 1080,
+      "height": 1350,
+      "format": "JPEG",
+      "aspectRatio": 0.8
+    },
+    "11.jpg": {
+      "width": 1080,
+      "height": 1350,
+      "format": "JPEG",
+      "aspectRatio": 0.8
+    },
+    "12.jpg": {
+      "width": 1080,
+      "height": 1350,
+      "format": "JPEG",
+      "aspectRatio": 0.8
+    }
+  }
+}

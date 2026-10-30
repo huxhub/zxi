@@ -1,23 +1,45 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { selectHeroVideo } from './hero-video-source';
 
 export function Hero({ hero, heroRef, heroPicRef, heroCopyRef }) {
-  const desktopVideoRef = useRef(null);
-  const mobileVideoRef = useRef(null);
+  const videoRef = useRef(null);
+  const [videoSource, setVideoSource] = useState(null);
 
   useEffect(() => {
-    [desktopVideoRef.current, mobileVideoRef.current].forEach((vid) => {
-      if (vid) {
-        vid.muted = true;
-        vid.defaultMuted = true;
-        const playPromise = vid.play();
-        if (playPromise !== undefined) {
-          playPromise.catch(() => {});
-        }
-      }
-    });
+    const mobileQuery = window.matchMedia('(max-width: 767px)');
+    const tabletQuery = window.matchMedia('(min-width: 768px) and (max-width: 1023px)');
+    const updateSource = () => setVideoSource(selectHeroVideo(window.innerWidth));
+
+    updateSource();
+    mobileQuery.addEventListener('change', updateSource);
+    tabletQuery.addEventListener('change', updateSource);
+    return () => {
+      mobileQuery.removeEventListener('change', updateSource);
+      tabletQuery.removeEventListener('change', updateSource);
+    };
   }, []);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (video && videoSource) {
+      video.muted = true;
+      video.defaultMuted = true;
+      video.load();
+      const playPromise = video.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(() => {});
+      }
+    }
+  }, [videoSource]);
+
+  const verifyVideoRatio = (event) => {
+    const video = event.currentTarget;
+    if (window.innerWidth >= 1024 && video.videoHeight > video.videoWidth) {
+      setVideoSource(`${selectHeroVideo(window.innerWidth)}?desktop=landscape-v4`);
+    }
+  };
 
   return (
     <section
@@ -29,35 +51,19 @@ export function Hero({ hero, heroRef, heroPicRef, heroCopyRef }) {
         className="absolute -inset-y-[5%] inset-x-0 h-[110%] w-full will-change-transform"
         ref={heroPicRef}
       >
-        {/* Desktop video (>= 768px) */}
         <video
-          ref={desktopVideoRef}
+          key={videoSource || 'hero-poster'}
+          ref={videoRef}
           autoPlay
           loop
           muted
           playsInline
           preload="auto"
           poster={hero?.src}
-          className="hero-video hero-video-desktop hidden md:block w-full h-full object-cover"
-        >
-          <source src="/zxi hero video 1.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-
-        {/* Mobile video (< 768px) */}
-        <video
-          ref={mobileVideoRef}
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="auto"
-          poster={hero?.src}
-          className="hero-video hero-video-mobile block md:hidden w-full h-full object-cover"
-        >
-          <source src="/zxi home banner mobile.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+          className="hero-video w-full h-full object-cover"
+          src={videoSource || undefined}
+          onLoadedMetadata={verifyVideoRatio}
+        />
       </div>
 
       <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/10 to-black/80 pointer-events-none" />

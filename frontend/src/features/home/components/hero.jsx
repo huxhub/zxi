@@ -1,7 +1,24 @@
 'use client';
 
+import { useEffect, useRef } from 'react';
 
 export function Hero({ hero, heroRef, heroPicRef, heroCopyRef }) {
+  const desktopVideoRef = useRef(null);
+  const mobileVideoRef = useRef(null);
+
+  useEffect(() => {
+    [desktopVideoRef.current, mobileVideoRef.current].forEach((vid) => {
+      if (vid) {
+        vid.muted = true;
+        vid.defaultMuted = true;
+        const playPromise = vid.play();
+        if (playPromise !== undefined) {
+          playPromise.catch(() => {});
+        }
+      }
+    });
+  }, []);
+
   return (
     <section
       id="home"
@@ -12,16 +29,33 @@ export function Hero({ hero, heroRef, heroPicRef, heroCopyRef }) {
         className="absolute -inset-y-[5%] inset-x-0 h-[110%] w-full will-change-transform"
         ref={heroPicRef}
       >
+        {/* Desktop video (>= 768px) */}
         <video
+          ref={desktopVideoRef}
           autoPlay
           loop
           muted
           playsInline
           preload="auto"
           poster={hero?.src}
-          className="hero-video w-full h-full object-cover"
+          className="hero-video hero-video-desktop hidden md:block w-full h-full object-cover"
         >
           <source src="/zxi hero video 1.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+
+        {/* Mobile video (< 768px) */}
+        <video
+          ref={mobileVideoRef}
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+          poster={hero?.src}
+          className="hero-video hero-video-mobile block md:hidden w-full h-full object-cover"
+        >
+          <source src="/zxi home banner mobile.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>

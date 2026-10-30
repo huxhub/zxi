@@ -75,3 +75,8 @@ Desktop.ini
 
 # Original furniture PDFs; optimized catalog photos live in public/products/
 /public/wetransfer_furnatures_2026-10-27_1234/
+
+# graphify
+graphify-out/
+**/graphify-out/
+.graphify*

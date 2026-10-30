@@ -10,3 +10,8 @@ Desktop.ini
 /*
 !/frontend/
 !/.gitignore
+
+# graphify
+graphify-out/
+**/graphify-out/
+.graphify*

@@ -4,6 +4,22 @@
    ========================================================================== */
 
 /* --- 1. Hero Section --- */
+#home .hero-video-mobile {
+  display: none !important;
+}
+#home .hero-video-desktop {
+  display: block !important;
+}
+
+@media (max-width: 768px) {
+  #home .hero-video-mobile {
+    display: block !important;
+  }
+  #home .hero-video-desktop {
+    display: none !important;
+  }
+}
+
 @media (max-width: 640px) {
   #home {
     height: 100svh;

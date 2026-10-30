@@ -86,19 +86,21 @@ export function ServiceDetailView({ service, nextService, logo }) {
           <div className="max-w-[1600px] mx-auto px-6 sm:px-10 lg:px-16">
             {service.slug !== 'custom-furniture' && (
               <>
-                <section className="grid grid-cols-1 gap-10 py-16 sm:py-24 lg:grid-cols-12 lg:gap-16">
-                  <p className="lg:col-span-3 text-[10px] uppercase tracking-[.24em] text-neutral-500">The approach</p>
-                  <p className="lg:col-span-7 text-2xl font-light leading-[1.25] tracking-[-.035em] text-neutral-900 sm:text-3xl lg:text-4xl">{service.overview[0]}</p>
+                <section className="pt-12 pb-8 sm:pt-16 sm:pb-10 lg:grid lg:grid-cols-12">
+                  <div className="flex flex-col gap-4 lg:col-start-4 lg:col-span-7 sm:gap-5">
+                    <p className="text-[10px] uppercase tracking-[.24em] text-neutral-500">The approach</p>
+                    <p className="text-2xl font-[200] leading-[1.25] tracking-[-.035em] text-neutral-900 sm:text-3xl lg:text-4xl">{service.overview[0]}</p>
+                  </div>
                 </section>
 
-                <section className="border-t border-neutral-300 py-12 sm:py-16" aria-labelledby="scope-heading">
-                  <div className="mb-10 flex items-end justify-between gap-4 sm:mb-14">
+                <section className="border-t border-neutral-300 py-6 sm:py-8" aria-labelledby="scope-heading">
+                  <div className="mb-5 flex items-end justify-between gap-4 sm:mb-6">
                     <h2 id="scope-heading" className="text-[10px] uppercase tracking-[.24em] text-neutral-500">Service scope</h2>
                     <span className="text-xs text-neutral-400">0{service.capabilities.length} areas</span>
                   </div>
                   <div className="grid grid-cols-1 divide-y divide-neutral-300 border-y border-neutral-300 md:grid-cols-2 md:divide-x md:divide-y-0">
                     {service.capabilities.map((cap, index) => (
-                      <div key={cap.title} className="flex min-h-32 items-start gap-5 p-5 first:pt-5 md:p-7">
+                      <div key={cap.title} className="flex min-h-24 items-start gap-5 p-4 md:p-5">
                         <span className="pt-1 text-[10px] tracking-widest text-neutral-400">0{index + 1}</span>
                         <h3 className="max-w-sm text-xl leading-tight tracking-[-.035em] text-neutral-900 sm:text-2xl">{cap.title}</h3>
                       </div>

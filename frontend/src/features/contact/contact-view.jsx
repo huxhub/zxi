@@ -57,7 +57,21 @@ export function ContactView({ logo, image, selectedPackage }) {
             <div className="contact-package-sections">{selectedPackage.sections.map((section, sectionIndex) => <article className="contact-package-section" key={section.title}><header><span>{String(sectionIndex + 1).padStart(2, '0')}</span><h3>{section.title}</h3></header><ol>{section.items.map((item, itemIndex) => <li key={item}><span>{String(itemIndex + 1).padStart(2, '0')}</span><p>{item}</p></li>)}</ol></article>)}</div>
             <div className="contact-package-price"><span>Special offer</span><strong>{selectedPackage.price}</strong><del>{selectedPackage.regular}</del></div>
             <p className="contact-package-note">{selectedPackage.note || 'Offer is subject to the agreed project scope and applicable terms.'}</p>
-          </div> : <div className="contact-package-empty"><span>01</span><h3>Select the right starting point.</h3><p>Choose a package to review its complete scope here, or send a general project enquiry.</p><Link href="/packages">Explore all packages <span aria-hidden="true">↗</span></Link></div>}
+          </div> : <div className="contact-package-empty"><h3>Select the right starting point.</h3><p>Choose a package to review its complete scope here, or send a general project enquiry.</p><Link href="/packages">Explore all packages <span aria-hidden="true">↗</span></Link></div>}
+          <div className="contact-direct-list">
+            <p className="contact-eyebrow">Reach us directly</p>
+            <ul>
+              {details.map((detail) => (
+                <li key={detail.label}>
+                  <a href={detail.href} target={detail.label === 'Office' ? '_blank' : undefined} rel={detail.label === 'Office' ? 'noreferrer' : undefined}>
+                    <span>{detail.label}</span>
+                    <strong>{detail.value}</strong>
+                    <i aria-hidden="true">↗</i>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
         <div className="contact-form-wrap">
@@ -73,7 +87,22 @@ export function ContactView({ logo, image, selectedPackage }) {
         </div>
       </section>
 
-      <section className="contact-details" aria-label="Contact details"><p className="contact-eyebrow">Reach us directly</p><div className="contact-detail-grid">{details.map((detail, index) => <a key={detail.label} href={detail.href} target={detail.label === 'Office' ? '_blank' : undefined} rel={detail.label === 'Office' ? 'noreferrer' : undefined} className="contact-detail"><span>0{index + 1} — {detail.label}</span><strong>{detail.value}</strong><i>↗</i></a>)}</div></section>
+      <section id="location" className="contact-details" aria-label="Contact details and office location">
+        <div className="contact-details-inner">
+          <div className="contact-map">
+            <iframe
+              title="ZXI Interiors office at The Metropolis Tower, Business Bay"
+              src="https://www.google.com/maps?q=The%20Metropolis%20Tower%2C%20Business%20Bay%2C%20Dubai&output=embed"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
+            />
+            <a href="https://maps.google.com/?q=The+Metropolis+Tower+Business+Bay+Dubai" target="_blank" rel="noreferrer" className="contact-map-link">
+              Open in Google Maps <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
     <Footer logo={logo} onNavigate={navigate} />
   </>;

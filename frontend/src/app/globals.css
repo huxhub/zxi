@@ -435,7 +435,7 @@ dialog#navigation-panel::backdrop {
 .folio-caption { display:flex; justify-content:space-between; gap:15px; font-size:11px; padding-top:10px; }
 .folio-caption h3 { font-weight:500; }
 .folio-caption>span { opacity:.6; flex-shrink:0; }
-.folio-end { margin-top:70px; display:flex; justify-content:space-between; gap:20px; font-size:12px; padding:0 15px; }
+.folio-end { margin-top:70px; display:flex; justify-content:space-between; gap:20px; font-size:12px; padding:0; }
 .folio a:focus-visible,.folio button:focus-visible,.project-story a:focus-visible { outline:2px solid #222; outline-offset:5px; }
 .project-story { background:#ede9e1; overflow:hidden; }
 .project-track { display:flex; width:max-content; height:100svh; }
@@ -579,10 +579,12 @@ h6 {
   padding-inline: 0 !important;
 }
 
-.folio-grid {
+.folio-grid,
+.folio-end {
   width: var(--page-rail-width);
   max-width: var(--page-content-max);
   margin-inline: auto;
+  padding-inline: 0 !important;
 }
 
 .packages-intro--compact,

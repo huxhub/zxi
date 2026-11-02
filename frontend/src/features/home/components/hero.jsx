@@ -1,46 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
-import { selectHeroVideo } from './hero-video-source';
-
 export function Hero({ hero, heroRef, heroPicRef, heroCopyRef }) {
-  const videoRef = useRef(null);
-  const [videoSource, setVideoSource] = useState(null);
-
-  useEffect(() => {
-    const mobileQuery = window.matchMedia('(max-width: 767px)');
-    const tabletQuery = window.matchMedia('(min-width: 768px) and (max-width: 1023px)');
-    const updateSource = () => setVideoSource(selectHeroVideo(window.innerWidth));
-
-    updateSource();
-    mobileQuery.addEventListener('change', updateSource);
-    tabletQuery.addEventListener('change', updateSource);
-    return () => {
-      mobileQuery.removeEventListener('change', updateSource);
-      tabletQuery.removeEventListener('change', updateSource);
-    };
-  }, []);
-
-  useEffect(() => {
-    const video = videoRef.current;
-    if (video && videoSource) {
-      video.muted = true;
-      video.defaultMuted = true;
-      video.load();
-      const playPromise = video.play();
-      if (playPromise !== undefined) {
-        playPromise.catch(() => {});
-      }
-    }
-  }, [videoSource]);
-
-  const verifyVideoRatio = (event) => {
-    const video = event.currentTarget;
-    if (window.innerWidth >= 1024 && video.videoHeight > video.videoWidth) {
-      setVideoSource(`${selectHeroVideo(window.innerWidth)}?desktop=landscape-v4`);
-    }
-  };
-
   return (
     <section
       id="home"
@@ -52,18 +12,17 @@ export function Hero({ hero, heroRef, heroPicRef, heroCopyRef }) {
         ref={heroPicRef}
       >
         <video
-          key={videoSource || 'hero-poster'}
-          ref={videoRef}
+          className="hero-video"
           autoPlay
-          loop
           muted
+          loop
           playsInline
-          preload="auto"
+          preload="metadata"
           poster={hero?.src}
-          className="hero-video w-full h-full object-cover"
-          src={videoSource || undefined}
-          onLoadedMetadata={verifyVideoRatio}
-        />
+          aria-hidden="true"
+        >
+          <source src="/media/hero/hero-desktop-enhanced-v1.mp4" type="video/mp4" />
+        </video>
       </div>
 
       <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/10 to-black/80 pointer-events-none" />
@@ -92,7 +51,6 @@ export function Hero({ hero, heroRef, heroPicRef, heroCopyRef }) {
             </h1>
           </div>
         </div>
-
       </div>
     </section>
   );

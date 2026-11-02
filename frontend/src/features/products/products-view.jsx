@@ -1,11 +1,36 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import Image from 'next/image';
+import Image, { getImageProps } from 'next/image';
 import { SiteNav } from '@/components/layout/site-nav';
 import { Footer } from '@/components/layout/footer';
 import categories from './products-data.json';
 import './products.css';
+
+const VIEWER_IMAGE_SIZES = '(max-width: 800px) 100vw, 60vw';
+const preloadedProductImages = new Map();
+
+function preloadProductImage(src) {
+  if (typeof window === 'undefined' || preloadedProductImages.has(src)) return;
+
+  const { props } = getImageProps({
+    src,
+    alt: '',
+    fill: true,
+    sizes: VIEWER_IMAGE_SIZES,
+  });
+  const image = new window.Image();
+  image.decoding = 'async';
+  image.fetchPriority = 'high';
+  image.sizes = props.sizes;
+  image.srcset = props.srcSet;
+  image.src = props.src;
+  preloadedProductImages.set(src, image);
+}
+
+function preloadCategory(category) {
+  category.items.forEach(({ image }) => preloadProductImage(image));
+}
 
 export function ProductsView() {
   const dialog = useRef(null);
@@ -29,6 +54,7 @@ export function ProductsView() {
   }, [selected]);
 
   const openCategory = (categoryIndex) => {
+    preloadCategory(categories[categoryIndex]);
     setIndex(0);
     setSelected(categoryIndex);
   };
@@ -55,6 +81,8 @@ export function ProductsView() {
               key={entry.slug}
               type="button"
               onClick={() => openCategory(categoryIndex)}
+              onPointerEnter={() => preloadCategory(entry)}
+              onFocus={() => preloadCategory(entry)}
               aria-label={`Explore ${entry.title}, ${entry.items.length} pieces`}
             >
               <span className="products-card__media">
@@ -106,7 +134,7 @@ export function ProductsView() {
             </div>
             <div className="products-viewer__content">
               <div className="products-viewer__stage">
-                <Image src={item.image} alt={item.title} fill sizes="(max-width: 800px) 100vw, 60vw" priority />
+                <Image src={item.image} alt={item.title} fill sizes={VIEWER_IMAGE_SIZES} priority />
               </div>
               <div className="products-viewer__details" aria-live="polite">
                 <h2>{item.title}</h2>

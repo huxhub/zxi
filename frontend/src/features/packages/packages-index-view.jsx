@@ -9,7 +9,7 @@ import { PACKAGE_INDEX } from './packages-data';
 export function PackagesIndexView() {
   return (
     <>
-      <SiteNav darkAtTop logo={{ src: '/zxi-ae-logo.png' }} />
+      <SiteNav darkAtTop logo={{ src: '/zxi_dubailogo_black.svg' }} />
       <main className="packages-page">
         <header className="packages-intro packages-intro--compact">
           <div>
@@ -36,7 +36,7 @@ export function PackagesIndexView() {
           ))}
         </section>
       </main>
-      <Footer logo={{ src: '/zxi-ae-logo.png' }} />
+      <Footer logo={{ src: '/zxi_dubailogo_black.svg' }} />
     </>
   );
 }

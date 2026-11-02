@@ -9,7 +9,7 @@ export const metadata = {
   openGraph: { url: '/contact', title: 'Discuss Your Dubai Interior Project | ZXI', description: 'Request a consultation with ZXI Interiors & Contracting.' },
 };
 
-const logo = { src: '/zxi-ae-logo.png', width: 500, height: 128 };
+const logo = { src: '/zxi_dubailogo_black.svg', width: 500, height: 128 };
 const defaultImage = { src: '/contact/contact-hero.webp', width: 1920, height: 1080 };
 
 async function ContactContent({ searchParams }) {

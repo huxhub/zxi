@@ -8,7 +8,7 @@ import { Footer } from '@/components/layout/footer';
 export function PackageDetailView({ item }) {
   return (
     <>
-      <SiteNav darkAtTop logo={{ src: '/zxi-ae-logo.png' }} />
+      <SiteNav darkAtTop logo={{ src: '/zxi_dubailogo_black.svg' }} />
       <main className="package-detail">
         <section className="package-detail-hero">
           <div className="package-detail-copy">
@@ -53,7 +53,7 @@ export function PackageDetailView({ item }) {
           </div>
         </section>
       </main>
-      <Footer logo={{ src: '/zxi-ae-logo.png' }} />
+      <Footer logo={{ src: '/zxi_dubailogo_black.svg' }} />
     </>
   );
 }

@@ -148,12 +148,12 @@ export function Footer({ logo, onNavigate }) {
 
       <div className="border-t border-[#282722]/20 flex flex-col sm:flex-row items-center justify-between gap-4 pt-7 text-xs text-[#4C4942]">
         <Image
-          src={logo?.src || logo || '/zxi-ae-logo.png'}
+          src="/zxi_dubailogo_black.svg"
           alt="ZXI Interiors & Contracting"
-          width={500}
-          height={97}
+          width={367}
+          height={72}
           style={{ height: 'auto' }}
-          className="h-auto w-[132px] sm:w-[156px] brightness-0"
+          className="h-auto w-[132px] sm:w-[156px]"
         />
         <span>© ZXI Interiors & Contracting. All rights reserved.</span>
         <Link

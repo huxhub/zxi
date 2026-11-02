@@ -44,7 +44,7 @@ async function BlogDetailContent({ params }) {
     <BlogDetailView
       post={post}
       nextPosts={nextPosts}
-      logo={{ src: '/zxi-ae-logo.png', width: 220, height: 80 }}
+      logo={{ src: '/zxi_dubailogo_black.svg', width: 220, height: 80 }}
     />
   );
 }

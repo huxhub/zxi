@@ -9,7 +9,7 @@ import { getPackage } from './packages-data';
 export function PackageCollectionView({ collection }) {
   return (
     <>
-      <SiteNav logo={{ src: '/zxi-ae-logo.png' }} />
+      <SiteNav logo={{ src: '/zxi_dubailogo_black.svg' }} />
       <main className="package-collection">
         <header className="package-collection-hero">
           <Image src={collection.image} alt="" fill priority sizes="100vw" />
@@ -42,7 +42,7 @@ export function PackageCollectionView({ collection }) {
           })}
         </section>
       </main>
-      <Footer logo={{ src: '/zxi-ae-logo.png' }} />
+      <Footer logo={{ src: '/zxi_dubailogo_black.svg' }} />
     </>
   );
 }

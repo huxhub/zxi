@@ -24,7 +24,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   const schema = {
     '@context': 'https://schema.org', '@type': 'LocalBusiness', name: 'ZXI Interiors & Contracting',
-    url: 'https://zxi.ae', logo: 'https://zxi.ae/zxi-ae-logo.png', image: 'https://zxi.ae/why-work-with-us.png',
+    url: 'https://zxi.ae', logo: 'https://zxi.ae/zxi_dubailogo_black.svg', image: 'https://zxi.ae/why-work-with-us.png',
     telephone: '+971565499766', email: 'info@zxi.ae', priceRange: '$$$',
     address: { '@type': 'PostalAddress', streetAddress: 'Office #808, The Metropolis Tower, Business Bay', addressLocality: 'Dubai', addressCountry: 'AE' },
     areaServed: ['Dubai', 'United Arab Emirates'],

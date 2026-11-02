@@ -39,7 +39,7 @@ export function ProductsView() {
 
   return (
     <>
-      <SiteNav darkAtTop logo={{ src: '/zxi-ae-logo.png' }} />
+      <SiteNav darkAtTop logo={{ src: '/zxi_dubailogo_black.svg' }} />
       <main className="products-page">
         <header className="products-intro">
           <div className="products-intro__body">
@@ -80,7 +80,7 @@ export function ProductsView() {
           ))}
         </section>
       </main>
-      <Footer logo={{ src: '/zxi-ae-logo.png' }} />
+      <Footer logo={{ src: '/zxi_dubailogo_black.svg' }} />
 
       <dialog
         ref={dialog}

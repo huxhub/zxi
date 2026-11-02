@@ -107,12 +107,15 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate, dark
     });
   };
 
+  const isDarkNav = pathname === '/' && !isPastHero;
+  const currentLogoSrc = isDarkNav ? '/zxi_dubailogo1.svg' : '/zxi_dubailogo_black.svg';
+
   return (
     <>
       {/* Top Header: transparent over the home hero, then a lightly compact white bar. */}
       <header
         ref={header}
-        className={`fixed top-0 inset-x-0 z-40 flex w-full items-center justify-between px-6 transition-all duration-300 pointer-events-auto sm:px-10 md:px-14 ${pathname === '/' && !isPastHero ? 'home-hero-nav border-transparent bg-transparent py-3 md:py-4' : isPastHero ? 'border-neutral-200 bg-white py-2 md:py-3' : 'border-neutral-200 bg-white py-3 md:py-4'} border-b`}
+        className={`fixed top-0 inset-x-0 z-40 flex w-full items-center justify-between px-6 transition-all duration-300 pointer-events-auto sm:px-10 md:px-14 ${isDarkNav ? 'home-hero-nav border-transparent bg-transparent py-3 md:py-4' : isPastHero ? 'border-neutral-200 bg-white py-2 md:py-3' : 'border-neutral-200 bg-white py-3 md:py-4'} border-b`}
       >
         <a
           href="#home"
@@ -124,19 +127,19 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate, dark
           }}
         >
           <Image
-            src={logo?.src || logo || '/zxi-ae-logo.png'}
+            src={currentLogoSrc}
             alt="ZXI Interiors & Contracting"
-            width={500}
-            height={97}
+            width={367}
+            height={72}
             priority
             style={{ height: 'auto' }}
-            className={`block h-auto object-contain transition-all duration-300 group-hover:opacity-80 ${isPastHero ? 'w-[140px] sm:w-[150px] md:w-[165px]' : 'w-[145px] sm:w-[160px] md:w-[175px]'} ${pathname === '/' && !isPastHero ? 'brightness-0 invert' : ''}`}
+            className={`block h-auto object-contain transition-all duration-300 group-hover:opacity-80 ${isPastHero ? 'w-[130px] sm:w-[145px] md:w-[160px]' : 'w-[140px] sm:w-[155px] md:w-[170px]'}`}
           />
         </a>
 
         {/* Minimal Two-Line Hamburger Button */}
         <button
-          className={`group flex items-center justify-end gap-3 p-1 cursor-pointer transition-colors hover:opacity-70 focus:outline-none nav-menu-btn ${isPastHero ? 'h-9 md:h-10' : 'h-10 md:h-11'} ${pathname === '/' && !isPastHero ? 'text-white' : 'text-neutral-900'}`}
+          className={`group flex items-center justify-end gap-3 p-1 cursor-pointer transition-colors hover:opacity-70 focus:outline-none nav-menu-btn ${isPastHero ? 'h-9 md:h-10' : 'h-10 md:h-11'} ${isDarkNav ? 'text-white' : 'text-neutral-900'}`}
           aria-label="Open navigation menu"
           aria-expanded={open}
           aria-controls="navigation-panel"
@@ -149,12 +152,12 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate, dark
           <span className="flex flex-col items-end gap-[6px] nav-menu-bars" aria-hidden="true">
             <span
               className={`block h-[2px] w-8 nav-menu-bar-top transition-all duration-300 ${
-                pathname === '/' && !isPastHero ? 'bg-white' : 'bg-neutral-900'
+                isDarkNav ? 'bg-white' : 'bg-neutral-900'
               }`}
             />
             <span
               className={`block h-[2px] w-5 nav-menu-bar-bottom transition-all duration-300 group-hover:w-8 ${
-                pathname === '/' && !isPastHero ? 'bg-white' : 'bg-neutral-900'
+                isDarkNav ? 'bg-white' : 'bg-neutral-900'
               }`}
             />
           </span>

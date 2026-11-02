@@ -39,7 +39,7 @@ export default function Page() {
     },
   ];
   return <HomeView data={{
-    logo: { src: '/zxi-ae-logo.png', width: 220, height: 80 }, hero: image(246), cta: image(245), projects, services, advantages,
+    logo: { src: '/zxi_dubailogo_black.svg', width: 220, height: 80 }, hero: image(246), cta: image(245), projects, services, advantages,
     intro: 'Considered interiors for homes, workplaces, and hospitality spaces across the UAE.',
     faq: [
       { question: 'What services do you offer?', answer: 'Interior design, fitouts, turnkey contracting, and custom furniture.' },

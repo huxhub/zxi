@@ -8,5 +8,5 @@ export const metadata = {
 };
 
 export default function BlogPage() {
-  return <BlogView logo={{ src: '/zxi-ae-logo.png', width: 220, height: 80 }} />;
+  return <BlogView logo={{ src: '/zxi_dubailogo_black.svg', width: 220, height: 80 }} />;
 }

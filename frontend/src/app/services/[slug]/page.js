@@ -48,7 +48,7 @@ async function ServiceContent({ params }) {
     <ServiceDetailView
       service={service}
       nextService={nextService}
-      logo={{ src: '/zxi-ae-logo.png', width: 220, height: 80 }}
+      logo={{ src: '/zxi_dubailogo_black.svg', width: 220, height: 80 }}
     />
   );
 }

@@ -14,5 +14,5 @@ export const metadata = {
 };
 
 export default function ServicesPage() {
-  return <ServicesIndexView logo={{ src: '/zxi-ae-logo.png', width: 220, height: 80 }} />;
+  return <ServicesIndexView logo={{ src: '/zxi_dubailogo_black.svg', width: 220, height: 80 }} />;
 }

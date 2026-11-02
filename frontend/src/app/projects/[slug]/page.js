@@ -27,5 +27,5 @@ async function ProjectContent({ params }) {
   const { slug } = await params;
   const index = projects.findIndex((item) => item.slug === slug);
   if (index < 0) notFound();
-  return <ProjectShell logo={{ src: '/zxi-ae-logo.png', width: 220, height: 80 }}><ProjectDetail project={projects[index]} next={projects[(index + 1) % projects.length]} /></ProjectShell>;
+  return <ProjectShell logo={{ src: '/zxi_dubailogo_black.svg', width: 220, height: 80 }}><ProjectDetail project={projects[index]} next={projects[(index + 1) % projects.length]} /></ProjectShell>;
 }

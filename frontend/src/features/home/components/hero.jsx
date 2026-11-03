@@ -20,7 +20,7 @@ export function Hero({ heroRef, heroPicRef, heroCopyRef }) {
           preload="auto"
           aria-hidden="true"
         >
-          <source src="/media/hero/hero-banner (2).mp4" type="video/mp4" />
+          <source src="/media/hero/hero-banner.mp4" type="video/mp4" />
         </video>
       </div>
 

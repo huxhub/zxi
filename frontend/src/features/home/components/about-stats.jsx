@@ -10,7 +10,7 @@ const STANDARDS = [
     title: '500+ PROJECTS DELIVERED',
     description:
       'More than 500 spaces delivered across the UAE and India.',
-    image: '/about/projects-500-milestone.webp',
+    image: '/about/projects-500-milestone-new.png',
     stats: [
       { num: '500+', label: 'Completed projects' },
       { num: '12+', label: 'Years of excellence' },

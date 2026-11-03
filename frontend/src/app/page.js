@@ -12,10 +12,17 @@ export default function Page() {
   const services = [
     ['Commercial Fitouts', 'Efficient workplaces delivered from plan to handover.', 1348, 'commercial-fitouts'],
     ['Residential Interiors', 'Refined homes built with comfort and precision.', 2189, 'residential-interiors'],
-    ['Turnkey Contracting', 'Engineering precision, authority approvals, and delivery.', 1389, 'turnkey-contracting'],
+    ['Turnkey Contracting', 'Engineering precision, authority approvals, and delivery.', 'turnkey-contracting-home', 'turnkey-contracting'],
     ['Custom Furniture', 'Bespoke pieces made for your space.', 1618, 'custom-furniture'],
     ['Hospitality & Wellness', 'Immersive dining, hospitality, and wellness environments.', 2625, 'hospitality-wellness'],
-  ].map(([title, description, id, slug]) => ({ title, description, image: image(id), slug }));
+  ].map(([title, description, id, slug]) => ({
+    title,
+    description,
+    image: id === 'turnkey-contracting-home'
+      ? { src: '/home/turnkey-contracting-home.png', width: 1024, height: 1536 }
+      : image(id),
+    slug,
+  }));
   const advantages = [
     {
       title: 'Bold ideas, made real',

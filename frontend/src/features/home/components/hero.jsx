@@ -1,6 +1,6 @@
 'use client';
 
-export function Hero({ hero, heroRef, heroPicRef, heroCopyRef }) {
+export function Hero({ heroRef, heroPicRef, heroCopyRef }) {
   return (
     <section
       id="home"
@@ -17,11 +17,10 @@ export function Hero({ hero, heroRef, heroPicRef, heroCopyRef }) {
           muted
           loop
           playsInline
-          preload="metadata"
-          poster={hero?.src}
+          preload="auto"
           aria-hidden="true"
         >
-          <source src="/media/hero/hero-desktop-enhanced-v1.mp4" type="video/mp4" />
+          <source src="/media/hero/hero-banner.mp4" type="video/mp4" />
         </video>
       </div>
 

@@ -6,8 +6,8 @@ export function MidPageCta() {
         <h2 id="project-cta-heading">Your Vision. Our Craft. Extraordinary Spaces.</h2>
       </div>
       <a
-        href="/brochure.pdf"
-        download="ZXI-Interiors-Brochure.pdf"
+        href="/ZXI%20Interiors%20Company%20Portfolio.pdf"
+        download="ZXI-Interiors-Company-Portfolio.pdf"
         aria-label="Download Brochure"
       >
         <span>Download Brochure</span>

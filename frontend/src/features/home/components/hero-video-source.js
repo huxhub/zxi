@@ -1,7 +1,9 @@
+const HERO_VIDEO = '/media/hero/hero-banner.mp4';
+
 export const HERO_VIDEOS = {
-  mobile: '/media/hero/hero-mobile.mp4',
-  tablet: '/media/hero/hero-tablet.mp4',
-  desktop: '/media/hero/hero-desktop-enhanced-v1.mp4',
+  mobile: HERO_VIDEO,
+  tablet: HERO_VIDEO,
+  desktop: HERO_VIDEO,
 };
 
 export function selectHeroVideo(width) {

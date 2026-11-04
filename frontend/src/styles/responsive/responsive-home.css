@@ -14,7 +14,7 @@
   #home .relative.z-10 {
     padding-left: 20px !important;
     padding-right: 20px !important;
-    padding-bottom: 180px !important;
+    padding-bottom: max(112px, calc(76px + env(safe-area-inset-bottom))) !important;
   }
 
   .hero-copy-sub {
@@ -22,10 +22,22 @@
     margin-bottom: 14px !important;
   }
 
-  .hero-split-line h1 {
-    font-size: clamp(30px, 8vw, 38px) !important;
-    line-height: 1.18 !important;
-    letter-spacing: -0.02em !important;
+  #home .hero-copy {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  #home .hero-title {
+    line-height: 1.12 !important;
+  }
+
+  #home .hero-title-primary {
+    font-size: clamp(20px, 6.4vw, 30px) !important;
+  }
+
+  #home .hero-title-brand {
+    margin-top: 2px;
+    font-size: clamp(30px, 9.2vw, 38px) !important;
   }
 
   .hero-actions {
@@ -43,10 +55,13 @@
 }
 
 @media (min-width: 641px) and (max-width: 1024px) {
-  .hero-split-line h1 {
-    font-size: clamp(40px, 4.8vw, 48px) !important;
+  #home .hero-title {
     line-height: 1.16 !important;
-    letter-spacing: -0.025em !important;
+  }
+
+  #home .hero-title-primary,
+  #home .hero-title-brand {
+    font-size: clamp(36px, 4.8vw, 48px) !important;
   }
 }
 
@@ -339,7 +354,8 @@
     margin-bottom: 24px !important;
   }
 
-  .hero-split-line h1 {
+  #home .hero-title-primary,
+  #home .hero-title-brand {
     font-size: 72px !important;
     line-height: 1.15 !important;
     letter-spacing: -0.025em !important;
@@ -567,7 +583,8 @@
     margin-bottom: 36px !important;
   }
 
-  .hero-split-line h1 {
+  #home .hero-title-primary,
+  #home .hero-title-brand {
     font-size: 88px !important;
     line-height: 1.14 !important;
     letter-spacing: -0.025em !important;

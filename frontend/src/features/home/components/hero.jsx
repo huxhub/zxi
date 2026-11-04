@@ -20,7 +20,10 @@ export function Hero({ heroRef, heroPicRef, heroCopyRef }) {
           preload="auto"
           aria-hidden="true"
         >
-          <source src="/media/hero/hero-banner.mp4" type="video/mp4" />
+          <source
+            src="/media/hero/hero-banner.mp4"
+            type="video/mp4"
+          />
         </video>
       </div>
 
@@ -30,23 +33,18 @@ export function Hero({ heroRef, heroPicRef, heroCopyRef }) {
         className="relative z-10 h-full max-w-[1720px] mx-auto px-5 sm:px-10 lg:px-16 pt-24 pb-16 flex flex-col md:flex-row md:items-end justify-end md:justify-between gap-8 md:gap-10 will-change-transform"
         ref={heroCopyRef}
       >
-        <div className="max-w-2xl">
+        <div className="hero-copy max-w-2xl min-w-0">
           <p className="hero-copy-sub text-base sm:text-lg font-medium text-white/90 mb-6 tracking-tight">
             Dubai’s leading interior fitout company
           </p>
           <div className="hero-split-line overflow-hidden py-0.5">
-            <h1 className="block text-3xl sm:text-4xl md:text-5xl lg:text-[55px] font-normal leading-[1.18] tracking-[-0.025em]">
-              Re-imagine your
-            </h1>
-          </div>
-          <div className="hero-split-line overflow-hidden py-0.5">
-            <h1 className="block text-3xl sm:text-4xl md:text-5xl lg:text-[55px] font-normal leading-[1.18] tracking-[-0.025em]">
-              space with
-            </h1>
-          </div>
-          <div className="hero-split-line overflow-hidden py-0.5">
-            <h1 className="block text-3xl sm:text-4xl md:text-5xl lg:text-[55px] font-normal leading-[1.18] tracking-[-0.025em]">
-              ZXI Interiors.
+            <h1 className="hero-title block font-normal leading-[1.12]">
+              <span className="hero-title-primary block whitespace-nowrap text-[clamp(1.5rem,4.1vw,55px)] tracking-[-0.04em]">
+                Re-imagine your space with
+              </span>
+              <span className="hero-title-brand block text-[clamp(1.5rem,4.1vw,55px)] tracking-[-0.025em]">
+                ZXI Interiors.
+              </span>
             </h1>
           </div>
         </div>

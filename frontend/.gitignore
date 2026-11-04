@@ -99,6 +99,7 @@ graphify-out/
 
 # Intermediate hero video test encodes (production videos are hero-desktop-native-hq-v5, hero-tablet, hero-mobile)
 /public/media/hero/*
+!/public/media/hero/hero-zxi-continuous-web.mp4
 !/public/media/hero/hero-desktop-native-hq-v5.mp4
 !/public/media/hero/hero-mobile.mp4
 !/public/media/hero/hero-tablet.mp4

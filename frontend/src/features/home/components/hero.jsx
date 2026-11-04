@@ -21,7 +21,7 @@ export function Hero({ heroRef, heroPicRef, heroCopyRef }) {
           aria-hidden="true"
         >
           <source
-            src="/media/hero/hero-banner.mp4"
+            src="/media/hero/hero-zxi-continuous-web.mp4"
             type="video/mp4"
           />
         </video>

@@ -1,4 +1,4 @@
-const HERO_VIDEO = '/media/hero/hero-banner.mp4';
+const HERO_VIDEO = '/media/hero/hero-zxi-continuous-web.mp4';
 
 export const HERO_VIDEOS = {
   mobile: HERO_VIDEO,

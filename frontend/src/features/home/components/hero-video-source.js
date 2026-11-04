@@ -1,4 +1,4 @@
-const HERO_VIDEO = '/media/hero/hero-zxi-continuous-web.mp4';
+const HERO_VIDEO = '/media/hero/ZXI_4K60_Homepage.webm';
 
 export const HERO_VIDEOS = {
   mobile: HERO_VIDEO,

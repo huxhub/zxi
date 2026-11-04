@@ -13,6 +13,7 @@ export function Hero({ heroRef, heroPicRef, heroCopyRef }) {
       >
         <video
           className="hero-video"
+          poster="/hero-poster.jpg"
           autoPlay
           muted
           loop
@@ -20,10 +21,7 @@ export function Hero({ heroRef, heroPicRef, heroCopyRef }) {
           preload="auto"
           aria-hidden="true"
         >
-          <source
-            src="/media/hero/hero-zxi-continuous-web.mp4"
-            type="video/mp4"
-          />
+          <source src="/media/hero/ZXI_4K60_Homepage.webm" type="video/webm" />
         </video>
       </div>
 

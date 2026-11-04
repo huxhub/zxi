@@ -15,7 +15,7 @@ const STANDARDS = [
       { num: '500+', label: 'Completed projects' },
       { num: '12+', label: 'Years of excellence' },
       { num: 'UAE', label: 'Interiors & contracting' },
-      { num: 'Dubai & Kochi', label: 'Design studios' },
+      { num: 'Dubai', label: 'Design studios' },
     ],
   },
   {

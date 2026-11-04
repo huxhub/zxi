@@ -11,7 +11,7 @@ export default function Page() {
   const projects = portfolioProjects;
   const services = [
     ['Commercial Fitouts', 'Efficient workplaces delivered from plan to handover.', 1348, 'commercial-fitouts'],
-    ['Residential Interiors', 'Refined homes built with comfort and precision.', 2189, 'residential-interiors'],
+    ['Residential Interiors', 'Refined homes built with comfort and precision.', 'residential-interiors-home', 'residential-interiors'],
     ['Turnkey Contracting', 'Engineering precision, authority approvals, and delivery.', 'turnkey-contracting-home', 'turnkey-contracting'],
     ['Custom Furniture', 'Bespoke pieces made for your space.', 'custom-furniture-home', 'custom-furniture'],
     ['Hospitality & Wellness', 'Immersive dining, hospitality, and wellness environments.', 2625, 'hospitality-wellness'],
@@ -21,6 +21,7 @@ export default function Page() {
     image: {
       'turnkey-contracting-home': { src: '/home/turnkey-contracting-home.png', width: 1024, height: 1536 },
       'custom-furniture-home': { src: '/home/custom-furniture-home.png', width: 1024, height: 1536 },
+      'residential-interiors-home': { src: '/home/residential-interiors-home.webp', width: 1024, height: 1536 },
     }[id] || image(id),
     slug,
   }));

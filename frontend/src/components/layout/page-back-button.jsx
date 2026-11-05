@@ -1,31 +1,35 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 
 export function PageBackButton() {
   const pathname = usePathname();
+  const router = useRouter();
+
+  if (pathname === '/' || pathname.startsWith('/packages/')) return null;
+
+  return <PageBackButtonControl key={pathname} pathname={pathname} router={router} />;
+}
+
+function PageBackButtonControl({ pathname, router }) {
   const [hasScrolled, setHasScrolled] = useState(false);
 
   useEffect(() => {
-    setHasScrolled(false);
-
     const revealBackButton = () => {
       if (window.scrollY > 72) setHasScrolled(true);
     };
 
     window.addEventListener('scroll', revealBackButton, { passive: true });
     return () => window.removeEventListener('scroll', revealBackButton);
-  }, [pathname]);
-
-  if (pathname === '/' || pathname.startsWith('/packages/')) return null;
+  }, []);
 
   return (
     <button
       type="button"
       onClick={() => {
-        if (window.history.length > 1) window.history.back();
-        else window.location.assign('/');
+        if (window.history.length > 1) router.back();
+        else router.push('/');
       }}
       className={`page-back-button ${pathname === '/projects' ? 'project-archive-back-button' : ''} fixed left-6 top-[calc(var(--site-header-height,72px)+14px)] z-[45] grid h-12 w-12 place-items-center rounded-full border-0 bg-[#F5F0E7] text-[#282722] transition-[opacity,transform,background-color] duration-300 hover:bg-[#E8DDCC] focus-visible:bg-[#E8DDCC] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#282722] sm:left-10 md:left-14 ${
         hasScrolled ? 'translate-y-0 opacity-100' : 'pointer-events-none translate-y-2 opacity-0'

@@ -1,6 +1,7 @@
 import { projects } from '@/lib/projects';
 import { BLOG_POSTS } from '@/features/blog/blog-data';
 import { PACKAGES } from '@/features/packages/packages-data';
+import { SERVICE_SLUGS } from '@/features/services/services-data';
 
 export default function sitemap() {
   const lastModified = new Date();
@@ -10,5 +11,6 @@ export default function sitemap() {
   const projectPages = projects.map(({ slug }) => ({ url: `https://zxi.ae/projects/${slug}`, lastModified, changeFrequency: 'monthly', priority: 0.7 }));
   const articles = BLOG_POSTS.map(({ slug }) => ({ url: `https://zxi.ae/blog/${slug}`, lastModified, changeFrequency: 'monthly', priority: 0.65 }));
   const packagePages = PACKAGES.map(({ slug }) => ({ url: `https://zxi.ae/packages/${slug}`, lastModified, changeFrequency: 'monthly', priority: 0.75 }));
-  return [...pages, ...projectPages, ...packagePages, ...articles];
+  const servicePages = SERVICE_SLUGS.map((slug) => ({ url: `https://zxi.ae/services/${slug}`, lastModified, changeFrequency: 'monthly', priority: 0.85 }));
+  return [...pages, ...servicePages, ...projectPages, ...packagePages, ...articles];
 }

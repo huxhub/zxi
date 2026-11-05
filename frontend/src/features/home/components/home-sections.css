@@ -84,6 +84,8 @@
     padding-right: 12px;
 }
 
+.trusted-partners__set:nth-child(3) { display: none; }
+
 .trusted-partners__logo {
     display: grid;
     position: relative;
@@ -434,11 +436,18 @@
 
     .trusted-partners__heading h2 { font-size: clamp(40px, 11vw, 58px); }
     .trusted-partners__intro { margin-top: 18px; }
-    .trusted-partners__viewport { overflow-x: auto; mask-image: none; scrollbar-width: none; }
+    .trusted-partners__viewport {
+        overflow-x: auto;
+        mask-image: none;
+        scrollbar-width: none;
+        touch-action: pan-x;
+        overscroll-behavior-inline: contain;
+        -webkit-overflow-scrolling: touch;
+    }
     .trusted-partners__viewport::-webkit-scrollbar { display: none; }
     .trusted-partners__rail { animation: none; }
     .trusted-partners__set { padding-left: 20px; }
-    .trusted-partners__set[aria-hidden='true'] { display: none; }
+    .trusted-partners__set:nth-child(3) { display: flex; }
 
     .trusted-partners__logo {
         width: 180px;

@@ -43,12 +43,26 @@ async function ServiceContent({ params }) {
 
   const service = SERVICES_DATA[index];
   const nextService = SERVICES_DATA[(index + 1) % SERVICES_DATA.length];
+  const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    '@id': `https://zxi.ae/services/${service.slug}#service`,
+    name: service.title,
+    description: service.subtitle,
+    url: `https://zxi.ae/services/${service.slug}`,
+    image: `https://zxi.ae${service.heroImage.src}`,
+    provider: { '@id': 'https://zxi.ae/#organization' },
+    areaServed: [{ '@type': 'City', name: 'Dubai' }, { '@type': 'Country', name: 'United Arab Emirates' }],
+  };
 
   return (
-    <ServiceDetailView
-      service={service}
-      nextService={nextService}
-      logo={{ src: '/zxi_dubailogo_black.svg', width: 220, height: 80 }}
-    />
+    <>
+      <ServiceDetailView
+        service={service}
+        nextService={nextService}
+        logo={{ src: '/zxi_dubailogo_black.svg', width: 220, height: 80 }}
+      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+    </>
   );
 }

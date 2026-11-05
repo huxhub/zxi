@@ -328,8 +328,8 @@
     "area": "4,000 sq. ft",
     "timeline": "90 working days",
     "folder": "kir-kaiten",
-    "files": ["01.webp", "02.webp", "03.webp", "04.webp", "05.webp"],
-    "imageDimensions": [[1269, 1800], [1800, 1230], [1800, 1230], [1800, 1230], [1800, 1230]]
+    "files": ["01.png", "02.png", "03.png", "04.png", "05.png"],
+    "imageDimensions": [[1904, 2700], [2400, 1640], [2400, 1640], [2400, 1640], [2400, 1640]]
   },
   "office-prism": {
     "title": "Office Prism",
@@ -339,8 +339,8 @@
     "area": "861 sq. ft",
     "timeline": "70 working days",
     "folder": "office-prism",
-    "files": ["02.webp", "03.webp", "04.webp", "05.webp", "06.webp", "07.webp", "08.webp", "09.webp", "10.webp"],
-    "imageDimensions": [[1800, 1200], [1800, 1198], [1800, 1198], [1800, 1200], [1800, 1198], [1800, 1198], [1800, 1198], [1800, 1200], [1800, 1200]]
+    "files": ["02.jpeg", "03.jpeg", "04.jpeg", "05.jpeg", "06.jpeg", "07.jpeg", "08.jpeg", "09.jpeg", "10.jpeg"],
+    "imageDimensions": [[1280, 853], [1280, 853], [1280, 852], [1280, 852], [1280, 853], [1280, 852], [1280, 852], [1280, 852], [1280, 853]]
   },
   "samiat-restaurant": {
     "title": "Samiat Restaurant",
@@ -350,8 +350,8 @@
     "area": "1,400 sq. ft",
     "timeline": "90 working days",
     "folder": "samiat-restaurant",
-    "files": ["01.webp", "02.webp", "03.webp", "04.webp", "05.webp", "06.webp", "07.webp", "08.webp"],
-    "imageDimensions": [[1800, 1350], [1800, 1350], [1800, 1350], [1800, 1350], [1800, 1350], [1800, 1350], [1800, 1350], [1800, 1350]]
+    "files": ["01.png", "02.png", "03.png", "04.png", "05.png", "06.png", "07.png", "08.png"],
+    "imageDimensions": [[3840, 2880], [3840, 2880], [3840, 2880], [3840, 2880], [3840, 2880], [3840, 2880], [3840, 2880], [3840, 2880]]
   },
   "dubai-hills": {
     "title": "Dubai Hills",
@@ -361,8 +361,8 @@
     "area": "80 sq. ft",
     "timeline": "20 working days",
     "folder": "dubai-hills",
-    "files": ["01.webp", "02.webp", "03.webp", "04.webp", "05.webp", "06.webp"],
-    "imageDimensions": [[1800, 1472], [1351, 1800], [1350, 1800], [1800, 1472], [1351, 1800], [1350, 1800]]
+    "files": ["01.png", "02.png", "03.jpg", "04.jpg", "05.jpg", "06.jpg"],
+    "imageDimensions": [[1080, 883], [1080, 1439], [1080, 1440], [1080, 883], [1080, 1439], [1080, 1440]]
   },
   "elie-saab-meydan": {
     "title": "Elie Saab Residence",
@@ -372,9 +372,9 @@
     "area": "2,152 sq. ft",
     "timeline": "Ongoing",
     "folder": "elie-saab-meydan",
-    "coverImage": "02.webp",
-    "files": ["01.webp", "02.webp", "03.webp", "04.webp", "05.webp", "06.webp", "07.webp", "08.webp", "09.webp", "10.webp"],
-    "imageDimensions": [[1200, 1800], [1200, 1800], [1200, 1800], [1200, 1800], [1200, 1800], [1200, 1800], [1200, 1800], [1350, 1800], [1350, 1800], [1350, 1800]]
+    "coverImage": "02.JPG",
+    "files": ["01.JPG", "02.JPG", "03.JPG", "04.JPG", "05.JPG", "06.JPG", "07.JPG", "08.JPG", "09.JPG", "10.JPG"],
+    "imageDimensions": [[2976, 1984], [2976, 1984], [2976, 1984], [2976, 1984], [2976, 1984], [2976, 1984], [2976, 1984], [2976, 1984], [2976, 1984], [2976, 1984]]
   },
   "italica-cafe": {
     "title": "Italica Café",
@@ -382,8 +382,8 @@
     "category": "Hospitality",
     "scope": "Café interior fit-out",
     "folder": "italica-cafe",
-    "files": ["01.webp", "02.webp", "03.webp", "04.webp"],
-    "imageDimensions": [[1800, 882], [975, 1800], [1317, 1800], [1800, 1309]]
+    "files": ["01.jpeg", "02.jpeg", "03.jpeg", "04.jpeg"],
+    "imageDimensions": [[2567, 1258], [1066, 1967], [1870, 2555], [2510, 1825]]
   },
   "laila-amraoui": {
     "title": "Laila Amraoui",
@@ -391,8 +391,8 @@
     "category": "Commercial",
     "scope": "Commercial interior fit-out",
     "folder": "laila-amraoui",
-    "files": ["01.webp", "02.webp", "03.webp", "04.webp", "05.webp"],
-    "imageDimensions": [[1493, 1800], [1299, 1800], [1327, 1800], [1300, 1800], [1800, 1396]]
+    "files": ["01.jpeg", "02.jpeg", "03.jpeg", "04.jpeg", "05.jpeg"],
+    "imageDimensions": [[2132, 2570], [1861, 2578], [1856, 2518], [1852, 2564], [2461, 1909]]
   },
   "mr-khalid": {
     "title": "Mr. Khalid",

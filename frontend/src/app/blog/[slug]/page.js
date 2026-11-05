@@ -39,12 +39,28 @@ async function BlogDetailContent({ params }) {
   const post = BLOG_POSTS[index];
   // Next 3 related posts (wrapping around)
   const nextPosts = BLOG_POSTS.filter((_, i) => i !== index).slice(0, 3);
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: post.title,
+    description: post.excerpt,
+    image: [`https://zxi.ae${post.image}`],
+    datePublished: new Date(post.date).toISOString(),
+    dateModified: new Date(post.date).toISOString(),
+    mainEntityOfPage: { '@type': 'WebPage', '@id': `https://zxi.ae/blog/${post.slug}` },
+    author: { '@id': 'https://zxi.ae/#organization' },
+    publisher: { '@id': 'https://zxi.ae/#organization' },
+    inLanguage: 'en-AE',
+  };
 
   return (
-    <BlogDetailView
-      post={post}
-      nextPosts={nextPosts}
-      logo={{ src: '/zxi_dubailogo_black.svg', width: 220, height: 80 }}
-    />
+    <>
+      <BlogDetailView
+        post={post}
+        nextPosts={nextPosts}
+        logo={{ src: '/zxi_dubailogo_black.svg', width: 220, height: 80 }}
+      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+    </>
   );
 }

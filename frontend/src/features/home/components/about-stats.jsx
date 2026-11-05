@@ -141,11 +141,11 @@ export function AboutStats({ intro, lenisRef }) {
               />
 
               {/* Centered Content */}
-              <div className="relative z-10 max-w-4xl px-6 text-center text-white flex flex-col items-center">
+              <div className="relative z-10 w-full max-w-4xl mx-auto px-5 sm:px-6 text-center text-white flex flex-col items-center">
                 <p className="text-xs sm:text-sm uppercase tracking-[0.25em] text-[#e8c887] font-medium mb-3">
                   {item.tag}
                 </p>
-                <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-[54px] font-normal tracking-[0.1em] uppercase text-white leading-tight drop-shadow-md">
+                <h3 className="w-full text-[clamp(24px,7.5vw,32px)] sm:text-4xl md:text-5xl lg:text-[54px] font-normal tracking-[0.055em] sm:tracking-[0.1em] uppercase text-white leading-[1.15] sm:leading-tight drop-shadow-md">
                   {item.title}
                 </h3>
                 <p className="mt-5 max-w-xl text-sm sm:text-base md:text-lg text-white/90 leading-relaxed font-light drop-shadow">
@@ -154,9 +154,9 @@ export function AboutStats({ intro, lenisRef }) {
 
                 {/* Embedded Stats Bar on Slide 4 */}
                 {item.stats && (
-                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8 mt-10 pt-8 border-t border-white/20 w-full max-w-4xl">
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-x-4 gap-y-7 sm:gap-8 mt-8 sm:mt-10 pt-6 sm:pt-8 border-t border-white/20 w-full max-w-4xl">
                     {item.stats.map((stat) => (
-                      <div key={stat.label} className="text-center min-w-[168px] lg:min-w-[216px]">
+                      <div key={stat.label} className="text-center min-w-0 sm:min-w-[168px] lg:min-w-[216px]">
                         <div className="text-2xl sm:text-3xl lg:text-4xl font-light tracking-tight text-white tabular-nums">
                           {stat.num}
                         </div>

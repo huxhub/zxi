@@ -140,7 +140,7 @@ export function BlogDetailView({ post, nextPosts = [], logo }) {
                     key={index}
                     className={
                       index === 0
-                        ? 'text-lg sm:text-xl text-neutral-900 font-normal leading-relaxed first-letter:text-5xl first-letter:font-normal first-letter:mr-3 first-letter:float-left first-letter:leading-none first-letter:text-neutral-900'
+                        ? 'text-lg sm:text-xl text-neutral-900 font-normal leading-relaxed'
                         : ''
                     }
                   >

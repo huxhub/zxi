@@ -320,6 +320,80 @@
       "12.jpg"
     ]
   },
+  "kir-kaiten": {
+    "title": "Kir Kaiten",
+    "location": "Dubai Marina, Dubai",
+    "category": "Commercial",
+    "scope": "Restaurant interior fit-out",
+    "area": "4,000 sq. ft",
+    "timeline": "90 working days",
+    "folder": "kir-kaiten",
+    "files": ["01.webp", "02.webp", "03.webp", "04.webp", "05.webp"],
+    "imageDimensions": [[1269, 1800], [1800, 1230], [1800, 1230], [1800, 1230], [1800, 1230]]
+  },
+  "office-prism": {
+    "title": "Office Prism",
+    "location": "Business Bay, Dubai",
+    "category": "Commercial",
+    "scope": "Office interior fit-out",
+    "area": "861 sq. ft",
+    "timeline": "70 working days",
+    "folder": "office-prism",
+    "files": ["02.webp", "03.webp", "04.webp", "05.webp", "06.webp", "07.webp", "08.webp", "09.webp", "10.webp"],
+    "imageDimensions": [[1800, 1200], [1800, 1198], [1800, 1198], [1800, 1200], [1800, 1198], [1800, 1198], [1800, 1198], [1800, 1200], [1800, 1200]]
+  },
+  "samiat-restaurant": {
+    "title": "Samiat Restaurant",
+    "location": "Dubai, UAE",
+    "category": "Hospitality",
+    "scope": "Restaurant interior fit-out",
+    "area": "1,400 sq. ft",
+    "timeline": "90 working days",
+    "folder": "samiat-restaurant",
+    "files": ["01.webp", "02.webp", "03.webp", "04.webp", "05.webp", "06.webp", "07.webp", "08.webp"],
+    "imageDimensions": [[1800, 1350], [1800, 1350], [1800, 1350], [1800, 1350], [1800, 1350], [1800, 1350], [1800, 1350], [1800, 1350]]
+  },
+  "dubai-hills": {
+    "title": "Dubai Hills",
+    "location": "Dubai Hills, Dubai",
+    "category": "Commercial",
+    "scope": "Interior fit-out",
+    "area": "80 sq. ft",
+    "timeline": "20 working days",
+    "folder": "dubai-hills",
+    "files": ["01.webp", "02.webp", "03.webp", "04.webp", "05.webp", "06.webp"],
+    "imageDimensions": [[1800, 1472], [1351, 1800], [1350, 1800], [1800, 1472], [1351, 1800], [1350, 1800]]
+  },
+  "elie-saab-meydan": {
+    "title": "Elie Saab Residence",
+    "location": "Meydan, Nad Al Sheba, Dubai",
+    "category": "Residential",
+    "scope": "Residential fit-out",
+    "area": "2,152 sq. ft",
+    "timeline": "Ongoing",
+    "folder": "elie-saab-meydan",
+    "coverImage": "02.webp",
+    "files": ["01.webp", "02.webp", "03.webp", "04.webp", "05.webp", "06.webp", "07.webp", "08.webp", "09.webp", "10.webp"],
+    "imageDimensions": [[1200, 1800], [1200, 1800], [1200, 1800], [1200, 1800], [1200, 1800], [1200, 1800], [1200, 1800], [1350, 1800], [1350, 1800], [1350, 1800]]
+  },
+  "italica-cafe": {
+    "title": "Italica Café",
+    "location": "Dubai, UAE",
+    "category": "Hospitality",
+    "scope": "Café interior fit-out",
+    "folder": "italica-cafe",
+    "files": ["01.webp", "02.webp", "03.webp", "04.webp"],
+    "imageDimensions": [[1800, 882], [975, 1800], [1317, 1800], [1800, 1309]]
+  },
+  "laila-amraoui": {
+    "title": "Laila Amraoui",
+    "location": "Dubai, UAE",
+    "category": "Commercial",
+    "scope": "Commercial interior fit-out",
+    "folder": "laila-amraoui",
+    "files": ["01.webp", "02.webp", "03.webp", "04.webp", "05.webp"],
+    "imageDimensions": [[1493, 1800], [1299, 1800], [1327, 1800], [1300, 1800], [1800, 1396]]
+  },
   "mr-khalid": {
     "title": "Mr. Khalid",
     "location": "Dubai",

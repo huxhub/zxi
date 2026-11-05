@@ -12,7 +12,7 @@ export function ProjectArchive({ projects, standalone = false }) {
   return (
     <section id="portfolio" className="folio">
       <div className="folio-intro">
-        <p className="folio-eyebrow">ZXI — Selected projects</p>
+        {!standalone && <p className="folio-eyebrow">ZXI — Selected projects</p>}
         {standalone ? <h1 className="folio-heading">Considered spaces. Distinctive interiors.<br />Made for living.</h1> : <h2 className="folio-heading">Considered spaces.<br />Distinctive interiors.<br />Made for living.</h2>}
       </div>
       <nav className="folio-filters" aria-label="Filter projects">

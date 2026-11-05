@@ -47,12 +47,13 @@ const projectColorPalette = {
 
 // Encode each segment so spaces, punctuation, and emoji in supplied filenames are safe URLs.
 function suppliedProject(slug, details, existing) {
-  const { folder, files, introImage, ...metadata } = details;
+  const { folder, files, introImage, imageDimensions = [], coverImage, ...metadata } = details;
   const folderDims = projectImageDimensions[folder] || {};
-  const gallery = files.map((file) => {
+  const gallery = files.map((file, index) => {
+    const [declaredWidth, declaredHeight] = imageDimensions[index] || [];
     const dim = folderDims[file] || {};
-    const width = dim.width || 1600;
-    const height = dim.height || 1067;
+    const width = declaredWidth || dim.width || 1600;
+    const height = declaredHeight || dim.height || 1067;
     const aspectRatio = dim.aspectRatio || +(width / height).toFixed(4);
     return {
       src: `/projects/${encodeURIComponent(folder)}/${encodeURIComponent(file)}`,
@@ -75,7 +76,7 @@ function suppliedProject(slug, details, existing) {
     ...metadata,
     slug,
     color: existing?.color || projectColorPalette[slug] || '#b9b4a2',
-    image: gallery[0],
+    image: gallery.find((image) => image.src.endsWith(`/${encodeURIComponent(coverImage)}`)) || gallery[0],
     introImage: introAsset,
     gallery,
   };

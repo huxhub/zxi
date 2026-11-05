@@ -441,7 +441,7 @@ dialog#navigation-panel::backdrop {
 .project-track { display:flex; width:max-content; height:100svh; }
 .project-cover { display:flex; flex:0 0 70vw; width:70vw; height:100svh; }
 .project-title-panel { background:var(--project-color); width:100%; padding:calc(var(--site-header-height, 80px) + 24px) 40px 36px; display:flex; flex-direction:column; align-items:center; justify-content:space-between; }
-.project-back { align-self:flex-start; margin-top:0; font-size:11px; }
+.project-back { align-self:flex-start; margin-top:18px; position:relative; top:28px; font-size:11px; }
 .project-thumbnail { width:min(85%, 1100px); margin-top:24px; display:flex; justify-content:center; align-items:center; }
 .project-thumbnail>div { width:min(100%, 680px); aspect-ratio:16 / 9; position:relative; overflow:hidden; }
 .project-thumbnail p { font-size:10px; display:flex; justify-content:space-between; gap:12px; margin:12px 0; }

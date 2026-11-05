@@ -19,8 +19,10 @@ export function Hero({ heroRef, heroPicRef, heroCopyRef }) {
           loop
           playsInline
           preload="auto"
+          disablePictureInPicture
           aria-hidden="true"
         >
+          <source src="/media/hero/ZXI_Homepage_mobile.mp4" type="video/mp4" />
           <source src="/media/hero/ZXI_4K60_Homepage.webm" type="video/webm" />
         </video>
       </div>

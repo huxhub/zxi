@@ -100,6 +100,7 @@ graphify-out/
 # Intermediate hero video test encodes (production videos are hero-desktop-native-hq-v5, hero-tablet, hero-mobile)
 /public/media/hero/*
 !/public/media/hero/ZXI_4K60_Homepage.webm
+!/public/media/hero/ZXI_Homepage_mobile.mp4
 
 # Raw intermediate package image downloads (production assets are in /public/packages/)
 /public/packages image/

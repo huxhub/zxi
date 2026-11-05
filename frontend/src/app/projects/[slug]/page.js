@@ -1,6 +1,7 @@
 import { Suspense } from 'react';
 import { notFound } from 'next/navigation';
 import { projects } from '@/lib/projects';
+import { orderProjects } from '@/lib/project-order';
 import { ProjectShell } from '@/features/projects/project-shell';
 import { ProjectDetail } from '@/features/projects/project-detail';
 export function generateStaticParams() { return projects.map(({ slug }) => ({ slug })); }
@@ -25,7 +26,8 @@ export default function ProjectPage({ params }) {
 
 async function ProjectContent({ params }) {
   const { slug } = await params;
-  const index = projects.findIndex((item) => item.slug === slug);
+  const orderedProjects = orderProjects(projects);
+  const index = orderedProjects.findIndex((item) => item.slug === slug);
   if (index < 0) notFound();
-  return <ProjectShell logo={{ src: '/zxi_dubailogo_black.svg', width: 220, height: 80 }}><ProjectDetail project={projects[index]} next={projects[(index + 1) % projects.length]} /></ProjectShell>;
+  return <ProjectShell logo={{ src: '/zxi_dubailogo_black.svg', width: 220, height: 80 }}><ProjectDetail project={orderedProjects[index]} next={orderedProjects[(index + 1) % orderedProjects.length]} /></ProjectShell>;
 }

@@ -1,4 +1,5 @@
 import { Suspense } from 'react';
+import Script from 'next/script';
 import { PageBackButton } from '@/components/layout/page-back-button';
 import { RouteScrollReset } from '@/components/layout/route-scroll-reset';
 import { SmoothScroll } from '@/components/layout/smooth-scroll';
@@ -61,6 +62,15 @@ export default function RootLayout({ children }) {
         <SmoothScroll />
         <PageBackButton />
         <Suspense fallback={null}><RouteScrollReset /></Suspense>
+        <Script id="zoho-salesiq-bootstrap" strategy="afterInteractive">
+          {`window.$zoho = window.$zoho || {};
+            $zoho.salesiq = $zoho.salesiq || { ready: function () {} };`}
+        </Script>
+        <Script
+          id="zsiqscript"
+          src="https://salesiq.zohopublic.in/widget?wc=siq9eb33b2da3c94fa857b15ab1fd922af0489183c7e9b4ff8d4293bcf317b6b8ca"
+          strategy="afterInteractive"
+        />
         <a className="whatsapp-cta" href="https://wa.me/971565499766?text=Hello%20ZXI%2C%20I%27d%20like%20to%20discuss%20an%20interior%20project." target="_blank" rel="noopener noreferrer" aria-label="Chat with ZXI on WhatsApp" title="Chat with us on WhatsApp">
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M20.5 11.7a8.5 8.5 0 0 1-12.6 7.45L3.5 20.5l1.38-4.22A8.5 8.5 0 1 1 20.5 11.7Z" />

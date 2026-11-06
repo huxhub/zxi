@@ -9,7 +9,6 @@ export function Portfolio({ projects }) {
   return (
     <section id="portfolio" className="relative bg-[#f7f7f7] pt-24 md:pt-36 pb-8 md:pb-12">
       <div className="max-w-[1720px] mx-auto px-5 sm:px-10 lg:px-16 text-center mb-16 md:mb-20">
-        <p className="text-xs uppercase tracking-widest text-neutral-500 font-medium mb-3">Selected Portfolio</p>
         <h2 className="text-4xl sm:text-5xl md:text-6xl font-normal tracking-tight text-neutral-900">Featured Projects</h2>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 gap-2 px-2 max-w-[1920px] mx-auto">

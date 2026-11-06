@@ -101,6 +101,7 @@ graphify-out/
 /public/media/hero/*
 !/public/media/hero/ZXI_4K60_Homepage.webm
 !/public/media/hero/ZXI_Homepage_mobile.mp4
+!/public/media/hero/ZXI_Mobile_1080x1920_60fps.webm
 
 # Raw intermediate package image downloads (production assets are in /public/packages/)
 /public/packages image/

@@ -1,5 +1,7 @@
 'use client';
 
+import { HERO_VIDEOS } from './hero-video-source';
+
 export function Hero({ heroRef, heroPicRef, heroCopyRef }) {
   return (
     <section
@@ -22,7 +24,8 @@ export function Hero({ heroRef, heroPicRef, heroCopyRef }) {
           disablePictureInPicture
           aria-hidden="true"
         >
-          <source src="/media/hero/ZXI_Homepage_mobile.mp4" type="video/mp4" />
+          <source media="(max-width: 767px)" src={HERO_VIDEOS.mobile} type="video/webm" />
+          <source media="(max-width: 767px)" src="/media/hero/ZXI_Homepage_mobile.mp4" type="video/mp4" />
           <source src="/media/hero/ZXI_4K60_Homepage.webm" type="video/webm" />
         </video>
       </div>

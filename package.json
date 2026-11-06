@@ -1,0 +1,13 @@
+{
+  "name": "zxi",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "engines": {
+    "node": "22.x"
+  },
+  "scripts": {
+    "build": "echo Static site ready",
+    "start": "node index.js"
+  }
+}

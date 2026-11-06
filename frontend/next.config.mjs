@@ -5,9 +5,9 @@ const securityHeaders = [
     value: [
       "default-src 'self'",
       "script-src 'self' 'unsafe-inline' https://salesiq.zohopublic.in https://*.zoho.in https://*.zohopublic.in https://*.zohocdn.com",
-      "style-src 'self' 'unsafe-inline'",
+      "style-src 'self' 'unsafe-inline' https://*.zohocdn.com https://*.zoho.in https://*.zohopublic.in",
       "img-src 'self' data: blob: https://lh3.googleusercontent.com",
-      "font-src 'self' data:",
+      "font-src 'self' data: https://*.zohocdn.com https://*.zoho.in https://*.zohopublic.in",
       "media-src 'self' blob:",
       "connect-src 'self' https://*.zoho.in https://*.zohopublic.in https://*.zohocdn.com wss://*.zoho.in wss://*.zohopublic.in",
       "frame-src https://www.google.com https://*.zoho.in https://*.zohopublic.in",

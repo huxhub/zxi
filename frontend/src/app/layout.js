@@ -58,19 +58,26 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body suppressHydrationWarning>
+        <Script
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtm.js?id=GTM-K6QCCFZ5"
+        />
+        <Script
+          id="gtm-init"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+            `,
+          }}
+        />
         {children}
         <SmoothScroll />
         <PageBackButton />
         <Suspense fallback={null}><RouteScrollReset /></Suspense>
-        <Script id="zoho-salesiq-bootstrap" strategy="afterInteractive">
-          {`window.$zoho = window.$zoho || {};
-            $zoho.salesiq = $zoho.salesiq || { ready: function () {} };`}
-        </Script>
-        <Script
-          id="zsiqscript"
-          src="https://salesiq.zohopublic.in/widget?wc=siq9eb33b2da3c94fa857b15ab1fd922af0489183c7e9b4ff8d4293bcf317b6b8ca"
-          strategy="afterInteractive"
-        />
+
         <a className="whatsapp-cta" href="https://wa.me/971565499766?text=Hello%20ZXI%2C%20I%27d%20like%20to%20discuss%20an%20interior%20project." target="_blank" rel="noopener noreferrer" aria-label="Chat with ZXI on WhatsApp" title="Chat with us on WhatsApp">
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M20.5 11.7a8.5 8.5 0 0 1-12.6 7.45L3.5 20.5l1.38-4.22A8.5 8.5 0 1 1 20.5 11.7Z" />

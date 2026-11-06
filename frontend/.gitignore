@@ -105,3 +105,7 @@ graphify-out/
 
 # Raw intermediate package image downloads (production assets are in /public/packages/)
 /public/packages image/
+
+# Converted project webp images
+/public/projects-webp/
+/public/projects/*-webp/

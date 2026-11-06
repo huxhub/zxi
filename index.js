@@ -19,6 +19,13 @@ function resolveRequest(requestUrl) {
   const candidates = pathname.endsWith('/')
     ? [path.join(relative, 'index.html')]
     : [relative, `${relative}.html`, path.join(relative, 'index.html')];
+  const directory = path.dirname(relative);
+  const filename = path.basename(relative);
+  const dataMatch = /^__next\.([^.]+)(?:\.(.+))?\.__PAGE__\.txt$/.exec(filename);
+  if (dataMatch) {
+    const dynamicSegments = dataMatch[2] ? dataMatch[2].split('.') : [];
+    candidates.push(path.join(directory, `__next.${dataMatch[1]}`, ...dynamicSegments, '__PAGE__.txt'));
+  }
   for (const candidate of candidates) {
     const resolved = path.resolve(root, candidate);
     if (!resolved.startsWith(`${root}${path.sep}`)) continue;

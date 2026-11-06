@@ -1,6 +1,6 @@
-:HL["/_next/static/chunks/1abtma-3r93nn.css","style"]
+:HL["/_next/static/chunks/1169akmfc6-xo.css","style"]
 :HL["/_next/static/chunks/17cc5dyep3ln-.css","style"]
 3:[["children",{"s":"__PAGE__","h":160}]]
 2:[["children",{"s":{"n":"slug","t":"d","k":"royal-gallery","s":[]},"h":96,"c":"$Q3"}]]
 1:[["children",{"s":"projects","h":64,"c":"$Q2"}]]
-0:{"b":"aogF7we3XRQiYvo46MC-8","t":{"t":{"s":"","h":16,"c":"$Q1"}}}
+0:{"b":"9bqO1FiNQev1_TH2y7xA7","t":{"t":{"s":"","h":16,"c":"$Q1"}}}

@@ -207,7 +207,7 @@
 .whatsapp-cta {
   position: fixed;
   right: max(18px, env(safe-area-inset-right));
-  bottom: max(18px, env(safe-area-inset-bottom));
+  bottom: calc(max(18px, env(safe-area-inset-bottom)) + 72px);
   z-index: 999998;
   display: grid;
   place-items: center;
@@ -218,6 +218,51 @@
   background: #25d366;
   animation: whatsapp-float 2.2s ease-in-out infinite;
   transition: transform .25s ease, background .25s ease;
+}
+
+/* Keep the two support launchers in one responsive, non-overlapping stack. */
+body .zsiq_floatmain {
+  right: max(18px, env(safe-area-inset-right)) !important;
+  bottom: max(18px, env(safe-area-inset-bottom)) !important;
+  left: auto !important;
+  top: auto !important;
+}
+
+/* Animate the SalesIQ panel from its launcher without delaying interaction. */
+body .zsiq-newtheme.siqembed.zls-sptwndw {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+  transform-origin: right bottom;
+  will-change: transform, opacity;
+  transition:
+    opacity 220ms ease,
+    transform 320ms cubic-bezier(.22, 1, .36, 1),
+    visibility 320ms allow-discrete,
+    display 320ms allow-discrete !important;
+}
+
+body .zsiq-newtheme.siqembed.zls-sptwndw[style*="display: none"],
+body .zsiq-newtheme.siqembed.zls-sptwndw[style*="visibility: hidden"] {
+  opacity: 0;
+  transform: translate3d(0, 16px, 0) scale(.965);
+}
+
+@starting-style {
+  body .zsiq-newtheme.siqembed.zls-sptwndw {
+    opacity: 0;
+    transform: translate3d(0, 16px, 0) scale(.965);
+  }
+}
+
+@media (max-width: 640px) {
+  body .zsiq_floatmain {
+    right: max(14px, env(safe-area-inset-right)) !important;
+    bottom: max(14px, env(safe-area-inset-bottom)) !important;
+  }
+
+  body .zsiq-newtheme.siqembed.zls-sptwndw {
+    transform-origin: center bottom;
+  }
 }
 
 .whatsapp-cta svg {
@@ -243,6 +288,10 @@
 
 @media (prefers-reduced-motion: reduce) {
   .whatsapp-cta { animation: none; }
+
+  body .zsiq-newtheme.siqembed.zls-sptwndw {
+    transition: none !important;
+  }
 }
 
 @layer base {

@@ -230,7 +230,7 @@ footer {
     width: 52px !important;
     height: 52px !important;
     right: max(14px, env(safe-area-inset-right)) !important;
-    bottom: max(14px, env(safe-area-inset-bottom)) !important;
+    bottom: calc(max(14px, env(safe-area-inset-bottom)) + 72px) !important;
   }
 
   .whatsapp-cta svg {

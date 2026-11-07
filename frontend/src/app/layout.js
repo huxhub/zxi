@@ -58,26 +58,19 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body suppressHydrationWarning>
-        <Script
-          strategy="afterInteractive"
-          src="https://www.googletagmanager.com/gtm.js?id=GTM-K6QCCFZ5"
-        />
-        <Script
-          id="gtm-init"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-            `,
-          }}
-        />
+        <Script id="google-tag-manager" strategy="afterInteractive">
+          {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-K6QCCFZ5');`}
+        </Script>
         {children}
         <SmoothScroll />
         <PageBackButton />
         <Suspense fallback={null}><RouteScrollReset /></Suspense>
-        <Script id="zoho-salesiq-bootstrap" strategy="afterInteractive">
+        {/* Zoho SalesIQ is managed and loaded directly via GTM container GTM-K6QCCFZ5 */}
+        {/* <Script id="zoho-salesiq-bootstrap" strategy="afterInteractive">
           {`window.$zoho = window.$zoho || {};
             $zoho.salesiq = $zoho.salesiq || { ready: function () {} };`}
         </Script>
@@ -85,7 +78,7 @@ export default function RootLayout({ children }) {
           id="zsiqscript"
           src="https://salesiq.zohopublic.in/widget?wc=siq9eb33b2da3c94fa857b15ab1fd922af0489183c7e9b4ff8d4293bcf317b6b8ca"
           strategy="afterInteractive"
-        />
+        /> */}
 
         <a className="whatsapp-cta" href="https://wa.me/971565499766?text=Hello%20ZXI%2C%20I%27d%20like%20to%20discuss%20an%20interior%20project." target="_blank" rel="noopener noreferrer" aria-label="Chat with ZXI on WhatsApp" title="Chat with us on WhatsApp">
           <svg viewBox="0 0 24 24" aria-hidden="true">

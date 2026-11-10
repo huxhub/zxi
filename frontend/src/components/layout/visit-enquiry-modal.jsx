@@ -90,10 +90,6 @@ export function VisitEnquiryModal() {
       aria-labelledby="visit-enquiry-title"
       onCancel={(event) => {
         event.preventDefault();
-        close();
-      }}
-      onClick={(event) => {
-        if (event.target === event.currentTarget) close();
       }}
     >
       <div className={`visit-enquiry-panel${sent ? ' is-sent' : ''}`}>
@@ -107,7 +103,6 @@ export function VisitEnquiryModal() {
             <p>Enquiry received</p>
             <h2 id="visit-enquiry-title">Thank you.</h2>
             <span>We&rsquo;ll continue the conversation on WhatsApp.</span>
-            <button type="button" onClick={close}>Return to the site <b aria-hidden="true">↗</b></button>
           </div>
         ) : (
           <>

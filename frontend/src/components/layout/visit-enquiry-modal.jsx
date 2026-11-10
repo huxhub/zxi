@@ -22,8 +22,18 @@ export function VisitEnquiryModal() {
     if (!dialog || !open) return undefined;
 
     dialog.showModal();
+    const previousHtmlOverflow = document.documentElement.style.overflow;
+    const previousBodyOverflow = document.body.style.overflow;
+    document.documentElement.style.overflow = 'hidden';
+    document.body.style.overflow = 'hidden';
+    window.__lenis?.stop();
     const focusTimer = window.setTimeout(() => firstFieldRef.current?.focus(), 80);
-    return () => window.clearTimeout(focusTimer);
+    return () => {
+      window.clearTimeout(focusTimer);
+      document.documentElement.style.overflow = previousHtmlOverflow;
+      document.body.style.overflow = previousBodyOverflow;
+      window.__lenis?.start();
+    };
   }, [open]);
 
   const close = () => {

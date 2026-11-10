@@ -32,7 +32,7 @@ export function ServicesIndexView({ logo }) {
         <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12">
           <header className="max-w-3xl px-2 sm:px-4 mb-14 sm:mb-20">
             <p className="text-[10px] uppercase tracking-[0.26em] text-neutral-500 mb-4">
-              ZXI interiors & contracting
+              ZXI Interiors &amp; Contracting
             </p>
             <h1 className="text-[32px] sm:text-[42px] lg:text-[55px] font-normal tracking-[-0.025em] leading-[1.14] text-neutral-900">
               Spaces made to work beautifully.

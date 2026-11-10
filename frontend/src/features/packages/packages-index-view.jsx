@@ -13,7 +13,7 @@ export function PackagesIndexView() {
       <main className="packages-page">
         <header className="packages-intro packages-intro--compact">
           <div>
-            <p className="packages-eyebrow">ZXI interiors & contracting · Dubai</p>
+            <p className="packages-eyebrow">ZXI Interiors &amp; Contracting · Dubai</p>
             <h1>Our <em>packages.</em></h1>
           </div>
           <p>Clear starting points, each with a defined scope, transparent offer price and complete list of inclusions.</p>

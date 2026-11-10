@@ -10,6 +10,7 @@ import { Footer } from '@/components/layout/footer';
 const details = [
   { label: 'Email', value: 'info@zxi.ae', href: 'mailto:info@zxi.ae' },
   { label: 'Phone', value: '+971 565 499 766', href: 'tel:+971565499766' },
+  { label: 'Instagram', value: '@zxiinteriors', href: 'https://www.instagram.com/zxiinteriors/' },
   { label: 'Office', value: 'Office #808, The Metropolis Tower\nBusiness Bay, Dubai, UAE', href: 'https://maps.google.com/?q=The+Metropolis+Tower+Business+Bay+Dubai' },
 ];
 
@@ -61,7 +62,7 @@ export function ContactView({ logo, image, selectedPackage }) {
             <ul>
               {details.map((detail) => (
                 <li key={detail.label}>
-                  <a href={detail.href} target={detail.label === 'Office' ? '_blank' : undefined} rel={detail.label === 'Office' ? 'noreferrer' : undefined}>
+                  <a href={detail.href} target={detail.label === 'Office' || detail.label === 'Instagram' ? '_blank' : undefined} rel={detail.label === 'Office' || detail.label === 'Instagram' ? 'noreferrer noopener' : undefined}>
                     <span>{detail.label}</span>
                     <strong>{detail.value}</strong>
                     <i aria-hidden="true">↗</i>
@@ -89,7 +90,7 @@ export function ContactView({ logo, image, selectedPackage }) {
         <div className="contact-details-inner">
           <div className="contact-map">
             <iframe
-              title="ZXI Interiors office at The Metropolis Tower, Business Bay"
+              title="ZXI Interiors & Contracting office at The Metropolis Tower, Business Bay"
               src="https://www.google.com/maps?q=The%20Metropolis%20Tower%2C%20Business%20Bay%2C%20Dubai&output=embed"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"

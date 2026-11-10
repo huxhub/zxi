@@ -5,6 +5,12 @@ import { portfolioProjects } from '@/lib/projects';
 export const metadata = {
   title: 'Dubai Interior Design, Fit-Out & Turnkey Contractor',
   description: 'Dubai interior design and fit-out specialists for offices, villas, retail, restaurants, hospitality and bespoke joinery. Discover ZXI projects and request a consultation.',
+  alternates: { canonical: '/' },
+  openGraph: {
+    url: '/',
+    title: 'Dubai Interior Design, Fit-Out & Turnkey Contractor | ZXI Interiors & Contracting',
+    description: 'Dubai interior design and fit-out specialists for offices, villas, retail, restaurants, hospitality and bespoke joinery. Discover ZXI projects and request a consultation.',
+  },
 };
 
 export default function Page() {
@@ -62,7 +68,7 @@ export default function Page() {
   const homepageSchema = {
     '@context': 'https://schema.org',
     '@graph': [
-      { '@type': 'WebPage', '@id': 'https://zxi.ae/#webpage', url: 'https://zxi.ae', name: 'Dubai Interior Design, Fit-Out & Turnkey Contractor | ZXI', description: 'Dubai interior design, fit-out and turnkey contracting by ZXI Interiors & Contracting.', inLanguage: 'en-AE', about: { '@id': 'https://zxi.ae/#organization' } },
+      { '@type': 'WebPage', '@id': 'https://zxi.ae/#webpage', url: 'https://zxi.ae', name: 'Dubai Interior Design, Fit-Out & Turnkey Contractor | ZXI Interiors & Contracting', description: 'Dubai interior design, fit-out and turnkey contracting by ZXI Interiors & Contracting.', inLanguage: 'en-AE', about: { '@id': 'https://zxi.ae/#organization' } },
       { '@type': 'FAQPage', mainEntity: faq.map(({ question, answer }) => ({ '@type': 'Question', name: question, acceptedAnswer: { '@type': 'Answer', text: answer } })) },
     ],
   };

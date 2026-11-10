@@ -18,6 +18,7 @@ import { Advantages } from './components/advantages';
 import { ContactBanner } from './components/contact-banner';
 import { FAQ } from './components/faq';
 import { TrustedPartners } from './components/trusted-partners';
+import { AuthorityApprovals } from './components/authority-approvals';
 
 export function HomeView({ data }) {
   const router = useRouter();
@@ -230,6 +231,8 @@ export function HomeView({ data }) {
         <TrustedPartners />
 
         <FAQ items={data.faq} />
+
+        <AuthorityApprovals />
       </main>
 
       <Footer logo={data.logo} onNavigate={handleSmoothNav} />

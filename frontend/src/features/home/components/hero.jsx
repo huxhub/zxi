@@ -46,7 +46,7 @@ export function Hero({ heroRef, heroPicRef, heroCopyRef }) {
                 Re-imagine your space with
               </span>
               <span className="hero-title-brand block text-[clamp(1.5rem,4.1vw,55px)] tracking-[-0.025em]">
-                ZXI Interiors.
+                ZXI Interiors &amp; Contracting.
               </span>
             </h1>
           </div>

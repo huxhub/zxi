@@ -188,7 +188,7 @@ export const SERVICES_DATA = [
     },
     metrics: [
       { num: '500+', label: 'Delivered Projects' },
-      { num: '12+', label: 'Years in the UAE' },
+      { num: '10+', label: 'Years in the UAE' },
       { num: '100%', label: 'In-House Trades' },
       { num: 'Fixed', label: 'Price & Handover Date' },
     ],

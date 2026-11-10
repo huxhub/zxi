@@ -31,7 +31,7 @@ export function DetailModal({ dialogRef, item, onClose }) {
             </div>
             <div className="p-6 sm:p-10 md:p-12">
               <p className="text-xs uppercase tracking-widest text-neutral-500 font-medium">
-                {item.category || 'ZXI Interior Services'}
+                {item.category || 'ZXI Interiors & Contracting'}
               </p>
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-normal tracking-tight my-3 text-neutral-900">
                 {item.title}

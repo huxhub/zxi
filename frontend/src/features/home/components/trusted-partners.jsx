@@ -19,16 +19,6 @@ const PARTNERS = [
   { name: 'Lulie Fisher Design Studio', image: '/partners/lulie-fisher.webp', scale: 1.12 },
   { name: 'Wahat Al Zaweya', image: '/partners/wahat-al-zaweya.webp', scale: 1.12 },
   { name: 'Tritvam', image: '/partners/tritvam.webp', scale: 1.5 },
-  { name: 'DAMAC', image: '/partners/damac.webp', scale: 1.18 },
-  { name: 'Trakhees', image: '/partners/trakhees.png', scale: 1.06 },
-  { name: 'Concordia', image: '/partners/concordia.png', scale: 1.08 },
-  { name: 'Nakheel', image: '/partners/nakheel.png', scale: 1.04 },
-  { name: 'TECOM Group', image: '/partners/tecom.png', scale: 1.06 },
-  { name: 'JAFZA', image: '/partners/jafza.png', scale: 1.04 },
-  { name: 'Dubai Retail', image: '/partners/dubai-retail.png', scale: 1.08 },
-  { name: 'Dubai Silicon Oasis', image: '/partners/dubai-silicon-oasis.png', scale: 1.02 },
-  { name: 'DEWA', image: '/partners/dewa.png', scale: 1.06 },
-  { name: 'DIFC', image: '/partners/difc.png', scale: 1.04 },
 ];
 
 export function TrustedPartners() {

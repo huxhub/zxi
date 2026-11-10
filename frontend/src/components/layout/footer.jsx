@@ -82,13 +82,13 @@ export function Footer({ logo, onNavigate }) {
               navigate(e, 'contact');
             }}
           >
-            Contacts
+            Contact
           </Link>
         </div>
 
         <div className="flex flex-col items-start gap-3.5 text-sm">
           <h3 className="text-xs uppercase tracking-widest text-[#4C4942] font-semibold mb-2">
-            Contacts
+            Contact
           </h3>
           <a href="mailto:info@zxi.ae" className="text-[#282722] hover:text-[#5C574E] transition-colors">
             info@zxi.ae
@@ -98,6 +98,14 @@ export function Footer({ logo, onNavigate }) {
           </a>
           <a href="tel:+971562321031" className="text-[#282722] hover:text-[#5C574E] transition-colors">
             +971 562 321 031
+          </a>
+          <a
+            href="https://www.instagram.com/zxiinteriors/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#282722] hover:text-[#5C574E] transition-colors inline-flex items-center gap-1"
+          >
+            Instagram @zxiinteriors <span aria-hidden="true">↗</span>
           </a>
           <h3 className="text-xs uppercase tracking-widest text-[#4C4942] font-semibold mt-4 mb-1">
             Address

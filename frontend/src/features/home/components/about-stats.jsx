@@ -13,7 +13,7 @@ const STANDARDS = [
     image: '/about/projects-500-milestone-new.png',
     stats: [
       { num: '500+', label: 'Completed projects' },
-      { num: '12+', label: 'Years of excellence' },
+      { num: '10+', label: 'Years of excellence' },
       { num: 'UAE', label: 'Interiors & contracting' },
       { num: 'Dubai', label: 'Design studios' },
     ],

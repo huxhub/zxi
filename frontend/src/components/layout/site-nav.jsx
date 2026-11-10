@@ -151,14 +151,12 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate, dark
           <span className="text-[10px] font-medium uppercase tracking-[0.2em] nav-menu-text">Menu</span>
           <span className="flex flex-col items-end gap-[6px] nav-menu-bars" aria-hidden="true">
             <span
-              className={`block h-[2px] w-8 nav-menu-bar-top transition-all duration-300 ${
-                isDarkNav ? 'bg-white' : 'bg-neutral-900'
-              }`}
+              className={`block h-[2px] w-8 nav-menu-bar-top transition-all duration-300 ${isDarkNav ? 'bg-white' : 'bg-neutral-900'
+                }`}
             />
             <span
-              className={`block h-[2px] w-5 nav-menu-bar-bottom transition-all duration-300 group-hover:w-8 ${
-                isDarkNav ? 'bg-white' : 'bg-neutral-900'
-              }`}
+              className={`block h-[2px] w-5 nav-menu-bar-bottom transition-all duration-300 group-hover:w-8 ${isDarkNav ? 'bg-white' : 'bg-neutral-900'
+                }`}
             />
           </span>
         </button>
@@ -223,9 +221,8 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate, dark
                   className="hidden"
                 >
                   <svg
-                    className={`w-5 h-5 text-[#282722]/70 transition-transform duration-300 ${
-                      portfolioOpen ? 'rotate-180' : ''
-                    }`}
+                    className={`w-5 h-5 text-[#282722]/70 transition-transform duration-300 ${portfolioOpen ? 'rotate-180' : ''
+                      }`}
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -238,9 +235,8 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate, dark
 
               {/* Sub-projects accordion dropdown */}
               <div
-                className={`grid transition-all duration-300 ease-in-out ${
-                  portfolioOpen ? 'grid-rows-[1fr] opacity-100 mt-3 pt-2' : 'grid-rows-[0fr] opacity-0'
-                }`}
+                className={`grid transition-all duration-300 ease-in-out ${portfolioOpen ? 'grid-rows-[1fr] opacity-100 mt-3 pt-2' : 'grid-rows-[0fr] opacity-0'
+                  }`}
               >
                 <div className="project-list-items overflow-hidden flex flex-col gap-2.5 pl-4 border-l-2 border-[#282722]/25 text-base sm:text-lg font-light text-[#282722]/75 max-h-56 overflow-y-auto">
                   <Link
@@ -401,7 +397,7 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate, dark
                 href="tel:+971565499766"
                 className="inline-flex items-center gap-2 bg-[#F5F0E7] text-[#282722] hover:bg-[#F7F3ED] text-[14px] font-semibold px-5 py-3.5 rounded-none border-0 transition-colors"
               >
-                <span>Schedule a call</span>
+                <span>Contact us</span>
                 <span className="text-sm font-light" aria-hidden="true">
                   ↗
                 </span>

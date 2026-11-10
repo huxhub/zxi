@@ -9,7 +9,18 @@ export function generateStaticParams() { return [...PACKAGES, ...PACKAGE_COLLECT
 export async function generateMetadata({ params }) {
   const { slug } = await params;
   const item = getPackage(slug) || getPackageCollection(slug);
-  return item ? { title: `${item.title} Package | ZXI Dubai`, description: item.intro } : {};
+  if (!item) return { title: 'Package Not Found' };
+  return {
+    title: `${item.title} Package`,
+    description: item.intro,
+    alternates: { canonical: `/packages/${slug}` },
+    openGraph: {
+      url: `/packages/${slug}`,
+      title: `${item.title} Package | ZXI Interiors & Contracting`,
+      description: item.intro,
+      images: item.image ? [item.image] : undefined,
+    },
+  };
 }
 
 export default function PackagePage({ params }) {

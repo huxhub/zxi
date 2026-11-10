@@ -6,7 +6,7 @@ export const metadata = {
   title: 'Contact Interior Fitout Company in Dubai',
   description: 'Request a consultation for residential interiors, commercial fitouts, turnkey contracting, or custom furniture in Dubai.',
   alternates: { canonical: '/contact' },
-  openGraph: { url: '/contact', title: 'Discuss Your Dubai Interior Project | ZXI', description: 'Request a consultation with ZXI Interiors & Contracting.' },
+  openGraph: { url: '/contact', title: 'Discuss Your Dubai Interior Project | ZXI Interiors & Contracting', description: 'Request a consultation with ZXI Interiors & Contracting.' },
 };
 
 const logo = { src: '/zxi_dubailogo_black.svg', width: 500, height: 128 };

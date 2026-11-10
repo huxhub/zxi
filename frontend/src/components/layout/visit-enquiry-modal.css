@@ -1,0 +1,31 @@
+.visit-enquiry-dialog { width:min(92vw,760px); margin:auto; padding:0; border:0; background:transparent; color:#282722; overflow:visible; }
+.visit-enquiry-dialog::backdrop { background:rgba(27,27,24,.68); backdrop-filter:blur(4px); -webkit-backdrop-filter:blur(4px); }
+.visit-enquiry-dialog[open] { animation:visit-enquiry-enter .45s cubic-bezier(.16,1,.3,1) both; }
+.visit-enquiry-panel { position:relative; display:grid; grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr); min-height:470px; background:#f5f0e7; box-shadow:0 24px 80px rgba(0,0,0,.3); }
+.visit-enquiry-intro { display:flex; flex-direction:column; justify-content:space-between; padding:clamp(32px,5vw,58px) clamp(25px,4vw,45px); background:#282722; color:#f5f0e7; }
+.visit-enquiry-intro p,.visit-enquiry-success>p { margin:0; font-size:10px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; opacity:.62; }
+.visit-enquiry-intro h2,.visit-enquiry-success h2 { max-width:285px; margin:42px 0 16px; font-size:clamp(37px,4.2vw,56px); font-weight:400; line-height:.92; letter-spacing:-.055em; }
+.visit-enquiry-intro>span,.visit-enquiry-success>span { max-width:235px; color:rgba(245,240,231,.68); font-size:13px; line-height:1.55; }
+.visit-enquiry-close { position:absolute; z-index:2; top:14px; right:14px; display:grid; width:40px; height:40px; place-items:center; border:0; background:transparent; color:#282722; font-size:28px; font-weight:300; line-height:1; cursor:pointer; transition:transform .25s ease,color .25s ease; }
+.visit-enquiry-close:hover { color:#8a4f2c; transform:rotate(90deg); }
+.visit-enquiry-form { align-content:center; display:grid; grid-template-columns:1fr 1fr; gap:25px 18px; padding:clamp(62px,7vw,82px) clamp(25px,5vw,52px) 32px; }
+.visit-enquiry-form label { display:flex; flex-direction:column; gap:9px; padding-bottom:12px; color:#4c4b45; font-size:11px; letter-spacing:.02em; }
+.visit-enquiry-form label span { display:flex; justify-content:space-between; gap:8px; }
+.visit-enquiry-form em { color:#89857b; font-size:10px; font-style:normal; }
+.visit-enquiry-form input,.visit-enquiry-form select { width:100%; padding:0; border:0; border-radius:0; outline:0; box-shadow:none; background:transparent; color:#282722; font:400 15px/1.45 inherit; }
+.visit-enquiry-form select { appearance:none; -webkit-appearance:none; padding-right:24px; cursor:pointer; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8' fill='none'%3E%3Cpath d='m1 1 5 5 5-5' stroke='%23282722' stroke-width='1.7'/%3E%3C/svg%3E"); background-position:right 2px center; background-repeat:no-repeat; background-size:12px 8px; }
+.visit-enquiry-form input::placeholder { color:#9c978d; opacity:1; }
+.visit-enquiry-submit,.visit-enquiry-success button { grid-column:1 / -1; display:flex; align-items:center; justify-content:space-between; width:100%; margin-top:5px; padding:17px 18px; border:0; background:#d8c9b4; color:#282722; font-size:11px; font-weight:600; letter-spacing:.1em; text-transform:uppercase; cursor:pointer; transition:background .25s ease,transform .25s ease; }
+.visit-enquiry-submit:hover,.visit-enquiry-success button:hover { background:#cdbba3; transform:translateY(-2px); }
+.visit-enquiry-note { position:absolute; right:clamp(25px,5vw,52px); bottom:22px; margin:0; color:#777269; font-size:10px; letter-spacing:.02em; }
+.visit-enquiry-note a { color:#282722; text-decoration-color:#9d9589; text-underline-offset:3px; }
+.visit-enquiry-success { grid-column:1 / -1; display:flex; flex-direction:column; justify-content:center; min-height:470px; padding:clamp(46px,8vw,92px); background:#282722; color:#f5f0e7; }
+.visit-enquiry-success h2 { margin-top:36px; font-size:clamp(54px,7vw,88px); }
+.visit-enquiry-success button { max-width:320px; margin-top:38px; background:#f5f0e7; }
+.visit-enquiry-success b { font-size:17px; font-weight:400; }
+.is-sent .visit-enquiry-close { color:#f5f0e7; }
+.visit-enquiry-dialog button:focus-visible { outline:2px solid currentColor; outline-offset:4px; }
+.visit-enquiry-dialog input:focus,.visit-enquiry-dialog input:focus-visible,.visit-enquiry-dialog select:focus,.visit-enquiry-dialog select:focus-visible { border:0; outline:0; box-shadow:none; }
+@keyframes visit-enquiry-enter { from { opacity:0; transform:translateY(20px) scale(.98); } to { opacity:1; transform:translateY(0) scale(1); } }
+@media (max-width:650px) { .visit-enquiry-panel { display:block; min-height:0; }.visit-enquiry-intro { min-height:255px; padding:32px 27px 27px; }.visit-enquiry-intro h2 { max-width:320px; margin:35px 0 14px; }.visit-enquiry-form { grid-template-columns:1fr; gap:18px; padding:35px 27px 58px; }.visit-enquiry-note { right:auto; left:27px; bottom:22px; }.visit-enquiry-success { min-height:510px; padding:70px 28px 45px; } }
+@media (prefers-reduced-motion:reduce) { .visit-enquiry-dialog[open] { animation:none; }.visit-enquiry-close,.visit-enquiry-submit,.visit-enquiry-success button { transition:none; } }

@@ -3,22 +3,23 @@ import Script from 'next/script';
 import { PageBackButton } from '@/components/layout/page-back-button';
 import { RouteScrollReset } from '@/components/layout/route-scroll-reset';
 import { SmoothScroll } from '@/components/layout/smooth-scroll';
+import { VisitEnquiryModal } from '@/components/layout/visit-enquiry-modal';
 import './globals.css';
+import '../components/layout/visit-enquiry-modal.css';
 import '../features/contact/contact.css';
 
 export const metadata = {
   metadataBase: new URL('https://zxi.ae'),
-  title: { default: 'Dubai Interior Design, Fit-Out & Turnkey Contractor | ZXI', template: '%s | ZXI Interiors Dubai' },
+  title: { default: 'Dubai Interior Design, Fit-Out & Turnkey Contractor | ZXI Interiors & Contracting', template: '%s | ZXI Interiors & Contracting' },
   description: 'ZXI Interiors & Contracting is a Dubai interior design, fit-out and turnkey contractor for commercial offices, villas, retail, hospitality and bespoke joinery projects.',
   keywords: ['Dubai interior design company', 'Dubai fit-out contractor', 'turnkey interior contractor Dubai', 'commercial office fit-out Dubai', 'villa interior design Dubai', 'restaurant fit-out Dubai', 'bespoke joinery Dubai', 'interior contractors UAE'],
-  alternates: { canonical: '/' },
   openGraph: {
     type: 'website', locale: 'en_AE', url: 'https://zxi.ae', siteName: 'ZXI Interiors & Contracting',
-    title: 'Dubai Interior Design, Fit-Out & Turnkey Contractor | ZXI',
+    title: 'Dubai Interior Design, Fit-Out & Turnkey Contractor | ZXI Interiors & Contracting',
     description: 'Interior design, fit-out, turnkey contracting and bespoke joinery for distinctive Dubai and UAE spaces.',
     images: [{ url: '/why-work-with-us.png', width: 1200, height: 630, alt: 'ZXI interior design and fitout project in Dubai' }],
   },
-  twitter: { card: 'summary_large_image', title: 'Dubai Interior Design, Fit-Out & Turnkey Contractor | ZXI', description: 'Design, fit-out, turnkey contracting and bespoke joinery across Dubai and the UAE.', images: ['/why-work-with-us.png'] },
+  twitter: { card: 'summary_large_image', title: 'Dubai Interior Design, Fit-Out & Turnkey Contractor | ZXI Interiors & Contracting', description: 'Design, fit-out, turnkey contracting and bespoke joinery across Dubai and the UAE.', images: ['/why-work-with-us.png'] },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 } },
 };
 
@@ -30,7 +31,6 @@ export default function RootLayout({ children }) {
         '@type': ['ProfessionalService', 'LocalBusiness'],
         '@id': 'https://zxi.ae/#organization',
         name: 'ZXI Interiors & Contracting',
-        alternateName: 'ZXI Interiors',
         url: 'https://zxi.ae',
         logo: 'https://zxi.ae/zxi_dubailogo_black.svg',
         image: 'https://zxi.ae/why-work-with-us.png',
@@ -66,6 +66,7 @@ export default function RootLayout({ children }) {
             })(window,document,'script','dataLayer','GTM-K6QCCFZ5');`}
         </Script>
         {children}
+        <VisitEnquiryModal />
         <SmoothScroll />
         <PageBackButton />
         <Suspense fallback={null}><RouteScrollReset /></Suspense>

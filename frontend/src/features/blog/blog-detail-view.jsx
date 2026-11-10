@@ -60,7 +60,7 @@ export function BlogDetailView({ post, nextPosts = [], logo }) {
               </div>
               <div className="flex flex-col sm:flex-row sm:items-center sm:gap-3 text-sm">
                 <span className="font-medium text-neutral-900">
-                  ZXI Architecture & Contracting Studio
+                  ZXI Interiors &amp; Contracting
                 </span>
                 <span className="hidden sm:inline text-neutral-300">•</span>
                 <span className="text-xs text-neutral-500">Dubai, United Arab Emirates</span>
@@ -82,7 +82,7 @@ export function BlogDetailView({ post, nextPosts = [], logo }) {
             </div>
             <div className="flex items-center justify-between text-xs text-neutral-400 mt-3 px-1">
               <span>{post.title} — Architectural Case Study</span>
-              <span>ZXI Interiors & Fitouts</span>
+              <span>ZXI Interiors & Contracting</span>
             </div>
           </div>
 

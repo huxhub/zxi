@@ -11,9 +11,9 @@ export async function generateMetadata({ params }) {
   if (!project) return { title: 'Project not found' };
   return {
     title: `${project.title} Interior Project`,
-    description: `${project.scope} project by ZXI Interiors in ${project.location}.`,
+    description: `${project.scope} project by ZXI Interiors & Contracting in ${project.location}.`,
     alternates: { canonical: `/projects/${project.slug}` },
-    openGraph: { url: `/projects/${project.slug}`, title: `${project.title} | ZXI Interiors`, images: [project.image.src] },
+    openGraph: { url: `/projects/${project.slug}`, title: `${project.title} | ZXI Interiors & Contracting`, images: [project.image.src] },
   };
 }
 export default function ProjectPage({ params }) {

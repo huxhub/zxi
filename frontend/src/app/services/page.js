@@ -1,13 +1,13 @@
 import { ServicesIndexView } from '@/features/services/services-index-view';
 
 export const metadata = {
-  title: 'Interior Design & Fitout Services | ZXI Dubai',
+  title: 'Interior Design & Fitout Services',
   description:
     'Comprehensive interior disciplines: commercial fitouts, residential villas, turnkey contracting, custom millwork, and hospitality spaces in the UAE.',
   alternates: { canonical: '/services' },
   openGraph: {
     url: '/services',
-    title: 'Interior Design & Fitout Disciplines | ZXI Dubai',
+    title: 'Interior Design & Fitout Disciplines | ZXI Interiors & Contracting',
     description:
       'Turnkey commercial, residential, joinery, and architectural services delivered with precision across Dubai and the UAE.',
   },

@@ -171,7 +171,7 @@ export const GOOGLE_REVIEWS = [
     "avatar": "https://lh3.googleusercontent.com/a/ACg8ocKgw91b9ZPW6F9lDdWo4fxcI7Ru8qbI9za2539_PLtZ3qWS6g=s64-c-rp-mo-br100",
     "stars": 5,
     "time": "11 months ago",
-    "text": "Zxi Interior Decoration LLC did an excellent job. The team is professional, reliable, and their work speaks for itself. Mr. Shahid is very dedicated and ensures everything is done with great attention to detail. Highly recommended!",
+    "text": "ZXI Interior Decoration LLC did an excellent job. The team is professional, reliable, and their work speaks for itself. Mr. Shahid is very dedicated and ensures everything is done with great attention to detail. Highly recommended!",
     "ownerResponse": {
       "date": "",
       "text": "5 months ago\nThank you very much for your great feedback."
@@ -197,7 +197,7 @@ export const GOOGLE_REVIEWS = [
     "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjXNOrwRsB7xbREr5nzoOkCsPJ-oQSVAU43dDFmb_PiWOfCC-uA0=s64-c-rp-mo-br100",
     "stars": 5,
     "time": "11 months ago",
-    "text": "I'm truly impressed with Zxi interiors & contracting stunning designs top-notch quality and best services. Made our dreams to reality! Highly recommend for Uae residents looking for reliable fit out services.",
+    "text": "I'm truly impressed with ZXI interiors & contracting stunning designs top-notch quality and best services. Made our dreams to reality! Highly recommend for Uae residents looking for reliable fit out services.",
     "ownerResponse": {
       "date": "",
       "text": "5 months ago\nThank you so much for your valuable feedback"
@@ -223,7 +223,7 @@ export const GOOGLE_REVIEWS = [
     "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjW4Ma-yRZ90dQs0uv8wx0ZENBPSPPrZm5SHDZ6siI4DeELPWks=s64-c-rp-mo-br100",
     "stars": 5,
     "time": "3 years ago",
-    "text": "We had a 3BHK with an unusual plan and especially the kitchen . We loved their suggestion and creativity to the perfectly match with our home layout . The space planning took almost a month but they were patient showing us various options that was possible unless we are aligned and on the same page. The best part about ZXI Interiors is they manage everything and give you what you want according to your style of thought. There is no compromise on the quality and the finishing of their products are unmatched.\nWe would highly recommend ZXi Interiors to anyone who is looking at Luxury interior with hassle free execution!",
+    "text": "We had a 3BHK with an unusual plan and especially the kitchen . We loved their suggestion and creativity to the perfectly match with our home layout . The space planning took almost a month but they were patient showing us various options that was possible unless we are aligned and on the same page. The best part about ZXI Interiors is they manage everything and give you what you want according to your style of thought. There is no compromise on the quality and the finishing of their products are unmatched.\nWe would highly recommend ZXI Interiors to anyone who is looking at Luxury interior with hassle free execution!",
     "ownerResponse": {
       "date": "",
       "text": "3 years ago\nThank you so much for your great feedback..It was wonderful experience to work with you."
@@ -236,7 +236,7 @@ export const GOOGLE_REVIEWS = [
     "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjVAmPa4HxpATj3R1Wsd3GuLPnvnJlvnV24OnT9h71sRU_6B8di96g=s64-c-rp-mo-br100",
     "stars": 5,
     "time": "3 years ago",
-    "text": "We have done our interiors from ZXi Interiors. 3 things that I can vouch for this brand is quality, service and professionalism. All the discussions that we had with team, was properly taken into consideration and formalised on emails/texts. All the products and finishes that they have used are very good quality products. The delivery+installation of the products happened before the committed date. The entire team is very very accomodative as well as professional. I would definitely recommend Asense to anyone who is looking to plan their dream home",
+    "text": "We have done our interiors from ZXI Interiors. 3 things that I can vouch for this brand is quality, service and professionalism. All the discussions that we had with team, was properly taken into consideration and formalised on emails/texts. All the products and finishes that they have used are very good quality products. The delivery+installation of the products happened before the committed date. The entire team is very very accomodative as well as professional. I would definitely recommend ZXI to anyone who is looking to plan their dream home",
     "ownerResponse": {
       "date": "",
       "text": "3 years ago\nThank you so much for your great feedback..It was wonderful experience to work with you."
@@ -249,7 +249,7 @@ export const GOOGLE_REVIEWS = [
     "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjXVrYaHJ4zdY8vjRhjDHl-n0yn8rGC3mcJxnGHUF9wF_3O-PKbb=s64-c-rp-mo-br100",
     "stars": 5,
     "time": "3 years ago",
-    "text": "It was wonderful working with ZXi on our new apartment interior design. The outcome is great and exactly what we looked for.\nteam Zxi was highly cooperative and worked fast yet neat. We’re 100% satisfied with our new apartment.\nPositive\nPunctuality, Quality, Professionalism",
+    "text": "It was wonderful working with ZXI on our new apartment interior design. The outcome is great and exactly what we looked for.\nteam ZXI was highly cooperative and worked fast yet neat. We’re 100% satisfied with our new apartment.\nPositive\nPunctuality, Quality, Professionalism",
     "ownerResponse": {
       "date": "",
       "text": "3 years ago\nThank you so much for your great feedback..It was wonderful experience to work with you."
@@ -275,7 +275,7 @@ export const GOOGLE_REVIEWS = [
     "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjUu740sK2DVj9BaOjahJJ4kx_SpPyQ9YBcUtfzXn5EWCygq26dh1w=s64-c-rp-mo-ba12-br100",
     "stars": 5,
     "time": "3 years ago",
-    "text": "Zxi interiors is really professional in the way they handle client and the service deliverables.\nThey are well coordinated Team to understand the customer priorities and give designing solution accordingly.\nWe are extremely happy with our decision of getting wardrobes done through them. Thank you Team Zxi\nPositive\nQuality",
+    "text": "ZXI interiors is really professional in the way they handle client and the service deliverables.\nThey are well coordinated Team to understand the customer priorities and give designing solution accordingly.\nWe are extremely happy with our decision of getting wardrobes done through them. Thank you Team ZXI\nPositive\nQuality",
     "ownerResponse": {
       "date": "",
       "text": "3 years ago\nThank you so much for your great feedback..It was wonderful experience to work with you."
@@ -327,7 +327,7 @@ export const GOOGLE_REVIEWS = [
     "avatar": "https://lh3.googleusercontent.com/a/ACg8ocJVaz4Z7_hokavO-v26AaGFTq8Lo9HEYj5K_nyPsnZaXHdT=s64-c-rp-mo-br100",
     "stars": 5,
     "time": "3 years ago",
-    "text": "I think what I love most is that ZXi Interiors are so approachable, they make me wonder, \"Why didn't l think of that?!\"\nAppreciate your broad range of design - it's clear from your reveals and posts that you and your team are truly prepared to transform pretty much any type of home.\nTruly hope to work with ZXi Interiors again .highly recommend",
+    "text": "I think what I love most is that ZXI Interiors are so approachable, they make me wonder, \"Why didn't l think of that?!\"\nAppreciate your broad range of design - it's clear from your reveals and posts that you and your team are truly prepared to transform pretty much any type of home.\nTruly hope to work with ZXI Interiors again .highly recommend",
     "ownerResponse": {
       "date": "",
       "text": "3 years ago\nThank you so much for your great feedback..It was wonderful experience to work with you."
@@ -522,7 +522,7 @@ export const GOOGLE_REVIEWS = [
     "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjWALqyaDW_6gNASAc0YoaNrxvO5lQZAhg0IAhARwtnfdKfd5Vd_=s64-c-rp-mo-br100",
     "stars": 5,
     "time": "4 years ago",
-    "text": "You can trust them to fulfill all your requirements and details without any worries.I Highly recommend zxi Interiors to all of you",
+    "text": "You can trust them to fulfill all your requirements and details without any worries.I Highly recommend ZXI Interiors to all of you",
     "ownerResponse": {
       "date": "",
       "text": "4 years ago\nThank you so much for your great feedback."
@@ -613,7 +613,7 @@ export const GOOGLE_REVIEWS = [
     "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjW42Tzl9F0Saat4XCTDWm4dccutcqEXLOgHCxHtXsixOkbqkiZh=s64-c-rp-mo-br100",
     "stars": 5,
     "time": "3 years ago",
-    "text": "A high value experience with zxI interior\nGood quality and durable materials\nPositive\nResponsiveness, Quality, Professionalism, Value\n\n\nServices\nFlooring selection, Refurbishment, Window design",
+    "text": "A high value experience with ZXI Interiors\nGood quality and durable materials\nPositive\nResponsiveness, Quality, Professionalism, Value\n\n\nServices\nFlooring selection, Refurbishment, Window design",
     "ownerResponse": {
       "date": "",
       "text": "2 years ago\nThank you so much for your great feedback.."

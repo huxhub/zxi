@@ -11,7 +11,7 @@ export async function generateMetadata({ params }) {
   const { slug } = await params;
   const post = BLOG_POSTS.find((item) => item.slug === slug);
   if (!post) {
-    return { title: 'Article Not Found | ZXI Interiors' };
+    return { title: 'Article Not Found' };
   }
   return {
     title: post.title,

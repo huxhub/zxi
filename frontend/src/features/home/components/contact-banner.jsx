@@ -34,7 +34,7 @@ export function ContactBanner({ cta, ctaPicRef }) {
         </h2>
         <div className="flex gap-3 flex-wrap">
           <Action href="tel:+971565499766" muted>
-            Schedule a call
+            Contact us
           </Action>
           <Action
             href="/contact"

@@ -11,15 +11,15 @@ export async function generateMetadata({ params }) {
   const { slug } = await params;
   const service = getServiceBySlug(slug);
   if (!service) {
-    return { title: 'Service Not Found | ZXI Interiors' };
+    return { title: 'Service Not Found' };
   }
   return {
-    title: `${service.title} | ZXI Interiors — Dubai`,
+    title: service.title,
     description: service.subtitle,
     alternates: { canonical: `/services/${service.slug}` },
     openGraph: {
       url: `/services/${service.slug}`,
-      title: `${service.title} | ZXI Interiors Dubai`,
+      title: `${service.title} | ZXI Interiors & Contracting`,
       description: service.subtitle,
       images: [service.heroImage.src],
     },

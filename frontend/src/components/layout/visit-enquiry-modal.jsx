@@ -62,7 +62,11 @@ export function VisitEnquiryModal() {
       }}
     >
       <div className={`visit-enquiry-panel${sent ? ' is-sent' : ''}`}>
-        <button type="button" className="visit-enquiry-close" onClick={close} aria-label="Close enquiry form">×</button>
+        <button type="button" className="visit-enquiry-close" onClick={close} aria-label="Close enquiry form">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 5l14 14M19 5 5 19" />
+          </svg>
+        </button>
         {sent ? (
           <div className="visit-enquiry-success" role="status">
             <p>Enquiry received</p>

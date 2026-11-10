@@ -7,6 +7,8 @@
 .visit-enquiry-intro h2,.visit-enquiry-success h2 { max-width:285px; margin:42px 0 16px; font-size:clamp(37px,4.2vw,56px); font-weight:400; line-height:.92; letter-spacing:-.055em; }
 .visit-enquiry-intro>span,.visit-enquiry-success>span { max-width:235px; color:rgba(245,240,231,.68); font-size:13px; line-height:1.55; }
 .visit-enquiry-close { position:absolute; z-index:2; top:14px; right:14px; display:grid; width:40px; height:40px; place-items:center; border:0; background:transparent; color:#282722; font-size:28px; font-weight:300; line-height:1; cursor:pointer; transition:transform .25s ease,color .25s ease; }
+.visit-enquiry-close svg { display:block; width:20px; height:20px; overflow:visible; }
+.visit-enquiry-close path { fill:none; stroke:currentColor; stroke-width:1.6; stroke-linecap:square; }
 .visit-enquiry-close:hover { color:#8a4f2c; transform:rotate(90deg); }
 .visit-enquiry-form { align-content:center; display:grid; grid-template-columns:1fr 1fr; gap:25px 18px; padding:clamp(62px,7vw,82px) clamp(25px,5vw,52px) 32px; }
 .visit-enquiry-form label { display:flex; flex-direction:column; gap:9px; padding-bottom:12px; color:#4c4b45; font-size:11px; letter-spacing:.02em; }

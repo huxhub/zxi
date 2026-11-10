@@ -3,12 +3,17 @@
 import { useEffect, useRef, useState } from 'react';
 
 const DISMISS_KEY = 'zxi-visit-enquiry-dismissed';
+const PROJECT_TYPES = ['Residential interiors', 'Commercial fitout', 'Hospitality / retail', 'Custom furniture', 'Turnkey contracting'];
 
 export function VisitEnquiryModal() {
   const dialogRef = useRef(null);
   const firstFieldRef = useRef(null);
+  const projectTypeRef = useRef(null);
   const [open, setOpen] = useState(false);
   const [sent, setSent] = useState(false);
+  const [projectType, setProjectType] = useState('');
+  const [projectMenuOpen, setProjectMenuOpen] = useState(false);
+  const [projectTypeError, setProjectTypeError] = useState(false);
 
   useEffect(() => {
     if (sessionStorage.getItem(DISMISS_KEY)) return undefined;
@@ -36,6 +41,21 @@ export function VisitEnquiryModal() {
     };
   }, [open]);
 
+  useEffect(() => {
+    if (!projectMenuOpen) return undefined;
+    const revealMenu = window.requestAnimationFrame(() => {
+      projectTypeRef.current?.scrollIntoView({ block: 'nearest' });
+    });
+    const closeMenu = (event) => {
+      if (!projectTypeRef.current?.contains(event.target)) setProjectMenuOpen(false);
+    };
+    document.addEventListener('pointerdown', closeMenu);
+    return () => {
+      window.cancelAnimationFrame(revealMenu);
+      document.removeEventListener('pointerdown', closeMenu);
+    };
+  }, [projectMenuOpen]);
+
   const close = () => {
     sessionStorage.setItem(DISMISS_KEY, 'true');
     const dialog = dialogRef.current;
@@ -45,6 +65,11 @@ export function VisitEnquiryModal() {
 
   const submitEnquiry = (event) => {
     event.preventDefault();
+    if (!projectType) {
+      setProjectTypeError(true);
+      setProjectMenuOpen(true);
+      return;
+    }
     const data = new FormData(event.currentTarget);
     const message = [
       'Hello ZXI, I would like to discuss an interior project.',
@@ -87,15 +112,13 @@ export function VisitEnquiryModal() {
         ) : (
           <>
             <header className="visit-enquiry-intro">
-              <p>ZXI Interiors &amp; Contracting · Dubai</p>
               <h2 id="visit-enquiry-title">Let&rsquo;s begin with your space.</h2>
-              <span>A few details are all we need to start a considered conversation.</span>
             </header>
             <form className="visit-enquiry-form" onSubmit={submitEnquiry}>
               <label><span>Your name</span><input ref={firstFieldRef} name="name" type="text" autoComplete="name" required placeholder="Full name" /></label>
               <label><span>Email address</span><input name="email" type="email" autoComplete="email" required placeholder="you@company.com" /></label>
               <label><span>Phone <em>optional</em></span><input name="phone" type="tel" autoComplete="tel" placeholder="+971" /></label>
-              <label><span>Project type</span><select name="projectType" defaultValue="" required><option value="" disabled>Select an option</option><option>Residential interiors</option><option>Commercial fitout</option><option>Hospitality / retail</option><option>Custom furniture</option><option>Turnkey contracting</option></select></label>
+              <label className="visit-enquiry-project"><span>Project type</span><input type="hidden" name="projectType" value={projectType} /><div className="visit-enquiry-select" ref={projectTypeRef}><button type="button" className="visit-enquiry-select__trigger" aria-haspopup="listbox" aria-expanded={projectMenuOpen} aria-controls="visit-project-types" aria-describedby={projectTypeError ? 'visit-project-type-error' : undefined} onClick={() => setProjectMenuOpen((current) => !current)} onKeyDown={(event) => { if (event.key === 'ArrowDown') { event.preventDefault(); setProjectMenuOpen(true); } if (event.key === 'Escape') setProjectMenuOpen(false); }}><span>{projectType || 'Select an option'}</span><svg viewBox="0 0 12 8" aria-hidden="true"><path d="m1 1 5 5 5-5" /></svg></button>{projectMenuOpen && <ul id="visit-project-types" className="visit-enquiry-select__menu" role="listbox" aria-label="Project type">{PROJECT_TYPES.map((option) => <li role="option" aria-selected={projectType === option} key={option}><button type="button" onClick={() => { setProjectType(option); setProjectTypeError(false); setProjectMenuOpen(false); }}>{option}</button></li>)}</ul>}</div>{projectTypeError && <small id="visit-project-type-error" className="visit-enquiry-select__error">Please select a project type.</small>}</label>
               <button type="submit" className="visit-enquiry-submit"><span>Start an enquiry</span><b aria-hidden="true">↗</b></button>
             </form>
             <p className="visit-enquiry-note">Prefer a direct conversation? <a href="tel:+971565499766">+971 565 499 766</a></p>

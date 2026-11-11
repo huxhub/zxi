@@ -3,7 +3,7 @@ import Script from 'next/script';
 import { PageBackButton } from '@/components/layout/page-back-button';
 import { RouteScrollReset } from '@/components/layout/route-scroll-reset';
 import { SmoothScroll } from '@/components/layout/smooth-scroll';
-import { VisitEnquiryModal } from '@/components/layout/visit-enquiry-modal';
+// import { VisitEnquiryModal } from '@/components/layout/visit-enquiry-modal';
 import './globals.css';
 import '../components/layout/visit-enquiry-modal.css';
 import '../features/contact/contact.css';
@@ -66,7 +66,7 @@ export default function RootLayout({ children }) {
             })(window,document,'script','dataLayer','GTM-K6QCCFZ5');`}
         </Script>
         {children}
-        <VisitEnquiryModal />
+        {/* <VisitEnquiryModal /> */}
         <SmoothScroll />
         <PageBackButton />
         <Suspense fallback={null}><RouteScrollReset /></Suspense>

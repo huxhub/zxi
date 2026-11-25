@@ -5,12 +5,12 @@ const securityHeaders = [
     key: 'Content-Security-Policy',
     value: [
       "default-src 'self'",
-      `script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://salesiq.zohopublic.in https://*.zoho.in https://*.zohopublic.in https://*.zohocdn.com${isDevelopment ? " 'unsafe-eval'" : ''}`,
+      `script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://*.clarity.ms https://salesiq.zohopublic.in https://*.zoho.in https://*.zohopublic.in https://*.zohocdn.com${isDevelopment ? " 'unsafe-eval'" : ''}`,
       "style-src 'self' 'unsafe-inline' https://*.zohocdn.com https://*.zoho.in https://*.zohopublic.in",
-      "img-src 'self' data: blob: https://lh3.googleusercontent.com https://www.googletagmanager.com https://*.google-analytics.com https://*.zohocdn.com https://*.zoho.in https://*.zohopublic.in",
+      "img-src 'self' data: blob: https://lh3.googleusercontent.com https://www.googletagmanager.com https://*.google-analytics.com https://www.google.com https://www.google.co.in https://www.google.ae https://www.googleadservices.com https://*.doubleclick.net https://*.clarity.ms https://*.bing.com https://*.zohocdn.com https://*.zoho.in https://*.zohopublic.in",
       "font-src 'self' data: https://*.zohocdn.com https://*.zoho.in https://*.zohopublic.in",
       "media-src 'self' blob:",
-      "connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.zoho.in https://*.zohopublic.in https://*.zohocdn.com wss://*.zoho.in wss://*.zohopublic.in",
+      "connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://www.google.com https://www.google.co.in https://www.google.ae https://www.googleadservices.com https://*.doubleclick.net https://*.clarity.ms https://*.bing.com https://*.zoho.in https://*.zohopublic.in https://*.zohocdn.com wss://*.zoho.in wss://*.zohopublic.in",
       "frame-src https://www.google.com https://www.googletagmanager.com https://*.zoho.in https://*.zohopublic.in",
       "object-src 'none'",
       "base-uri 'self'",
@@ -35,6 +35,40 @@ const nextConfig = {
   },
   cacheComponents: true,
   partialPrefetching: true,
+  async redirects() {
+    return [
+      {
+        source: '/interiors',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/interiors/:path*',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/construction',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/construction/:path*',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/about-us',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/about',
+        destination: '/',
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [{ source: '/:path*', headers: securityHeaders }];
   },

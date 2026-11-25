@@ -3,7 +3,7 @@ import { HomeView } from '@/features/home';
 import { portfolioProjects } from '@/lib/projects';
 
 export const metadata = {
-  title: 'Dubai Interior Design, Fit-Out & Turnkey Contractor',
+  title: 'Dubai Interior Design, Fit-Out & Turnkey Contractor | ZXI Interiors & Contracting',
   description: 'Dubai interior design and fit-out specialists for offices, villas, retail, restaurants, hospitality and bespoke joinery. Discover ZXI projects and request a consultation.',
   alternates: { canonical: '/' },
   openGraph: {

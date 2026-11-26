@@ -52,7 +52,7 @@ export function ProjectDetail({ project, next }) {
       </section>
       <section className="project-information">
         <h2>{project.scope}<br />in {project.location}.</h2>
-        <dl><div><dt>Project</dt><dd>{project.title}</dd></div><div><dt>Location</dt><dd>{project.location}</dd></div><div><dt>Category</dt><dd>{project.category}</dd></div>{project.area && <div><dt>Area</dt><dd>{project.area}</dd></div>}{project.timeline && <div><dt>Timeline</dt><dd>{project.timeline}</dd></div>}<div><dt>Studio</dt><dd>ZXI Interiors & Contracting</dd></div></dl>
+        <dl><div><dt>Project</dt><dd>{project.title}</dd></div><div><dt>Location</dt><dd>{project.location}</dd></div><div><dt>Category</dt><dd>{project.category}</dd></div>{project.area && <div><dt>Area</dt><dd>{project.area}</dd></div>}{project.timeline && <div><dt>Timeline</dt><dd>{project.timeline}</dd></div>}<div><dt>Studio</dt><dd>ZXI Interiors and Contracting</dd></div></dl>
         <Link href="/contact">Discuss your project &#8599;</Link>
       </section>
       {storyImages.map((image, index) => (

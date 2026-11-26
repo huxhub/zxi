@@ -7,7 +7,7 @@ export const metadata = {
   alternates: { canonical: '/services' },
   openGraph: {
     url: '/services',
-    title: 'Interior Design & Fitout Disciplines | ZXI Interiors & Contracting',
+    title: 'Interior Design & Fitout Disciplines | ZXI Interiors and Contracting',
     description:
       'Turnkey commercial, residential, joinery, and architectural services delivered with precision across Dubai and the UAE.',
   },

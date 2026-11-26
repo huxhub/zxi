@@ -82,7 +82,7 @@ export function BlogDetailView({ post, nextPosts = [], logo }) {
             </div>
             <div className="flex items-center justify-between text-xs text-neutral-400 mt-3 px-1">
               <span>{post.title} — Architectural Case Study</span>
-              <span>ZXI Interiors & Contracting</span>
+              <span>ZXI Interiors and Contracting</span>
             </div>
           </div>
 

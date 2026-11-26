@@ -90,7 +90,7 @@ export function ContactView({ logo, image, selectedPackage }) {
         <div className="contact-details-inner">
           <div className="contact-map">
             <iframe
-              title="ZXI Interiors & Contracting office at The Metropolis Tower, Business Bay"
+              title="ZXI Interiors and Contracting office at The Metropolis Tower, Business Bay"
               src="https://www.google.com/maps?q=The%20Metropolis%20Tower%2C%20Business%20Bay%2C%20Dubai&output=embed"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"

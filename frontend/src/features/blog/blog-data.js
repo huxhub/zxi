@@ -126,9 +126,9 @@ export const BLOG_POSTS = [
     "date": "December 1, 2025",
     "readTime": "7 min read",
     "image": "/blog/zxi-setting-the-standard-for-interior-fit-out-companies-in-dubai.webp",
-    "excerpt": "How ZXI Interiors & Contracting delivers turnkey commercial workspaces, corporate headquarters, and retail flagships that elevate brand equity, employee productivity, and architectural quality.",
+    "excerpt": "How ZXI Interiors and Contracting delivers turnkey commercial workspaces, corporate headquarters, and retail flagships that elevate brand equity, employee productivity, and architectural quality.",
     "content": [
-      "For more than a decade, ZXI Interiors & Contracting has stood as a benchmark of reliability, craftsmanship, and engineering precision in Dubai. From corporate headquarters in Business Bay and DIFC to luxury retail showrooms and wellness sanctuaries, our portfolio reflects a disciplined, client-centered approach to turnkey design and construction.",
+      "For more than a decade, ZXI Interiors and Contracting has stood as a benchmark of reliability, craftsmanship, and engineering precision in Dubai. From corporate headquarters in Business Bay and DIFC to luxury retail showrooms and wellness sanctuaries, our portfolio reflects a disciplined, client-centered approach to turnkey design and construction.",
       "1. Single-Source Accountability: As one of Dubai's few genuine turnkey contractors, ZXI eliminates intermediate middlemen. With dedicated in-house joinery workshops, skilled MEP engineering teams, and veteran site directors, we control quality, procurement costs, and fabrication timelines from day one.",
       "2. Sector-Specific Commercial Expertise: Commercial environments influence human behavior. Our workplace strategies combine agile acoustic meeting pods, ergonomic workstations, and integrated smart AV infrastructure to foster focused productivity and collaborative innovation for modern regional headquarters.",
       "3. Rigorous UAE Regulatory Compliance: Navigating statutory handovers is second nature to our team. Every drawing, load calculation, and material safety data sheet (MSDS) is pre-vetted to align smoothly with Dubai Municipality, Civil Defence, and master developer guidelines, ensuring seamless Building Completion Certificates (BCC).",

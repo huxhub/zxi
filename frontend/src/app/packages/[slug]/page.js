@@ -16,7 +16,7 @@ export async function generateMetadata({ params }) {
     alternates: { canonical: `/packages/${slug}` },
     openGraph: {
       url: `/packages/${slug}`,
-      title: `${item.title} Package | ZXI Interiors & Contracting`,
+      title: `${item.title} Package | ZXI Interiors and Contracting`,
       description: item.intro,
       images: item.image ? [item.image] : undefined,
     },

@@ -19,7 +19,7 @@ export async function generateMetadata({ params }) {
     alternates: { canonical: `/services/${service.slug}` },
     openGraph: {
       url: `/services/${service.slug}`,
-      title: `${service.title} | ZXI Interiors & Contracting`,
+      title: `${service.title} | ZXI Interiors and Contracting`,
       description: service.subtitle,
       images: [service.heroImage.src],
     },

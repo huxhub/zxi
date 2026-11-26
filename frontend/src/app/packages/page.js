@@ -6,7 +6,7 @@ export const metadata = {
   alternates: { canonical: '/packages' },
   openGraph: {
     url: '/packages',
-    title: 'Interior Packages | ZXI Interiors & Contracting',
+    title: 'Interior Packages | ZXI Interiors and Contracting',
     description: 'Clear residential, office, F&B and interior design packages from ZXI.',
   },
 };

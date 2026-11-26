@@ -10,16 +10,16 @@ import '../features/contact/contact.css';
 
 export const metadata = {
   metadataBase: new URL('https://zxi.ae'),
-  title: { default: 'Dubai Interior Design, Fit-Out & Turnkey Contractor | ZXI Interiors & Contracting', template: '%s | ZXI Interiors & Contracting' },
-  description: 'ZXI Interiors & Contracting is a Dubai interior design, fit-out and turnkey contractor for commercial offices, villas, retail, hospitality and bespoke joinery projects.',
+  title: { default: 'ZXI Interiors and Contracting | Dubai', template: '%s | ZXI Interiors and Contracting' },
+  description: 'ZXI Interiors and Contracting is a Dubai-based interior design and fit-out specialist delivering bespoke residential, commercial and retail interiors.',
   keywords: ['Dubai interior design company', 'Dubai fit-out contractor', 'turnkey interior contractor Dubai', 'commercial office fit-out Dubai', 'villa interior design Dubai', 'restaurant fit-out Dubai', 'bespoke joinery Dubai', 'interior contractors UAE'],
   openGraph: {
-    type: 'website', locale: 'en_AE', url: 'https://zxi.ae', siteName: 'ZXI Interiors & Contracting',
-    title: 'Dubai Interior Design, Fit-Out & Turnkey Contractor | ZXI Interiors & Contracting',
-    description: 'Interior design, fit-out, turnkey contracting and bespoke joinery for distinctive Dubai and UAE spaces.',
+    type: 'website', locale: 'en_AE', url: 'https://zxi.ae/', siteName: 'ZXI Interiors and Contracting',
+    title: 'ZXI Interiors and Contracting',
+    description: 'Dubai-based interior design and fit-out specialist delivering bespoke residential, commercial and retail interiors.',
     images: [{ url: '/why-work-with-us.png', width: 1200, height: 630, alt: 'ZXI interior design and fitout project in Dubai' }],
   },
-  twitter: { card: 'summary_large_image', title: 'Dubai Interior Design, Fit-Out & Turnkey Contractor | ZXI Interiors & Contracting', description: 'Design, fit-out, turnkey contracting and bespoke joinery across Dubai and the UAE.', images: ['/why-work-with-us.png'] },
+  twitter: { card: 'summary_large_image', title: 'ZXI Interiors and Contracting', description: 'Dubai-based interior design and fit-out specialist delivering bespoke residential, commercial and retail interiors.', images: ['/why-work-with-us.png'] },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 } },
 };
 
@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
       {
         '@type': ['ProfessionalService', 'LocalBusiness'],
         '@id': 'https://zxi.ae/#organization',
-        name: 'ZXI Interiors & Contracting',
+        name: 'ZXI Interiors and Contracting',
         url: 'https://zxi.ae',
         logo: 'https://zxi.ae/zxi_dubailogo_black.svg',
         image: 'https://zxi.ae/why-work-with-us.png',
@@ -52,7 +52,7 @@ export default function RootLayout({ children }) {
           ],
         },
       },
-      { '@type': 'WebSite', '@id': 'https://zxi.ae/#website', url: 'https://zxi.ae', name: 'ZXI Interiors & Contracting', publisher: { '@id': 'https://zxi.ae/#organization' }, inLanguage: 'en-AE' },
+      { '@type': 'WebSite', '@id': 'https://zxi.ae/#website', url: 'https://zxi.ae/', name: 'ZXI Interiors and Contracting', alternateName: 'ZXI', publisher: { '@id': 'https://zxi.ae/#organization' }, inLanguage: 'en-AE' },
     ],
   };
   return (

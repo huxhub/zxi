@@ -3,13 +3,15 @@ import { HomeView } from '@/features/home';
 import { portfolioProjects } from '@/lib/projects';
 
 export const metadata = {
-  title: 'Dubai Interior Design, Fit-Out & Turnkey Contractor | ZXI Interiors & Contracting',
-  description: 'Dubai interior design and fit-out specialists for offices, villas, retail, restaurants, hospitality and bespoke joinery. Discover ZXI projects and request a consultation.',
+  title: 'ZXI Interiors and Contracting | Dubai',
+  description: 'ZXI Interiors and Contracting is a Dubai-based interior design and fit-out specialist delivering bespoke residential, commercial and retail interiors.',
   alternates: { canonical: '/' },
   openGraph: {
+    type: 'website',
     url: '/',
-    title: 'Dubai Interior Design, Fit-Out & Turnkey Contractor | ZXI Interiors & Contracting',
-    description: 'Dubai interior design and fit-out specialists for offices, villas, retail, restaurants, hospitality and bespoke joinery. Discover ZXI projects and request a consultation.',
+    siteName: 'ZXI Interiors and Contracting',
+    title: 'ZXI Interiors and Contracting',
+    description: 'Dubai-based interior design and fit-out specialist delivering bespoke residential, commercial and retail interiors.',
   },
 };
 
@@ -68,7 +70,7 @@ export default function Page() {
   const homepageSchema = {
     '@context': 'https://schema.org',
     '@graph': [
-      { '@type': 'WebPage', '@id': 'https://zxi.ae/#webpage', url: 'https://zxi.ae', name: 'Dubai Interior Design, Fit-Out & Turnkey Contractor | ZXI Interiors & Contracting', description: 'Dubai interior design, fit-out and turnkey contracting by ZXI Interiors & Contracting.', inLanguage: 'en-AE', about: { '@id': 'https://zxi.ae/#organization' } },
+      { '@type': 'WebPage', '@id': 'https://zxi.ae/#webpage', url: 'https://zxi.ae/', name: 'ZXI Interiors and Contracting | Dubai', description: 'Dubai-based interior design and fit-out specialist delivering bespoke residential, commercial and retail interiors.', inLanguage: 'en-AE', about: { '@id': 'https://zxi.ae/#organization' } },
       { '@type': 'FAQPage', mainEntity: faq.map(({ question, answer }) => ({ '@type': 'Question', name: question, acceptedAnswer: { '@type': 'Answer', text: answer } })) },
     ],
   };

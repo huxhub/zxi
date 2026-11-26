@@ -128,7 +128,7 @@ export function SiteNav({ logo, projects = [], onSelectProject, onNavigate, dark
         >
           <Image
             src={currentLogoSrc}
-            alt="ZXI Interiors & Contracting"
+            alt="ZXI Interiors and Contracting"
             width={367}
             height={72}
             priority

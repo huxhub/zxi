@@ -60,7 +60,7 @@ export function BlogDetailView({ post, nextPosts = [], logo }) {
               </div>
               <div className="flex flex-col sm:flex-row sm:items-center sm:gap-3 text-sm">
                 <span className="font-medium text-neutral-900">
-                  ZXI Interiors &amp; Contracting
+                  ZXI Interiors and Contracting
                 </span>
                 <span className="hidden sm:inline text-neutral-300">•</span>
                 <span className="text-xs text-neutral-500">Dubai, United Arab Emirates</span>
